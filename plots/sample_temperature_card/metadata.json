@@ -1,0 +1,13 @@
+{
+  "id": "sample_temperature_card",
+  "title": "Past 365 days temperature",
+  "subtitle": "Whitehorse A",
+  "description": "Daily mean, minimum, and maximum temperature for the past 365 days compared with the 1981-2010 normal.",
+  "date_label": "Updated 2026-05-30",
+  "source": "AHCCD + ECCC daily observations + ERA5 gap filling",
+  "preview_image": "plots/sample_temperature_card/preview.png",
+  "full_image": "plots/sample_temperature_card/full.png",
+  "category": "Temperature",
+  "station": "Whitehorse A",
+  "last_updated": "2026-05-30"
+}

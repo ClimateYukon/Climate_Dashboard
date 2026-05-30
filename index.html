@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Climate Plot Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="menu-icon" aria-hidden="true">☰</div>
+    <div class="brand-mark" aria-hidden="true">▰▰▰</div>
+    <div class="brand-text">Climate Dashboard</div>
+  </header>
+
+  <main class="page-shell">
+    <section class="intro-card">
+      <h1>Tracking Climate Conditions</h1>
+      <h2>Indicators and recent observations</h2>
+      <p>
+        This dashboard presents selected climate plots generated from verified daily datasets.
+        Each card links to a larger version of the plot with source and update information.
+      </p>
+      <p>
+        Plots are generated outside this website, validated, and then published here as static images.
+      </p>
+    </section>
+
+    <section class="toolbar" aria-label="Dashboard filters">
+      <label>
+        Search
+        <input id="search-input" type="search" placeholder="Search title, station, category..." />
+      </label>
+      <label>
+        Category
+        <select id="category-filter">
+          <option value="all">All categories</option>
+        </select>
+      </label>
+    </section>
+
+    <section id="card-grid" class="card-grid" aria-live="polite"></section>
+
+    <section id="empty-state" class="empty-state" hidden>
+      No plots matched your filters.
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span id="footer-status">Loading dashboard metadata...</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Climate Plot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="back-link" href="index.html">← Back</a>
+    <div class="brand-mark" aria-hidden="true">▰▰▰</div>
+    <div class="brand-text">Climate Dashboard</div>
+  </header>
+
+  <main class="page-shell">
+    <article class="plot-page-card">
+      <div class="plot-page-header">
+        <div>
+          <h1 id="plot-title">Loading plot...</h1>
+          <p id="plot-subtitle" class="subtitle"></p>
+        </div>
+        <div id="plot-date" class="date-pill"></div>
+      </div>
+
+      <p id="plot-description" class="plot-description"></p>
+
+      <div class="full-plot-frame">
+        <img id="full-plot-image" src="" alt="" />
+      </div>
+
+      <dl class="metadata-list">
+        <div>
+          <dt>Source</dt>
+          <dd id="plot-source"></dd>
+        </div>
+        <div>
+          <dt>Category</dt>
+          <dd id="plot-category"></dd>
+        </div>
+        <div>
+          <dt>Station</dt>
+          <dd id="plot-station"></dd>
+        </div>
+      </dl>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    Static plot dashboard
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
