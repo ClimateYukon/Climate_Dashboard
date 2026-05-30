@@ -2,43 +2,25 @@
 # -*- coding: utf-8 -*-
 
 """
-Build data/index.json and data/indicators.json for the static climate dashboard.
+Build data/index.json and data/indicators.json from all metadata.json files
+under plots/, including nested folders.
 
-Expected plot folder structure:
-
-plots/<plot_id>/
-  preview.png
-  full.png
-  metadata.json
-
-Each metadata.json should include at minimum:
-  id
-  title
-  subtitle or community
-  description
-  preview_image
-  full_image
-
-For the indicator/community hierarchy, include:
-  indicator_id
-  indicator_title
-  indicator_description
+Supported structures:
+  plots/<plot_id>/metadata.json
+  plots/<indicator_id>/<plot_id>/metadata.json
 """
-
-from __future__ import annotations
 
 import json
 from pathlib import Path
 from collections import defaultdict
 
-ROOT = Path(__file__).resolve().parents[1]
-PLOTS_DIR = ROOT / "plots"
-DATA_DIR = ROOT / "data"
+
+REPO_DIR = Path(__file__).resolve().parents[1]
+PLOTS_DIR = REPO_DIR / "plots"
+DATA_DIR = REPO_DIR / "data"
+
 INDEX_PATH = DATA_DIR / "index.json"
 INDICATORS_PATH = DATA_DIR / "indicators.json"
-
-DEFAULT_INDICATOR_ID = "uncategorized"
-DEFAULT_INDICATOR_TITLE = "Uncategorized plots"
 
 
 def read_json(path: Path) -> dict:
@@ -50,79 +32,98 @@ def write_json(path: Path, data) -> None:
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
 
 
-def normalize_metadata(meta: dict, folder: Path) -> dict:
-    plot_id = meta.get("id") or folder.name
-    meta["id"] = plot_id
-
-    meta.setdefault("indicator_id", DEFAULT_INDICATOR_ID)
-    meta.setdefault("indicator_title", DEFAULT_INDICATOR_TITLE)
-    meta.setdefault("indicator_description", "Climate plots generated from verified outputs.")
-
-    meta.setdefault("preview_image", f"plots/{folder.name}/preview.png")
-    meta.setdefault("full_image", f"plots/{folder.name}/full.png")
-    meta.setdefault("community", meta.get("subtitle", ""))
-    meta.setdefault("tags", [])
-
-    if isinstance(meta["tags"], str):
-        meta["tags"] = [meta["tags"]]
-
-    return meta
-
-
-def build() -> None:
+def main() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
+    metadata_files = sorted(PLOTS_DIR.rglob("metadata.json"))
+
     plots = []
+    for metadata_file in metadata_files:
+        try:
+            item = read_json(metadata_file)
+        except Exception as error:
+            print(f"Skipping invalid metadata: {metadata_file} | {error}")
+            continue
 
-    if PLOTS_DIR.exists():
-        for metadata_path in sorted(PLOTS_DIR.glob("*/metadata.json")):
-            folder = metadata_path.parent
-            meta = normalize_metadata(read_json(metadata_path), folder)
-            plots.append(meta)
+        if "id" not in item:
+            print(f"Skipping metadata without id: {metadata_file}")
+            continue
 
-    plots.sort(
-        key=lambda item: (
-            str(item.get("indicator_order", 9999)),
-            str(item.get("indicator_title", "")),
-            str(item.get("community", item.get("subtitle", ""))),
-            str(item.get("title", "")),
-        )
+        item["_metadata_path"] = str(metadata_file.relative_to(REPO_DIR))
+        plots.append(item)
+
+    # Sort for stable output.
+    plots = sorted(
+        plots,
+        key=lambda x: (
+            str(x.get("indicator_title", x.get("title", ""))).lower(),
+            str(x.get("community", x.get("subtitle", ""))).lower(),
+            str(x.get("id", "")).lower(),
+        ),
     )
 
+    # Group community-based plots by indicator_id.
     grouped = defaultdict(list)
-    for plot in plots:
-        grouped[plot["indicator_id"]].append(plot)
+    direct_cards = []
+
+    for item in plots:
+        indicator_id = item.get("indicator_id")
+        community = item.get("community")
+
+        if indicator_id and community:
+            grouped[indicator_id].append(item)
+        else:
+            direct_cards.append(item)
 
     indicators = []
+
     for indicator_id, items in grouped.items():
         first = items[0]
-        tags = []
-        for item in items:
-            for tag in item.get("tags", []):
-                if tag not in tags:
-                    tags.append(tag)
 
-        indicators.append(
-            {
-                "id": indicator_id,
-                "title": first.get("indicator_title", indicator_id),
-                "description": first.get("indicator_description", ""),
-                "source": first.get("source", ""),
-                "preview_image": first.get("indicator_preview_image") or first.get("preview_image"),
-                "plot_count": len(items),
-                "tags": tags,
-                "order": first.get("indicator_order", 9999),
-            }
-        )
+        # Use first item as preview, but represent the whole group.
+        indicators.append({
+            "id": indicator_id,
+            "card_type": "indicator",
+            "title": first.get("indicator_title", first.get("title", indicator_id)),
+            "subtitle": f"{len(items)} communities",
+            "description": first.get(
+                "indicator_description",
+                first.get("description", "Community plots generated from verified outputs."),
+            ),
+            "date_label": first.get("date_label", ""),
+            "source": first.get("source", ""),
+            "preview_image": first.get("preview_image", ""),
+            "tags": sorted(set(tag for item in items for tag in item.get("tags", []))),
+            "plot_count": len(items),
+            "href": f"indicator.html?id={indicator_id}",
+        })
 
-    indicators.sort(key=lambda item: (item.get("order", 9999), item.get("title", "")))
+    for item in direct_cards:
+        indicators.append({
+            "id": item.get("id"),
+            "card_type": "direct",
+            "title": item.get("title", item.get("id")),
+            "subtitle": item.get("subtitle", ""),
+            "description": item.get("description", ""),
+            "date_label": item.get("date_label", ""),
+            "source": item.get("source", ""),
+            "preview_image": item.get("preview_image", ""),
+            "tags": item.get("tags", []),
+            "plot_count": 1,
+            "href": f"plot.html?id={item.get('id')}",
+        })
+
+    indicators = sorted(
+        indicators,
+        key=lambda x: (str(x.get("title", "")).lower(), str(x.get("subtitle", "")).lower()),
+    )
 
     write_json(INDEX_PATH, plots)
     write_json(INDICATORS_PATH, indicators)
 
-    print(f"Wrote {INDEX_PATH} with {len(plots)} plot(s)")
-    print(f"Wrote {INDICATORS_PATH} with {len(indicators)} indicator(s)")
+    print(f"Wrote {INDEX_PATH} with {len(plots)} plot(s).")
+    print(f"Wrote {INDICATORS_PATH} with {len(indicators)} indicator/direct card(s).")
 
 
 if __name__ == "__main__":
-    build()
+    main()

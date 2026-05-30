@@ -1,0 +1,40 @@
+{
+  "indicator_id": "annual_temperature_anomalies",
+  "indicator_title": "Annual temperature anomalies",
+  "indicator_description": "Daily mean temperature compared with 1981-2010 normals for each community.",
+  "id": "pelly_ranch_2025_annual_temperature_anomalies",
+  "title": "2025 annual temperature anomalies",
+  "subtitle": "PELLY RANCH",
+  "community": "PELLY RANCH",
+  "station_id": "2100880",
+  "description": "Daily mean temperature compared with 1981-2010 normals. 225 days were warmer than normal and 140 days were colder than normal. Annual mean anomaly: +0.48 °C.",
+  "date_label": "Updated 2026-05-30",
+  "source": "AHCCD base, ECCC daily observations, and ERA5 gap filling with source flags",
+  "preview_image": "plots/annual_temperature_anomalies/pelly_ranch_2025_annual_temperature_anomalies/preview.png",
+  "full_image": "plots/annual_temperature_anomalies/pelly_ranch_2025_annual_temperature_anomalies/full.png",
+  "tags": [
+    "temperature",
+    "annual",
+    "anomaly",
+    "2025",
+    "PELLY RANCH",
+    "2100880"
+  ],
+  "details": {
+    "station_id": "2100880",
+    "station_name": "PELLY RANCH",
+    "variable": "tas",
+    "year": 2025,
+    "climatology_start": 1981,
+    "climatology_end": 2010,
+    "warm_days": 225,
+    "cold_days": 140,
+    "valid_days": 365,
+    "missing_days": 0,
+    "mean_temperature_c": -2.51,
+    "mean_climatology_c": -2.99,
+    "mean_anomaly_c": 0.48,
+    "dataset": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260530T170125Z.nc",
+    "created_utc": "2026-05-30T19:19:07Z"
+  }
+}

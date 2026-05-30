@@ -11,8 +11,8 @@
     "description": "Daily mean temperature compared with 1981-2010 normals. 219 days were warmer than normal and 146 days were colder than normal. Annual mean anomaly: +1.13 °C.",
     "date_label": "Updated 2026-05-30",
     "source": "AHCCD base, ECCC daily observations, and ERA5 gap filling with source flags",
-    "preview_image": "plots/burwash_airport_auto_2025_annual_temperature_anomalies/preview.png",
-    "full_image": "plots/burwash_airport_auto_2025_annual_temperature_anomalies/full.png",
+    "preview_image": "plots/annual_temperature_anomalies/burwash_airport_auto_2025_annual_temperature_anomalies/preview.png",
+    "full_image": "plots/annual_temperature_anomalies/burwash_airport_auto_2025_annual_temperature_anomalies/full.png",
     "tags": [
       "temperature",
       "annual",
@@ -37,7 +37,8 @@
       "mean_anomaly_c": 1.13,
       "dataset": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260530T170125Z.nc",
       "created_utc": "2026-05-30T19:16:33Z"
-    }
+    },
+    "_metadata_path": "plots/annual_temperature_anomalies/burwash_airport_auto_2025_annual_temperature_anomalies/metadata.json"
   },
   {
     "indicator_id": "annual_temperature_anomalies",
@@ -51,8 +52,8 @@
     "description": "Daily mean temperature compared with 1981-2010 normals. 244 days were warmer than normal and 121 days were colder than normal. Annual mean anomaly: +1.35 °C.",
     "date_label": "Updated 2026-05-30",
     "source": "AHCCD base, ECCC daily observations, and ERA5 gap filling with source flags",
-    "preview_image": "plots/carmacks_cs_2025_annual_temperature_anomalies/preview.png",
-    "full_image": "plots/carmacks_cs_2025_annual_temperature_anomalies/full.png",
+    "preview_image": "plots/annual_temperature_anomalies/carmacks_cs_2025_annual_temperature_anomalies/preview.png",
+    "full_image": "plots/annual_temperature_anomalies/carmacks_cs_2025_annual_temperature_anomalies/full.png",
     "tags": [
       "temperature",
       "annual",
@@ -77,7 +78,8 @@
       "mean_anomaly_c": 1.35,
       "dataset": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260530T170125Z.nc",
       "created_utc": "2026-05-30T19:16:50Z"
-    }
+    },
+    "_metadata_path": "plots/annual_temperature_anomalies/carmacks_cs_2025_annual_temperature_anomalies/metadata.json"
   },
   {
     "indicator_id": "annual_temperature_anomalies",
@@ -91,8 +93,8 @@
     "description": "Daily mean temperature compared with 1981-2010 normals. 255 days were warmer than normal and 110 days were colder than normal. Annual mean anomaly: +1.72 °C.",
     "date_label": "Updated 2026-05-30",
     "source": "AHCCD base, ECCC daily observations, and ERA5 gap filling with source flags",
-    "preview_image": "plots/dawson_2025_annual_temperature_anomalies/preview.png",
-    "full_image": "plots/dawson_2025_annual_temperature_anomalies/full.png",
+    "preview_image": "plots/annual_temperature_anomalies/dawson_2025_annual_temperature_anomalies/preview.png",
+    "full_image": "plots/annual_temperature_anomalies/dawson_2025_annual_temperature_anomalies/full.png",
     "tags": [
       "temperature",
       "annual",
@@ -117,7 +119,8 @@
       "mean_anomaly_c": 1.72,
       "dataset": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260530T170125Z.nc",
       "created_utc": "2026-05-30T19:19:59Z"
-    }
+    },
+    "_metadata_path": "plots/annual_temperature_anomalies/dawson_2025_annual_temperature_anomalies/metadata.json"
   },
   {
     "indicator_id": "annual_temperature_anomalies",
@@ -131,8 +134,8 @@
     "description": "Daily mean temperature compared with 1981-2010 normals. 248 days were warmer than normal and 117 days were colder than normal. Annual mean anomaly: +0.77 °C.",
     "date_label": "Updated 2026-05-30",
     "source": "AHCCD base, ECCC daily observations, and ERA5 gap filling with source flags",
-    "preview_image": "plots/faro_aut_2025_annual_temperature_anomalies/preview.png",
-    "full_image": "plots/faro_aut_2025_annual_temperature_anomalies/full.png",
+    "preview_image": "plots/annual_temperature_anomalies/faro_aut_2025_annual_temperature_anomalies/preview.png",
+    "full_image": "plots/annual_temperature_anomalies/faro_aut_2025_annual_temperature_anomalies/full.png",
     "tags": [
       "temperature",
       "annual",
@@ -157,7 +160,8 @@
       "mean_anomaly_c": 0.77,
       "dataset": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260530T170125Z.nc",
       "created_utc": "2026-05-30T19:17:07Z"
-    }
+    },
+    "_metadata_path": "plots/annual_temperature_anomalies/faro_aut_2025_annual_temperature_anomalies/metadata.json"
   },
   {
     "indicator_id": "annual_temperature_anomalies",
@@ -171,8 +175,8 @@
     "description": "Daily mean temperature compared with 1981-2010 normals. 212 days were warmer than normal and 153 days were colder than normal. Annual mean anomaly: +0.25 °C.",
     "date_label": "Updated 2026-05-30",
     "source": "AHCCD base, ECCC daily observations, and ERA5 gap filling with source flags",
-    "preview_image": "plots/haines_junction_2025_annual_temperature_anomalies/preview.png",
-    "full_image": "plots/haines_junction_2025_annual_temperature_anomalies/full.png",
+    "preview_image": "plots/annual_temperature_anomalies/haines_junction_2025_annual_temperature_anomalies/preview.png",
+    "full_image": "plots/annual_temperature_anomalies/haines_junction_2025_annual_temperature_anomalies/full.png",
     "tags": [
       "temperature",
       "annual",
@@ -197,7 +201,8 @@
       "mean_anomaly_c": 0.25,
       "dataset": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260530T170125Z.nc",
       "created_utc": "2026-05-30T19:17:24Z"
-    }
+    },
+    "_metadata_path": "plots/annual_temperature_anomalies/haines_junction_2025_annual_temperature_anomalies/metadata.json"
   },
   {
     "indicator_id": "annual_temperature_anomalies",
@@ -211,8 +216,8 @@
     "description": "Daily mean temperature compared with 1981-2010 normals. 217 days were warmer than normal and 148 days were colder than normal. Annual mean anomaly: +1.76 °C.",
     "date_label": "Updated 2026-05-30",
     "source": "AHCCD base, ECCC daily observations, and ERA5 gap filling with source flags",
-    "preview_image": "plots/ivvavik_nat_park_2025_annual_temperature_anomalies/preview.png",
-    "full_image": "plots/ivvavik_nat_park_2025_annual_temperature_anomalies/full.png",
+    "preview_image": "plots/annual_temperature_anomalies/ivvavik_nat_park_2025_annual_temperature_anomalies/preview.png",
+    "full_image": "plots/annual_temperature_anomalies/ivvavik_nat_park_2025_annual_temperature_anomalies/full.png",
     "tags": [
       "temperature",
       "annual",
@@ -237,7 +242,8 @@
       "mean_anomaly_c": 1.76,
       "dataset": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260530T170125Z.nc",
       "created_utc": "2026-05-30T19:17:41Z"
-    }
+    },
+    "_metadata_path": "plots/annual_temperature_anomalies/ivvavik_nat_park_2025_annual_temperature_anomalies/metadata.json"
   },
   {
     "indicator_id": "annual_temperature_anomalies",
@@ -251,8 +257,8 @@
     "description": "Daily mean temperature compared with 1981-2010 normals. 255 days were warmer than normal and 110 days were colder than normal. Annual mean anomaly: +3.01 °C.",
     "date_label": "Updated 2026-05-30",
     "source": "AHCCD base, ECCC daily observations, and ERA5 gap filling with source flags",
-    "preview_image": "plots/komakuk_beach_2025_annual_temperature_anomalies/preview.png",
-    "full_image": "plots/komakuk_beach_2025_annual_temperature_anomalies/full.png",
+    "preview_image": "plots/annual_temperature_anomalies/komakuk_beach_2025_annual_temperature_anomalies/preview.png",
+    "full_image": "plots/annual_temperature_anomalies/komakuk_beach_2025_annual_temperature_anomalies/full.png",
     "tags": [
       "temperature",
       "annual",
@@ -277,7 +283,8 @@
       "mean_anomaly_c": 3.01,
       "dataset": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260530T170125Z.nc",
       "created_utc": "2026-05-30T19:17:58Z"
-    }
+    },
+    "_metadata_path": "plots/annual_temperature_anomalies/komakuk_beach_2025_annual_temperature_anomalies/metadata.json"
   },
   {
     "indicator_id": "annual_temperature_anomalies",
@@ -291,8 +298,8 @@
     "description": "Daily mean temperature compared with 1981-2010 normals. 226 days were warmer than normal and 139 days were colder than normal. Annual mean anomaly: +0.52 °C.",
     "date_label": "Updated 2026-05-30",
     "source": "AHCCD base, ECCC daily observations, and ERA5 gap filling with source flags",
-    "preview_image": "plots/macmillan_pass_2025_annual_temperature_anomalies/preview.png",
-    "full_image": "plots/macmillan_pass_2025_annual_temperature_anomalies/full.png",
+    "preview_image": "plots/annual_temperature_anomalies/macmillan_pass_2025_annual_temperature_anomalies/preview.png",
+    "full_image": "plots/annual_temperature_anomalies/macmillan_pass_2025_annual_temperature_anomalies/full.png",
     "tags": [
       "temperature",
       "annual",
@@ -317,7 +324,8 @@
       "mean_anomaly_c": 0.52,
       "dataset": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260530T170125Z.nc",
       "created_utc": "2026-05-30T19:18:15Z"
-    }
+    },
+    "_metadata_path": "plots/annual_temperature_anomalies/macmillan_pass_2025_annual_temperature_anomalies/metadata.json"
   },
   {
     "indicator_id": "annual_temperature_anomalies",
@@ -331,8 +339,8 @@
     "description": "Daily mean temperature compared with 1981-2010 normals. 242 days were warmer than normal and 123 days were colder than normal. Annual mean anomaly: +0.58 °C.",
     "date_label": "Updated 2026-05-30",
     "source": "AHCCD base, ECCC daily observations, and ERA5 gap filling with source flags",
-    "preview_image": "plots/mayo_a_2025_annual_temperature_anomalies/preview.png",
-    "full_image": "plots/mayo_a_2025_annual_temperature_anomalies/full.png",
+    "preview_image": "plots/annual_temperature_anomalies/mayo_a_2025_annual_temperature_anomalies/preview.png",
+    "full_image": "plots/annual_temperature_anomalies/mayo_a_2025_annual_temperature_anomalies/full.png",
     "tags": [
       "temperature",
       "annual",
@@ -357,7 +365,8 @@
       "mean_anomaly_c": 0.58,
       "dataset": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260530T170125Z.nc",
       "created_utc": "2026-05-30T19:18:33Z"
-    }
+    },
+    "_metadata_path": "plots/annual_temperature_anomalies/mayo_a_2025_annual_temperature_anomalies/metadata.json"
   },
   {
     "indicator_id": "annual_temperature_anomalies",
@@ -371,8 +380,8 @@
     "description": "Daily mean temperature compared with 1981-2010 normals. 224 days were warmer than normal and 141 days were colder than normal. Annual mean anomaly: +1.56 °C.",
     "date_label": "Updated 2026-05-30",
     "source": "AHCCD base, ECCC daily observations, and ERA5 gap filling with source flags",
-    "preview_image": "plots/old_crow_rcs_2025_annual_temperature_anomalies/preview.png",
-    "full_image": "plots/old_crow_rcs_2025_annual_temperature_anomalies/full.png",
+    "preview_image": "plots/annual_temperature_anomalies/old_crow_rcs_2025_annual_temperature_anomalies/preview.png",
+    "full_image": "plots/annual_temperature_anomalies/old_crow_rcs_2025_annual_temperature_anomalies/full.png",
     "tags": [
       "temperature",
       "annual",
@@ -397,7 +406,8 @@
       "mean_anomaly_c": 1.56,
       "dataset": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260530T170125Z.nc",
       "created_utc": "2026-05-30T19:18:50Z"
-    }
+    },
+    "_metadata_path": "plots/annual_temperature_anomalies/old_crow_rcs_2025_annual_temperature_anomalies/metadata.json"
   },
   {
     "indicator_id": "annual_temperature_anomalies",
@@ -411,8 +421,8 @@
     "description": "Daily mean temperature compared with 1981-2010 normals. 225 days were warmer than normal and 140 days were colder than normal. Annual mean anomaly: +0.48 °C.",
     "date_label": "Updated 2026-05-30",
     "source": "AHCCD base, ECCC daily observations, and ERA5 gap filling with source flags",
-    "preview_image": "plots/pelly_ranch_2025_annual_temperature_anomalies/preview.png",
-    "full_image": "plots/pelly_ranch_2025_annual_temperature_anomalies/full.png",
+    "preview_image": "plots/annual_temperature_anomalies/pelly_ranch_2025_annual_temperature_anomalies/preview.png",
+    "full_image": "plots/annual_temperature_anomalies/pelly_ranch_2025_annual_temperature_anomalies/full.png",
     "tags": [
       "temperature",
       "annual",
@@ -437,7 +447,8 @@
       "mean_anomaly_c": 0.48,
       "dataset": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260530T170125Z.nc",
       "created_utc": "2026-05-30T19:19:07Z"
-    }
+    },
+    "_metadata_path": "plots/annual_temperature_anomalies/pelly_ranch_2025_annual_temperature_anomalies/metadata.json"
   },
   {
     "indicator_id": "annual_temperature_anomalies",
@@ -451,8 +462,8 @@
     "description": "Daily mean temperature compared with 1981-2010 normals. 237 days were warmer than normal and 128 days were colder than normal. Annual mean anomaly: +0.71 °C.",
     "date_label": "Updated 2026-05-30",
     "source": "AHCCD base, ECCC daily observations, and ERA5 gap filling with source flags",
-    "preview_image": "plots/ross_river_ytg_2025_annual_temperature_anomalies/preview.png",
-    "full_image": "plots/ross_river_ytg_2025_annual_temperature_anomalies/full.png",
+    "preview_image": "plots/annual_temperature_anomalies/ross_river_ytg_2025_annual_temperature_anomalies/preview.png",
+    "full_image": "plots/annual_temperature_anomalies/ross_river_ytg_2025_annual_temperature_anomalies/full.png",
     "tags": [
       "temperature",
       "annual",
@@ -477,7 +488,8 @@
       "mean_anomaly_c": 0.71,
       "dataset": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260530T170125Z.nc",
       "created_utc": "2026-05-30T19:19:24Z"
-    }
+    },
+    "_metadata_path": "plots/annual_temperature_anomalies/ross_river_ytg_2025_annual_temperature_anomalies/metadata.json"
   },
   {
     "indicator_id": "annual_temperature_anomalies",
@@ -491,8 +503,8 @@
     "description": "Daily mean temperature compared with 1981-2010 normals. 234 days were warmer than normal and 131 days were colder than normal. Annual mean anomaly: +2.27 °C.",
     "date_label": "Updated 2026-05-30",
     "source": "AHCCD base, ECCC daily observations, and ERA5 gap filling with source flags",
-    "preview_image": "plots/shingle_point_a_2025_annual_temperature_anomalies/preview.png",
-    "full_image": "plots/shingle_point_a_2025_annual_temperature_anomalies/full.png",
+    "preview_image": "plots/annual_temperature_anomalies/shingle_point_a_2025_annual_temperature_anomalies/preview.png",
+    "full_image": "plots/annual_temperature_anomalies/shingle_point_a_2025_annual_temperature_anomalies/full.png",
     "tags": [
       "temperature",
       "annual",
@@ -517,7 +529,8 @@
       "mean_anomaly_c": 2.27,
       "dataset": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260530T170125Z.nc",
       "created_utc": "2026-05-30T19:19:41Z"
-    }
+    },
+    "_metadata_path": "plots/annual_temperature_anomalies/shingle_point_a_2025_annual_temperature_anomalies/metadata.json"
   },
   {
     "indicator_id": "annual_temperature_anomalies",
@@ -531,8 +544,8 @@
     "description": "Daily mean temperature compared with 1981-2010 normals. 245 days were warmer than normal and 120 days were colder than normal. Annual mean anomaly: +0.93 °C.",
     "date_label": "Updated 2026-05-30",
     "source": "AHCCD base, ECCC daily observations, and ERA5 gap filling with source flags",
-    "preview_image": "plots/teslin_aut_2025_annual_temperature_anomalies/preview.png",
-    "full_image": "plots/teslin_aut_2025_annual_temperature_anomalies/full.png",
+    "preview_image": "plots/annual_temperature_anomalies/teslin_aut_2025_annual_temperature_anomalies/preview.png",
+    "full_image": "plots/annual_temperature_anomalies/teslin_aut_2025_annual_temperature_anomalies/full.png",
     "tags": [
       "temperature",
       "annual",
@@ -557,7 +570,8 @@
       "mean_anomaly_c": 0.93,
       "dataset": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260530T170125Z.nc",
       "created_utc": "2026-05-30T19:20:16Z"
-    }
+    },
+    "_metadata_path": "plots/annual_temperature_anomalies/teslin_aut_2025_annual_temperature_anomalies/metadata.json"
   },
   {
     "indicator_id": "annual_temperature_anomalies",
@@ -571,8 +585,8 @@
     "description": "Daily mean temperature compared with 1981-2010 normals. 230 days were warmer than normal and 135 days were colder than normal. Annual mean anomaly: +0.95 °C.",
     "date_label": "Updated 2026-05-30",
     "source": "AHCCD base, ECCC daily observations, and ERA5 gap filling with source flags",
-    "preview_image": "plots/tuchitua_2025_annual_temperature_anomalies/preview.png",
-    "full_image": "plots/tuchitua_2025_annual_temperature_anomalies/full.png",
+    "preview_image": "plots/annual_temperature_anomalies/tuchitua_2025_annual_temperature_anomalies/preview.png",
+    "full_image": "plots/annual_temperature_anomalies/tuchitua_2025_annual_temperature_anomalies/full.png",
     "tags": [
       "temperature",
       "annual",
@@ -597,7 +611,8 @@
       "mean_anomaly_c": 0.95,
       "dataset": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260530T170125Z.nc",
       "created_utc": "2026-05-30T19:20:33Z"
-    }
+    },
+    "_metadata_path": "plots/annual_temperature_anomalies/tuchitua_2025_annual_temperature_anomalies/metadata.json"
   },
   {
     "indicator_id": "annual_temperature_anomalies",
@@ -611,8 +626,8 @@
     "description": "Daily mean temperature compared with 1981-2010 normals. 229 days were warmer than normal and 136 days were colder than normal. Annual mean anomaly: +0.79 °C.",
     "date_label": "Updated 2026-05-30",
     "source": "AHCCD base, ECCC daily observations, and ERA5 gap filling with source flags",
-    "preview_image": "plots/watson_lake_aut_2025_annual_temperature_anomalies/preview.png",
-    "full_image": "plots/watson_lake_aut_2025_annual_temperature_anomalies/full.png",
+    "preview_image": "plots/annual_temperature_anomalies/watson_lake_aut_2025_annual_temperature_anomalies/preview.png",
+    "full_image": "plots/annual_temperature_anomalies/watson_lake_aut_2025_annual_temperature_anomalies/full.png",
     "tags": [
       "temperature",
       "annual",
@@ -637,7 +652,8 @@
       "mean_anomaly_c": 0.79,
       "dataset": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260530T170125Z.nc",
       "created_utc": "2026-05-30T19:20:50Z"
-    }
+    },
+    "_metadata_path": "plots/annual_temperature_anomalies/watson_lake_aut_2025_annual_temperature_anomalies/metadata.json"
   },
   {
     "indicator_id": "annual_temperature_anomalies",
@@ -651,8 +667,8 @@
     "description": "Daily mean temperature compared with 1981-2010 normals. 237 days were warmer than normal and 128 days were colder than normal. Annual mean anomaly: +0.79 °C.",
     "date_label": "Updated 2026-05-30",
     "source": "AHCCD base, ECCC daily observations, and ERA5 gap filling with source flags",
-    "preview_image": "plots/whitehorse_a_2025_annual_temperature_anomalies/preview.png",
-    "full_image": "plots/whitehorse_a_2025_annual_temperature_anomalies/full.png",
+    "preview_image": "plots/annual_temperature_anomalies/whitehorse_a_2025_annual_temperature_anomalies/preview.png",
+    "full_image": "plots/annual_temperature_anomalies/whitehorse_a_2025_annual_temperature_anomalies/full.png",
     "tags": [
       "temperature",
       "annual",
@@ -677,7 +693,8 @@
       "mean_anomaly_c": 0.79,
       "dataset": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260530T170125Z.nc",
       "created_utc": "2026-05-30T19:21:07Z"
-    }
+    },
+    "_metadata_path": "plots/annual_temperature_anomalies/whitehorse_a_2025_annual_temperature_anomalies/metadata.json"
   },
   {
     "indicator_id": "annual_temperature_anomalies",
@@ -691,8 +708,8 @@
     "description": "Daily mean temperature compared with 1981-2010 normals. 244 days were warmer than normal and 121 days were colder than normal. Annual mean anomaly: +1.26 °C.",
     "date_label": "Updated 2026-05-30",
     "source": "AHCCD base, ECCC daily observations, and ERA5 gap filling with source flags",
-    "preview_image": "plots/whitehorse_auto_2025_annual_temperature_anomalies/preview.png",
-    "full_image": "plots/whitehorse_auto_2025_annual_temperature_anomalies/full.png",
+    "preview_image": "plots/annual_temperature_anomalies/whitehorse_auto_2025_annual_temperature_anomalies/preview.png",
+    "full_image": "plots/annual_temperature_anomalies/whitehorse_auto_2025_annual_temperature_anomalies/full.png",
     "tags": [
       "temperature",
       "annual",
@@ -717,24 +734,7 @@
       "mean_anomaly_c": 1.26,
       "dataset": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260530T170125Z.nc",
       "created_utc": "2026-05-30T19:21:24Z"
-    }
-  },
-  {
-    "id": "sample_temperature_card",
-    "title": "Past 365 days temperature",
-    "subtitle": "Whitehorse A",
-    "description": "Daily mean, minimum, and maximum temperature for the past 365 days compared with the 1981-2010 normal.",
-    "date_label": "Updated 2026-05-30",
-    "source": "AHCCD + ECCC daily observations + ERA5 gap filling",
-    "preview_image": "plots/sample_temperature_card/preview.png",
-    "full_image": "plots/sample_temperature_card/full.png",
-    "category": "Temperature",
-    "station": "Whitehorse A",
-    "last_updated": "2026-05-30",
-    "indicator_id": "uncategorized",
-    "indicator_title": "Uncategorized plots",
-    "indicator_description": "Climate plots generated from verified outputs.",
-    "community": "Whitehorse A",
-    "tags": []
+    },
+    "_metadata_path": "plots/annual_temperature_anomalies/whitehorse_auto_2025_annual_temperature_anomalies/metadata.json"
   }
 ]
