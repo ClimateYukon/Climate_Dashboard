@@ -3,11 +3,11 @@
     "id": "annual_temperature_anomalies",
     "card_type": "indicator",
     "title": "2025 annual temperature anomalies",
-    "subtitle": "18 communities",
+    "subtitle": "12 communities",
     "description": "Daily mean temperature compared with 1981-2010 normals for Yukon communities.",
     "date_label": "Updated 2026-05-30",
-    "source": "AHCCD base, ECCC daily observations, and ERA5 gap filling with source flags",
-    "preview_image": "plots/annual_temperature_anomalies/burwash_airport_auto_2025_annual_temperature_anomalies/preview.png",
+    "source": "AHCCD base, ECCC daily observations, and ERA5-Land gap filling with source flags",
+    "preview_image": "plots/annual_temperature_anomalies/burwash_landing_2025_annual_temperature_anomalies/preview.png",
     "tags": [
       "2025",
       "AHCCD",
@@ -16,7 +16,7 @@
       "communities",
       "temperature"
     ],
-    "plot_count": 18,
+    "plot_count": 12,
     "href": "indicator.html?id=annual_temperature_anomalies"
   }
 ]

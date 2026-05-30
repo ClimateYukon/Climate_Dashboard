@@ -1,0 +1,42 @@
+{
+  "indicator_id": "annual_temperature_anomalies",
+  "indicator_title": "2025 annual temperature anomalies",
+  "indicator_description": "Daily mean temperature compared with 1981-2010 normals for Yukon communities.",
+  "id": "burwash_landing_2025_annual_temperature_anomalies",
+  "title": "2025 annual temperature anomalies",
+  "subtitle": "Burwash Landing",
+  "community": "Burwash Landing",
+  "station_id": "2100184",
+  "raw_station_name": "BURWASH AIRPORT AUTO",
+  "description": "Daily mean temperature compared with 1981-2010 normals. 219 days were warmer than normal and 146 days were colder than normal. Annual mean anomaly: +1.13 °C.",
+  "date_label": "Updated 2026-05-30",
+  "source": "AHCCD base, ECCC daily observations, and ERA5-Land gap filling with source flags",
+  "preview_image": "plots/annual_temperature_anomalies/burwash_landing_2025_annual_temperature_anomalies/preview.png",
+  "full_image": "plots/annual_temperature_anomalies/burwash_landing_2025_annual_temperature_anomalies/full.png",
+  "tags": [
+    "2025",
+    "temperature",
+    "anomalies",
+    "communities",
+    "AHCCD",
+    "annual"
+  ],
+  "details": {
+    "station_id": "2100184",
+    "raw_station_name": "BURWASH AIRPORT AUTO",
+    "community_name": "Burwash Landing",
+    "variable": "tas",
+    "year": 2025,
+    "climatology_start": 1981,
+    "climatology_end": 2010,
+    "warm_days": 219,
+    "cold_days": 146,
+    "valid_days": 365,
+    "missing_days": 0,
+    "mean_temperature_c": -2.04,
+    "mean_climatology_c": -3.17,
+    "mean_anomaly_c": 1.13,
+    "dataset": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260530T170125Z.nc",
+    "created_utc": "2026-05-30T19:47:35Z"
+  }
+}

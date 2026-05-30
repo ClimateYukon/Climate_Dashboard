@@ -4,12 +4,13 @@
   "indicator_description": "Daily mean temperature compared with 1981-2010 normals for Yukon communities.",
   "id": "haines_junction_2025_annual_temperature_anomalies",
   "title": "2025 annual temperature anomalies",
-  "subtitle": "HAINES JUNCTION",
-  "community": "HAINES JUNCTION",
+  "subtitle": "Haines Junction",
+  "community": "Haines Junction",
   "station_id": "2100630",
-  "description": "Daily mean temperature compared with 1981-2010 normals for Yukon communities. 212 days were warmer than normal and 153 days were colder than normal. Annual mean anomaly: +0.25 °C.",
+  "raw_station_name": "HAINES JUNCTION",
+  "description": "Daily mean temperature compared with 1981-2010 normals. 212 days were warmer than normal and 153 days were colder than normal. Annual mean anomaly: +0.25 °C.",
   "date_label": "Updated 2026-05-30",
-  "source": "AHCCD base, ECCC daily observations, and ERA5 gap filling with source flags",
+  "source": "AHCCD base, ECCC daily observations, and ERA5-Land gap filling with source flags",
   "preview_image": "plots/annual_temperature_anomalies/haines_junction_2025_annual_temperature_anomalies/preview.png",
   "full_image": "plots/annual_temperature_anomalies/haines_junction_2025_annual_temperature_anomalies/full.png",
   "tags": [
@@ -22,7 +23,8 @@
   ],
   "details": {
     "station_id": "2100630",
-    "station_name": "HAINES JUNCTION",
+    "raw_station_name": "HAINES JUNCTION",
+    "community_name": "Haines Junction",
     "variable": "tas",
     "year": 2025,
     "climatology_start": 1981,
@@ -35,6 +37,6 @@
     "mean_climatology_c": -1.32,
     "mean_anomaly_c": 0.25,
     "dataset": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260530T170125Z.nc",
-    "created_utc": "2026-05-30T19:17:24Z"
+    "created_utc": "2026-05-30T19:45:32Z"
   }
 }
