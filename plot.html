@@ -3,53 +3,36 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Climate Plot</title>
+  <title>Climate plot</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <a class="back-link" href="index.html">← Back</a>
-    <div class="brand-mark" aria-hidden="true">▰▰▰</div>
-    <div class="brand-text">Climate Dashboard</div>
+  <header class="site-header compact">
+    <div>
+      <a id="backToIndicator" class="back-link" href="index.html">← Back</a>
+      <p class="eyebrow" id="plotEyebrow">Climate plot</p>
+      <h1 id="plotTitle">Loading plot</h1>
+      <p class="lead" id="plotDescription"></p>
+    </div>
   </header>
 
-  <main class="page-shell">
-    <article class="plot-page-card">
-      <div class="plot-page-header">
-        <div>
-          <h1 id="plot-title">Loading plot...</h1>
-          <p id="plot-subtitle" class="subtitle"></p>
-        </div>
-        <div id="plot-date" class="date-pill"></div>
-      </div>
+  <main class="page-wrap plot-page">
+    <figure class="full-figure">
+      <img id="fullPlot" alt="Climate plot" />
+      <figcaption id="plotCaption"></figcaption>
+    </figure>
 
-      <p id="plot-description" class="plot-description"></p>
-
-      <div class="full-plot-frame">
-        <img id="full-plot-image" src="" alt="" />
-      </div>
-
-      <dl class="metadata-list">
-        <div>
-          <dt>Source</dt>
-          <dd id="plot-source"></dd>
-        </div>
-        <div>
-          <dt>Category</dt>
-          <dd id="plot-category"></dd>
-        </div>
-        <div>
-          <dt>Station</dt>
-          <dd id="plot-station"></dd>
-        </div>
-      </dl>
-    </article>
+    <section class="metadata-panel">
+      <h2>Details</h2>
+      <dl id="metadataList"></dl>
+    </section>
   </main>
 
   <footer class="site-footer">
-    Static plot dashboard
+    <span id="plotFooter"></span>
   </footer>
 
   <script src="app.js"></script>
+  <script>initPlotPage();</script>
 </body>
 </html>

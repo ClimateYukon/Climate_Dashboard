@@ -1,0 +1,18 @@
+[
+  {
+    "id": "uncategorized",
+    "title": "Uncategorized plots",
+    "description": "Climate plots generated from verified outputs.",
+    "source": "AHCCD base, ECCC daily observations, and ERA5 gap filling with source flags",
+    "preview_image": "plots/whitehorse_a_2025_annual_temperature_gradient/preview.png",
+    "plot_count": 2,
+    "tags": [
+      "temperature",
+      "annual",
+      "2025",
+      "WHITEHORSE A",
+      "2101303"
+    ],
+    "order": 9999
+  }
+]

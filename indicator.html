@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Climate indicator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header compact">
+    <div>
+      <a class="back-link" href="index.html">← All indicators</a>
+      <p class="eyebrow" id="indicatorEyebrow">Indicator</p>
+      <h1 id="indicatorTitle">Loading indicator</h1>
+      <p class="lead" id="indicatorDescription"></p>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+    <section class="toolbar">
+      <label for="searchInput">Search communities</label>
+      <input id="searchInput" type="search" placeholder="Search community or station" />
+    </section>
+
+    <section id="cards" class="card-grid" aria-live="polite"></section>
+    <p id="emptyState" class="empty-state" hidden>No communities match your search.</p>
+  </main>
+
+  <footer class="site-footer">
+    <span id="indicatorFooter"></span>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>initIndicatorPage();</script>
+</body>
+</html>

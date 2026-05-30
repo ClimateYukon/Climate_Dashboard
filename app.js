@@ -1,193 +1,181 @@
-const INDEX_PATH = "data/index.json";
-
-async function loadIndex() {
-  const response = await fetch(INDEX_PATH, { cache: "no-cache" });
+async function loadJson(path) {
+  const response = await fetch(path, { cache: "no-cache" });
   if (!response.ok) {
-    throw new Error(`Could not load ${INDEX_PATH}`);
+    throw new Error(`Could not load ${path}: ${response.status}`);
   }
-  return await response.json();
+  return response.json();
 }
 
-function normalizeText(value) {
-  return String(value || "").toLowerCase();
+function getParam(name) {
+  return new URLSearchParams(window.location.search).get(name);
 }
 
-function uniqueSorted(values) {
-  return [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b));
+function normalize(text) {
+  return String(text || "").toLowerCase();
 }
 
-function makeCard(item) {
-  const link = document.createElement("a");
-  link.className = "plot-card";
-  link.href = `plot.html?id=${encodeURIComponent(item.id)}`;
-
-  const imageWrap = document.createElement("div");
-  imageWrap.className = "plot-preview-wrap";
-
-  const img = document.createElement("img");
-  img.src = item.preview_image;
-  img.alt = item.title || "Climate plot preview";
-  img.loading = "lazy";
-  imageWrap.appendChild(img);
-
-  const body = document.createElement("div");
-  body.className = "plot-card-body";
-
-  const eyebrow = document.createElement("div");
-  eyebrow.className = "eyebrow";
-  eyebrow.textContent = [item.category, item.station].filter(Boolean).join(" · ");
-
-  const title = document.createElement("h3");
-  title.textContent = item.title || "Untitled plot";
-
-  const subtitle = document.createElement("p");
-  subtitle.className = "subtitle";
-  subtitle.textContent = item.subtitle || "";
-
-  const description = document.createElement("p");
-  description.className = "card-description";
-  description.textContent = item.description || "";
-
-  const footer = document.createElement("div");
-  footer.className = "card-footer";
-
-  const date = document.createElement("span");
-  date.textContent = item.date_label || item.last_updated || "";
-
-  const cta = document.createElement("span");
-  cta.className = "card-cta";
-  cta.textContent = "Open plot";
-
-  footer.appendChild(date);
-  footer.appendChild(cta);
-
-  body.appendChild(eyebrow);
-  body.appendChild(title);
-  body.appendChild(subtitle);
-  body.appendChild(description);
-  body.appendChild(footer);
-
-  link.appendChild(imageWrap);
-  link.appendChild(body);
-
-  return link;
+function textMatches(item, query, fields) {
+  if (!query) return true;
+  const q = normalize(query);
+  return fields.some((field) => {
+    const value = item[field];
+    if (Array.isArray(value)) return normalize(value.join(" ")).includes(q);
+    return normalize(value).includes(q);
+  });
 }
 
-function renderCards(items) {
-  const grid = document.getElementById("card-grid");
-  const empty = document.getElementById("empty-state");
-  if (!grid) return;
+function cardImage(src, title) {
+  if (!src) return "";
+  return `<img src="${src}" alt="${title || "Climate plot preview"}" loading="lazy" />`;
+}
 
-  grid.innerHTML = "";
+function renderIndicatorCard(indicator) {
+  const href = `indicator.html?id=${encodeURIComponent(indicator.id)}`;
+  const countLabel = indicator.plot_count === 1 ? "1 community" : `${indicator.plot_count || 0} communities`;
+  const tags = (indicator.tags || []).slice(0, 4).map((tag) => `<span>${tag}</span>`).join("");
 
-  if (items.length === 0) {
-    empty.hidden = false;
+  return `
+    <article class="card">
+      <a href="${href}" class="card-link" aria-label="Open ${indicator.title}">
+        <div class="card-image">${cardImage(indicator.preview_image, indicator.title)}</div>
+        <div class="card-body">
+          <p class="card-kicker">${countLabel}</p>
+          <h2>${indicator.title || indicator.id}</h2>
+          <p>${indicator.description || ""}</p>
+          <div class="tag-row">${tags}</div>
+        </div>
+      </a>
+    </article>
+  `;
+}
+
+function renderPlotCard(plot) {
+  const href = `plot.html?id=${encodeURIComponent(plot.id)}`;
+  const tags = (plot.tags || []).slice(0, 4).map((tag) => `<span>${tag}</span>`).join("");
+  const community = plot.community || plot.subtitle || "Community";
+
+  return `
+    <article class="card">
+      <a href="${href}" class="card-link" aria-label="Open ${plot.title} for ${community}">
+        <div class="card-image">${cardImage(plot.preview_image, plot.title)}</div>
+        <div class="card-body">
+          <p class="card-kicker">${community}</p>
+          <h2>${plot.title || plot.id}</h2>
+          <p>${plot.description || ""}</p>
+          <p class="date-label">${plot.date_label || ""}</p>
+          <div class="tag-row">${tags}</div>
+        </div>
+      </a>
+    </article>
+  `;
+}
+
+function setCards(items, renderFunction) {
+  const cards = document.getElementById("cards");
+  const empty = document.getElementById("emptyState");
+  cards.innerHTML = items.map(renderFunction).join("");
+  empty.hidden = items.length > 0;
+}
+
+async function initIndicatorHome() {
+  const indicators = await loadJson("data/indicators.json");
+  const search = document.getElementById("searchInput");
+
+  function update() {
+    const query = search.value;
+    const filtered = indicators.filter((item) =>
+      textMatches(item, query, ["title", "description", "id", "tags"])
+    );
+    setCards(filtered, renderIndicatorCard);
+  }
+
+  search.addEventListener("input", update);
+  update();
+}
+
+async function initIndicatorPage() {
+  const indicatorId = getParam("id");
+  const [indicators, plots] = await Promise.all([
+    loadJson("data/indicators.json"),
+    loadJson("data/index.json"),
+  ]);
+
+  const indicator = indicators.find((item) => item.id === indicatorId);
+  if (!indicator) {
+    document.getElementById("indicatorTitle").textContent = "Indicator not found";
+    document.getElementById("indicatorDescription").textContent = "The requested indicator was not found in data/indicators.json.";
     return;
   }
 
-  empty.hidden = true;
-  for (const item of items) {
-    grid.appendChild(makeCard(item));
-  }
-}
+  document.title = indicator.title || "Climate indicator";
+  document.getElementById("indicatorTitle").textContent = indicator.title || indicator.id;
+  document.getElementById("indicatorDescription").textContent = indicator.description || "";
+  document.getElementById("indicatorEyebrow").textContent = `${indicator.plot_count || 0} community plots`;
+  document.getElementById("indicatorFooter").textContent = indicator.source || "";
 
-function setupFilters(items) {
-  const searchInput = document.getElementById("search-input");
-  const categoryFilter = document.getElementById("category-filter");
+  const search = document.getElementById("searchInput");
+  const indicatorPlots = plots.filter((plot) => plot.indicator_id === indicatorId);
 
-  if (!searchInput || !categoryFilter) return;
-
-  const categories = uniqueSorted(items.map((item) => item.category));
-  for (const category of categories) {
-    const option = document.createElement("option");
-    option.value = category;
-    option.textContent = category;
-    categoryFilter.appendChild(option);
+  function update() {
+    const query = search.value;
+    const filtered = indicatorPlots.filter((item) =>
+      textMatches(item, query, ["title", "subtitle", "community", "station_id", "description", "tags"])
+    );
+    setCards(filtered, renderPlotCard);
   }
 
-  function applyFilters() {
-    const query = normalizeText(searchInput.value);
-    const category = categoryFilter.value;
-
-    const filtered = items.filter((item) => {
-      const haystack = normalizeText([
-        item.title,
-        item.subtitle,
-        item.description,
-        item.category,
-        item.station,
-        item.source,
-      ].join(" "));
-
-      const matchesSearch = haystack.includes(query);
-      const matchesCategory = category === "all" || item.category === category;
-      return matchesSearch && matchesCategory;
-    });
-
-    renderCards(filtered);
-  }
-
-  searchInput.addEventListener("input", applyFilters);
-  categoryFilter.addEventListener("change", applyFilters);
+  search.addEventListener("input", update);
+  update();
 }
 
-function getItemById(items, id) {
-  return items.find((item) => item.id === id);
-}
+async function initPlotPage() {
+  const plotId = getParam("id");
+  const [indicators, plots] = await Promise.all([
+    loadJson("data/indicators.json"),
+    loadJson("data/index.json"),
+  ]);
 
-function renderPlotPage(items) {
-  const params = new URLSearchParams(window.location.search);
-  const id = params.get("id");
-  const item = getItemById(items, id);
-
-  const title = document.getElementById("plot-title");
-  if (!title) return;
-
-  if (!item) {
-    title.textContent = "Plot not found";
-    document.getElementById("plot-description").textContent = "The requested plot is not listed in data/index.json.";
+  const plot = plots.find((item) => item.id === plotId);
+  if (!plot) {
+    document.getElementById("plotTitle").textContent = "Plot not found";
+    document.getElementById("plotDescription").textContent = "The requested plot was not found in data/index.json.";
     return;
   }
 
-  document.title = `${item.title} | Climate Dashboard`;
-  title.textContent = item.title || "Untitled plot";
-  document.getElementById("plot-subtitle").textContent = item.subtitle || "";
-  document.getElementById("plot-date").textContent = item.date_label || item.last_updated || "";
-  document.getElementById("plot-description").textContent = item.description || "";
-  document.getElementById("plot-source").textContent = item.source || "Not specified";
-  document.getElementById("plot-category").textContent = item.category || "Not specified";
-  document.getElementById("plot-station").textContent = item.station || "Not specified";
-
-  const img = document.getElementById("full-plot-image");
-  img.src = item.full_image || item.preview_image;
-  img.alt = item.title || "Climate plot";
-}
-
-async function init() {
-  try {
-    const items = await loadIndex();
-    const footer = document.getElementById("footer-status");
-    if (footer) {
-      footer.textContent = `${items.length} plot${items.length === 1 ? "" : "s"} available`;
-    }
-
-    if (document.getElementById("card-grid")) {
-      renderCards(items);
-      setupFilters(items);
-    }
-
-    if (document.getElementById("plot-title")) {
-      renderPlotPage(items);
-    }
-  } catch (error) {
-    console.error(error);
-    const footer = document.getElementById("footer-status");
-    if (footer) footer.textContent = "Could not load dashboard metadata.";
-    const grid = document.getElementById("card-grid");
-    if (grid) {
-      grid.innerHTML = `<div class="error-box">Could not load <code>${INDEX_PATH}</code>. Check that the file exists and contains valid JSON.</div>`;
-    }
+  const indicator = indicators.find((item) => item.id === plot.indicator_id);
+  const back = document.getElementById("backToIndicator");
+  if (indicator) {
+    back.href = `indicator.html?id=${encodeURIComponent(indicator.id)}`;
+    back.textContent = `← ${indicator.title || "Indicator"}`;
   }
-}
 
-init();
+  const community = plot.community || plot.subtitle || "";
+  document.title = `${plot.title || plot.id} - ${community}`;
+  document.getElementById("plotEyebrow").textContent = community;
+  document.getElementById("plotTitle").textContent = plot.title || plot.id;
+  document.getElementById("plotDescription").textContent = plot.description || "";
+
+  const image = document.getElementById("fullPlot");
+  image.src = plot.full_image;
+  image.alt = `${plot.title || "Climate plot"} ${community}`;
+
+  document.getElementById("plotCaption").textContent = plot.date_label || "";
+  document.getElementById("plotFooter").textContent = plot.source || "";
+
+  const details = plot.details || {};
+  const metadata = {
+    Community: community,
+    Indicator: indicator ? indicator.title : plot.indicator_id,
+    Station: plot.station_id || details.station_id,
+    Year: details.year || plot.year,
+    Source: plot.source,
+    Updated: plot.date_label,
+  };
+
+  const rows = Object.entries(metadata)
+    .filter(([, value]) => value !== undefined && value !== null && value !== "")
+    .map(([key, value]) => `<dt>${key}</dt><dd>${value}</dd>`)
+    .join("");
+
+  document.getElementById("metadataList").innerHTML = rows;
+}
