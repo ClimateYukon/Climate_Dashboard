@@ -20,27 +20,6 @@
     "href": "indicator.html?id=annual_temperature_anomalies"
   },
   {
-    "id": "yukon_2025_seasonal_temperature_anomalies",
-    "card_type": "direct",
-    "title": "2025 seasonal temperature anomalies",
-    "subtitle": "ERA5-Land, relative to 1981-2010",
-    "description": "Seasonal mean near-surface air temperature anomalies for Yukon. Spring, summer and fall are from 2025. Winter is December 2025 to February 2026. Values are calculated from ERA5-Land daily tas and displayed on the native grid without smoothing.",
-    "date_label": "Updated 2026-05-30",
-    "source": "ERA5-Land daily tas, processed from local Zarr archive",
-    "preview_image": "plots/seasonal_temperature_anomalies/yukon_2025_seasonal_temperature_anomalies/preview.png",
-    "tags": [
-      "temperature",
-      "seasonal",
-      "anomaly",
-      "ERA5-Land",
-      "Yukon",
-      "2025",
-      "1981-2010"
-    ],
-    "plot_count": 1,
-    "href": "plot.html?id=yukon_2025_seasonal_temperature_anomalies"
-  },
-  {
     "id": "monthly_temperature_rankings",
     "card_type": "indicator",
     "title": "Monthly temperature rankings",
@@ -60,5 +39,26 @@
     ],
     "plot_count": 2,
     "href": "indicator.html?id=monthly_temperature_rankings"
+  },
+  {
+    "id": "seasonal_temperature_anomalies",
+    "card_type": "indicator",
+    "title": "Seasonal temperature anomalies",
+    "subtitle": "1 communities",
+    "description": "Seasonal ERA5-Land near-surface air temperature anomalies across Yukon relative to the 1981-2010 baseline.",
+    "date_label": "Updated 2026-05-30",
+    "source": "ERA5-Land daily tas, processed from local Zarr archive",
+    "preview_image": "plots/seasonal_temperature_anomalies/yukon_2025_seasonal_temperature_anomalies/preview.png",
+    "tags": [
+      "1981-2010",
+      "2025",
+      "ERA5-Land",
+      "Yukon",
+      "anomaly",
+      "seasonal",
+      "temperature"
+    ],
+    "plot_count": 1,
+    "href": "indicator.html?id=seasonal_temperature_anomalies"
   }
 ]
