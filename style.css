@@ -151,7 +151,13 @@ body {
   color: var(--muted);
   line-height: 1.45;
 }
-
+.hero-disclaimer {
+  max-width: 980px;
+  margin-top: 0.8rem;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.82);
+}
 .date-label {
   font-size: 0.9rem;
 }
