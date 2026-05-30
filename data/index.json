@@ -542,7 +542,7 @@
       "start_year": 1979,
       "latest_year": 2026,
       "latest_complete_month_context": "April 2026",
-      "created_utc": "2026-05-30T20:02:49Z"
+      "created_utc": "2026-05-30T21:28:57Z"
     },
     "_metadata_path": "plots/monthly_temperature_rankings/northern_canada_2026_monthly_temperature_rankings/metadata.json"
   },
@@ -573,7 +573,7 @@
       "start_year": 1979,
       "latest_year": 2026,
       "latest_complete_month_context": "April 2026",
-      "created_utc": "2026-05-30T20:01:50Z"
+      "created_utc": "2026-05-30T21:27:58Z"
     },
     "_metadata_path": "plots/monthly_temperature_rankings/yukon_2026_monthly_temperature_rankings/metadata.json"
   }
