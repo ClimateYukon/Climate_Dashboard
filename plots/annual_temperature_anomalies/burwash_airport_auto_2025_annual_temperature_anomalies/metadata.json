@@ -1,24 +1,24 @@
 {
   "indicator_id": "annual_temperature_anomalies",
-  "indicator_title": "Annual temperature anomalies",
-  "indicator_description": "Daily mean temperature compared with 1981-2010 normals for each community.",
+  "indicator_title": "2025 annual temperature anomalies",
+  "indicator_description": "Daily mean temperature compared with 1981-2010 normals for Yukon communities.",
   "id": "burwash_airport_auto_2025_annual_temperature_anomalies",
   "title": "2025 annual temperature anomalies",
   "subtitle": "BURWASH AIRPORT AUTO",
   "community": "BURWASH AIRPORT AUTO",
   "station_id": "2100184",
-  "description": "Daily mean temperature compared with 1981-2010 normals. 219 days were warmer than normal and 146 days were colder than normal. Annual mean anomaly: +1.13 °C.",
+  "description": "Daily mean temperature compared with 1981-2010 normals for Yukon communities. 219 days were warmer than normal and 146 days were colder than normal. Annual mean anomaly: +1.13 °C.",
   "date_label": "Updated 2026-05-30",
   "source": "AHCCD base, ECCC daily observations, and ERA5 gap filling with source flags",
   "preview_image": "plots/annual_temperature_anomalies/burwash_airport_auto_2025_annual_temperature_anomalies/preview.png",
   "full_image": "plots/annual_temperature_anomalies/burwash_airport_auto_2025_annual_temperature_anomalies/full.png",
   "tags": [
-    "temperature",
-    "annual",
-    "anomaly",
     "2025",
-    "BURWASH AIRPORT AUTO",
-    "2100184"
+    "temperature",
+    "anomalies",
+    "communities",
+    "AHCCD",
+    "annual"
   ],
   "details": {
     "station_id": "2100184",
