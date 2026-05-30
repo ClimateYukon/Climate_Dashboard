@@ -1,0 +1,34 @@
+{
+  "id": "whitehorse_a_2025_annual_temperature_gradient",
+  "title": "2025 annual temperature",
+  "subtitle": "WHITEHORSE A",
+  "description": "Daily mean temperature compared with 1981-2010 normals. 237 days were warmer than normal and 128 days were colder than normal. Annual mean anomaly: +0.79 °C.",
+  "date_label": "Updated 2026-05-30",
+  "source": "AHCCD base, ECCC daily observations, and ERA5 gap filling with source flags",
+  "preview_image": "plots/whitehorse_a_2025_annual_temperature_gradient/preview.png",
+  "full_image": "plots/whitehorse_a_2025_annual_temperature_gradient/full.png",
+  "tags": [
+    "temperature",
+    "annual",
+    "2025",
+    "WHITEHORSE A",
+    "2101303"
+  ],
+  "details": {
+    "station_id": "2101303",
+    "station_name": "WHITEHORSE A",
+    "variable": "tas",
+    "year": 2025,
+    "climatology_start": 1981,
+    "climatology_end": 2010,
+    "warm_days": 237,
+    "cold_days": 128,
+    "valid_days": 365,
+    "missing_days": 0,
+    "mean_temperature_c": 0.89,
+    "mean_climatology_c": 0.1,
+    "mean_anomaly_c": 0.79,
+    "dataset": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260530T170125Z.nc",
+    "created_utc": "2026-05-30T19:01:43Z"
+  }
+}
