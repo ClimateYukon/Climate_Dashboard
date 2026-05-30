@@ -18,5 +18,26 @@
     ],
     "plot_count": 12,
     "href": "indicator.html?id=annual_temperature_anomalies"
+  },
+  {
+    "id": "monthly_temperature_rankings",
+    "card_type": "indicator",
+    "title": "Monthly temperature rankings",
+    "subtitle": "2 communities",
+    "description": "Monthly and annual area-average temperature rankings based on ERA5 2 m temperature.",
+    "date_label": "Updated 2026-05-30",
+    "source": "ERA5 2 m temperature from Copernicus Climate Change Service / ECMWF",
+    "preview_image": "plots/monthly_temperature_rankings/northern_canada_2026_monthly_temperature_rankings/preview.png",
+    "tags": [
+      "ERA5",
+      "Northern Canada",
+      "Yukon",
+      "annual",
+      "monthly",
+      "ranking",
+      "temperature"
+    ],
+    "plot_count": 2,
+    "href": "indicator.html?id=monthly_temperature_rankings"
   }
 ]

@@ -514,5 +514,67 @@
       "created_utc": "2026-05-30T19:44:39Z"
     },
     "_metadata_path": "plots/annual_temperature_anomalies/whitehorse_2025_annual_temperature_anomalies/metadata.json"
+  },
+  {
+    "indicator_id": "monthly_temperature_rankings",
+    "indicator_title": "Monthly temperature rankings",
+    "indicator_description": "Monthly and annual area-average temperature rankings based on ERA5 2 m temperature.",
+    "id": "northern_canada_2026_monthly_temperature_rankings",
+    "title": "Northern Canada monthly temperature rankings",
+    "subtitle": "ERA5, 1979-2026",
+    "community": "Northern Canada",
+    "description": "Monthly and annual area-average 2 m temperature rankings. Rank 1 is the warmest year for that month or annual row.",
+    "date_label": "Updated 2026-05-30",
+    "source": "ERA5 2 m temperature from Copernicus Climate Change Service / ECMWF",
+    "preview_image": "plots/monthly_temperature_rankings/northern_canada_2026_monthly_temperature_rankings/preview.png",
+    "full_image": "plots/monthly_temperature_rankings/northern_canada_2026_monthly_temperature_rankings/full.png",
+    "tags": [
+      "ERA5",
+      "temperature",
+      "ranking",
+      "monthly",
+      "annual",
+      "Northern Canada"
+    ],
+    "details": {
+      "area_key": "N Canada",
+      "area_label": "Northern Canada",
+      "start_year": 1979,
+      "latest_year": 2026,
+      "latest_complete_month_context": "April 2026",
+      "created_utc": "2026-05-30T20:02:49Z"
+    },
+    "_metadata_path": "plots/monthly_temperature_rankings/northern_canada_2026_monthly_temperature_rankings/metadata.json"
+  },
+  {
+    "indicator_id": "monthly_temperature_rankings",
+    "indicator_title": "Monthly temperature rankings",
+    "indicator_description": "Monthly and annual area-average temperature rankings based on ERA5 2 m temperature.",
+    "id": "yukon_2026_monthly_temperature_rankings",
+    "title": "Yukon monthly temperature rankings",
+    "subtitle": "ERA5, 1979-2026",
+    "community": "Yukon",
+    "description": "Monthly and annual area-average 2 m temperature rankings. Rank 1 is the warmest year for that month or annual row.",
+    "date_label": "Updated 2026-05-30",
+    "source": "ERA5 2 m temperature from Copernicus Climate Change Service / ECMWF",
+    "preview_image": "plots/monthly_temperature_rankings/yukon_2026_monthly_temperature_rankings/preview.png",
+    "full_image": "plots/monthly_temperature_rankings/yukon_2026_monthly_temperature_rankings/full.png",
+    "tags": [
+      "ERA5",
+      "temperature",
+      "ranking",
+      "monthly",
+      "annual",
+      "Yukon"
+    ],
+    "details": {
+      "area_key": "Yukon",
+      "area_label": "Yukon",
+      "start_year": 1979,
+      "latest_year": 2026,
+      "latest_complete_month_context": "April 2026",
+      "created_utc": "2026-05-30T20:01:50Z"
+    },
+    "_metadata_path": "plots/monthly_temperature_rankings/yukon_2026_monthly_temperature_rankings/metadata.json"
   }
 ]
