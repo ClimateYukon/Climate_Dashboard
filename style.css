@@ -20,6 +20,36 @@ body {
   color: var(--text);
 }
 
+.plot-full-container,
+.plot-image-container,
+.full-plot-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+
+.plot-full-image,
+.full-plot-image,
+.plot-detail-image {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 260px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 14px;
+}
+
+/* On smaller screens, allow a bit more vertical room */
+@media (max-width: 800px) {
+  .plot-full-image,
+  .full-plot-image,
+  .plot-detail-image {
+    max-height: calc(100vh - 180px);
+  }
+}
 .site-header {
   background: linear-gradient(135deg, #17324d, #1f6f8b);
   color: white;
