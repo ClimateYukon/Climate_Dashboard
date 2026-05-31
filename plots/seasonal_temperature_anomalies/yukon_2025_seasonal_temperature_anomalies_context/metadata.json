@@ -1,0 +1,61 @@
+{
+  "indicator_id": "seasonal_temperature_anomalies",
+  "indicator_title": "Seasonal temperature anomalies",
+  "indicator_description": "Seasonal ERA5-Land near-surface air temperature anomalies for Yukon and surrounding regions relative to the 1981-2010 baseline.",
+  "id": "yukon_2025_seasonal_temperature_anomalies_context",
+  "title": "2025 seasonal temperature anomalies",
+  "subtitle": "Yukon and surrounding region",
+  "description": "Seasonal near-surface air temperature anomalies for Yukon and surrounding regions. Spring, summer and fall are from 2025. Winter is December 2025 to February 2026. Values are calculated from ERA5-Land monthly 2 m temperature data relative to 1981-2010.",
+  "community": "Yukon",
+  "community_name": "Yukon",
+  "station_name": "Yukon",
+  "station_label": "Yukon",
+  "location_label": "Yukon and surrounding region",
+  "card_title": "Yukon and surrounding region",
+  "scope": "territory",
+  "plot_scope": "territory",
+  "date_label": "Updated 2026-05-31",
+  "source": "ERA5-Land monthly 2 m temperature, processed from local GRIB archive",
+  "preview_image": "plots/seasonal_temperature_anomalies/yukon_2025_seasonal_temperature_anomalies_context/preview.png",
+  "full_image": "plots/seasonal_temperature_anomalies/yukon_2025_seasonal_temperature_anomalies_context/full.png",
+  "tags": [
+    "temperature",
+    "seasonal",
+    "anomaly",
+    "ERA5-Land",
+    "Yukon",
+    "regional",
+    "2025",
+    "1981-2010"
+  ],
+  "details": {
+    "baseline_period": "1981-2010",
+    "target_periods": {
+      "Spring": {
+        "title": "Spring 2025 (MAM)"
+      },
+      "Summer": {
+        "title": "Summer 2025 (JJA)"
+      },
+      "Fall": {
+        "title": "Fall 2025 (SON)"
+      },
+      "Winter": {
+        "title": "Winter 2025-2026 (DJF)"
+      }
+    },
+    "temperature_variable": "t2m",
+    "colour_step_degrees_c": 0.5,
+    "display_smoothing": false,
+    "map_projection": "Orthographic",
+    "map_extent_lonlat": [
+      -151.0,
+      -114.5,
+      57.0,
+      71.5
+    ],
+    "source_file": "/mnt/CC/Climate_data/Historical/ERA5_Land/Monthly_2025_seasons_anomalies_extracted.grib",
+    "cache_file": "/mnt/CC/tmp/era5land_monthly_2025_seasonal_temperature_anomalies_vs_1981_2010.nc",
+    "created_utc": "2026-05-31T00:41:21Z"
+  }
+}

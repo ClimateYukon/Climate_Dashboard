@@ -44,7 +44,7 @@
     "id": "seasonal_temperature_anomalies",
     "card_type": "indicator",
     "title": "Seasonal temperature anomalies",
-    "subtitle": "1 communities",
+    "subtitle": "2 communities",
     "description": "Seasonal ERA5-Land near-surface air temperature anomalies across Yukon relative to the 1981-2010 baseline.",
     "date_label": "Updated 2026-05-30",
     "source": "ERA5-Land daily tas, processed from local Zarr archive",
@@ -55,10 +55,11 @@
       "ERA5-Land",
       "Yukon",
       "anomaly",
+      "regional",
       "seasonal",
       "temperature"
     ],
-    "plot_count": 1,
+    "plot_count": 2,
     "href": "indicator.html?id=seasonal_temperature_anomalies"
   }
 ]
