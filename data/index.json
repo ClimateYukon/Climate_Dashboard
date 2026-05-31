@@ -635,7 +635,7 @@
       ],
       "source_file": "/mnt/CC/Climate_data/Historical/ERA5_Land/Monthly_2025_seasons_anomalies_extracted.grib",
       "cache_file": "/mnt/CC/tmp/era5land_monthly_2025_seasonal_temperature_anomalies_vs_1981_2010.nc",
-      "created_utc": "2026-05-31T00:45:15Z"
+      "created_utc": "2026-05-31T00:53:33Z"
     },
     "_metadata_path": "plots/seasonal_temperature_anomalies/yukon_2025_seasonal_temperature_anomalies_context/metadata.json"
   }
