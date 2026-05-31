@@ -16,17 +16,23 @@ function normalize(text) {
 
 function textMatches(item, query, fields) {
   if (!query) return true;
+
   const q = normalize(query);
 
   return fields.some((field) => {
     const value = item[field];
-    if (Array.isArray(value)) return normalize(value.join(" ")).includes(q);
+
+    if (Array.isArray(value)) {
+      return normalize(value.join(" ")).includes(q);
+    }
+
     return normalize(value).includes(q);
   });
 }
 
 function cardImage(src, title) {
   if (!src) return "";
+
   return `<img src="${src}" alt="${title || "Climate plot preview"}" loading="lazy" />`;
 }
 
@@ -54,7 +60,9 @@ function getIndicatorEyebrow(indicator, indicatorPlots) {
   const territoryCount = indicatorPlots.filter(isTerritoryPlot).length;
   const communityCount = count - territoryCount;
 
-  if (count === 0) return "0 plots";
+  if (count === 0) {
+    return "0 plots";
+  }
 
   if (territoryCount === count) {
     return count === 1 ? "1 Yukon-wide plot" : `${count} Yukon-wide plots`;
@@ -68,19 +76,37 @@ function getIndicatorEyebrow(indicator, indicatorPlots) {
 }
 
 function getSearchLabel(indicatorPlots) {
-  const hasOnlyTerritoryPlots = indicatorPlots.length > 0 && indicatorPlots.every(isTerritoryPlot);
+  const hasOnlyTerritoryPlots =
+    indicatorPlots.length > 0 && indicatorPlots.every(isTerritoryPlot);
+
   return hasOnlyTerritoryPlots ? "Search plots" : "Search communities";
 }
 
 function getSearchPlaceholder(indicatorPlots) {
-  const hasOnlyTerritoryPlots = indicatorPlots.length > 0 && indicatorPlots.every(isTerritoryPlot);
+  const hasOnlyTerritoryPlots =
+    indicatorPlots.length > 0 && indicatorPlots.every(isTerritoryPlot);
+
   return hasOnlyTerritoryPlots ? "Search plot or topic" : "Search community or station";
+}
+
+function getPlotLocationLabel(plot) {
+  return (
+    plot.location_label ||
+    plot.card_title ||
+    plot.community_name ||
+    plot.community ||
+    plot.subtitle ||
+    ""
+  );
 }
 
 function renderIndicatorCard(indicator) {
   const href = `indicator.html?id=${encodeURIComponent(indicator.id)}`;
   const countLabel = getIndicatorCountLabel(indicator);
-  const tags = (indicator.tags || []).slice(0, 4).map((tag) => `<span>${tag}</span>`).join("");
+  const tags = (indicator.tags || [])
+    .slice(0, 4)
+    .map((tag) => `<span>${tag}</span>`)
+    .join("");
 
   return `
     <article class="card">
@@ -99,15 +125,12 @@ function renderIndicatorCard(indicator) {
 
 function renderPlotCard(plot) {
   const href = `plot.html?id=${encodeURIComponent(plot.id)}`;
-  const tags = (plot.tags || []).slice(0, 4).map((tag) => `<span>${tag}</span>`).join("");
+  const tags = (plot.tags || [])
+    .slice(0, 4)
+    .map((tag) => `<span>${tag}</span>`)
+    .join("");
 
-  const locationLabel =
-    plot.card_title ||
-    plot.location_label ||
-    plot.community_name ||
-    plot.community ||
-    plot.subtitle ||
-    "Plot";
+  const locationLabel = getPlotLocationLabel(plot) || "Plot";
 
   return `
     <article class="card">
@@ -142,18 +165,13 @@ function fitFullPlotImage() {
   const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
   const imageTop = image.getBoundingClientRect().top;
 
-  const caption = document.getElementById("plotCaption");
-  const footer = document.getElementById("plotFooter");
-  const metadata = document.getElementById("metadataList");
-
-  const captionHeight = caption ? caption.getBoundingClientRect().height : 0;
-  const footerHeight = footer ? footer.getBoundingClientRect().height : 0;
-  const metadataHeight = metadata ? Math.min(metadata.getBoundingClientRect().height, 120) : 0;
-
   const bottomPadding = 34;
-  const reservedBelowImage = captionHeight + footerHeight + metadataHeight + bottomPadding;
+  const reservedBelowImage = bottomPadding;
 
-  const availableHeight = Math.max(300, viewportHeight - imageTop - reservedBelowImage);
+  const availableHeight = Math.max(
+    300,
+    viewportHeight - imageTop - reservedBelowImage
+  );
 
   image.style.display = "block";
   image.style.width = "auto";
@@ -165,6 +183,7 @@ function fitFullPlotImage() {
   image.style.marginRight = "auto";
 
   const parent = image.parentElement;
+
   if (parent) {
     parent.style.display = "flex";
     parent.style.justifyContent = "center";
@@ -180,6 +199,7 @@ async function initIndicatorHome() {
 
   function update() {
     const query = search.value;
+
     const filtered = indicators.filter((item) =>
       textMatches(item, query, ["title", "description", "id", "tags"])
     );
@@ -193,6 +213,7 @@ async function initIndicatorHome() {
 
 async function initIndicatorPage() {
   const indicatorId = getParam("id");
+
   const [indicators, plots] = await Promise.all([
     loadJson("data/indicators.json"),
     loadJson("data/index.json"),
@@ -211,8 +232,10 @@ async function initIndicatorPage() {
 
   document.title = indicator.title || "Climate indicator";
   document.getElementById("indicatorTitle").textContent = indicator.title || indicator.id;
-  document.getElementById("indicatorDescription").textContent = indicator.description || "";
-  document.getElementById("indicatorEyebrow").textContent = getIndicatorEyebrow(indicator, indicatorPlots);
+  document.getElementById("indicatorDescription").textContent =
+    indicator.description || "";
+  document.getElementById("indicatorEyebrow").textContent =
+    getIndicatorEyebrow(indicator, indicatorPlots);
   document.getElementById("indicatorFooter").textContent = indicator.source || "";
 
   const search = document.getElementById("searchInput");
@@ -228,6 +251,7 @@ async function initIndicatorPage() {
 
   function update() {
     const query = search.value;
+
     const filtered = indicatorPlots.filter((item) =>
       textMatches(item, query, [
         "title",
@@ -251,6 +275,7 @@ async function initIndicatorPage() {
 
 async function initPlotPage() {
   const plotId = getParam("id");
+
   const [indicators, plots] = await Promise.all([
     loadJson("data/indicators.json"),
     loadJson("data/index.json"),
@@ -273,13 +298,7 @@ async function initPlotPage() {
     back.textContent = `← ${indicator.title || "Indicator"}`;
   }
 
-  const locationLabel =
-    plot.location_label ||
-    plot.card_title ||
-    plot.community_name ||
-    plot.community ||
-    plot.subtitle ||
-    "";
+  const locationLabel = getPlotLocationLabel(plot);
 
   document.title = `${plot.title || plot.id}${locationLabel ? " - " + locationLabel : ""}`;
 
@@ -288,6 +307,7 @@ async function initPlotPage() {
   document.getElementById("plotDescription").textContent = plot.description || "";
 
   const image = document.getElementById("fullPlot");
+
   image.src = plot.full_image || plot.preview_image;
   image.alt = `${plot.title || "Climate plot"} ${locationLabel}`;
   image.loading = "eager";
@@ -297,10 +317,17 @@ async function initPlotPage() {
   window.addEventListener("resize", fitFullPlotImage);
   window.addEventListener("orientationchange", fitFullPlotImage);
 
-  requestAnimationFrame(fitFullPlotImage);
+  const plotCaption = document.getElementById("plotCaption");
+  if (plotCaption) {
+    plotCaption.textContent = "";
+    plotCaption.hidden = true;
+  }
 
-  document.getElementById("plotCaption").textContent = plot.date_label || "";
-  document.getElementById("plotFooter").textContent = plot.source || "";
+  const plotFooter = document.getElementById("plotFooter");
+  if (plotFooter) {
+    plotFooter.textContent = "";
+    plotFooter.hidden = true;
+  }
 
   const details = plot.details || {};
 
