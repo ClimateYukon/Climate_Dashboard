@@ -550,12 +550,12 @@
     "details": {
       "event": "Kluane Chilkat International Bike Relay",
       "race_date": "2026-06-20",
-      "race_start_local": "2026-06-20 08:00",
+      "race_start_local": "2026-06-20 08:20",
       "rider_duration_hours": 10.0,
       "data_retrieved_at_utc": "2026-06-18 19:00 UTC",
       "forecast_source": "Open-Meteo weather data, CC BY 4.0",
       "cache_max_age_hours": 5.5,
-      "created_utc": "2026-06-18T19:01:37Z"
+      "created_utc": "2026-06-18T19:38:34Z"
     },
     "_metadata_path": "plots/kcibr_weather_forecast/kcibr_weather_10h/metadata.json"
   },
@@ -594,12 +594,12 @@
     "details": {
       "event": "Kluane Chilkat International Bike Relay",
       "race_date": "2026-06-20",
-      "race_start_local": "2026-06-20 08:00",
+      "race_start_local": "2026-06-20 08:20",
       "rider_duration_hours": 11.0,
       "data_retrieved_at_utc": "2026-06-18 19:00 UTC",
       "forecast_source": "Open-Meteo weather data, CC BY 4.0",
       "cache_max_age_hours": 5.5,
-      "created_utc": "2026-06-18T19:01:37Z"
+      "created_utc": "2026-06-18T19:38:34Z"
     },
     "_metadata_path": "plots/kcibr_weather_forecast/kcibr_weather_11h/metadata.json"
   },
@@ -638,12 +638,12 @@
     "details": {
       "event": "Kluane Chilkat International Bike Relay",
       "race_date": "2026-06-20",
-      "race_start_local": "2026-06-20 08:00",
+      "race_start_local": "2026-06-20 08:20",
       "rider_duration_hours": 12.0,
       "data_retrieved_at_utc": "2026-06-18 19:00 UTC",
       "forecast_source": "Open-Meteo weather data, CC BY 4.0",
       "cache_max_age_hours": 5.5,
-      "created_utc": "2026-06-18T19:01:38Z"
+      "created_utc": "2026-06-18T19:38:35Z"
     },
     "_metadata_path": "plots/kcibr_weather_forecast/kcibr_weather_12h/metadata.json"
   },
@@ -682,12 +682,12 @@
     "details": {
       "event": "Kluane Chilkat International Bike Relay",
       "race_date": "2026-06-20",
-      "race_start_local": "2026-06-20 08:00",
+      "race_start_local": "2026-06-20 08:20",
       "rider_duration_hours": 6.0,
       "data_retrieved_at_utc": "2026-06-18 19:00 UTC",
       "forecast_source": "Open-Meteo weather data, CC BY 4.0",
       "cache_max_age_hours": 5.5,
-      "created_utc": "2026-06-18T19:01:36Z"
+      "created_utc": "2026-06-18T19:38:32Z"
     },
     "_metadata_path": "plots/kcibr_weather_forecast/kcibr_weather_6h/metadata.json"
   },
@@ -726,12 +726,12 @@
     "details": {
       "event": "Kluane Chilkat International Bike Relay",
       "race_date": "2026-06-20",
-      "race_start_local": "2026-06-20 08:00",
+      "race_start_local": "2026-06-20 08:20",
       "rider_duration_hours": 7.0,
       "data_retrieved_at_utc": "2026-06-18 19:00 UTC",
       "forecast_source": "Open-Meteo weather data, CC BY 4.0",
       "cache_max_age_hours": 5.5,
-      "created_utc": "2026-06-18T19:01:36Z"
+      "created_utc": "2026-06-18T19:38:33Z"
     },
     "_metadata_path": "plots/kcibr_weather_forecast/kcibr_weather_7h/metadata.json"
   },
@@ -770,12 +770,12 @@
     "details": {
       "event": "Kluane Chilkat International Bike Relay",
       "race_date": "2026-06-20",
-      "race_start_local": "2026-06-20 08:00",
+      "race_start_local": "2026-06-20 08:20",
       "rider_duration_hours": 8.0,
       "data_retrieved_at_utc": "2026-06-18 19:00 UTC",
       "forecast_source": "Open-Meteo weather data, CC BY 4.0",
       "cache_max_age_hours": 5.5,
-      "created_utc": "2026-06-18T19:01:36Z"
+      "created_utc": "2026-06-18T19:38:33Z"
     },
     "_metadata_path": "plots/kcibr_weather_forecast/kcibr_weather_8h/metadata.json"
   },
@@ -814,12 +814,12 @@
     "details": {
       "event": "Kluane Chilkat International Bike Relay",
       "race_date": "2026-06-20",
-      "race_start_local": "2026-06-20 08:00",
+      "race_start_local": "2026-06-20 08:20",
       "rider_duration_hours": 9.0,
       "data_retrieved_at_utc": "2026-06-18 19:00 UTC",
       "forecast_source": "Open-Meteo weather data, CC BY 4.0",
       "cache_max_age_hours": 5.5,
-      "created_utc": "2026-06-18T19:01:37Z"
+      "created_utc": "2026-06-18T19:38:33Z"
     },
     "_metadata_path": "plots/kcibr_weather_forecast/kcibr_weather_9h/metadata.json"
   },
