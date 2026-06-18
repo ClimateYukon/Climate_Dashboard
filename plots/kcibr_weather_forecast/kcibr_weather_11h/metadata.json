@@ -1,11 +1,11 @@
 {
   "indicator_id": "kcibr_weather_forecast",
   "indicator_title": "KCIBR race-day weather forecast",
-  "indicator_description": "Rider-facing weather forecast plots for the Kluane Chilkat International Bike Relay. Plots show expected temperature, rain, wind effect, and gusts along the route.",
+  "indicator_description": "Rider-facing weather forecast plots for the Kluane Chilkat International Bike Relay. Plots show expected temperature, rain, wind effect, gusts, cloud cover, and UV index along the route.",
   "id": "kcibr_weather_11h",
   "title": "KCIBR weather forecast for a 11-hour rider",
   "subtitle": "11-hour rider",
-  "description": "Race-day weather guidance along the KCIBR route. The upper panel shows temperature and rain near the rider's estimated arrival time. The lower panels show wind effect and gusts every 10 km. Timing assumes a constant average pace for the selected finish time.",
+  "description": "Race-day weather guidance along the KCIBR route. The upper panel shows temperature and rain near the rider's estimated arrival time. The lower panels show wind effect, gusts, cloud cover, and UV index. Timing assumes a constant average pace for the selected finish time.",
   "community": "11-hour rider",
   "community_name": "11-hour rider",
   "station_name": "",
@@ -14,7 +14,7 @@
   "card_title": "11-hour rider",
   "scope": "event",
   "plot_scope": "event",
-  "date_label": "Forecast retrieved 2026-06-17 23:24 UTC",
+  "date_label": "Forecast retrieved 2026-06-18 04:51 UTC",
   "source": "Open-Meteo weather data, CC BY 4.0",
   "preview_image": "plots/kcibr_weather_forecast/kcibr_weather_11h/preview.png",
   "full_image": "plots/kcibr_weather_forecast/kcibr_weather_11h/full.png",
@@ -26,17 +26,18 @@
     "rain",
     "wind",
     "gusts",
+    "cloud cover",
+    "UV index",
     "11-hour rider"
   ],
   "details": {
     "event": "Kluane Chilkat International Bike Relay",
     "race_date": "2026-06-20",
     "race_start_local": "2026-06-20 08:00",
-    "rider_finish_time_hours": 11.0,
-    "data_retrieved_at_utc": "2026-06-17 23:24 UTC",
+    "rider_duration_hours": 11.0,
+    "data_retrieved_at_utc": "2026-06-18 04:51 UTC",
     "forecast_source": "Open-Meteo weather data, CC BY 4.0",
-    "precipitation_window_hours": 1.0,
     "cache_max_age_hours": 5.5,
-    "created_utc": "2026-06-18T01:00:59Z"
+    "created_utc": "2026-06-18T04:58:51Z"
   }
 }
