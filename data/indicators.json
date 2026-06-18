@@ -20,12 +20,40 @@
     "href": "indicator.html?id=annual_temperature_anomalies"
   },
   {
+    "id": "kcibr_weather_forecast",
+    "card_type": "indicator",
+    "title": "KCIBR race-day weather forecast",
+    "subtitle": "7 communities",
+    "description": "Rider-facing weather forecast plots for the Kluane Chilkat International Bike Relay. Plots show expected temperature, rain, wind effect, and gusts along the route.",
+    "date_label": "Forecast retrieved 2026-06-17 23:24 UTC",
+    "source": "Open-Meteo weather data, CC BY 4.0",
+    "preview_image": "plots/kcibr_weather_forecast/kcibr_weather_10h/preview.png",
+    "tags": [
+      "10-hour rider",
+      "11-hour rider",
+      "12-hour rider",
+      "6-hour rider",
+      "7-hour rider",
+      "8-hour rider",
+      "9-hour rider",
+      "KCIBR",
+      "forecast",
+      "gusts",
+      "rain",
+      "temperature",
+      "weather",
+      "wind"
+    ],
+    "plot_count": 7,
+    "href": "indicator.html?id=kcibr_weather_forecast"
+  },
+  {
     "id": "monthly_temperature_rankings",
     "card_type": "indicator",
     "title": "Monthly temperature rankings",
     "subtitle": "2 communities",
     "description": "Monthly and annual area-average temperature rankings based on ERA5 2 m temperature.",
-    "date_label": "Updated 2026-05-30",
+    "date_label": "Updated 2026-06-15",
     "source": "ERA5 2 m temperature from Copernicus Climate Change Service / ECMWF",
     "preview_image": "plots/monthly_temperature_rankings/northern_canada_2026_monthly_temperature_rankings/preview.png",
     "tags": [
