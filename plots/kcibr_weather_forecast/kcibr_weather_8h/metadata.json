@@ -36,7 +36,7 @@
     "data_retrieved_at_utc": "2026-06-17 23:24 UTC",
     "forecast_source": "Open-Meteo weather data, CC BY 4.0",
     "precipitation_window_hours": 1.0,
-    "cache_max_age_hours": 8,
-    "created_utc": "2026-06-18T00:23:51Z"
+    "cache_max_age_hours": 5.5,
+    "created_utc": "2026-06-18T01:00:57Z"
   }
 }
