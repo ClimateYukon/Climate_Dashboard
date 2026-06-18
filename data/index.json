@@ -555,7 +555,7 @@
       "data_retrieved_at_utc": "2026-06-18 04:51 UTC",
       "forecast_source": "Open-Meteo weather data, CC BY 4.0",
       "cache_max_age_hours": 5.5,
-      "created_utc": "2026-06-18T04:58:51Z"
+      "created_utc": "2026-06-18T07:01:07Z"
     },
     "_metadata_path": "plots/kcibr_weather_forecast/kcibr_weather_10h/metadata.json"
   },
@@ -599,7 +599,7 @@
       "data_retrieved_at_utc": "2026-06-18 04:51 UTC",
       "forecast_source": "Open-Meteo weather data, CC BY 4.0",
       "cache_max_age_hours": 5.5,
-      "created_utc": "2026-06-18T04:58:51Z"
+      "created_utc": "2026-06-18T07:01:07Z"
     },
     "_metadata_path": "plots/kcibr_weather_forecast/kcibr_weather_11h/metadata.json"
   },
@@ -643,7 +643,7 @@
       "data_retrieved_at_utc": "2026-06-18 04:51 UTC",
       "forecast_source": "Open-Meteo weather data, CC BY 4.0",
       "cache_max_age_hours": 5.5,
-      "created_utc": "2026-06-18T04:58:52Z"
+      "created_utc": "2026-06-18T07:01:07Z"
     },
     "_metadata_path": "plots/kcibr_weather_forecast/kcibr_weather_12h/metadata.json"
   },
@@ -687,7 +687,7 @@
       "data_retrieved_at_utc": "2026-06-18 04:51 UTC",
       "forecast_source": "Open-Meteo weather data, CC BY 4.0",
       "cache_max_age_hours": 5.5,
-      "created_utc": "2026-06-18T04:58:49Z"
+      "created_utc": "2026-06-18T07:01:05Z"
     },
     "_metadata_path": "plots/kcibr_weather_forecast/kcibr_weather_6h/metadata.json"
   },
@@ -731,7 +731,7 @@
       "data_retrieved_at_utc": "2026-06-18 04:51 UTC",
       "forecast_source": "Open-Meteo weather data, CC BY 4.0",
       "cache_max_age_hours": 5.5,
-      "created_utc": "2026-06-18T04:58:50Z"
+      "created_utc": "2026-06-18T07:01:06Z"
     },
     "_metadata_path": "plots/kcibr_weather_forecast/kcibr_weather_7h/metadata.json"
   },
@@ -775,7 +775,7 @@
       "data_retrieved_at_utc": "2026-06-18 04:51 UTC",
       "forecast_source": "Open-Meteo weather data, CC BY 4.0",
       "cache_max_age_hours": 5.5,
-      "created_utc": "2026-06-18T04:58:50Z"
+      "created_utc": "2026-06-18T07:01:06Z"
     },
     "_metadata_path": "plots/kcibr_weather_forecast/kcibr_weather_8h/metadata.json"
   },
@@ -819,7 +819,7 @@
       "data_retrieved_at_utc": "2026-06-18 04:51 UTC",
       "forecast_source": "Open-Meteo weather data, CC BY 4.0",
       "cache_max_age_hours": 5.5,
-      "created_utc": "2026-06-18T04:58:51Z"
+      "created_utc": "2026-06-18T07:01:06Z"
     },
     "_metadata_path": "plots/kcibr_weather_forecast/kcibr_weather_9h/metadata.json"
   },
