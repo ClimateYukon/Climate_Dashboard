@@ -158,6 +158,119 @@ function setCards(items, renderFunction) {
   empty.hidden = items.length > 0;
 }
 
+function ensureImageLightbox() {
+  if (document.getElementById("imageLightbox")) return;
+
+  const style = document.createElement("style");
+  style.textContent = `
+    .image-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(15, 23, 42, 0.92);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .image-lightbox.is-open {
+      display: flex;
+    }
+
+    .image-lightbox img {
+      max-width: 96vw;
+      max-height: 92vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+    }
+
+    .image-lightbox-close {
+      position: fixed;
+      top: 18px;
+      right: 22px;
+      width: 44px;
+      height: 44px;
+      border: 0;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.92);
+      color: #0f172a;
+      font-size: 30px;
+      line-height: 1;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .image-lightbox-close:hover {
+      background: white;
+    }
+
+    .image-lightbox-open-hint {
+      cursor: zoom-in;
+    }
+  `;
+
+  document.head.appendChild(style);
+
+  const lightbox = document.createElement("div");
+  lightbox.id = "imageLightbox";
+  lightbox.className = "image-lightbox";
+  lightbox.innerHTML = `
+    <button class="image-lightbox-close" type="button" aria-label="Close full-screen image">&times;</button>
+    <img id="imageLightboxImage" src="" alt="">
+  `;
+
+  document.body.appendChild(lightbox);
+
+  lightbox.addEventListener("click", (event) => {
+    if (
+      event.target.id === "imageLightbox" ||
+      event.target.classList.contains("image-lightbox-close")
+    ) {
+      closeImageLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeImageLightbox();
+    }
+  });
+}
+
+function openImageLightbox(src, alt) {
+  ensureImageLightbox();
+
+  const lightbox = document.getElementById("imageLightbox");
+  const lightboxImage = document.getElementById("imageLightboxImage");
+
+  if (!lightbox || !lightboxImage || !src) return;
+
+  lightboxImage.src = src;
+  lightboxImage.alt = alt || "Expanded plot image";
+
+  lightbox.classList.add("is-open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeImageLightbox() {
+  const lightbox = document.getElementById("imageLightbox");
+  const lightboxImage = document.getElementById("imageLightboxImage");
+
+  if (!lightbox) return;
+
+  lightbox.classList.remove("is-open");
+  document.body.style.overflow = "";
+
+  if (lightboxImage) {
+    lightboxImage.src = "";
+  }
+}
+
 function fitFullPlotImage() {
   const image = document.getElementById("fullPlot");
   if (!image) return;
@@ -312,6 +425,15 @@ async function initPlotPage() {
   image.alt = `${plot.title || "Climate plot"} ${locationLabel}`;
   image.loading = "eager";
   image.decoding = "async";
+  image.classList.add("image-lightbox-open-hint");
+  image.title = "Click to expand";
+
+  image.addEventListener("click", () => {
+    openImageLightbox(
+      plot.full_image || plot.preview_image,
+      `${plot.title || "Climate plot"} ${locationLabel}`
+    );
+  });
 
   image.addEventListener("load", fitFullPlotImage);
   window.addEventListener("resize", fitFullPlotImage);
