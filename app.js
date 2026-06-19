@@ -45,6 +45,10 @@ function isTerritoryPlot(plot) {
   );
 }
 
+function isEventPlot(plot) {
+  return plot.scope === "event" || plot.plot_scope === "event";
+}
+
 function getIndicatorCountLabel(indicator) {
   const count = indicator.plot_count || 0;
 
@@ -52,24 +56,29 @@ function getIndicatorCountLabel(indicator) {
     return count === 1 ? "1 Yukon-wide plot" : `${count} Yukon-wide plots`;
   }
 
+  if (indicator.scope === "event" || indicator.plot_scope === "event") {
+    return count === 1 ? "1 event plot" : `${count} event plots`;
+  }
+
   return count === 1 ? "1 plot" : `${count} plots`;
 }
 
 function getIndicatorEyebrow(indicator, indicatorPlots) {
   const count = indicator.plot_count || indicatorPlots.length || 0;
-  const territoryCount = indicatorPlots.filter(isTerritoryPlot).length;
-  const communityCount = count - territoryCount;
 
   if (count === 0) {
     return "0 plots";
   }
 
+  const territoryCount = indicatorPlots.filter(isTerritoryPlot).length;
+  const eventCount = indicatorPlots.filter(isEventPlot).length;
+
   if (territoryCount === count) {
     return count === 1 ? "1 Yukon-wide plot" : `${count} Yukon-wide plots`;
   }
 
-  if (territoryCount > 0 && communityCount > 0) {
-    return `${count} plots`;
+  if (eventCount === count) {
+    return count === 1 ? "1 event plot" : `${count} event plots`;
   }
 
   return count === 1 ? "1 plot" : `${count} plots`;
@@ -79,14 +88,28 @@ function getSearchLabel(indicatorPlots) {
   const hasOnlyTerritoryPlots =
     indicatorPlots.length > 0 && indicatorPlots.every(isTerritoryPlot);
 
-  return hasOnlyTerritoryPlots ? "Search plots" : "Search communities";
+  const hasOnlyEventPlots =
+    indicatorPlots.length > 0 && indicatorPlots.every(isEventPlot);
+
+  if (hasOnlyTerritoryPlots || hasOnlyEventPlots) {
+    return "Search plots";
+  }
+
+  return "Search communities";
 }
 
 function getSearchPlaceholder(indicatorPlots) {
   const hasOnlyTerritoryPlots =
     indicatorPlots.length > 0 && indicatorPlots.every(isTerritoryPlot);
 
-  return hasOnlyTerritoryPlots ? "Search plot or topic" : "Search community or station";
+  const hasOnlyEventPlots =
+    indicatorPlots.length > 0 && indicatorPlots.every(isEventPlot);
+
+  if (hasOnlyTerritoryPlots || hasOnlyEventPlots) {
+    return "Search plot or topic";
+  }
+
+  return "Search community or station";
 }
 
 function getPlotLocationLabel(plot) {
@@ -98,6 +121,19 @@ function getPlotLocationLabel(plot) {
     plot.subtitle ||
     ""
   );
+}
+
+function sortItems(items) {
+  return [...items].sort((a, b) => {
+    const orderA = Number.isFinite(Number(a.sort_order)) ? Number(a.sort_order) : 9999;
+    const orderB = Number.isFinite(Number(b.sort_order)) ? Number(b.sort_order) : 9999;
+
+    if (orderA !== orderB) {
+      return orderA - orderB;
+    }
+
+    return String(a.title || a.id || "").localeCompare(String(b.title || b.id || ""));
+  });
 }
 
 function renderIndicatorCard(indicator) {
@@ -158,17 +194,12 @@ function setCards(items, renderFunction) {
   empty.hidden = items.length > 0;
 }
 
-function sortItems(items) {
-  return [...items].sort((a, b) => {
-    const orderA = Number.isFinite(Number(a.sort_order)) ? Number(a.sort_order) : 9999;
-    const orderB = Number.isFinite(Number(b.sort_order)) ? Number(b.sort_order) : 9999;
+function hideElement(element) {
+  if (!element) return;
 
-    if (orderA !== orderB) {
-      return orderA - orderB;
-    }
-
-    return String(a.title || a.id || "").localeCompare(String(b.title || b.id || ""));
-  });
+  element.hidden = true;
+  element.style.display = "none";
+  element.setAttribute("aria-hidden", "true");
 }
 
 function ensureImageLightbox() {
@@ -324,16 +355,19 @@ async function initIndicatorHome() {
   const search = document.getElementById("searchInput");
 
   function update() {
-    const query = search.value;
+    const query = search ? search.value : "";
 
     const filtered = indicators.filter((item) =>
       textMatches(item, query, ["title", "description", "id", "tags"])
     );
 
-    setCards(filtered, renderIndicatorCard);
+    setCards(sortItems(filtered), renderIndicatorCard);
   }
 
-  search.addEventListener("input", update);
+  if (search) {
+    search.addEventListener("input", update);
+  }
+
   update();
 }
 
@@ -364,27 +398,48 @@ async function initIndicatorPage() {
     getIndicatorEyebrow(indicator, indicatorPlots);
   document.getElementById("indicatorFooter").textContent = indicator.source || "";
 
-const search = document.getElementById("searchInput");
-const searchLabel = document.querySelector("label[for='searchInput']");
+  const search = document.getElementById("searchInput");
+  const searchLabel = document.querySelector("label[for='searchInput']");
 
-const searchWrapper = search
-  ? search.closest(".search-row, .search-box, .search-panel, .toolbar, div")
-  : null;
+  const hideSearch =
+    indicatorId === "kcibr_weather_forecast" ||
+    indicatorPlots.length <= 10;
 
-if (indicatorId === "kcibr_weather_forecast" && searchWrapper) {
-  searchWrapper.hidden = true;
-} else {
-  if (searchLabel) {
-    searchLabel.textContent = getSearchLabel(indicatorPlots);
+  if (hideSearch) {
+    if (search) {
+      search.value = "";
+    }
+
+    hideElement(search);
+    hideElement(searchLabel);
+
+    const searchParent = search ? search.parentElement : null;
+    hideElement(searchParent);
+
+    const possibleSearchContainers = document.querySelectorAll(
+      ".search-row, .search-box, .search-panel, .toolbar, .filters, .controls"
+    );
+
+    possibleSearchContainers.forEach((container) => {
+      if (
+        (search && container.contains(search)) ||
+        (searchLabel && container.contains(searchLabel))
+      ) {
+        hideElement(container);
+      }
+    });
+  } else {
+    if (searchLabel) {
+      searchLabel.textContent = getSearchLabel(indicatorPlots);
+    }
+
+    if (search) {
+      search.placeholder = getSearchPlaceholder(indicatorPlots);
+    }
   }
-
-  if (search) {
-    search.placeholder = getSearchPlaceholder(indicatorPlots);
-  }
-}
 
   function update() {
-    const query = search.value;
+    const query = search && !hideSearch ? search.value : "";
 
     const filtered = indicatorPlots.filter((item) =>
       textMatches(item, query, [
@@ -403,7 +458,10 @@ if (indicatorId === "kcibr_weather_forecast" && searchWrapper) {
     setCards(sortItems(filtered), renderPlotCard);
   }
 
-  search.addEventListener("input", update);
+  if (search && !hideSearch) {
+    search.addEventListener("input", update);
+  }
+
   update();
 }
 
