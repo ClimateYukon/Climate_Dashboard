@@ -5,6 +5,7 @@
   "id": "kcibr_weather_11h",
   "title": "KCIBR weather forecast for a 11-hour rider",
   "subtitle": "11-hour rider",
+  "sort_order": 11,
   "description": "Race-day weather guidance along the KCIBR route. The upper panel shows temperature and rain near the rider's estimated arrival time. The lower panels show wind effect, gusts, cloud cover, and UV index. Timing uses elevation aware pacing time to the finish.",
   "community": "11-hour rider",
   "community_name": "11-hour rider",
@@ -40,6 +41,6 @@
     "data_retrieved_at_utc": "2026-06-19 01:00 UTC",
     "forecast_source": "Open-Meteo weather data, CC BY 4.0",
     "cache_max_age_hours": 5.5,
-    "created_utc": "2026-06-19T05:13:10Z"
+    "created_utc": "2026-06-19T05:20:36Z"
   }
 }
