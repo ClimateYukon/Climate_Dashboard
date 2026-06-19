@@ -158,6 +158,19 @@ function setCards(items, renderFunction) {
   empty.hidden = items.length > 0;
 }
 
+function sortItems(items) {
+  return [...items].sort((a, b) => {
+    const orderA = Number.isFinite(Number(a.sort_order)) ? Number(a.sort_order) : 9999;
+    const orderB = Number.isFinite(Number(b.sort_order)) ? Number(b.sort_order) : 9999;
+
+    if (orderA !== orderB) {
+      return orderA - orderB;
+    }
+
+    return String(a.title || a.id || "").localeCompare(String(b.title || b.id || ""));
+  });
+}
+
 function ensureImageLightbox() {
   if (document.getElementById("imageLightbox")) return;
 
@@ -351,9 +364,16 @@ async function initIndicatorPage() {
     getIndicatorEyebrow(indicator, indicatorPlots);
   document.getElementById("indicatorFooter").textContent = indicator.source || "";
 
-  const search = document.getElementById("searchInput");
+const search = document.getElementById("searchInput");
+const searchLabel = document.querySelector("label[for='searchInput']");
 
-  const searchLabel = document.querySelector("label[for='searchInput']");
+const searchWrapper = search
+  ? search.closest(".search-row, .search-box, .search-panel, .toolbar, div")
+  : null;
+
+if (indicatorId === "kcibr_weather_forecast" && searchWrapper) {
+  searchWrapper.hidden = true;
+} else {
   if (searchLabel) {
     searchLabel.textContent = getSearchLabel(indicatorPlots);
   }
@@ -361,6 +381,7 @@ async function initIndicatorPage() {
   if (search) {
     search.placeholder = getSearchPlaceholder(indicatorPlots);
   }
+}
 
   function update() {
     const query = search.value;
@@ -379,7 +400,7 @@ async function initIndicatorPage() {
       ])
     );
 
-    setCards(filtered, renderPlotCard);
+    setCards(sortItems(filtered), renderPlotCard);
   }
 
   search.addEventListener("input", update);
