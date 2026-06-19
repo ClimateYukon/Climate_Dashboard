@@ -5,7 +5,7 @@
   "id": "kcibr_weather_6h",
   "title": "KCIBR weather forecast for a 6-hour rider",
   "subtitle": "6-hour rider",
-  "description": "Race-day weather guidance along the KCIBR route. The upper panel shows temperature and rain near the rider's estimated arrival time. The lower panels show wind effect, gusts, cloud cover, and UV index. Timing uses a GPX-derived pacing curve scaled to the selected finish time.",
+  "description": "Race-day weather guidance along the KCIBR route. The upper panel shows temperature and rain near the rider's estimated arrival time. The lower panels show wind effect, gusts, cloud cover, and UV index. Timing uses cleaned GPX-derived moving-time pacing rescaled to the selected finish time.",
   "community": "6-hour rider",
   "community_name": "6-hour rider",
   "station_name": "",
@@ -35,11 +35,11 @@
     "race_date": "2026-06-20",
     "race_start_local": "2026-06-20 08:20",
     "rider_duration_hours": 6.0,
-    "pacing_method": "empirical-gpx",
+    "pacing_method": "cleaned_gpx_moving_time",
     "pacing_gpx_path": "/home/jschrode/jupyter/Code/Jupyter_Notebooks/Messing_around/KCIBR/KCIBR.gpx",
     "data_retrieved_at_utc": "2026-06-19 01:00 UTC",
     "forecast_source": "Open-Meteo weather data, CC BY 4.0",
     "cache_max_age_hours": 5.5,
-    "created_utc": "2026-06-19T01:45:29Z"
+    "created_utc": "2026-06-19T01:54:27Z"
   }
 }
