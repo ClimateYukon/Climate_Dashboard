@@ -532,7 +532,7 @@
     "card_title": "10-hour rider",
     "scope": "event",
     "plot_scope": "event",
-    "date_label": "Forecast retrieved 2026-06-21 07:00 UTC",
+    "date_label": "Forecast retrieved 2026-06-21 13:00 UTC",
     "source": "Open-Meteo weather data, CC BY 4.0",
     "preview_image": "plots/kcibr_weather_forecast/kcibr_weather_10h/preview.png",
     "full_image": "plots/kcibr_weather_forecast/kcibr_weather_10h/full.png",
@@ -555,10 +555,10 @@
       "rider_duration_hours": 10.0,
       "pacing_method": "cleaned_gpx_moving_time",
       "pacing_gpx_path": "/home/jschrode/jupyter/Code/Jupyter_Notebooks/Messing_around/KCIBR/KCIBR.gpx",
-      "data_retrieved_at_utc": "2026-06-21 07:00 UTC",
+      "data_retrieved_at_utc": "2026-06-21 13:00 UTC",
       "forecast_source": "Open-Meteo weather data, CC BY 4.0",
       "cache_max_age_hours": 5.5,
-      "created_utc": "2026-06-21T07:01:35Z"
+      "created_utc": "2026-06-21T13:01:38Z"
     },
     "_metadata_path": "plots/kcibr_weather_forecast/kcibr_weather_10h/metadata.json"
   },
@@ -579,7 +579,7 @@
     "card_title": "11-hour rider",
     "scope": "event",
     "plot_scope": "event",
-    "date_label": "Forecast retrieved 2026-06-21 07:00 UTC",
+    "date_label": "Forecast retrieved 2026-06-21 13:00 UTC",
     "source": "Open-Meteo weather data, CC BY 4.0",
     "preview_image": "plots/kcibr_weather_forecast/kcibr_weather_11h/preview.png",
     "full_image": "plots/kcibr_weather_forecast/kcibr_weather_11h/full.png",
@@ -602,10 +602,10 @@
       "rider_duration_hours": 11.0,
       "pacing_method": "cleaned_gpx_moving_time",
       "pacing_gpx_path": "/home/jschrode/jupyter/Code/Jupyter_Notebooks/Messing_around/KCIBR/KCIBR.gpx",
-      "data_retrieved_at_utc": "2026-06-21 07:00 UTC",
+      "data_retrieved_at_utc": "2026-06-21 13:00 UTC",
       "forecast_source": "Open-Meteo weather data, CC BY 4.0",
       "cache_max_age_hours": 5.5,
-      "created_utc": "2026-06-21T07:01:35Z"
+      "created_utc": "2026-06-21T13:01:38Z"
     },
     "_metadata_path": "plots/kcibr_weather_forecast/kcibr_weather_11h/metadata.json"
   },
@@ -626,7 +626,7 @@
     "card_title": "12-hour rider",
     "scope": "event",
     "plot_scope": "event",
-    "date_label": "Forecast retrieved 2026-06-21 07:00 UTC",
+    "date_label": "Forecast retrieved 2026-06-21 13:00 UTC",
     "source": "Open-Meteo weather data, CC BY 4.0",
     "preview_image": "plots/kcibr_weather_forecast/kcibr_weather_12h/preview.png",
     "full_image": "plots/kcibr_weather_forecast/kcibr_weather_12h/full.png",
@@ -649,10 +649,10 @@
       "rider_duration_hours": 12.0,
       "pacing_method": "cleaned_gpx_moving_time",
       "pacing_gpx_path": "/home/jschrode/jupyter/Code/Jupyter_Notebooks/Messing_around/KCIBR/KCIBR.gpx",
-      "data_retrieved_at_utc": "2026-06-21 07:00 UTC",
+      "data_retrieved_at_utc": "2026-06-21 13:00 UTC",
       "forecast_source": "Open-Meteo weather data, CC BY 4.0",
       "cache_max_age_hours": 5.5,
-      "created_utc": "2026-06-21T07:01:35Z"
+      "created_utc": "2026-06-21T13:01:39Z"
     },
     "_metadata_path": "plots/kcibr_weather_forecast/kcibr_weather_12h/metadata.json"
   },
@@ -673,7 +673,7 @@
     "card_title": "6-hour rider",
     "scope": "event",
     "plot_scope": "event",
-    "date_label": "Forecast retrieved 2026-06-21 07:00 UTC",
+    "date_label": "Forecast retrieved 2026-06-21 13:00 UTC",
     "source": "Open-Meteo weather data, CC BY 4.0",
     "preview_image": "plots/kcibr_weather_forecast/kcibr_weather_6h/preview.png",
     "full_image": "plots/kcibr_weather_forecast/kcibr_weather_6h/full.png",
@@ -696,10 +696,10 @@
       "rider_duration_hours": 6.0,
       "pacing_method": "cleaned_gpx_moving_time",
       "pacing_gpx_path": "/home/jschrode/jupyter/Code/Jupyter_Notebooks/Messing_around/KCIBR/KCIBR.gpx",
-      "data_retrieved_at_utc": "2026-06-21 07:00 UTC",
+      "data_retrieved_at_utc": "2026-06-21 13:00 UTC",
       "forecast_source": "Open-Meteo weather data, CC BY 4.0",
       "cache_max_age_hours": 5.5,
-      "created_utc": "2026-06-21T07:01:33Z"
+      "created_utc": "2026-06-21T13:01:37Z"
     },
     "_metadata_path": "plots/kcibr_weather_forecast/kcibr_weather_6h/metadata.json"
   },
@@ -720,7 +720,7 @@
     "card_title": "7-hour rider",
     "scope": "event",
     "plot_scope": "event",
-    "date_label": "Forecast retrieved 2026-06-21 07:00 UTC",
+    "date_label": "Forecast retrieved 2026-06-21 13:00 UTC",
     "source": "Open-Meteo weather data, CC BY 4.0",
     "preview_image": "plots/kcibr_weather_forecast/kcibr_weather_7h/preview.png",
     "full_image": "plots/kcibr_weather_forecast/kcibr_weather_7h/full.png",
@@ -743,10 +743,10 @@
       "rider_duration_hours": 7.0,
       "pacing_method": "cleaned_gpx_moving_time",
       "pacing_gpx_path": "/home/jschrode/jupyter/Code/Jupyter_Notebooks/Messing_around/KCIBR/KCIBR.gpx",
-      "data_retrieved_at_utc": "2026-06-21 07:00 UTC",
+      "data_retrieved_at_utc": "2026-06-21 13:00 UTC",
       "forecast_source": "Open-Meteo weather data, CC BY 4.0",
       "cache_max_age_hours": 5.5,
-      "created_utc": "2026-06-21T07:01:33Z"
+      "created_utc": "2026-06-21T13:01:37Z"
     },
     "_metadata_path": "plots/kcibr_weather_forecast/kcibr_weather_7h/metadata.json"
   },
@@ -767,7 +767,7 @@
     "card_title": "8-hour rider",
     "scope": "event",
     "plot_scope": "event",
-    "date_label": "Forecast retrieved 2026-06-21 07:00 UTC",
+    "date_label": "Forecast retrieved 2026-06-21 13:00 UTC",
     "source": "Open-Meteo weather data, CC BY 4.0",
     "preview_image": "plots/kcibr_weather_forecast/kcibr_weather_8h/preview.png",
     "full_image": "plots/kcibr_weather_forecast/kcibr_weather_8h/full.png",
@@ -790,10 +790,10 @@
       "rider_duration_hours": 8.0,
       "pacing_method": "cleaned_gpx_moving_time",
       "pacing_gpx_path": "/home/jschrode/jupyter/Code/Jupyter_Notebooks/Messing_around/KCIBR/KCIBR.gpx",
-      "data_retrieved_at_utc": "2026-06-21 07:00 UTC",
+      "data_retrieved_at_utc": "2026-06-21 13:00 UTC",
       "forecast_source": "Open-Meteo weather data, CC BY 4.0",
       "cache_max_age_hours": 5.5,
-      "created_utc": "2026-06-21T07:01:34Z"
+      "created_utc": "2026-06-21T13:01:37Z"
     },
     "_metadata_path": "plots/kcibr_weather_forecast/kcibr_weather_8h/metadata.json"
   },
@@ -814,7 +814,7 @@
     "card_title": "9-hour rider",
     "scope": "event",
     "plot_scope": "event",
-    "date_label": "Forecast retrieved 2026-06-21 07:00 UTC",
+    "date_label": "Forecast retrieved 2026-06-21 13:00 UTC",
     "source": "Open-Meteo weather data, CC BY 4.0",
     "preview_image": "plots/kcibr_weather_forecast/kcibr_weather_9h/preview.png",
     "full_image": "plots/kcibr_weather_forecast/kcibr_weather_9h/full.png",
@@ -837,10 +837,10 @@
       "rider_duration_hours": 9.0,
       "pacing_method": "cleaned_gpx_moving_time",
       "pacing_gpx_path": "/home/jschrode/jupyter/Code/Jupyter_Notebooks/Messing_around/KCIBR/KCIBR.gpx",
-      "data_retrieved_at_utc": "2026-06-21 07:00 UTC",
+      "data_retrieved_at_utc": "2026-06-21 13:00 UTC",
       "forecast_source": "Open-Meteo weather data, CC BY 4.0",
       "cache_max_age_hours": 5.5,
-      "created_utc": "2026-06-21T07:01:34Z"
+      "created_utc": "2026-06-21T13:01:38Z"
     },
     "_metadata_path": "plots/kcibr_weather_forecast/kcibr_weather_9h/metadata.json"
   },
