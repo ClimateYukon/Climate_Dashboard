@@ -29,7 +29,7 @@ BASELINE_END = 2010
 EXTREME_Q = 0.99
 
 # Keep this as WHITEHORSE A while testing. Change to None later to export all stations.
-STATIONS_TO_EXPORT = ["WHITEHORSE A"]
+STATIONS_TO_EXPORT = None
 
 
 # 4. Helper functions

@@ -390,6 +390,209 @@ function refreshYearSelect() {
 }
 
 
+
+// 5. Summary and ranking table
+function periodLabelForYear(mode, year, month, season) {
+  if (mode === "month") {
+    return `${monthNames[month - 1]} ${year}`;
+  }
+
+  if (mode === "season") {
+    return `${seasonDefinitions[season].label} ${year}`;
+  }
+
+  return `365-day period ending in ${monthNames[month - 1]} ${year}`;
+}
+
+function periodDatesForComparisonYear(mode, comparisonYear, selectedMonth, selectedSeason, selectedPeriodDates) {
+  if (mode === "month") {
+    const startDate = new Date(comparisonYear, selectedMonth - 1, 1);
+    const endDate = new Date(comparisonYear, selectedMonth, 0);
+    return makeDateRange(startDate, endDate);
+  }
+
+  if (mode === "season") {
+    return makeSelectedPeriodDates("season", comparisonYear, selectedMonth, selectedSeason);
+  }
+
+  if (mode === "annual") {
+    const selectedEnd = selectedPeriodDates[selectedPeriodDates.length - 1];
+    const selectedEndParts = dateParts(selectedEnd);
+
+    const endDate = new Date(comparisonYear, selectedEndParts.month - 1, selectedEndParts.day);
+    const startDate = new Date(endDate);
+    startDate.setDate(startDate.getDate() - 364);
+
+    return makeDateRange(startDate, endDate);
+  }
+
+  return [];
+}
+
+function meanFinite(values) {
+  const finiteValues = values
+    .filter((value) => value !== null && value !== undefined && value !== "")
+    .map((value) => Number(value))
+    .filter((value) => Number.isFinite(value));
+
+  if (finiteValues.length === 0) {
+    return null;
+  }
+
+  return finiteValues.reduce((sum, value) => sum + value, 0) / finiteValues.length;
+}
+
+function formatSigned(value, digits = 2) {
+  if (!finiteValue(value)) {
+    return "";
+  }
+
+  const numberValue = Number(value);
+  const sign = numberValue > 0 ? "+" : "";
+  return `${sign}${numberValue.toFixed(digits)}`;
+}
+
+function formatNumber(value, digits = 2) {
+  if (!finiteValue(value)) {
+    return "";
+  }
+
+  return Number(value).toFixed(digits);
+}
+
+function computeRankingRows(mode, selectedYear, selectedMonth, selectedSeason, selectedPeriodDates) {
+  const years = uniqueSortedYears(stationData.time);
+  const rows = [];
+
+  years.forEach((year) => {
+    const comparisonDates = periodDatesForComparisonYear(
+      mode,
+      year,
+      selectedMonth,
+      selectedSeason,
+      selectedPeriodDates
+    );
+
+    const comparisonSeries = valuesForPeriod(comparisonDates, stationData);
+    const averageTemperature = meanFinite(comparisonSeries.tas);
+
+    if (averageTemperature !== null) {
+      rows.push({
+        Year: year,
+        tas: averageTemperature
+      });
+    }
+  });
+
+  const baselineRows = rows.filter((row) => row.Year >= 1981 && row.Year <= 2010);
+  const baselineMean = meanFinite(baselineRows.map((row) => row.tas));
+
+  if (baselineMean === null) {
+    return [];
+  }
+
+  rows.forEach((row) => {
+    row.Deviation = row.tas - baselineMean;
+  });
+
+  rows.sort((a, b) => b.tas - a.tas);
+
+  rows.forEach((row, index) => {
+    row.Rank = index + 1;
+  });
+
+  return rows;
+}
+
+function nearbyRankingRows(rows, selectedYear, radius = 3) {
+  const selectedIndex = rows.findIndex((row) => row.Year === selectedYear);
+
+  if (selectedIndex === -1) {
+    return rows.slice(0, 7);
+  }
+
+  const start = Math.max(0, selectedIndex - radius);
+  const end = Math.min(rows.length, selectedIndex + radius + 1);
+
+  return rows.slice(start, end);
+}
+
+function updateSummaryAndRankingTable(mode, selectedYear, selectedMonth, selectedSeason, selectedStationName, selectedPeriodDates) {
+  const summaryElement = document.getElementById("temperature-summary");
+  const tableElement = document.getElementById("ranking-table");
+
+  if (!summaryElement || !tableElement) {
+    return;
+  }
+
+  const tableBody = tableElement.querySelector("tbody");
+  if (!tableBody) {
+    return;
+  }
+
+  const rows = computeRankingRows(
+    mode,
+    selectedYear,
+    selectedMonth,
+    selectedSeason,
+    selectedPeriodDates
+  );
+
+  tableBody.innerHTML = "";
+
+  if (rows.length === 0) {
+    summaryElement.textContent = "Not enough data are available to calculate a ranking for this period.";
+    return;
+  }
+
+  const selectedRow = rows.find((row) => row.Year === selectedYear);
+
+  if (!selectedRow) {
+    summaryElement.textContent = "The selected year does not have enough data for this period.";
+    return;
+  }
+
+  const periodLabel = periodLabelForYear(mode, selectedYear, selectedMonth, selectedSeason);
+  const anomalyAbs = Math.abs(selectedRow.Deviation).toFixed(2);
+  const rankText = `${selectedRow.Rank}/${rows.length}`;
+
+  if (selectedRow.Deviation >= 0) {
+    summaryElement.textContent =
+      `${periodLabel} is ${anomalyAbs} °C warmer than the 1981-2010 normal at ${selectedStationName}. ` +
+      `It ranks ${rankText} among available years, where 1 is the warmest.`;
+  } else {
+    summaryElement.textContent =
+      `${periodLabel} is ${anomalyAbs} °C cooler than the 1981-2010 normal at ${selectedStationName}. ` +
+      `It ranks ${rankText} among available years, where 1 is the warmest and ${rows.length} is the coolest.`;
+  }
+
+  const visibleRows = nearbyRankingRows(rows, selectedYear, 3);
+
+  visibleRows.forEach((row) => {
+    const tr = document.createElement("tr");
+
+    if (row.Year === selectedYear) {
+      tr.classList.add("selected-ranking-row");
+    }
+
+    const cells = [
+      row.Rank,
+      row.Year,
+      formatNumber(row.tas, 2),
+      formatSigned(row.Deviation, 2)
+    ];
+
+    cells.forEach((value) => {
+      const td = document.createElement("td");
+      td.textContent = value;
+      tr.appendChild(td);
+    });
+
+    tableBody.appendChild(tr);
+  });
+}
+
+
 // 5. Plot drawing
 function updatePlot() {
   if (!stationData) return;
@@ -608,6 +811,15 @@ function updatePlot() {
   };
 
   Plotly.react("temperature-plot", traces, layout, config);
+
+  updateSummaryAndRankingTable(
+    mode,
+    year,
+    month,
+    season,
+    stationSelect.options[stationSelect.selectedIndex].text,
+    series.x
+  );
 
   setStatus(
     `Data updated ${manifest.created}. Source period: ${manifest.time_min} to ${manifest.time_max}. Baseline: ${manifest.baseline}.`

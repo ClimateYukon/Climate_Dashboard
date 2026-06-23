@@ -118,6 +118,54 @@
       margin-bottom: 16px;
     }
 
+
+    .summary-card h2,
+    .table-card h2 {
+      margin: 0 0 10px 0;
+      font-size: 1.1rem;
+    }
+
+    #temperature-summary {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    #ranking-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+
+    #ranking-table th,
+    #ranking-table td {
+      border-bottom: 1px solid var(--border);
+      padding: 8px 10px;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    #ranking-table th {
+      background: #eef2f6;
+      font-weight: 700;
+    }
+
+    #ranking-table th:first-child,
+    #ranking-table td:first-child,
+    #ranking-table th:nth-child(2),
+    #ranking-table td:nth-child(2) {
+      text-align: left;
+    }
+
+    #ranking-table tr.selected-ranking-row {
+      background: #fff3d6;
+      font-weight: 700;
+    }
+
     @media (max-width: 760px) {
       main {
         padding: 14px;
@@ -189,7 +237,27 @@
     <section class="card">
       <div id="temperature-plot"></div>
     </section>
-
+    <section class="card summary-card">
+      <h2>Temperature summary</h2>
+      <p id="temperature-summary">Select a station and period to view the summary.</p>
+    </section>
+    
+    <section class="card table-card">
+      <h2>Historical ranking</h2>
+      <div class="table-wrap">
+        <table id="ranking-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Year</th>
+              <th>Avg temp (°C)</th>
+              <th>Anomaly (°C)</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
     <section class="card status" id="data-status">
       Loading data...
     </section>
