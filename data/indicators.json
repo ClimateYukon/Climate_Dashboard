@@ -91,5 +91,22 @@
     ],
     "plot_count": 1,
     "href": "indicator.html?id=seasonal_temperature_anomalies"
+  },
+  {
+    "id": "ahccd_temperature_interactive",
+    "title": "Daily temperature observations",
+    "description": "Compare recent daily temperatures with historical normals, records, and unusually warm or cold days.",
+    "source": "AHCCD daily station observations",
+    "tags": [
+      "AHCCD",
+      "temperature",
+      "observations",
+      "daily",
+      "interactive"
+    ],
+    "scope": "interactive",
+    "plot_count": 1,
+    "href": "interactive/ahccd-temperature.html",
+    "preview_image": "interactive/ahccd-temperature-preview.png"
   }
 ]
