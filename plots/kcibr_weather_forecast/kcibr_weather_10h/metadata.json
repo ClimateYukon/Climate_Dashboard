@@ -15,7 +15,7 @@
   "card_title": "10-hour rider",
   "scope": "event",
   "plot_scope": "event",
-  "date_label": "Forecast retrieved 2026-06-23 07:00 UTC",
+  "date_label": "Forecast retrieved 2026-06-23 13:00 UTC",
   "source": "Open-Meteo weather data, CC BY 4.0",
   "preview_image": "plots/kcibr_weather_forecast/kcibr_weather_10h/preview.png",
   "full_image": "plots/kcibr_weather_forecast/kcibr_weather_10h/full.png",
@@ -38,9 +38,9 @@
     "rider_duration_hours": 10.0,
     "pacing_method": "cleaned_gpx_moving_time",
     "pacing_gpx_path": "/home/jschrode/jupyter/Code/Jupyter_Notebooks/Messing_around/KCIBR/KCIBR.gpx",
-    "data_retrieved_at_utc": "2026-06-23 07:00 UTC",
+    "data_retrieved_at_utc": "2026-06-23 13:00 UTC",
     "forecast_source": "Open-Meteo weather data, CC BY 4.0",
     "cache_max_age_hours": 5.5,
-    "created_utc": "2026-06-23T07:01:33Z"
+    "created_utc": "2026-06-23T13:01:38Z"
   }
 }
