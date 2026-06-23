@@ -137,7 +137,7 @@ function sortItems(items) {
 }
 
 function renderIndicatorCard(indicator) {
-  const href = `indicator.html?id=${encodeURIComponent(indicator.id)}`;
+  const href = indicator.href || `indicator.html?id=${encodeURIComponent(indicator.id)}`;
   const countLabel = getIndicatorCountLabel(indicator);
   const tags = (indicator.tags || [])
     .slice(0, 4)
