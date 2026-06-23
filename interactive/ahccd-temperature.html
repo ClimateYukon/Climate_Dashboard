@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Daily temperature explorer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    :root {
+      --page-bg: #f6f8fb;
+      --card-bg: #ffffff;
+      --text: #1f2933;
+      --muted: #5f6c7b;
+      --border: #d8dee6;
+      --accent: #1d4f91;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--page-bg);
+    }
+
+    main {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 6px 0;
+      font-size: 1.7rem;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin: 0;
+      max-width: 850px;
+    }
+
+    .back-link {
+      color: var(--accent);
+      text-decoration: none;
+      white-space: nowrap;
+      font-weight: 600;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: end;
+    }
+
+    .control {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    label {
+      font-size: 0.86rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    select {
+      min-width: 200px;
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #ffffff;
+      font-size: 0.95rem;
+    }
+
+    #temperature-plot {
+      width: 100%;
+      height: 72vh;
+      min-height: 520px;
+    }
+
+    .status {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.4;
+    }
+
+    .error {
+      color: #9b1c1c;
+      background: #fff1f1;
+      border: 1px solid #f2b8b8;
+      padding: 12px;
+      border-radius: 10px;
+      display: none;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 760px) {
+      main {
+        padding: 14px;
+      }
+
+      .top-bar {
+        flex-direction: column;
+      }
+
+      select {
+        min-width: 100%;
+      }
+
+      .control {
+        width: 100%;
+      }
+
+      #temperature-plot {
+        height: 68vh;
+        min-height: 460px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="top-bar">
+      <div>
+        <h1>Daily temperature explorer</h1>
+        <p class="subtitle">
+          Interactive static Plotly version. The data are generated ahead of time and loaded from JSON.
+        </p>
+      </div>
+      <a class="back-link" href="../index.html">Back to dashboard</a>
+    </div>
+
+    <div id="error-box" class="error"></div>
+
+    <section class="card">
+      <div class="controls">
+        <div class="control">
+          <label for="station-select">Station</label>
+          <select id="station-select"></select>
+        </div>
+
+        <div class="control">
+          <label for="mode-select">View</label>
+          <select id="mode-select"></select>
+        </div>
+
+        <div class="control">
+          <label for="year-select">Year</label>
+          <select id="year-select"></select>
+        </div>
+
+        <div class="control" id="month-control">
+          <label for="month-select">Month</label>
+          <select id="month-select"></select>
+        </div>
+
+        <div class="control" id="season-control">
+          <label for="season-select">Season</label>
+          <select id="season-select"></select>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div id="temperature-plot"></div>
+    </section>
+
+    <section class="card status" id="data-status">
+      Loading data...
+    </section>
+  </main>
+
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <script src="ahccd-temperature.js"></script>
+</body>
+</html>
