@@ -3,6 +3,12 @@ let manifest = null;
 let stationData = null;
 
 const DATA_ROOT = "../data/interactive/ahccd_temperature";
+const DATA_CACHE_BUSTER = String(Date.now());
+
+function withCacheBuster(path) {
+  const separator = path.includes("?") ? "&" : "?";
+  return `${path}${separator}v=${DATA_CACHE_BUSTER}`;
+}
 
 const monthNames = [
   "January", "February", "March", "April", "May", "June",
