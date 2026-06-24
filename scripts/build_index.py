@@ -163,6 +163,22 @@ def main() -> None:
             "href": f"plot.html?id={item.get('id')}",
         })
 
+        # 9. Add manual interactive page cards
+    indicators.append({
+        "id": "ahccd_temperature",
+        "card_type": "interactive",
+        "title": "AHCCD temperature stations",
+        "subtitle": "Interactive station dashboard",
+        "description": "Explore AHCCD temperature records for Yukon stations.",
+        "date_label": "Updated 2026-06-24",
+        "updated_date": "2026-06-24",
+        "source": "AHCCD",
+        "preview_image": "interactive/ahccd-temperature-preview.png",
+        "tags": ["temperature", "stations", "AHCCD", "interactive"],
+        "plot_count": 1,
+        "href": "interactive/ahccd-temperature.html",
+    })
+
     # 9. Sort main page cards by newest update first
     indicators = sorted(
         indicators,
