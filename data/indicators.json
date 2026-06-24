@@ -1,33 +1,14 @@
 [
   {
-    "id": "annual_temperature_anomalies",
-    "card_type": "indicator",
-    "title": "2025 annual temperature anomalies",
-    "subtitle": "12 communities",
-    "description": "Daily mean temperature compared with 1981-2010 normals for Yukon communities.",
-    "date_label": "Updated 2026-05-30",
-    "source": "AHCCD base, ECCC daily observations, and ERA5-Land gap filling with source flags",
-    "preview_image": "plots/annual_temperature_anomalies/burwash_landing_2025_annual_temperature_anomalies/preview.png",
-    "tags": [
-      "2025",
-      "AHCCD",
-      "annual",
-      "anomalies",
-      "communities",
-      "temperature"
-    ],
-    "plot_count": 12,
-    "href": "indicator.html?id=annual_temperature_anomalies"
-  },
-  {
     "id": "kcibr_weather_forecast",
     "card_type": "indicator",
     "title": "KCIBR race-day weather forecast",
     "subtitle": "7 communities",
     "description": "Rider-facing weather forecast plots for the Kluane Chilkat International Bike Relay. Plots show expected temperature, rain, wind effect, gusts, cloud cover, and UV index along the route.",
     "date_label": "Forecast retrieved 2026-06-23 19:00 UTC",
+    "updated_date": "2026-06-23",
     "source": "Open-Meteo weather data, CC BY 4.0",
-    "preview_image": "plots/kcibr_weather_forecast/kcibr_weather_10h/preview.png",
+    "preview_image": "plots/kcibr_weather_forecast/kcibr_weather_9h/preview.png",
     "tags": [
       "10-hour rider",
       "11-hour rider",
@@ -56,8 +37,9 @@
     "subtitle": "2 communities",
     "description": "Monthly and annual area-average temperature rankings based on ERA5 2 m temperature.",
     "date_label": "Updated 2026-06-15",
+    "updated_date": "2026-06-15",
     "source": "ERA5 2 m temperature from Copernicus Climate Change Service / ECMWF",
-    "preview_image": "plots/monthly_temperature_rankings/northern_canada_2026_monthly_temperature_rankings/preview.png",
+    "preview_image": "plots/monthly_temperature_rankings/yukon_2026_monthly_temperature_rankings/preview.png",
     "tags": [
       "ERA5",
       "Northern Canada",
@@ -77,6 +59,7 @@
     "subtitle": "1 communities",
     "description": "Seasonal ERA5-Land near-surface air temperature anomalies for Yukon and surrounding regions relative to the 1981-2010 baseline.",
     "date_label": "Updated 2026-05-31",
+    "updated_date": "2026-05-31",
     "source": "ERA5-Land monthly 2 m temperature, processed from local GRIB archive",
     "preview_image": "plots/seasonal_temperature_anomalies/yukon_2025_seasonal_temperature_anomalies_context/preview.png",
     "tags": [
@@ -93,20 +76,24 @@
     "href": "indicator.html?id=seasonal_temperature_anomalies"
   },
   {
-    "id": "ahccd_temperature_interactive",
-    "title": "Daily temperature observations",
-    "description": "Compare recent daily temperatures with historical normals, records, and unusually warm or cold days.",
-    "source": "AHCCD daily station observations",
+    "id": "annual_temperature_anomalies",
+    "card_type": "indicator",
+    "title": "2025 annual temperature anomalies",
+    "subtitle": "12 communities",
+    "description": "Daily mean temperature compared with 1981-2010 normals for Yukon communities.",
+    "date_label": "Updated 2026-05-30",
+    "updated_date": "2026-05-30",
+    "source": "AHCCD base, ECCC daily observations, and ERA5-Land gap filling with source flags",
+    "preview_image": "plots/annual_temperature_anomalies/whitehorse_2025_annual_temperature_anomalies/preview.png",
     "tags": [
+      "2025",
       "AHCCD",
-      "temperature",
-      "observations",
-      "daily",
-      "interactive"
+      "annual",
+      "anomalies",
+      "communities",
+      "temperature"
     ],
-    "scope": "interactive",
-    "plot_count": 1,
-    "href": "interactive/ahccd-temperature.html",
-    "preview_image": "interactive/ahccd-temperature-preview.png"
+    "plot_count": 12,
+    "href": "indicator.html?id=annual_temperature_anomalies"
   }
 ]
