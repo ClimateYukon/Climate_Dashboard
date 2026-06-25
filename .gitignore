@@ -2,3 +2,4 @@
 # Local Jupyter and runtime files
 .ipynb_checkpoints/
 logs/
+**/.ipynb_checkpoints/
