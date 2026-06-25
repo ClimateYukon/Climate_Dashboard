@@ -1,76 +1,90 @@
 # Static Climate Plot Dashboard
 
-This is a simple static website for publishing verified climate plots as cards.
-It is designed for GitHub Pages and does not require Dash, Shiny, Python hosting, or a database.
+This repository contains a static website for publishing curated Yukon climate plots and interactive climate tools.
+
+The site is designed for GitHub Pages. It does not require Dash, Shiny, Python hosting, a database, or a backend server.
 
 ## Folder structure
 
-```text
-climate-dashboard-static/
-  index.html              # Card gallery page
-  plot.html               # Full plot page
-  style.css               # Site styling
-  app.js                  # Loads data/index.json and builds the site
+Climate_Dashboard/
+  index.html                 Main dashboard page
+  indicator.html             Indicator gallery page
+  plot.html                  Individual plot page
+
+  assets/
+    css/
+      style.css              Site styling
+    js/
+      app.js                 Main dashboard JavaScript
+
   data/
-    index.json            # List of cards to show
+    index.json               Plot index generated from plot metadata
+    indicators.json          Main dashboard card index
+    interactive_cards.json   Metadata for interactive dashboard cards
+    interactive/             Data used by interactive tools
+
+  interactive/
+    ahccd-temperature.html
+    ahccd-temperature.js
+    ahccd-temperature-preview.png
+
   plots/
-    sample_temperature_card/
-      preview.png         # Small image used on the card
-      full.png            # Full-size image shown on click
-      metadata.json       # Metadata for this plot
-  scripts/
-    build_index.py        # Optional helper to rebuild data/index.json from metadata.json files
-  .nojekyll               # Makes GitHub Pages serve files as-is
-```
+    annual_temperature_anomalies/
+    kcibr_weather_forecast/
+    monthly_temperature_rankings/
+    seasonal_temperature_anomalies/
 
-## How to use
+  tools/
+    build_index.py
+    export_ahccd_temperature_interactive.py
+    update_ahccd_temperature_interactive.sh
 
-1. Create a GitHub repository, for example `climate-dashboard-static`.
-2. Copy these files into the repository.
-3. Replace the sample plot folder with your real plot folders.
-4. For each plot, include:
-   - `preview.png`
-   - `full.png`
-   - `metadata.json`
-5. Rebuild the index:
+  .nojekyll
+  .gitignore
+  README.md
 
-```bash
-python scripts/build_index.py
-```
+## What is required for the website to run
 
-6. Commit and push.
-7. In GitHub, go to **Settings > Pages** and publish from your main branch.
+The public website needs only these static files and folders:
 
-## Plot folder example
+index.html
+indicator.html
+plot.html
+assets/
+data/
+interactive/
+plots/
+.nojekyll
 
-```text
-plots/whitehorse_a_past_365_days_temperature/
-  preview.png
-  full.png
-  metadata.json
-```
+The tools/ folder is not required by the browser, but it is kept in the repository because it is used to rebuild or update the dashboard outputs.
 
-Example metadata:
+## Updating the dashboard index
 
-```json
-{
-  "id": "whitehorse_a_past_365_days_temperature",
-  "title": "Past 365 days temperature",
-  "subtitle": "Whitehorse A",
-  "description": "Daily mean, minimum, and maximum temperature for the past 365 days compared with the 1981-2010 normal.",
-  "date_label": "Updated 2026-05-30",
-  "source": "AHCCD + ECCC daily observations + ERA5 gap filling",
-  "preview_image": "plots/whitehorse_a_past_365_days_temperature/preview.png",
-  "full_image": "plots/whitehorse_a_past_365_days_temperature/full.png",
-  "category": "Temperature",
-  "station": "Whitehorse A",
-  "last_updated": "2026-05-30"
-}
-```
+After adding, editing, or removing plot metadata, rebuild the dashboard indexes with:
+
+python tools/build_index.py
+
+This updates:
+
+data/index.json
+data/indicators.json
+
+## Testing locally
+
+From the repository root, run:
+
+python -m http.server 8080
+
+On Junix/JupyterHub, the proxy URL usually looks like:
+
+https://junix.ynet.gov.yk.ca/user/jschrode/proxy/8080/
+
+The trailing slash is important.
+
+## GitHub Pages
+
+This site should be published from the repository root on the main branch.
 
 ## Notes
 
-- This is a static website. It cannot truly scan folders in the browser.
-- `scripts/build_index.py` scans `plots/*/metadata.json` and writes `data/index.json`.
-- The public website reads `data/index.json` and builds the cards.
-- For now, publish PNG previews and PNG full plots. You can add interactive Plotly HTML later if needed.
+Generated checkpoint folders such as .ipynb_checkpoints/ should not be committed.
