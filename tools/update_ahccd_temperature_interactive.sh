@@ -23,7 +23,7 @@ conda activate climate
 cd "${DASHBOARD_DIR}"
 
 # 6. Regenerate static interactive JSON
-python scripts/export_ahccd_temperature_interactive.py
+python tools/export_ahccd_temperature_interactive.py
 
 # 7. Show updated manifest date for logs
 python - <<'PY'
