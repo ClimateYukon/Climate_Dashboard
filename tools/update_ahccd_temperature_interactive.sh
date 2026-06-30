@@ -16,7 +16,7 @@ echo "============================================================"
 echo "Started AHCCD interactive temperature update: $(date -Is)"
 
 # 4. Load conda
-source "$(conda info --base)/etc/profile.d/conda.sh"
+source "$(/home/jschrode/miniconda3/bin/conda info --base)/etc/profile.d/conda.sh"
 conda activate climate
 
 # 5. Move to dashboard repository
