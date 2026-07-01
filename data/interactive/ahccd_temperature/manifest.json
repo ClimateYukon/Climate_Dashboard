@@ -1,10 +1,10 @@
 {
-  "created": "2026-06-30",
-  "source_file": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260630T110754Z.nc",
+  "created": "2026-07-01",
+  "source_file": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260701T111121Z.nc",
   "baseline": "1981-2010",
   "extreme_quantile": 0.99,
   "time_min": "1950-01-01",
-  "time_max": "2026-06-29",
+  "time_max": "2026-06-30",
   "stations": [
     {
       "id": "BURWASH_AIRPORT_AUTO",
