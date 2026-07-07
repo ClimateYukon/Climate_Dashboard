@@ -114,5 +114,23 @@
     ],
     "plot_count": 12,
     "href": "indicator.html?id=annual_temperature_anomalies"
+  },
+  {
+    "id": "northern_warming_comparisons",
+    "title": "Northern warming comparisons",
+    "description": "Compare annual warming rates for Yukon, Northwest Territories, and Nunavut with global and Canadian reference areas.",
+    "source": "ERA5 2 m temperature from Copernicus Climate Change Service / ECMWF",
+    "preview_image": "plots/northern_warming_comparisons/overview.png",
+    "tags": [
+      "ERA5",
+      "temperature",
+      "warming",
+      "Yukon",
+      "Northwest Territories",
+      "Nunavut"
+    ],
+    "scope": "territory",
+    "plot_count": 3,
+    "href": "indicator.html?id=northern_warming_comparisons"
   }
 ]

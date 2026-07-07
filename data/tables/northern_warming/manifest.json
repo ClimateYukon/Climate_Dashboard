@@ -1,0 +1,40 @@
+{
+  "created": "2026-07-07",
+  "final_complete_year": 2025,
+  "start_years": [
+    1940,
+    1950,
+    1960,
+    1970,
+    1980,
+    1990
+  ],
+  "fast_warming_percentile": 95,
+  "source": "Data source: ERA5 hourly data on single levels from 1940 to present, Copernicus Climate Change Service (C3S) Climate Data Store. DOI: 10.24381/cds.adbb2d47. Contains modified Copernicus Climate Change Service information 2026. Neither the European Commission nor ECMWF is responsible for any use that may be made of the Copernicus information or data it contains.",
+  "territories": [
+    {
+      "id": "yukon",
+      "title": "Yukon",
+      "json": "data/interactive/northern_warming_tables/tables/yukon.json",
+      "average_comparison_csv": "data/interactive/northern_warming_tables/tables/yukon_average_warming_comparison.csv",
+      "fast_area_csv": "data/interactive/northern_warming_tables/tables/yukon_faster_warming_areas_comparison.csv",
+      "xlsx": "data/interactive/northern_warming_tables/tables/yukon_warming_tables.xlsx"
+    },
+    {
+      "id": "northwest_territories",
+      "title": "Northwest Territories",
+      "json": "data/interactive/northern_warming_tables/tables/northwest_territories.json",
+      "average_comparison_csv": "data/interactive/northern_warming_tables/tables/northwest_territories_average_warming_comparison.csv",
+      "fast_area_csv": "data/interactive/northern_warming_tables/tables/northwest_territories_faster_warming_areas_comparison.csv",
+      "xlsx": "data/interactive/northern_warming_tables/tables/northwest_territories_warming_tables.xlsx"
+    },
+    {
+      "id": "nunavut",
+      "title": "Nunavut",
+      "json": "data/interactive/northern_warming_tables/tables/nunavut.json",
+      "average_comparison_csv": "data/interactive/northern_warming_tables/tables/nunavut_average_warming_comparison.csv",
+      "fast_area_csv": "data/interactive/northern_warming_tables/tables/nunavut_faster_warming_areas_comparison.csv",
+      "xlsx": "data/interactive/northern_warming_tables/tables/nunavut_warming_tables.xlsx"
+    }
+  ]
+}

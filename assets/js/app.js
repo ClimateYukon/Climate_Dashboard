@@ -160,7 +160,7 @@ function renderIndicatorCard(indicator) {
 }
 
 function renderPlotCard(plot) {
-  const href = `plot.html?id=${encodeURIComponent(plot.id)}`;
+  const href = plot.href || `plot.html?id=${encodeURIComponent(plot.id)}`;
   const tags = (plot.tags || [])
     .slice(0, 4)
     .map((tag) => `<span>${tag}</span>`)

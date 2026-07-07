@@ -1,0 +1,284 @@
+{
+  "id": "nunavut",
+  "title": "Nunavut",
+  "final_complete_year": 2025,
+  "source": "Data source: ERA5 hourly data on single levels from 1940 to present, Copernicus Climate Change Service (C3S) Climate Data Store. DOI: 10.24381/cds.adbb2d47. Contains modified Copernicus Climate Change Service information 2026. Neither the European Commission nor ECMWF is responsible for any use that may be made of the Copernicus information or data it contains.",
+  "average_comparison_report": [
+    {
+      "Start year": 1940,
+      "End year": 2025,
+      "Nunavut warming rate (\u00b0C/decade)": 0.2523,
+      "Compared with global surface": "1.8\u00d7 faster",
+      "Compared with global land": "1.1\u00d7 faster",
+      "Compared with southern Canada": "1.1\u00d7 faster",
+      "Compared with rest of Canada": "1.1\u00d7 faster"
+    },
+    {
+      "Start year": 1950,
+      "End year": 2025,
+      "Nunavut warming rate (\u00b0C/decade)": 0.3616,
+      "Compared with global surface": "2.2\u00d7 faster",
+      "Compared with global land": "1.4\u00d7 faster",
+      "Compared with southern Canada": "1.3\u00d7 faster",
+      "Compared with rest of Canada": "1.2\u00d7 faster"
+    },
+    {
+      "Start year": 1960,
+      "End year": 2025,
+      "Nunavut warming rate (\u00b0C/decade)": 0.4434,
+      "Compared with global surface": "2.4\u00d7 faster",
+      "Compared with global land": "1.5\u00d7 faster",
+      "Compared with southern Canada": "1.4\u00d7 faster",
+      "Compared with rest of Canada": "1.3\u00d7 faster"
+    },
+    {
+      "Start year": 1970,
+      "End year": 2025,
+      "Nunavut warming rate (\u00b0C/decade)": 0.5687,
+      "Compared with global surface": "2.7\u00d7 faster",
+      "Compared with global land": "1.7\u00d7 faster",
+      "Compared with southern Canada": "1.5\u00d7 faster",
+      "Compared with rest of Canada": "1.4\u00d7 faster"
+    },
+    {
+      "Start year": 1980,
+      "End year": 2025,
+      "Nunavut warming rate (\u00b0C/decade)": 0.6076,
+      "Compared with global surface": "2.8\u00d7 faster",
+      "Compared with global land": "1.8\u00d7 faster",
+      "Compared with southern Canada": "1.8\u00d7 faster",
+      "Compared with rest of Canada": "1.6\u00d7 faster"
+    },
+    {
+      "Start year": 1990,
+      "End year": 2025,
+      "Nunavut warming rate (\u00b0C/decade)": 0.7014,
+      "Compared with global surface": "2.8\u00d7 faster",
+      "Compared with global land": "1.9\u00d7 faster",
+      "Compared with southern Canada": "1.6\u00d7 faster",
+      "Compared with rest of Canada": "1.6\u00d7 faster"
+    }
+  ],
+  "average_comparison_full": [
+    {
+      "Start year": 1940,
+      "End year": 2025,
+      "Nunavut warming rate (\u00b0C/decade)": 0.2523,
+      "Compared with global surface": "1.8\u00d7 faster",
+      "Compared with global land": "1.1\u00d7 faster",
+      "Compared with southern Canada": "1.1\u00d7 faster",
+      "Compared with rest of Canada": "1.1\u00d7 faster",
+      "Global surface rate (\u00b0C/decade)": 0.1421,
+      "Global land rate (\u00b0C/decade)": 0.2208,
+      "Southern Canada rate (\u00b0C/decade)": 0.2199,
+      "Rest of Canada rate (\u00b0C/decade)": 0.2328
+    },
+    {
+      "Start year": 1950,
+      "End year": 2025,
+      "Nunavut warming rate (\u00b0C/decade)": 0.3616,
+      "Compared with global surface": "2.2\u00d7 faster",
+      "Compared with global land": "1.4\u00d7 faster",
+      "Compared with southern Canada": "1.3\u00d7 faster",
+      "Compared with rest of Canada": "1.2\u00d7 faster",
+      "Global surface rate (\u00b0C/decade)": 0.1648,
+      "Global land rate (\u00b0C/decade)": 0.257,
+      "Southern Canada rate (\u00b0C/decade)": 0.2804,
+      "Rest of Canada rate (\u00b0C/decade)": 0.3035
+    },
+    {
+      "Start year": 1960,
+      "End year": 2025,
+      "Nunavut warming rate (\u00b0C/decade)": 0.4434,
+      "Compared with global surface": "2.4\u00d7 faster",
+      "Compared with global land": "1.5\u00d7 faster",
+      "Compared with southern Canada": "1.4\u00d7 faster",
+      "Compared with rest of Canada": "1.3\u00d7 faster",
+      "Global surface rate (\u00b0C/decade)": 0.1875,
+      "Global land rate (\u00b0C/decade)": 0.2897,
+      "Southern Canada rate (\u00b0C/decade)": 0.3262,
+      "Rest of Canada rate (\u00b0C/decade)": 0.354
+    },
+    {
+      "Start year": 1970,
+      "End year": 2025,
+      "Nunavut warming rate (\u00b0C/decade)": 0.5687,
+      "Compared with global surface": "2.7\u00d7 faster",
+      "Compared with global land": "1.7\u00d7 faster",
+      "Compared with southern Canada": "1.5\u00d7 faster",
+      "Compared with rest of Canada": "1.4\u00d7 faster",
+      "Global surface rate (\u00b0C/decade)": 0.2128,
+      "Global land rate (\u00b0C/decade)": 0.328,
+      "Southern Canada rate (\u00b0C/decade)": 0.3773,
+      "Rest of Canada rate (\u00b0C/decade)": 0.3978
+    },
+    {
+      "Start year": 1980,
+      "End year": 2025,
+      "Nunavut warming rate (\u00b0C/decade)": 0.6076,
+      "Compared with global surface": "2.8\u00d7 faster",
+      "Compared with global land": "1.8\u00d7 faster",
+      "Compared with southern Canada": "1.8\u00d7 faster",
+      "Compared with rest of Canada": "1.6\u00d7 faster",
+      "Global surface rate (\u00b0C/decade)": 0.2134,
+      "Global land rate (\u00b0C/decade)": 0.3344,
+      "Southern Canada rate (\u00b0C/decade)": 0.3453,
+      "Rest of Canada rate (\u00b0C/decade)": 0.3709
+    },
+    {
+      "Start year": 1990,
+      "End year": 2025,
+      "Nunavut warming rate (\u00b0C/decade)": 0.7014,
+      "Compared with global surface": "2.8\u00d7 faster",
+      "Compared with global land": "1.9\u00d7 faster",
+      "Compared with southern Canada": "1.6\u00d7 faster",
+      "Compared with rest of Canada": "1.6\u00d7 faster",
+      "Global surface rate (\u00b0C/decade)": 0.2474,
+      "Global land rate (\u00b0C/decade)": 0.3763,
+      "Southern Canada rate (\u00b0C/decade)": 0.4264,
+      "Rest of Canada rate (\u00b0C/decade)": 0.4503
+    }
+  ],
+  "fast_area_report": [
+    {
+      "Start year": 1940,
+      "End year": 2025,
+      "Faster-warming Nunavut areas, 95th percentile (\u00b0C/decade)": 0.4139,
+      "Compared with global surface": "2.9\u00d7 faster",
+      "Compared with global land": "1.9\u00d7 faster",
+      "Compared with southern Canada": "1.9\u00d7 faster",
+      "Compared with rest of Canada": "1.8\u00d7 faster"
+    },
+    {
+      "Start year": 1950,
+      "End year": 2025,
+      "Faster-warming Nunavut areas, 95th percentile (\u00b0C/decade)": 0.5288,
+      "Compared with global surface": "3.2\u00d7 faster",
+      "Compared with global land": "2.1\u00d7 faster",
+      "Compared with southern Canada": "1.9\u00d7 faster",
+      "Compared with rest of Canada": "1.7\u00d7 faster"
+    },
+    {
+      "Start year": 1960,
+      "End year": 2025,
+      "Faster-warming Nunavut areas, 95th percentile (\u00b0C/decade)": 0.59,
+      "Compared with global surface": "3.1\u00d7 faster",
+      "Compared with global land": "2.0\u00d7 faster",
+      "Compared with southern Canada": "1.8\u00d7 faster",
+      "Compared with rest of Canada": "1.7\u00d7 faster"
+    },
+    {
+      "Start year": 1970,
+      "End year": 2025,
+      "Faster-warming Nunavut areas, 95th percentile (\u00b0C/decade)": 0.7156,
+      "Compared with global surface": "3.4\u00d7 faster",
+      "Compared with global land": "2.2\u00d7 faster",
+      "Compared with southern Canada": "1.9\u00d7 faster",
+      "Compared with rest of Canada": "1.8\u00d7 faster"
+    },
+    {
+      "Start year": 1980,
+      "End year": 2025,
+      "Faster-warming Nunavut areas, 95th percentile (\u00b0C/decade)": 0.7853,
+      "Compared with global surface": "3.7\u00d7 faster",
+      "Compared with global land": "2.3\u00d7 faster",
+      "Compared with southern Canada": "2.3\u00d7 faster",
+      "Compared with rest of Canada": "2.1\u00d7 faster"
+    },
+    {
+      "Start year": 1990,
+      "End year": 2025,
+      "Faster-warming Nunavut areas, 95th percentile (\u00b0C/decade)": 0.945,
+      "Compared with global surface": "3.8\u00d7 faster",
+      "Compared with global land": "2.5\u00d7 faster",
+      "Compared with southern Canada": "2.2\u00d7 faster",
+      "Compared with rest of Canada": "2.1\u00d7 faster"
+    }
+  ],
+  "fast_area_full": [
+    {
+      "Start year": 1940,
+      "End year": 2025,
+      "Faster-warming Nunavut areas, 95th percentile (\u00b0C/decade)": 0.4139,
+      "Compared with global surface": "2.9\u00d7 faster",
+      "Compared with global land": "1.9\u00d7 faster",
+      "Compared with southern Canada": "1.9\u00d7 faster",
+      "Compared with rest of Canada": "1.8\u00d7 faster",
+      "Global surface rate (\u00b0C/decade)": 0.1421,
+      "Global land rate (\u00b0C/decade)": 0.2208,
+      "Southern Canada rate (\u00b0C/decade)": 0.2199,
+      "Rest of Canada rate (\u00b0C/decade)": 0.2328,
+      "Grid-cell percentile used": 95
+    },
+    {
+      "Start year": 1950,
+      "End year": 2025,
+      "Faster-warming Nunavut areas, 95th percentile (\u00b0C/decade)": 0.5288,
+      "Compared with global surface": "3.2\u00d7 faster",
+      "Compared with global land": "2.1\u00d7 faster",
+      "Compared with southern Canada": "1.9\u00d7 faster",
+      "Compared with rest of Canada": "1.7\u00d7 faster",
+      "Global surface rate (\u00b0C/decade)": 0.1648,
+      "Global land rate (\u00b0C/decade)": 0.257,
+      "Southern Canada rate (\u00b0C/decade)": 0.2804,
+      "Rest of Canada rate (\u00b0C/decade)": 0.3035,
+      "Grid-cell percentile used": 95
+    },
+    {
+      "Start year": 1960,
+      "End year": 2025,
+      "Faster-warming Nunavut areas, 95th percentile (\u00b0C/decade)": 0.59,
+      "Compared with global surface": "3.1\u00d7 faster",
+      "Compared with global land": "2.0\u00d7 faster",
+      "Compared with southern Canada": "1.8\u00d7 faster",
+      "Compared with rest of Canada": "1.7\u00d7 faster",
+      "Global surface rate (\u00b0C/decade)": 0.1875,
+      "Global land rate (\u00b0C/decade)": 0.2897,
+      "Southern Canada rate (\u00b0C/decade)": 0.3262,
+      "Rest of Canada rate (\u00b0C/decade)": 0.354,
+      "Grid-cell percentile used": 95
+    },
+    {
+      "Start year": 1970,
+      "End year": 2025,
+      "Faster-warming Nunavut areas, 95th percentile (\u00b0C/decade)": 0.7156,
+      "Compared with global surface": "3.4\u00d7 faster",
+      "Compared with global land": "2.2\u00d7 faster",
+      "Compared with southern Canada": "1.9\u00d7 faster",
+      "Compared with rest of Canada": "1.8\u00d7 faster",
+      "Global surface rate (\u00b0C/decade)": 0.2128,
+      "Global land rate (\u00b0C/decade)": 0.328,
+      "Southern Canada rate (\u00b0C/decade)": 0.3773,
+      "Rest of Canada rate (\u00b0C/decade)": 0.3978,
+      "Grid-cell percentile used": 95
+    },
+    {
+      "Start year": 1980,
+      "End year": 2025,
+      "Faster-warming Nunavut areas, 95th percentile (\u00b0C/decade)": 0.7853,
+      "Compared with global surface": "3.7\u00d7 faster",
+      "Compared with global land": "2.3\u00d7 faster",
+      "Compared with southern Canada": "2.3\u00d7 faster",
+      "Compared with rest of Canada": "2.1\u00d7 faster",
+      "Global surface rate (\u00b0C/decade)": 0.2134,
+      "Global land rate (\u00b0C/decade)": 0.3344,
+      "Southern Canada rate (\u00b0C/decade)": 0.3453,
+      "Rest of Canada rate (\u00b0C/decade)": 0.3709,
+      "Grid-cell percentile used": 95
+    },
+    {
+      "Start year": 1990,
+      "End year": 2025,
+      "Faster-warming Nunavut areas, 95th percentile (\u00b0C/decade)": 0.945,
+      "Compared with global surface": "3.8\u00d7 faster",
+      "Compared with global land": "2.5\u00d7 faster",
+      "Compared with southern Canada": "2.2\u00d7 faster",
+      "Compared with rest of Canada": "2.1\u00d7 faster",
+      "Global surface rate (\u00b0C/decade)": 0.2474,
+      "Global land rate (\u00b0C/decade)": 0.3763,
+      "Southern Canada rate (\u00b0C/decade)": 0.4264,
+      "Rest of Canada rate (\u00b0C/decade)": 0.4503,
+      "Grid-cell percentile used": 95
+    }
+  ]
+}
