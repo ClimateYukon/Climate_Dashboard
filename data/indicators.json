@@ -2,21 +2,23 @@
   {
     "id": "ahccd_temperature",
     "card_type": "interactive",
-    "title": "AHCCD temperature stations",
+    "title": "Daily temperature observations",
     "subtitle": "Interactive station dashboard",
-    "description": "Explore AHCCD temperature records for Yukon stations.",
+    "description": "Explore daily station temperatures with historical normals, records, and unusually warm or cold days.",
     "date_label": "Updated 2026-06-24",
     "updated_date": "2026-06-24",
     "source": "AHCCD",
     "preview_image": "interactive/ahccd-temperature-preview.png",
     "tags": [
+      "AHCCD",
       "temperature",
       "stations",
-      "AHCCD",
+      "daily",
       "interactive"
     ],
     "plot_count": 1,
-    "href": "interactive/ahccd-temperature.html"
+    "href": "interactive/ahccd-temperature.html",
+    "sort_order": 20
   },
   {
     "id": "kcibr_weather_forecast",
@@ -47,7 +49,8 @@
       "wind"
     ],
     "plot_count": 7,
-    "href": "indicator.html?id=kcibr_weather_forecast"
+    "href": "indicator.html?id=kcibr_weather_forecast",
+    "sort_order": 999
   },
   {
     "id": "monthly_temperature_rankings",
@@ -69,7 +72,8 @@
       "temperature"
     ],
     "plot_count": 2,
-    "href": "indicator.html?id=monthly_temperature_rankings"
+    "href": "indicator.html?id=monthly_temperature_rankings",
+    "sort_order": 40
   },
   {
     "id": "seasonal_temperature_anomalies",
@@ -92,12 +96,13 @@
       "temperature"
     ],
     "plot_count": 1,
-    "href": "indicator.html?id=seasonal_temperature_anomalies"
+    "href": "indicator.html?id=seasonal_temperature_anomalies",
+    "sort_order": 50
   },
   {
     "id": "annual_temperature_anomalies",
     "card_type": "indicator",
-    "title": "2025 annual temperature anomalies",
+    "title": "2025 Yukon annual temperature anomalies",
     "subtitle": "12 communities",
     "description": "Daily mean temperature compared with 1981-2010 normals for Yukon communities.",
     "date_label": "Updated 2026-05-30",
@@ -113,7 +118,8 @@
       "temperature"
     ],
     "plot_count": 12,
-    "href": "indicator.html?id=annual_temperature_anomalies"
+    "href": "indicator.html?id=annual_temperature_anomalies",
+    "sort_order": 10
   },
   {
     "id": "northern_warming_comparisons",
@@ -127,6 +133,7 @@
       "warming"
     ],
     "plot_count": 3,
-    "href": "indicator.html?id=northern_warming_comparisons"
+    "href": "indicator.html?id=northern_warming_comparisons",
+    "sort_order": 60
   }
 ]
