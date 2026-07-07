@@ -295,3 +295,39 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Archived dashboard cards */
+.card-archived {
+  opacity: 0.78;
+}
+
+.card-archived .card-image {
+  position: relative;
+  filter: grayscale(0.35);
+}
+
+.archive-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(229, 231, 235, 0.72);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.archive-overlay span {
+  display: inline-block;
+  transform: rotate(-18deg);
+  border: 3px solid rgba(31, 41, 55, 0.78);
+  color: rgba(31, 41, 55, 0.86);
+  background: rgba(255, 255, 255, 0.70);
+  padding: 0.35rem 0.85rem;
+  border-radius: 0.35rem;
+  font-size: 1.05rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+

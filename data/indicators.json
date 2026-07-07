@@ -25,7 +25,7 @@
     "card_type": "indicator",
     "title": "KCIBR race-day weather forecast",
     "subtitle": "7 communities",
-    "description": "Rider-facing weather forecast plots for the Kluane Chilkat International Bike Relay. Plots show expected temperature, rain, wind effect, gusts, cloud cover, and UV index along the route.",
+    "description": "Archived race-day weather forecast plots for the Kluane Chilkat International Bike Relay.",
     "date_label": "Forecast retrieved 2026-06-23 19:00 UTC",
     "updated_date": "2026-06-23",
     "source": "Open-Meteo weather data, CC BY 4.0",
@@ -50,7 +50,9 @@
     ],
     "plot_count": 7,
     "href": "indicator.html?id=kcibr_weather_forecast",
-    "sort_order": 999
+    "sort_order": 999,
+    "status": "archived",
+    "status_label": "ARCHIVED"
   },
   {
     "id": "monthly_temperature_rankings",

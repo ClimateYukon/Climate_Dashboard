@@ -30,6 +30,22 @@ function textMatches(item, query, fields) {
   });
 }
 
+
+function getArchiveOverlay(item) {
+  const isArchived =
+    item.status === "archived" ||
+    item.status === "deprecated" ||
+    item.archived === true ||
+    item.deprecated === true;
+
+  if (!isArchived) {
+    return "";
+  }
+
+  const label = item.status_label || (item.status === "deprecated" ? "DEPRECATED" : "ARCHIVED");
+  return `<div class="archive-overlay"><span>${label}</span></div>`;
+}
+
 function cardImage(src, title) {
   if (!src) return "";
 
@@ -145,9 +161,9 @@ function renderIndicatorCard(indicator) {
     .join("");
 
   return `
-    <article class="card">
+    <article class="card${getArchiveOverlay(indicator) ? " card-archived" : ""}">
       <a href="${href}" class="card-link" aria-label="Open ${indicator.title}">
-        <div class="card-image">${cardImage(indicator.preview_image, indicator.title)}</div>
+        <div class="card-image">${cardImage(indicator.preview_image, indicator.title)}${getArchiveOverlay(indicator)}</div>
         <div class="card-body">
           <p class="card-kicker">${countLabel}</p>
           <h2>${indicator.title || indicator.id}</h2>
