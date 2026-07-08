@@ -5,25 +5,25 @@ let stationData = null;
 const DATA_ROOT = "../data/interactive/ahccd_temperature";
 const DATA_CACHE_BUSTER = String(Date.now());
 
-function withCacheBuster(path) {
-  const separator = path.includes("?") ? "&" : "?";
-  return `${path}${separator}v=${DATA_CACHE_BUSTER}`;
-}
-
 const monthNames = [
   "January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
 
 const seasonDefinitions = {
-  DJF: { label: "Winter (DJF)", months: [12, 1, 2] },
-  MAM: { label: "Spring (MAM)", months: [3, 4, 5] },
-  JJA: { label: "Summer (JJA)", months: [6, 7, 8] },
-  SON: { label: "Fall (SON)", months: [9, 10, 11] }
+  DJF: { label: "Winter (Dec-Feb)", months: [12, 1, 2] },
+  MAM: { label: "Spring (Mar-May)", months: [3, 4, 5] },
+  JJA: { label: "Summer (Jun-Aug)", months: [6, 7, 8] },
+  SON: { label: "Fall (Sep-Nov)", months: [9, 10, 11] }
 };
 
 
 // 2. Utility functions
+function withCacheBuster(path) {
+  const separator = path.includes("?") ? "&" : "?";
+  return `${path}${separator}v=${DATA_CACHE_BUSTER}`;
+}
+
 function showError(message) {
   const errorBox = document.getElementById("error-box");
   errorBox.textContent = message;
@@ -83,24 +83,12 @@ function finiteValue(value) {
   return value !== null && value !== undefined && Number.isFinite(Number(value));
 }
 
-function finiteMinMax(arrays) {
-  const values = [];
+function formatNumber(value, digits = 2) {
+  if (!finiteValue(value)) {
+    return "";
+  }
 
-  arrays.forEach((array) => {
-    array.forEach((value) => {
-      if (finiteValue(value)) {
-        values.push(Number(value));
-      }
-    });
-  });
-
-  if (values.length === 0) return null;
-
-  const minValue = Math.min(...values);
-  const maxValue = Math.max(...values);
-  const padding = Math.max(1.2, 0.08 * (maxValue - minValue));
-
-  return [minValue - padding, maxValue + padding];
+  return Number(value).toFixed(digits);
 }
 
 function makeDateRange(startDate, endDate) {
@@ -114,54 +102,163 @@ function makeDateRange(startDate, endDate) {
 
   return dates;
 }
+
 function paddedDateRange(startDateString, endDateString) {
-  const startDate = new Date(startDateString + "T00:00:00");
-  const endDate = new Date(endDateString + "T00:00:00");
+  const startDate = new Date(`${startDateString}T00:00:00`);
+  const endDate = new Date(`${endDateString}T00:00:00`);
 
   startDate.setDate(startDate.getDate() - 1);
   endDate.setDate(endDate.getDate() + 1);
 
   return [formatDate(startDate), formatDate(endDate)];
 }
-function makeSelectedPeriodDates(mode, year, month, season) {
+
+function safeDate(year, month, day) {
+  const candidate = new Date(year, month - 1, day);
+
+  if (candidate.getMonth() !== month - 1) {
+    return new Date(year, month, 0);
+  }
+
+  return candidate;
+}
+
+function finiteMinMax(arrays) {
+  const values = [];
+
+  arrays.forEach((array) => {
+    array.forEach((value) => {
+      if (finiteValue(value)) {
+        values.push(Number(value));
+      }
+    });
+  });
+
+  if (values.length === 0) return [-40, 40];
+
+  const minValue = Math.min(...values);
+  const maxValue = Math.max(...values);
+
+  const ymin = Math.floor((minValue - 2) / 5) * 5;
+  const ymax = Math.ceil((maxValue + 2) / 5) * 5;
+
+  return [ymin, ymax];
+}
+
+function baselineLabel() {
+  return manifest.baseline || manifest.climatology_period || "reference period";
+}
+
+function getComparisonView() {
+  const selected = document.querySelector("input[name='comparison-view']:checked");
+  return selected ? selected.value : "average";
+}
+
+
+// 3. Period helpers
+function seasonStartEnd(year, season) {
+  if (season === "DJF") {
+    return {
+      start: new Date(year - 1, 11, 1),
+      end: new Date(year, 2, 0)
+    };
+  }
+
+  if (season === "MAM") {
+    return {
+      start: new Date(year, 2, 1),
+      end: new Date(year, 5, 0)
+    };
+  }
+
+  if (season === "JJA") {
+    return {
+      start: new Date(year, 5, 1),
+      end: new Date(year, 8, 0)
+    };
+  }
+
+  return {
+    start: new Date(year, 8, 1),
+    end: new Date(year, 11, 0)
+  };
+}
+
+function selectedPeriod(mode, year, month, season) {
+  const stationMaxDate = new Date(`${stationData.time[stationData.time.length - 1]}T00:00:00`);
+
   if (mode === "month") {
-    const startDate = new Date(year, month - 1, 1);
-    const endDate = new Date(year, month, 0);
-    return makeDateRange(startDate, endDate);
+    const plotStart = new Date(year, month - 1, 1);
+    const plotEnd = new Date(year, month, 0);
+    const rankingEnd = (year === stationMaxDate.getFullYear() && month === stationMaxDate.getMonth() + 1)
+      ? new Date(Math.min(plotEnd.getTime(), stationMaxDate.getTime()))
+      : plotEnd;
+
+    return {
+      plotStart,
+      plotEnd,
+      rankingEnd,
+      label: `${monthNames[month - 1]} ${year}`
+    };
   }
 
   if (mode === "season") {
-    if (season === "DJF") {
-      return makeDateRange(new Date(year - 1, 11, 1), new Date(year, 2, 0));
-    }
+    const { start, end } = seasonStartEnd(year, season);
+    const rankingEnd = (stationMaxDate >= start && stationMaxDate <= end)
+      ? new Date(Math.min(end.getTime(), stationMaxDate.getTime()))
+      : end;
 
-    if (season === "MAM") {
-      return makeDateRange(new Date(year, 2, 1), new Date(year, 5, 0));
-    }
-
-    if (season === "JJA") {
-      return makeDateRange(new Date(year, 5, 1), new Date(year, 8, 0));
-    }
-
-    if (season === "SON") {
-      return makeDateRange(new Date(year, 8, 1), new Date(year, 11, 0));
-    }
+    return {
+      plotStart: start,
+      plotEnd: end,
+      rankingEnd,
+      label: `${seasonDefinitions[season].label.replace(/\s*\(.+\)/, "")} ${year}`
+    };
   }
 
-  if (mode === "annual") {
-    const requestedEndDate = new Date(year, month, 0);
-    const dataMaxDate = new Date(manifest.time_max + "T00:00:00");
-    const endDate = requestedEndDate <= dataMaxDate ? requestedEndDate : dataMaxDate;
+  const plotEnd = stationMaxDate;
+  const plotStart = new Date(plotEnd.getTime());
+  plotStart.setDate(plotStart.getDate() - 364);
 
-    const startDate = new Date(endDate);
-    startDate.setDate(startDate.getDate() - 364);
-
-    return makeDateRange(startDate, endDate);
-  }
-
-  return [];
+  return {
+    plotStart,
+    plotEnd,
+    rankingEnd: plotEnd,
+    label: "Last 365 days"
+  };
 }
 
+function makeSelectedPeriodDates(mode, year, month, season) {
+  const period = selectedPeriod(mode, year, month, season);
+  return makeDateRange(period.plotStart, period.plotEnd);
+}
+
+function rankingWindowForYear(rankYear, selectedStartString, rankingEndString, mode, month, season) {
+  const selectedStart = new Date(`${selectedStartString}T00:00:00`);
+  const rankingEnd = new Date(`${rankingEndString}T00:00:00`);
+  const dayCount = Math.round((rankingEnd - selectedStart) / 86400000) + 1;
+
+  let start;
+
+  if (mode === "month") {
+    start = safeDate(rankYear, month, selectedStart.getDate());
+  } else if (mode === "season") {
+    start = seasonStartEnd(rankYear, season).start;
+  } else {
+    const end = safeDate(rankYear, rankingEnd.getMonth() + 1, rankingEnd.getDate());
+    start = new Date(end.getTime());
+    start.setDate(start.getDate() - dayCount + 1);
+    return makeDateRange(start, end);
+  }
+
+  const end = new Date(start.getTime());
+  end.setDate(end.getDate() + dayCount - 1);
+
+  return makeDateRange(start, end);
+}
+
+
+// 4. Lookup and series
 function makeLookup(data) {
   const byDate = new Map();
   const byMonthDay = new Map();
@@ -176,6 +273,10 @@ function makeLookup(data) {
       clim_tasmax: data.clim_tasmax[index],
       p01_tas: data.p01_tas[index],
       p99_tas: data.p99_tas[index],
+      p01_tasmin: data.p01_tasmin ? data.p01_tasmin[index] : null,
+      p99_tasmin: data.p99_tasmin ? data.p99_tasmin[index] : null,
+      p01_tasmax: data.p01_tasmax ? data.p01_tasmax[index] : null,
+      p99_tasmax: data.p99_tasmax ? data.p99_tasmax[index] : null,
       tasmax_record: data.tasmax_record ? data.tasmax_record[index] : null,
       tasmin_record: data.tasmin_record ? data.tasmin_record[index] : null,
       tasmax_record_year: data.tasmax_record_year ? data.tasmax_record_year[index] : null,
@@ -183,18 +284,7 @@ function makeLookup(data) {
     };
 
     byDate.set(dateString, record);
-
-    const key = monthDayKey(dateString);
-
-    if (!byMonthDay.has(key)) {
-      byMonthDay.set(key, record);
-    }
-
-    const d = dateParts(dateString);
-
-    if (d.year >= 1981 && d.year <= 2010) {
-      byMonthDay.set(key, record);
-    }
+    byMonthDay.set(monthDayKey(dateString), record);
   });
 
   return { byDate, byMonthDay };
@@ -213,22 +303,20 @@ function valuesForPeriod(periodDates, data) {
     clim_tasmax: [],
     p01_tas: [],
     p99_tas: [],
+    p01_tasmin: [],
+    p99_tasmin: [],
+    p01_tasmax: [],
+    p99_tasmax: [],
     tasmax_record: [],
     tasmin_record: [],
     tasmax_record_year: [],
     tasmin_record_year: [],
-    warm_extreme_x: [],
-    warm_extreme_y: [],
-    cold_extreme_x: [],
-    cold_extreme_y: []
+    day_class: []
   };
 
   periodDates.forEach((dateString) => {
     const exact = lookup.byDate.get(dateString);
     const fallback = lookup.byMonthDay.get(monthDayKey(dateString));
-
-    const p01Value = exact ? exact.p01_tas : (fallback ? fallback.p01_tas : null);
-    const p99Value = exact ? exact.p99_tas : (fallback ? fallback.p99_tas : null);
 
     out.tas.push(exact ? exact.tas : null);
     out.tasmin.push(exact ? exact.tasmin : null);
@@ -238,89 +326,400 @@ function valuesForPeriod(periodDates, data) {
     out.clim_tasmin.push(exact ? exact.clim_tasmin : (fallback ? fallback.clim_tasmin : null));
     out.clim_tasmax.push(exact ? exact.clim_tasmax : (fallback ? fallback.clim_tasmax : null));
 
-    out.p01_tas.push(p01Value);
-    out.p99_tas.push(p99Value);
+    out.p01_tas.push(exact ? exact.p01_tas : (fallback ? fallback.p01_tas : null));
+    out.p99_tas.push(exact ? exact.p99_tas : (fallback ? fallback.p99_tas : null));
+    out.p01_tasmin.push(exact ? exact.p01_tasmin : (fallback ? fallback.p01_tasmin : null));
+    out.p99_tasmin.push(exact ? exact.p99_tasmin : (fallback ? fallback.p99_tasmin : null));
+    out.p01_tasmax.push(exact ? exact.p01_tasmax : (fallback ? fallback.p01_tasmax : null));
+    out.p99_tasmax.push(exact ? exact.p99_tasmax : (fallback ? fallback.p99_tasmax : null));
 
     out.tasmax_record.push(fallback ? fallback.tasmax_record : null);
     out.tasmin_record.push(fallback ? fallback.tasmin_record : null);
     out.tasmax_record_year.push(fallback ? fallback.tasmax_record_year : null);
     out.tasmin_record_year.push(fallback ? fallback.tasmin_record_year : null);
-
-    if (exact && finiteValue(exact.tas) && finiteValue(p99Value) && Number(exact.tas) > Number(p99Value)) {
-      out.warm_extreme_x.push(dateString);
-      out.warm_extreme_y.push(exact.tas);
-    }
-
-    if (exact && finiteValue(exact.tas) && finiteValue(p01Value) && Number(exact.tas) < Number(p01Value)) {
-      out.cold_extreme_x.push(dateString);
-      out.cold_extreme_y.push(exact.tas);
-    }
   });
 
   return out;
 }
 
-function makeSegmentedFillTraces(x, lower, upper, name, fillcolor) {
-  const traces = [];
-  let startIndex = null;
-  let showLegend = true;
-
-  for (let index = 0; index < x.length; index += 1) {
-    const isValid = finiteValue(lower[index]) && finiteValue(upper[index]);
-
-    if (isValid && startIndex === null) {
-      startIndex = index;
-    }
-
-    const isLast = index === x.length - 1;
-
-    if (startIndex !== null && (!isValid || isLast)) {
-      const endIndex = isValid && isLast ? index : index - 1;
-
-      if (endIndex >= startIndex) {
-        const xSegment = x.slice(startIndex, endIndex + 1);
-        const lowerSegment = lower.slice(startIndex, endIndex + 1);
-        const upperSegment = upper.slice(startIndex, endIndex + 1);
-
-        traces.push({
-          x: xSegment.concat([...xSegment].reverse()),
-          y: lowerSegment.concat([...upperSegment].reverse()),
-          fill: "toself",
-          fillcolor: fillcolor,
-          line: { color: "rgba(255,255,255,0)", width: 0 },
-          hoverinfo: "skip",
-          name: name,
-          showlegend: showLegend,
-          type: "scatter"
-        });
-
-        showLegend = false;
-      }
-
-      startIndex = null;
-    }
+function classifyDay(series, index, comparisonView) {
+  if (!finiteValue(series.tas[index])) {
+    return "missing";
   }
 
-  return traces;
+  if (comparisonView === "average") {
+    if (finiteValue(series.p01_tas[index]) && Number(series.tas[index]) < Number(series.p01_tas[index])) {
+      return "cool";
+    }
+
+    if (finiteValue(series.p99_tas[index]) && Number(series.tas[index]) > Number(series.p99_tas[index])) {
+      return "warm";
+    }
+
+    return "normal";
+  }
+
+  const lowExtreme = finiteValue(series.tasmin[index])
+    && finiteValue(series.p01_tasmin[index])
+    && Number(series.tasmin[index]) < Number(series.p01_tasmin[index]);
+
+  const highExtreme = finiteValue(series.tasmax[index])
+    && finiteValue(series.p99_tasmax[index])
+    && Number(series.tasmax[index]) > Number(series.p99_tasmax[index]);
+
+  if (lowExtreme && highExtreme) return "both";
+  if (lowExtreme) return "cool";
+  if (highExtreme) return "warm";
+  return "normal";
+}
+
+function applyDayClasses(series, comparisonView) {
+  series.day_class = series.x.map((_, index) => classifyDay(series, index, comparisonView));
 }
 
 
-// 3. Data loading
+// 5. Hover text
+function formatYearValue(value) {
+  if (!finiteValue(value)) {
+    return "n/a";
+  }
+
+  return String(Math.round(Number(value)));
+}
+
+function makeHoverText(series, index, comparisonView) {
+  if (!finiteValue(series.tas[index])) {
+    return `<b>${series.x[index]}</b><br>No observation`;
+  }
+
+  let lines = [
+    `<b>${series.x[index]}</b>`,
+    "",
+    "<b>Observed</b>",
+    `High: ${formatNumber(series.tasmax[index], 1)} °C`,
+    `Average: ${formatNumber(series.tas[index], 1)} °C`,
+    `Low: ${formatNumber(series.tasmin[index], 1)} °C`,
+    ""
+  ];
+
+  if (comparisonView === "average") {
+    lines = lines.concat([
+      "<b>Normal comparison</b>",
+      `Normal average: ${formatNumber(series.clim_tas[index], 1)} °C`,
+      `Extreme average range: ${formatNumber(series.p01_tas[index], 1)} to ${formatNumber(series.p99_tas[index], 1)} °C`,
+      ""
+    ]);
+  } else {
+    lines = lines.concat([
+      "<b>Normal comparison</b>",
+      `Normal low: ${formatNumber(series.clim_tasmin[index], 1)} °C`,
+      `Normal high: ${formatNumber(series.clim_tasmax[index], 1)} °C`,
+      `Extreme low threshold: ${formatNumber(series.p01_tasmin[index], 1)} °C`,
+      `Extreme high threshold: ${formatNumber(series.p99_tasmax[index], 1)} °C`,
+      ""
+    ]);
+  }
+
+  lines = lines.concat([
+    "<b>Records</b>",
+    `Record high: ${formatNumber(series.tasmax_record[index], 1)} °C (${formatYearValue(series.tasmax_record_year[index])})`,
+    `Record low: ${formatNumber(series.tasmin_record[index], 1)} °C (${formatYearValue(series.tasmin_record_year[index])})`
+  ]);
+
+  return lines.join("<br>");
+}
+
+
+// 6. Trace helpers
+function makeBandTraces(x, lower, upper, fillcolor) {
+  return [
+    {
+      x,
+      y: upper,
+      mode: "lines",
+      line: { width: 0, color: "rgba(0,0,0,0)" },
+      hoverinfo: "skip",
+      showlegend: false,
+      type: "scatter"
+    },
+    {
+      x,
+      y: lower,
+      mode: "lines",
+      line: { width: 0, color: "rgba(0,0,0,0)" },
+      fill: "tonexty",
+      fillcolor,
+      hoverinfo: "skip",
+      showlegend: false,
+      type: "scatter"
+    }
+  ];
+}
+
+function addBackgroundBands(traces, series, comparisonView) {
+  if (comparisonView === "average") {
+    traces.push(...makeBandTraces(
+      series.x,
+      series.p01_tas,
+      series.p99_tas,
+      "rgba(120,130,140,0.24)"
+    ));
+    return;
+  }
+
+  traces.push(...makeBandTraces(
+    series.x,
+    series.p01_tasmin,
+    series.clim_tasmin,
+    "rgba(120,130,140,0.12)"
+  ));
+
+  traces.push(...makeBandTraces(
+    series.x,
+    series.clim_tasmin,
+    series.clim_tasmax,
+    "rgba(80,90,100,0.30)"
+  ));
+
+  traces.push(...makeBandTraces(
+    series.x,
+    series.clim_tasmax,
+    series.p99_tasmax,
+    "rgba(120,130,140,0.12)"
+  ));
+}
+
+function makeObservedRangeTrace(series, className, color, opacity, comparisonView) {
+  const x = [];
+  const y = [];
+  const text = [];
+
+  series.x.forEach((dateString, index) => {
+    if (
+      series.day_class[index] === className
+      && finiteValue(series.tasmin[index])
+      && finiteValue(series.tasmax[index])
+    ) {
+      const hoverText = makeHoverText(series, index, comparisonView);
+      x.push(dateString, dateString, null);
+      y.push(series.tasmin[index], series.tasmax[index], null);
+      text.push(hoverText, hoverText, null);
+    }
+  });
+
+  return {
+    x,
+    y,
+    mode: "lines",
+    line: { color, width: 4 },
+    opacity,
+    text,
+    hovertemplate: "%{text}<extra></extra>",
+    showlegend: false,
+    type: "scatter"
+  };
+}
+
+function addExtremeMarkers(traces, series, comparisonView) {
+  const coolX = [];
+  const coolY = [];
+  const coolText = [];
+  const warmX = [];
+  const warmY = [];
+  const warmText = [];
+
+  series.x.forEach((dateString, index) => {
+    if (series.day_class[index] === "cool") {
+      coolX.push(dateString);
+      coolY.push(comparisonView === "average" ? series.tas[index] : series.tasmin[index]);
+      coolText.push(makeHoverText(series, index, comparisonView));
+    }
+
+    if (series.day_class[index] === "warm") {
+      warmX.push(dateString);
+      warmY.push(comparisonView === "average" ? series.tas[index] : series.tasmax[index]);
+      warmText.push(makeHoverText(series, index, comparisonView));
+    }
+  });
+
+  traces.push({
+    x: coolX,
+    y: coolY,
+    mode: "markers",
+    marker: { size: 7, color: "#2b59d1", line: { width: 0.8, color: "white" } },
+    text: coolText,
+    hovertemplate: "%{text}<extra></extra>",
+    showlegend: false,
+    type: "scatter"
+  });
+
+  traces.push({
+    x: warmX,
+    y: warmY,
+    mode: "markers",
+    marker: { size: 7, color: "#d62828", line: { width: 0.8, color: "white" } },
+    text: warmText,
+    hovertemplate: "%{text}<extra></extra>",
+    showlegend: false,
+    type: "scatter"
+  });
+}
+
+function addObservedRanges(traces, series, comparisonView, mode) {
+  if (mode === "annual") {
+    addExtremeMarkers(traces, series, comparisonView);
+    return;
+  }
+
+  traces.push(makeObservedRangeTrace(series, "normal", "#d69b45", 0.35, comparisonView));
+  traces.push(makeObservedRangeTrace(series, "cool", "#2b59d1", 0.80, comparisonView));
+  traces.push(makeObservedRangeTrace(series, "warm", "#d62828", 0.80, comparisonView));
+  traces.push(makeObservedRangeTrace(series, "both", "#6a00a8", 0.85, comparisonView));
+}
+
+function addRecordMarkers(traces, series) {
+  traces.push({
+    x: series.x,
+    y: series.tasmax_record,
+    mode: "markers",
+    marker: {
+      size: 4,
+      symbol: "diamond",
+      color: "rgba(170,0,0,0.45)",
+      line: { width: 0.5, color: "white" }
+    },
+    text: series.tasmax_record_year.map(formatYearValue),
+    hovertemplate: "<b>%{x|%b %-d}</b><br>Record high: %{y:.1f} °C<br>Year: %{text}<extra></extra>",
+    showlegend: false,
+    type: "scatter"
+  });
+
+  traces.push({
+    x: series.x,
+    y: series.tasmin_record,
+    mode: "markers",
+    marker: {
+      size: 4,
+      symbol: "diamond",
+      color: "rgba(0,45,170,0.45)",
+      line: { width: 0.5, color: "white" }
+    },
+    text: series.tasmin_record_year.map(formatYearValue),
+    hovertemplate: "<b>%{x|%b %-d}</b><br>Record low: %{y:.1f} °C<br>Year: %{text}<extra></extra>",
+    showlegend: false,
+    type: "scatter"
+  });
+}
+
+
+// 7. Legend and titles
+function legendItem(label, styleType, color, options = {}) {
+  const opacity = options.opacity === undefined ? 1 : options.opacity;
+  const dash = options.dash || false;
+
+  let swatchClass = "legend-swatch-line";
+  let style = `border-top-color: ${color}; opacity: ${opacity};`;
+
+  if (styleType === "band") {
+    swatchClass = "legend-swatch-band";
+    style = `background: ${color}; opacity: ${opacity};`;
+  }
+
+  if (styleType === "diamond") {
+    swatchClass = "legend-swatch-diamond";
+    style = `background: ${color}; opacity: ${opacity};`;
+  }
+
+  if (dash) {
+    style += " border-top-style: dashed;";
+  }
+
+  return `<div class="legend-item"><span class="${swatchClass}" style="${style}"></span><span>${label}</span></div>`;
+}
+
+function updateGraphTitle(stationName, periodLabel, comparisonView) {
+  const subtitle = comparisonView === "average"
+    ? "Daily average compared with the historical daily-average extreme range"
+    : "Daily lows and highs compared with normal and extreme values";
+
+  document.getElementById("graph-title").innerHTML = `
+    <div class="main-title">${stationName} Daily Temperatures - ${periodLabel}</div>
+    <div class="sub-title">${subtitle}</div>
+  `;
+}
+
+function updateLegend(comparisonView) {
+  let historicalItems = "";
+  let observedItems = "";
+  let extremeItems = "";
+
+  if (comparisonView === "average") {
+    historicalItems = [
+      legendItem("Extreme daily-average range", "band", "rgba(120,130,140,0.24)"),
+      legendItem("Normal daily average", "line", "rgba(40,45,50,0.80)", { dash: true })
+    ].join("");
+
+    observedItems = [
+      legendItem("Observed daily average", "line", "#c97912"),
+      legendItem("Observed daily low-high", "line", "#d69b45", { opacity: 0.35 })
+    ].join("");
+
+    extremeItems = [
+      legendItem("Extreme cool day", "line", "#2b59d1"),
+      legendItem("Extreme warm day", "line", "#d62828")
+    ].join("");
+  } else {
+    historicalItems = [
+      legendItem("Normal daily low-high range", "band", "rgba(80,90,100,0.30)"),
+      legendItem("Extreme low-high range", "band", "rgba(120,130,140,0.12)"),
+      legendItem("Normal daily average", "line", "rgba(40,45,50,0.80)", { dash: true })
+    ].join("");
+
+    observedItems = [
+      legendItem("Observed daily average", "line", "#c97912"),
+      legendItem("Observed daily low-high", "line", "#d69b45", { opacity: 0.35 })
+    ].join("");
+
+    extremeItems = [
+      legendItem("Extreme daily low", "line", "#2b59d1"),
+      legendItem("Extreme daily high", "line", "#d62828")
+    ].join("");
+  }
+
+  const recordItems = [
+    legendItem("Record high", "diamond", "rgba(170,0,0,0.60)"),
+    legendItem("Record low", "diamond", "rgba(0,45,170,0.60)")
+  ].join("");
+
+  document.getElementById("custom-legend").innerHTML = `
+    <div><div class="legend-heading">Historical context</div>${historicalItems}</div>
+    <div><div class="legend-heading">Observed temperatures</div>${observedItems}</div>
+    <div><div class="legend-heading">Extremes</div>${extremeItems}</div>
+    <div><div class="legend-heading">Records</div>${recordItems}</div>
+  `;
+}
+
+
+// 8. Data loading
 async function loadManifest() {
-  const response = await fetch(`${DATA_ROOT}/manifest.json`, { cache: "no-store" });
+  const response = await fetch(withCacheBuster(`${DATA_ROOT}/manifest.json`), { cache: "no-store" });
+
   if (!response.ok) {
     throw new Error(`Could not load manifest.json. HTTP ${response.status}`);
   }
+
   return response.json();
 }
 
 async function loadStation(stationId) {
   const stationInfo = manifest.stations.find((station) => station.id === stationId);
+
   if (!stationInfo) {
     throw new Error(`Station not found in manifest: ${stationId}`);
   }
 
-  const response = await fetch(`../${stationInfo.data_file}`, { cache: "no-store" });
+  const response = await fetch(withCacheBuster(`../${stationInfo.data_file}`), { cache: "no-store" });
+
   if (!response.ok) {
     throw new Error(`Could not load station file for ${stationInfo.name}. HTTP ${response.status}`);
   }
@@ -329,7 +728,7 @@ async function loadStation(stationId) {
 }
 
 
-// 4. Control setup
+// 9. Controls
 function setupControls() {
   const stationSelect = document.getElementById("station-select");
   const modeSelect = document.getElementById("mode-select");
@@ -378,6 +777,10 @@ function setupControls() {
   [modeSelect, monthSelect, seasonSelect].forEach((element) => {
     element.addEventListener("change", updatePlot);
   });
+
+  document.querySelectorAll("input[name='comparison-view']").forEach((element) => {
+    element.addEventListener("change", updatePlot);
+  });
 }
 
 function refreshYearSelect() {
@@ -396,50 +799,11 @@ function refreshYearSelect() {
 }
 
 
-
-// 5. Summary and ranking table
-function periodLabelForYear(mode, year, month, season) {
-  if (mode === "month") {
-    return `${monthNames[month - 1]} ${year}`;
-  }
-
-  if (mode === "season") {
-    return `${seasonDefinitions[season].label} ${year}`;
-  }
-
-  return `365-day period ending in ${monthNames[month - 1]} ${year}`;
-}
-
-function periodDatesForComparisonYear(mode, comparisonYear, selectedMonth, selectedSeason, selectedPeriodDates) {
-  if (mode === "month") {
-    const startDate = new Date(comparisonYear, selectedMonth - 1, 1);
-    const endDate = new Date(comparisonYear, selectedMonth, 0);
-    return makeDateRange(startDate, endDate);
-  }
-
-  if (mode === "season") {
-    return makeSelectedPeriodDates("season", comparisonYear, selectedMonth, selectedSeason);
-  }
-
-  if (mode === "annual") {
-    const selectedEnd = selectedPeriodDates[selectedPeriodDates.length - 1];
-    const selectedEndParts = dateParts(selectedEnd);
-
-    const endDate = new Date(comparisonYear, selectedEndParts.month - 1, selectedEndParts.day);
-    const startDate = new Date(endDate);
-    startDate.setDate(startDate.getDate() - 364);
-
-    return makeDateRange(startDate, endDate);
-  }
-
-  return [];
-}
-
+// 10. Ranking and summary
 function meanFinite(values) {
   const finiteValues = values
-    .filter((value) => value !== null && value !== undefined && value !== "")
-    .map((value) => Number(value))
-    .filter((value) => Number.isFinite(value));
+    .filter((value) => finiteValue(value))
+    .map(Number);
 
   if (finiteValues.length === 0) {
     return null;
@@ -448,57 +812,44 @@ function meanFinite(values) {
   return finiteValues.reduce((sum, value) => sum + value, 0) / finiteValues.length;
 }
 
-function formatSigned(value, digits = 2) {
-  if (!finiteValue(value)) {
-    return "";
-  }
+function computeRankingRows(mode, selectedYear, selectedMonth, selectedSeason, selectedPeriodDates, rankingEndDate) {
+  const selectedStart = selectedPeriodDates[0];
+  const rankingEnd = rankingEndDate;
+  const selectedDayCount = Math.round(
+    (new Date(`${rankingEnd}T00:00:00`) - new Date(`${selectedStart}T00:00:00`)) / 86400000
+  ) + 1;
 
-  const numberValue = Number(value);
-  const sign = numberValue > 0 ? "+" : "";
-  return `${sign}${numberValue.toFixed(digits)}`;
-}
-
-function formatNumber(value, digits = 2) {
-  if (!finiteValue(value)) {
-    return "";
-  }
-
-  return Number(value).toFixed(digits);
-}
-
-function computeRankingRows(mode, selectedYear, selectedMonth, selectedSeason, selectedPeriodDates) {
+  const minDays = Math.max(1, Math.ceil(selectedDayCount * 0.85));
   const years = uniqueSortedYears(stationData.time);
   const rows = [];
 
   years.forEach((year) => {
-    const comparisonDates = periodDatesForComparisonYear(
-      mode,
+    const comparisonDates = rankingWindowForYear(
       year,
+      selectedStart,
+      rankingEnd,
+      mode,
       selectedMonth,
-      selectedSeason,
-      selectedPeriodDates
+      selectedSeason
     );
 
     const comparisonSeries = valuesForPeriod(comparisonDates, stationData);
-    const averageTemperature = meanFinite(comparisonSeries.tas);
+    const validTas = comparisonSeries.tas.filter(finiteValue);
 
-    if (averageTemperature !== null) {
+    if (validTas.length < minDays) {
+      return;
+    }
+
+    const averageTemperature = meanFinite(comparisonSeries.tas);
+    const normalTemperature = meanFinite(comparisonSeries.clim_tas);
+
+    if (averageTemperature !== null && normalTemperature !== null) {
       rows.push({
         Year: year,
-        tas: averageTemperature
+        tas: averageTemperature,
+        Deviation: averageTemperature - normalTemperature
       });
     }
-  });
-
-  const baselineRows = rows.filter((row) => row.Year >= 1981 && row.Year <= 2010);
-  const baselineMean = meanFinite(baselineRows.map((row) => row.tas));
-
-  if (baselineMean === null) {
-    return [];
-  }
-
-  rows.forEach((row) => {
-    row.Deviation = row.tas - baselineMean;
   });
 
   rows.sort((a, b) => b.tas - a.tas);
@@ -510,20 +861,71 @@ function computeRankingRows(mode, selectedYear, selectedMonth, selectedSeason, s
   return rows;
 }
 
-function nearbyRankingRows(rows, selectedYear, radius = 3) {
+function nearbyRankingRows(rows, selectedYear, nRows = 7) {
   const selectedIndex = rows.findIndex((row) => row.Year === selectedYear);
 
   if (selectedIndex === -1) {
-    return rows.slice(0, 7);
+    return rows.slice(0, nRows);
   }
 
-  const start = Math.max(0, selectedIndex - radius);
-  const end = Math.min(rows.length, selectedIndex + radius + 1);
+  const halfWindow = Math.floor(nRows / 2);
+  let start = Math.max(0, selectedIndex - halfWindow);
+  let end = start + nRows;
+
+  if (end > rows.length) {
+    end = rows.length;
+    start = Math.max(0, end - nRows);
+  }
 
   return rows.slice(start, end);
 }
 
-function updateSummaryAndRankingTable(mode, selectedYear, selectedMonth, selectedSeason, selectedStationName, selectedPeriodDates) {
+function countEvents(series) {
+  let recordHigh = 0;
+  let recordLow = 0;
+  let extremeWarm = 0;
+  let extremeCool = 0;
+  let extremeHigh = 0;
+  let extremeLow = 0;
+
+  series.x.forEach((_, index) => {
+    if (finiteValue(series.tasmax[index]) && finiteValue(series.tasmax_record[index]) && Number(series.tasmax[index]) >= Number(series.tasmax_record[index])) {
+      recordHigh += 1;
+    }
+
+    if (finiteValue(series.tasmin[index]) && finiteValue(series.tasmin_record[index]) && Number(series.tasmin[index]) <= Number(series.tasmin_record[index])) {
+      recordLow += 1;
+    }
+
+    if (finiteValue(series.tas[index]) && finiteValue(series.p99_tas[index]) && Number(series.tas[index]) > Number(series.p99_tas[index])) {
+      extremeWarm += 1;
+    }
+
+    if (finiteValue(series.tas[index]) && finiteValue(series.p01_tas[index]) && Number(series.tas[index]) < Number(series.p01_tas[index])) {
+      extremeCool += 1;
+    }
+
+    if (finiteValue(series.tasmax[index]) && finiteValue(series.p99_tasmax[index]) && Number(series.tasmax[index]) > Number(series.p99_tasmax[index])) {
+      extremeHigh += 1;
+    }
+
+    if (finiteValue(series.tasmin[index]) && finiteValue(series.p01_tasmin[index]) && Number(series.tasmin[index]) < Number(series.p01_tasmin[index])) {
+      extremeLow += 1;
+    }
+  });
+
+  return {
+    recordHigh,
+    recordLow,
+    extremeWarm,
+    extremeCool,
+    extremeHigh,
+    extremeLow
+  };
+}
+
+function updateSummaryAndRankingTable(mode, selectedYear, selectedMonth, selectedSeason, selectedStationName, selectedPeriodDates, rankingEndDate, series, comparisonView) {
+  const summaryCard = document.getElementById("summary-card");
   const summaryElement = document.getElementById("temperature-summary");
   const tableElement = document.getElementById("ranking-table");
 
@@ -532,6 +934,7 @@ function updateSummaryAndRankingTable(mode, selectedYear, selectedMonth, selecte
   }
 
   const tableBody = tableElement.querySelector("tbody");
+
   if (!tableBody) {
     return;
   }
@@ -541,40 +944,44 @@ function updateSummaryAndRankingTable(mode, selectedYear, selectedMonth, selecte
     selectedYear,
     selectedMonth,
     selectedSeason,
-    selectedPeriodDates
+    selectedPeriodDates,
+    rankingEndDate
   );
 
   tableBody.innerHTML = "";
 
   if (rows.length === 0) {
-    summaryElement.textContent = "Not enough data are available to calculate a ranking for this period.";
+    summaryCard.style.display = "none";
     return;
   }
 
   const selectedRow = rows.find((row) => row.Year === selectedYear);
 
   if (!selectedRow) {
-    summaryElement.textContent = "The selected year does not have enough data for this period.";
+    summaryCard.style.display = "none";
     return;
   }
 
-  const periodLabel = periodLabelForYear(mode, selectedYear, selectedMonth, selectedSeason);
+  const period = selectedPeriod(mode, selectedYear, selectedMonth, selectedSeason);
+  const periodLabel = period.label;
   const anomalyAbs = Math.abs(selectedRow.Deviation).toFixed(2);
-  const rankText = `${selectedRow.Rank}/${rows.length}`;
+  const direction = selectedRow.Deviation >= 0 ? "warmer" : "cooler";
+  const counts = countEvents(series);
 
-  if (selectedRow.Deviation >= 0) {
-    summaryElement.textContent =
-      `${periodLabel} is ${anomalyAbs} °C warmer than the 1981-2010 normal at ${selectedStationName}. ` +
-      `It ranks ${rankText} among available years, where 1 is the warmest.`;
-  } else {
-    summaryElement.textContent =
-      `${periodLabel} is ${anomalyAbs} °C cooler than the 1981-2010 normal at ${selectedStationName}. ` +
-      `It ranks ${rankText} among available years, where 1 is the warmest and ${rows.length} is the coolest.`;
-  }
+  const line1 =
+    `${periodLabel} is ${anomalyAbs} °C ${direction} than the ${baselineLabel()} normal at ${selectedStationName}. ` +
+    `It ranks ${selectedRow.Rank}/${rows.length} among available years, where 1 is the warmest and ${rows.length} is the coolest.`;
 
-  const visibleRows = nearbyRankingRows(rows, selectedYear, 3);
+  const line2 = `Records: ${counts.recordHigh} high, ${counts.recordLow} low.`;
 
-  visibleRows.forEach((row) => {
+  const line3 = comparisonView === "average"
+    ? `Extreme temperature events: ${counts.extremeWarm} warm, ${counts.extremeCool} cool.`
+    : `Extreme temperature events: ${counts.extremeHigh} high, ${counts.extremeLow} low.`;
+
+  summaryCard.style.display = "block";
+  summaryElement.innerHTML = `<p>${line1}</p><p>${line2}</p><p>${line3}</p>`;
+
+  nearbyRankingRows(rows, selectedYear, 7).forEach((row) => {
     const tr = document.createElement("tr");
 
     if (row.Year === selectedYear) {
@@ -585,7 +992,7 @@ function updateSummaryAndRankingTable(mode, selectedYear, selectedMonth, selecte
       row.Rank,
       row.Year,
       formatNumber(row.tas, 2),
-      formatSigned(row.Deviation, 2)
+      formatNumber(row.Deviation, 2)
     ];
 
     cells.forEach((value) => {
@@ -599,7 +1006,24 @@ function updateSummaryAndRankingTable(mode, selectedYear, selectedMonth, selecte
 }
 
 
-// 5. Plot drawing
+// 11. Plot drawing
+function monthlyTickSettings(series) {
+  const firstDate = dateParts(series.x[0]);
+  const lastDate = dateParts(series.x[series.x.length - 1]);
+  const tickDays = [1, 5, 10, 15, 20, 25, 30];
+  const tickvals = [];
+  const ticktext = [];
+
+  tickDays.forEach((day) => {
+    if (day <= lastDate.day) {
+      tickvals.push(formatDate(new Date(firstDate.year, firstDate.month - 1, day)));
+      ticktext.push(String(day));
+    }
+  });
+
+  return { tickvals, ticktext };
+}
+
 function updatePlot() {
   if (!stationData) return;
 
@@ -608,206 +1032,136 @@ function updatePlot() {
   const year = Number(document.getElementById("year-select").value);
   const month = Number(document.getElementById("month-select").value);
   const season = document.getElementById("season-select").value;
+  const comparisonView = getComparisonView();
 
-  document.getElementById("month-control").style.display = mode === "season" ? "none" : "flex";
+  document.getElementById("month-control").style.display = mode === "month" ? "flex" : "none";
   document.getElementById("season-control").style.display = mode === "season" ? "flex" : "none";
 
-  const periodDates = makeSelectedPeriodDates(mode, year, month, season);
+  const period = selectedPeriod(mode, year, month, season);
+  const periodDates = makeDateRange(period.plotStart, period.plotEnd);
+  const rankingEndDate = formatDate(period.rankingEnd);
+
   const series = valuesForPeriod(periodDates, stationData);
+  applyDayClasses(series, comparisonView);
 
-  let periodLabel = "";
+  const stationName = stationSelect.options[stationSelect.selectedIndex].text;
 
-  if (mode === "month") {
-    periodLabel = `${monthNames[month - 1]} ${year}`;
-  } else if (mode === "season") {
-    periodLabel = `${seasonDefinitions[season].label} ${year}`;
-  } else {
-    periodLabel = series.x.length ? `Last 365 days ending ${series.x[series.x.length - 1]}` : "Last 365 days";
-  }
+  updateGraphTitle(stationName, period.label, comparisonView);
+  updateLegend(comparisonView);
 
   const traces = [];
 
-  traces.push(...makeSegmentedFillTraces(
-    series.x,
-    series.clim_tasmin,
-    series.clim_tasmax,
-    "Normal Temp Range",
-    "rgba(128,128,128,0.2)"
-  ));
+  addBackgroundBands(traces, series, comparisonView);
 
-  traces.push(...makeSegmentedFillTraces(
-    series.x,
-    series.tasmin,
-    series.tasmax,
-    "Daily Min-Max Range",
-    "rgba(255,165,0,0.14)"
-  ));
+  if (mode !== "annual") {
+    addObservedRanges(traces, series, comparisonView, mode);
+  }
 
-  traces.push(
-    {
-      x: series.x,
-      y: series.clim_tas,
-      mode: "lines",
-      name: "Normal Avg Temp",
-      line: { dash: "dashdot", width: 1, color: "black" },
-      connectgaps: false,
-      type: "scatter"
-    },
-    {
-      x: series.x,
-      y: series.clim_tasmax,
-      mode: "lines",
-      name: "Normal Max Temp",
-      line: { dash: "dashdot", width: 1, color: "red" },
-      connectgaps: false,
-      type: "scatter"
-    },
-    {
-      x: series.x,
-      y: series.clim_tasmin,
-      mode: "lines",
-      name: "Normal Min Temp",
-      line: { dash: "dashdot", width: 1, color: "blue" },
-      connectgaps: false,
-      type: "scatter"
-    },
-    {
-      x: series.x,
-      y: series.tas,
-      mode: "lines",
-      name: "Daily Avg Temp",
-      line: { width: 2.2, color: "orange" },
-      connectgaps: false,
-      hovertemplate: "Daily avg: %{y:.1f}°C<extra></extra>",
-      type: "scatter"
-    },
-    {
-      x: series.x,
-      y: series.p99_tas,
-      mode: "lines",
-      name: "99th %ile (avg)",
-      line: { width: 1, dash: "longdash", color: "rgba(200,0,0,0.55)" },
-      connectgaps: false,
-      type: "scatter"
-    },
-    {
-      x: series.x,
-      y: series.p01_tas,
-      mode: "lines",
-      name: "1st %ile (avg)",
-      line: { width: 1, dash: "longdash", color: "rgba(0,0,200,0.55)" },
-      connectgaps: false,
-      type: "scatter"
-    }
-  );
+  traces.push({
+    x: series.x,
+    y: series.clim_tas,
+    mode: "lines",
+    line: { width: 1.8, dash: "dash", color: "rgba(40,45,50,0.80)" },
+    hoverinfo: "skip",
+    showlegend: false,
+    connectgaps: false,
+    type: "scatter"
+  });
+
+  traces.push({
+    x: series.x,
+    y: series.tas,
+    mode: "lines",
+    line: { width: 3.0, color: "#c97912" },
+    hovertemplate: "<b>%{x|%b %-d, %Y}</b><br>Observed daily average: %{y:.1f} °C<extra></extra>",
+    showlegend: false,
+    connectgaps: false,
+    type: "scatter"
+  });
+
+  if (mode === "annual") {
+    addObservedRanges(traces, series, comparisonView, mode);
+  }
+
+  addRecordMarkers(traces, series);
+
+  const yRange = comparisonView === "average"
+    ? finiteMinMax([
+      series.tas,
+      series.tasmin,
+      series.tasmax,
+      series.p01_tas,
+      series.p99_tas,
+      series.clim_tas,
+      series.tasmax_record,
+      series.tasmin_record
+    ])
+    : finiteMinMax([
+      series.tas,
+      series.tasmin,
+      series.tasmax,
+      series.clim_tasmin,
+      series.clim_tasmax,
+      series.p01_tasmin,
+      series.p99_tasmax,
+      series.tasmax_record,
+      series.tasmin_record
+    ]);
+
+  let xaxis = {
+    title: mode === "month" ? "Day of month" : "Date",
+    range: series.x.length ? paddedDateRange(series.x[0], series.x[series.x.length - 1]) : undefined,
+    showgrid: true,
+    gridcolor: "rgba(0,0,0,0.08)",
+    zeroline: false
+  };
+
+  let height = 500;
 
   if (mode === "month") {
-    traces.push(
-      {
-        x: series.x,
-        y: series.tasmax_record,
-        mode: "markers",
-        name: "Max Temp Record",
-        marker: {
-          size: 4,
-          symbol: "diamond",
-          color: "rgba(200,0,0,0.8)"
-        },
-        text: series.tasmax_record_year.map((value) => value === null ? "" : String(Math.round(Number(value)))),
-        hovertemplate: "Record max %{y:.1f}°C (%{text})<extra></extra>",
-        type: "scatter"
-      },
-      {
-        x: series.x,
-        y: series.tasmin_record,
-        mode: "markers",
-        name: "Min Temp Record",
-        marker: {
-          size: 4,
-          symbol: "diamond",
-          color: "rgba(0,0,200,0.8)"
-        },
-        text: series.tasmin_record_year.map((value) => value === null ? "" : String(Math.round(Number(value)))),
-        hovertemplate: "Record min %{y:.1f}°C (%{text})<extra></extra>",
-        type: "scatter"
-      }
-    );
+    const ticks = monthlyTickSettings(series);
+    xaxis = {
+      ...xaxis,
+      tickmode: "array",
+      tickvals: ticks.tickvals,
+      ticktext: ticks.ticktext
+    };
+  } else if (mode === "season") {
+    height = 560;
+    xaxis = {
+      ...xaxis,
+      dtick: 14 * 24 * 60 * 60 * 1000,
+      tickformat: "%b %-d"
+    };
+  } else {
+    height = 620;
+    xaxis = {
+      ...xaxis,
+      dtick: "M1",
+      tickformat: "%b"
+    };
   }
-
-  if (series.warm_extreme_x.length > 0) {
-    traces.push({
-      x: series.warm_extreme_x,
-      y: series.warm_extreme_y,
-      mode: "markers",
-      name: ">99th %ile",
-      marker: {
-        color: "red",
-        size: 6,
-        symbol: "triangle-up"
-      },
-      type: "scatter"
-    });
-  }
-
-  if (series.cold_extreme_x.length > 0) {
-    traces.push({
-      x: series.cold_extreme_x,
-      y: series.cold_extreme_y,
-      mode: "markers",
-      name: "<1st %ile",
-      marker: {
-        color: "blue",
-        size: 6,
-        symbol: "triangle-down"
-      },
-      type: "scatter"
-    });
-  }
-
-  const yRange = finiteMinMax([
-    series.tas,
-    series.tasmin,
-    series.tasmax,
-    series.clim_tasmin,
-    series.clim_tasmax,
-    series.p01_tas,
-    series.p99_tas,
-    series.tasmax_record,
-    series.tasmin_record
-  ]);
 
   const layout = {
-    title: {
-      text: `${stationSelect.options[stationSelect.selectedIndex].text} Daily Temperatures - ${periodLabel}`,
-      x: 0.5,
-      font: { size: 17 }
-    },
-    xaxis: {
-      title: "Date",
-      range: series.x.length ? paddedDateRange(series.x[0], series.x[series.x.length - 1]) : undefined,
-      showgrid: true,
-      gridcolor: "rgba(0,0,0,0.1)"
-    },
+    height,
+    xaxis,
     yaxis: {
       title: "Temperature (°C)",
       zeroline: true,
+      zerolinecolor: "rgba(0,0,0,0.35)",
+      showgrid: true,
+      gridcolor: "rgba(0,0,0,0.10)",
       range: yRange
     },
     plot_bgcolor: "white",
     paper_bgcolor: "white",
-    hovermode: "x unified",
-    legend: {
-      orientation: "h",
-      x: 0.01,
-      y: 1.03,
-      xanchor: "left",
-      yanchor: "top"
-    },
+    hovermode: "closest",
+    showlegend: false,
     margin: {
-      l: 60,
-      r: 20,
-      t: 130,
-      b: 60
+      l: 70,
+      r: 30,
+      t: 30,
+      b: 70
     }
   };
 
@@ -823,17 +1177,20 @@ function updatePlot() {
     year,
     month,
     season,
-    stationSelect.options[stationSelect.selectedIndex].text,
-    series.x
+    stationName,
+    periodDates,
+    rankingEndDate,
+    series,
+    comparisonView
   );
 
   setStatus(
-    `Data updated ${manifest.created}. Source period: ${manifest.time_min} to ${manifest.time_max}. Baseline: ${manifest.baseline}.`
+    `Data updated ${manifest.created}. Source period: ${manifest.time_min} to ${manifest.time_max}. Reference period: ${baselineLabel()}. Extreme values are outside the 1st-to-99th percentile range for that calendar day.`
   );
 }
 
 
-// 6. Startup
+// 12. Startup
 async function start() {
   try {
     manifest = await loadManifest();
@@ -851,3 +1208,4 @@ async function start() {
 }
 
 start();
+JS
