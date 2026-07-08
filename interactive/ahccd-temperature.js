@@ -1208,4 +1208,3 @@ async function start() {
 }
 
 start();
-JS
