@@ -976,7 +976,7 @@
     "title": "Yukon warming comparisons",
     "card_title": "Yukon",
     "description": "Annual temperature warming rate comparisons for Yukon.",
-    "date_label": "Updated 2026-07-07",
+    "date_label": "Updated 2026-07-08",
     "source": "ERA5 2 m temperature from Copernicus Climate Change Service / ECMWF",
     "preview_image": "plots/northern_warming_comparisons/yukon/preview.png",
     "tags": [
@@ -985,7 +985,6 @@
       "warming",
       "Yukon"
     ],
-    "scope": "territory",
     "plot_scope": "territory",
     "location_label": "Yukon",
     "href": "plots/northern_warming_comparisons/yukon/index.html"
@@ -998,7 +997,7 @@
     "title": "Northwest Territories warming comparisons",
     "card_title": "Northwest Territories",
     "description": "Annual temperature warming rate comparisons for Northwest Territories.",
-    "date_label": "Updated 2026-07-07",
+    "date_label": "Updated 2026-07-08",
     "source": "ERA5 2 m temperature from Copernicus Climate Change Service / ECMWF",
     "preview_image": "plots/northern_warming_comparisons/northwest_territories/preview.png",
     "tags": [
@@ -1007,7 +1006,6 @@
       "warming",
       "Northwest Territories"
     ],
-    "scope": "territory",
     "plot_scope": "territory",
     "location_label": "Northwest Territories",
     "href": "plots/northern_warming_comparisons/northwest_territories/index.html"
@@ -1020,7 +1018,7 @@
     "title": "Nunavut warming comparisons",
     "card_title": "Nunavut",
     "description": "Annual temperature warming rate comparisons for Nunavut.",
-    "date_label": "Updated 2026-07-07",
+    "date_label": "Updated 2026-07-08",
     "source": "ERA5 2 m temperature from Copernicus Climate Change Service / ECMWF",
     "preview_image": "plots/northern_warming_comparisons/nunavut/preview.png",
     "tags": [
@@ -1029,7 +1027,6 @@
       "warming",
       "Nunavut"
     ],
-    "scope": "territory",
     "plot_scope": "territory",
     "location_label": "Nunavut",
     "href": "plots/northern_warming_comparisons/nunavut/index.html"

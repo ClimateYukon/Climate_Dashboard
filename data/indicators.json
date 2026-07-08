@@ -132,10 +132,13 @@
     "tags": [
       "ERA5",
       "temperature",
-      "warming"
+      "warming",
+      "Yukon",
+      "Northwest Territories",
+      "Nunavut"
     ],
     "plot_count": 3,
-    "href": "indicator.html?id=northern_warming_comparisons",
-    "sort_order": 60
+    "sort_order": 60,
+    "href": "indicator.html?id=northern_warming_comparisons"
   }
 ]
