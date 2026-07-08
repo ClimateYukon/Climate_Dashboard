@@ -7,7 +7,7 @@
   "subtitle": "ERA5, 1979-2026",
   "community": "Yukon",
   "description": "Monthly and annual area-average 2 m temperature rankings. Rank 1 is the warmest year for that month or annual row.",
-  "date_label": "Updated 2026-06-15",
+  "date_label": "Updated 2026-07-08",
   "source": "ERA5 2 m temperature from Copernicus Climate Change Service / ECMWF",
   "preview_image": "plots/monthly_temperature_rankings/yukon_2026_monthly_temperature_rankings/preview.png",
   "full_image": "plots/monthly_temperature_rankings/yukon_2026_monthly_temperature_rankings/full.png",
@@ -24,7 +24,7 @@
     "area_label": "Yukon",
     "start_year": 1979,
     "latest_year": 2026,
-    "latest_complete_month_context": "May 2026",
-    "created_utc": "2026-06-15T07:15:27Z"
+    "latest_complete_month_context": "June 2026",
+    "created_utc": "2026-07-08T07:25:30Z"
   }
 }
