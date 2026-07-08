@@ -625,6 +625,16 @@ function legendItem(label, styleType, color, options = {}) {
     style = `background: ${color}; opacity: ${opacity};`;
   }
 
+  if (styleType === "vline") {
+    swatchClass = "legend-swatch-vline";
+    style = `color: ${color}; --legend-opacity: ${opacity};`;
+  }
+
+  if (styleType === "dot") {
+    swatchClass = "legend-swatch-dot";
+    style = `color: ${color}; --legend-opacity: ${opacity};`;
+  }
+
   if (styleType === "diamond") {
     swatchClass = "legend-swatch-diamond";
     style = `background: ${color}; opacity: ${opacity};`;
@@ -648,10 +658,11 @@ function updateGraphTitle(stationName, periodLabel, comparisonView) {
   `;
 }
 
-function updateLegend(comparisonView) {
+function updateLegend(comparisonView, mode) {
   let historicalItems = "";
   let observedItems = "";
   let extremeItems = "";
+  const extremeSwatch = mode === "annual" ? "dot" : "vline";
 
   if (comparisonView === "average") {
     historicalItems = [
@@ -661,12 +672,14 @@ function updateLegend(comparisonView) {
 
     observedItems = [
       legendItem("Observed daily average", "line", "#c97912"),
-      legendItem("Observed daily low-high", "line", "#d69b45", { opacity: 0.35 })
+      ...(mode === "annual" ? [] : [
+        legendItem("Observed daily low-high", "vline", "#d69b45", { opacity: 0.35 })
+      ])
     ].join("");
 
     extremeItems = [
-      legendItem("Extreme cool day", "line", "#2b59d1"),
-      legendItem("Extreme warm day", "line", "#d62828")
+      legendItem("Extreme cool day", extremeSwatch, "#2b59d1"),
+      legendItem("Extreme warm day", extremeSwatch, "#d62828")
     ].join("");
   } else {
     historicalItems = [
@@ -677,12 +690,14 @@ function updateLegend(comparisonView) {
 
     observedItems = [
       legendItem("Observed daily average", "line", "#c97912"),
-      legendItem("Observed daily low-high", "line", "#d69b45", { opacity: 0.35 })
+      ...(mode === "annual" ? [] : [
+        legendItem("Observed daily low-high", "vline", "#d69b45", { opacity: 0.35 })
+      ])
     ].join("");
 
     extremeItems = [
-      legendItem("Extreme daily low", "line", "#2b59d1"),
-      legendItem("Extreme daily high", "line", "#d62828")
+      legendItem("Extreme daily low", extremeSwatch, "#2b59d1"),
+      legendItem("Extreme daily high", extremeSwatch, "#d62828")
     ].join("");
   }
 
@@ -1047,7 +1062,7 @@ function updatePlot() {
   const stationName = stationSelect.options[stationSelect.selectedIndex].text;
 
   updateGraphTitle(stationName, period.label, comparisonView);
-  updateLegend(comparisonView);
+  updateLegend(comparisonView, mode);
 
   const traces = [];
 

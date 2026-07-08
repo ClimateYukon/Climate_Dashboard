@@ -70,9 +70,12 @@
 
     .controls {
       display: grid;
-      grid-template-columns: minmax(180px, 1.25fr) minmax(150px, 0.9fr) minmax(120px, 0.7fr) minmax(150px, 0.9fr) minmax(150px, 0.9fr) minmax(180px, 1fr);
+      grid-template-columns: 260px 170px 130px 170px 170px 190px;
       gap: 12px;
       align-items: end;
+      justify-content: center;
+      max-width: 1120px;
+      margin: 0 auto;
     }
 
     .control {
@@ -130,8 +133,9 @@
 
     #custom-legend {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
+      grid-template-columns: repeat(4, max-content);
+      justify-content: center;
+      gap: 54px;
       padding: 6px 18px 2px 18px;
       max-width: 1080px;
       margin: 0 auto 4px auto;
@@ -158,6 +162,51 @@
       border-top: 3px solid;
       vertical-align: middle;
       margin-right: 8px;
+    }
+
+    .legend-swatch-vline {
+      display: inline-block;
+      width: 28px;
+      height: 18px;
+      position: relative;
+      vertical-align: middle;
+      margin-right: 8px;
+      flex: 0 0 28px;
+    }
+
+    .legend-swatch-vline::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 1px;
+      bottom: 1px;
+      transform: translateX(-50%);
+      border-left: 4px solid currentColor;
+      opacity: var(--legend-opacity, 1);
+    }
+
+    .legend-swatch-dot {
+      display: inline-block;
+      width: 28px;
+      height: 18px;
+      position: relative;
+      vertical-align: middle;
+      margin-right: 8px;
+      flex: 0 0 28px;
+    }
+
+    .legend-swatch-dot::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 9px;
+      height: 9px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: currentColor;
+      opacity: var(--legend-opacity, 1);
+      box-shadow: 0 0 0 1px white;
     }
 
     .legend-swatch-band {
@@ -256,13 +305,27 @@
       font-weight: 700;
     }
 
+    @media (max-width: 1100px) {
+      .controls {
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 760px;
+      }
+
+      #custom-legend {
+        grid-template-columns: repeat(2, max-content);
+        gap: 24px 54px;
+      }
+    }
+
     @media (max-width: 900px) {
       .controls {
         grid-template-columns: 1fr 1fr;
+        max-width: 620px;
       }
 
       #custom-legend {
         grid-template-columns: 1fr 1fr;
+        justify-content: stretch;
       }
     }
 
@@ -281,6 +344,8 @@
 
       #custom-legend {
         grid-template-columns: 1fr;
+        justify-content: stretch;
+        gap: 12px;
       }
 
       #temperature-plot {
