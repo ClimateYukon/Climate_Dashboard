@@ -1,12 +1,17 @@
 {
-  "created": "2026-07-09",
-  "source_file": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260709T110602Z.nc",
+  "created": "2026-07-13",
+  "source_file": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260713T225550Z.nc",
   "baseline": "1991-2020",
   "climatology_period": "1991-01-01 to 2020-12-31",
   "extreme_quantile": 0.99,
   "time_min": "1950-01-01",
-  "time_max": "2026-07-08",
+  "time_max": "2026-07-12",
   "stations": [
+    {
+      "id": "STATION",
+      "name": "",
+      "data_file": "data/interactive/ahccd_temperature/stations/STATION.json"
+    },
     {
       "id": "BURWASH_AIRPORT_AUTO",
       "name": "BURWASH AIRPORT AUTO",
@@ -38,16 +43,6 @@
       "data_file": "data/interactive/ahccd_temperature/stations/IVVAVIK_NAT_PARK.json"
     },
     {
-      "id": "KOMAKUK_BEACH",
-      "name": "KOMAKUK BEACH",
-      "data_file": "data/interactive/ahccd_temperature/stations/KOMAKUK_BEACH.json"
-    },
-    {
-      "id": "MACMILLAN_PASS",
-      "name": "MACMILLAN PASS",
-      "data_file": "data/interactive/ahccd_temperature/stations/MACMILLAN_PASS.json"
-    },
-    {
       "id": "MAYO_A",
       "name": "MAYO A",
       "data_file": "data/interactive/ahccd_temperature/stations/MAYO_A.json"
@@ -58,29 +53,9 @@
       "data_file": "data/interactive/ahccd_temperature/stations/OLD_CROW_RCS.json"
     },
     {
-      "id": "PELLY_RANCH",
-      "name": "PELLY RANCH",
-      "data_file": "data/interactive/ahccd_temperature/stations/PELLY_RANCH.json"
-    },
-    {
-      "id": "ROSS_RIVER_YTG",
-      "name": "ROSS RIVER YTG",
-      "data_file": "data/interactive/ahccd_temperature/stations/ROSS_RIVER_YTG.json"
-    },
-    {
-      "id": "SHINGLE_POINT_A",
-      "name": "SHINGLE POINT A",
-      "data_file": "data/interactive/ahccd_temperature/stations/SHINGLE_POINT_A.json"
-    },
-    {
       "id": "TESLIN_AUT",
       "name": "TESLIN (AUT)",
       "data_file": "data/interactive/ahccd_temperature/stations/TESLIN_AUT.json"
-    },
-    {
-      "id": "TUCHITUA",
-      "name": "TUCHITUA",
-      "data_file": "data/interactive/ahccd_temperature/stations/TUCHITUA.json"
     },
     {
       "id": "WATSON_LAKE_AUT",
@@ -91,11 +66,6 @@
       "id": "WHITEHORSE_A",
       "name": "WHITEHORSE A",
       "data_file": "data/interactive/ahccd_temperature/stations/WHITEHORSE_A.json"
-    },
-    {
-      "id": "WHITEHORSE_AUTO",
-      "name": "WHITEHORSE AUTO",
-      "data_file": "data/interactive/ahccd_temperature/stations/WHITEHORSE_AUTO.json"
     }
   ]
 }
