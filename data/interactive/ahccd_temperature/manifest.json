@@ -1,17 +1,12 @@
 {
   "created": "2026-07-13",
-  "source_file": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260713T233528Z.nc",
+  "source_file": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260713T235018Z.nc",
   "baseline": "1991-2020",
   "climatology_period": "1991-01-01 to 2020-12-31",
   "extreme_quantile": 0.99,
   "time_min": "1950-01-01",
   "time_max": "2026-07-12",
   "stations": [
-    {
-      "id": "STATION",
-      "name": "",
-      "data_file": "data/interactive/ahccd_temperature/stations/STATION.json"
-    },
     {
       "id": "BURWASH_AIRPORT_AUTO",
       "name": "BURWASH AIRPORT AUTO",
@@ -51,6 +46,11 @@
       "id": "OLD_CROW_RCS",
       "name": "OLD CROW RCS",
       "data_file": "data/interactive/ahccd_temperature/stations/OLD_CROW_RCS.json"
+    },
+    {
+      "id": "PELLY_RANCH_FORT_SELKIRK",
+      "name": "PELLY RANCH FORT SELKIRK",
+      "data_file": "data/interactive/ahccd_temperature/stations/PELLY_RANCH_FORT_SELKIRK.json"
     },
     {
       "id": "TESLIN_AUT",
