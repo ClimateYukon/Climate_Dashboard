@@ -976,7 +976,7 @@
     "title": "Yukon warming comparisons",
     "card_title": "Yukon",
     "description": "Annual temperature warming rate comparisons for Yukon.",
-    "date_label": "Updated 2026-07-08",
+    "date_label": "Updated 2026-07-13",
     "source": "ERA5 2 m temperature from Copernicus Climate Change Service / ECMWF",
     "preview_image": "plots/northern_warming_comparisons/yukon/preview.png",
     "tags": [
@@ -997,7 +997,7 @@
     "title": "Northwest Territories warming comparisons",
     "card_title": "Northwest Territories",
     "description": "Annual temperature warming rate comparisons for Northwest Territories.",
-    "date_label": "Updated 2026-07-08",
+    "date_label": "Updated 2026-07-13",
     "source": "ERA5 2 m temperature from Copernicus Climate Change Service / ECMWF",
     "preview_image": "plots/northern_warming_comparisons/northwest_territories/preview.png",
     "tags": [
@@ -1018,7 +1018,7 @@
     "title": "Nunavut warming comparisons",
     "card_title": "Nunavut",
     "description": "Annual temperature warming rate comparisons for Nunavut.",
-    "date_label": "Updated 2026-07-08",
+    "date_label": "Updated 2026-07-13",
     "source": "ERA5 2 m temperature from Copernicus Climate Change Service / ECMWF",
     "preview_image": "plots/northern_warming_comparisons/nunavut/preview.png",
     "tags": [
