@@ -1,11 +1,11 @@
 {
-  "created": "2026-07-21",
-  "source_file": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260721T110151Z.nc",
+  "created": "2026-07-22",
+  "source_file": "/STORE/Apps_Data/AHCCD_v2/published/full_AHCCD_filled_with_stats_20260722T110159Z.nc",
   "baseline": "1991-2020",
   "climatology_period": "1991-01-01 to 2020-12-31",
   "extreme_quantile": 0.99,
   "time_min": "1950-01-01",
-  "time_max": "2026-07-20",
+  "time_max": "2026-07-21",
   "stations": [
     {
       "id": "BURWASH_AIRPORT_AUTO",
