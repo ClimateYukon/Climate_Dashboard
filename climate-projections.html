@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta
+        name="description"
+        content="Interactive climate projections for Yukon First Nation territories and communities."
+    >
+
+    <title>Yukon climate projections</title>
+
+    <link
+        rel="stylesheet"
+        href="assets/css/climate-projections.css"
+    >
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a
+                class="back-link"
+                href="index.html"
+            >
+                ← Yukon climate indicators
+            </a>
+
+            <p class="eyebrow">
+                CLIMATE PROJECTIONS
+            </p>
+
+            <h1>
+                Yukon climate projections
+            </h1>
+
+            <p class="header-description">
+                Explore projected changes in temperature,
+                precipitation, snow and seasonal climate
+                conditions for Yukon First Nation territories.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section
+            class="selector-band"
+            aria-label="Projection selections"
+        >
+            <div class="selector-band__inner">
+                <div class="control">
+                    <label for="geography-type">
+                        Geography
+                    </label>
+
+                    <select id="geography-type">
+                    </select>
+                </div>
+
+                <div class="control control--location">
+                    <label for="location">
+                        First Nation territory
+                    </label>
+
+                    <select id="location">
+                    </select>
+                </div>
+
+                <div class="control">
+                    <label for="scenario">
+                        Emissions scenario
+                    </label>
+
+                    <select id="scenario">
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-wrapper">
+            <div
+                id="status-message"
+                class="status-message"
+                role="status"
+            >
+                Loading climate projection data...
+            </div>
+
+            <div
+                id="projection-content"
+                hidden
+            >
+                <section class="summary-panel">
+                    <div>
+                        <p class="section-label">
+                            SELECTED AREA
+                        </p>
+
+                        <h2 id="location-title">
+                        </h2>
+
+                        <p id="scenario-description">
+                        </p>
+                    </div>
+
+                    <div class="summary-panel__periods">
+                        <div>
+                            <span>Historical</span>
+                            <strong>1971–2000</strong>
+                        </div>
+
+                        <div>
+                            <span>Mid-century</span>
+                            <strong>2041–2070</strong>
+                        </div>
+
+                        <div>
+                            <span>Late century</span>
+                            <strong>2071–2100</strong>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="table-section">
+                    <div class="table-toolbar">
+                        <div>
+                            <p class="section-label">
+                                CLIMATE INDICATORS
+                            </p>
+
+                            <h2>
+                                Historical climate and projected change
+                            </h2>
+                        </div>
+
+                        <div class="indicator-search">
+                            <label
+                                for="indicator-filter"
+                                class="visually-hidden"
+                            >
+                                Search indicators
+                            </label>
+
+                            <input
+                                id="indicator-filter"
+                                type="search"
+                                placeholder="Search indicators"
+                            >
+                        </div>
+                    </div>
+
+                    <p class="table-explanation">
+                        The projections combine results from 26 climate
+                        models. Low, median and high show the lower end,
+                        middle and upper end of the results across models
+                        for the selected scenario.
+                    </p>
+
+                    <div class="table-scroll">
+                        <table id="projection-table">
+                            <thead>
+                                <tr class="group-header">
+                                    <th
+                                        rowspan="2"
+                                        class="indicator-header"
+                                    >
+                                        Climate indicator
+                                    </th>
+
+                                    <th
+                                        rowspan="2"
+                                        class="historical-header"
+                                    >
+                                        Historical
+                                    </th>
+
+                                    <th
+                                        colspan="3"
+                                        class="near-header"
+                                    >
+                                        Mid-century
+                                    </th>
+
+                                    <th
+                                        colspan="3"
+                                        class="late-header"
+                                    >
+                                        Late century
+                                    </th>
+                                </tr>
+
+                                <tr class="column-header">
+                                    <th class="near-header">
+                                        Low
+                                    </th>
+                                    <th class="near-header">
+                                        Median
+                                    </th>
+                                    <th class="near-header">
+                                        High
+                                    </th>
+
+                                    <th class="late-header">
+                                        Low
+                                    </th>
+                                    <th class="late-header">
+                                        Median
+                                    </th>
+                                    <th class="late-header">
+                                        High
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="projection-table-body">
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p
+                        id="no-results"
+                        class="no-results"
+                        hidden
+                    >
+                        No climate indicators match that search.
+                    </p>
+                </section>
+
+                <section class="method-note">
+                    <h2>About these projections</h2>
+
+                    <p id="geography-method-text">
+                    </p>
+
+                    <p>
+                        Historical values represent average conditions
+                        for 1971–2000. Future values show projected
+                        changes from that historical period.
+                    </p>
+
+                    <p>
+                        These results are intended for climate
+                        information and screening. Conditions can vary
+                        considerably within a large territory,
+                        especially with changes in elevation and
+                        geography.
+                    </p>
+
+                    <h3>Data and acknowledgements</h3>
+
+                    <p class="citation-text">
+                        Climate projection data are from the Canadian
+                        Downscaled Climate Scenarios Multivariate
+                        dataset for CMIP6, or CanDCS-M6.
+                    </p>
+
+                    <p class="citation-text">
+                        Sobie, S.R., Ouali, D., Curry, C.L. and
+                        Zwiers, F.W. (2024). Multivariate Canadian
+                        Downscaled Climate Scenarios for CMIP6
+                        (CanDCS-M6). <em>Geoscience Data Journal</em>,
+                        11, 806–824.
+                        <a
+                            href="https://doi.org/10.1002/gdj3.257"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Dataset publication
+                        </a>
+                    </p>
+
+                    <p class="citation-text">
+                        Data access and the analysis environment were
+                        provided through the Power Analytics and
+                        Visualization for Climate Science platform,
+                        PAVICS, developed by Ouranos and CRIM.
+                        <a
+                            href="https://pavics.ouranos.ca/citation.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            PAVICS acknowledgement
+                        </a>
+                    </p>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <script
+        src="assets/js/climate-projections.js"
+    ></script>
+</body>
+</html>

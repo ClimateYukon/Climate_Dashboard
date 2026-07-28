@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0",
+  "title": "Yukon climate projections",
+  "last_updated": "2026-07-28",
+  "scenarios": [
+    {
+      "id": "ssp245",
+      "name": "SSP2-4.5",
+      "description": "A medium-emissions pathway in which global emissions decline later this century."
+    },
+    {
+      "id": "ssp370",
+      "name": "SSP3-7.0",
+      "description": "A high-emissions pathway in which emissions continue to rise through much of this century."
+    }
+  ],
+  "geography_types": [
+    {
+      "id": "territory",
+      "name": "First Nation territory",
+      "enabled": true,
+      "locations": [
+        {
+          "id": "acho_dene_koe_first_nation",
+          "name": "Acho Dene Koe First Nation",
+          "abbreviation": "ADKFN",
+          "file": "territories/acho_dene_koe_first_nation.json"
+        },
+        {
+          "id": "carcross_tagish_first_nation",
+          "name": "Carcross/Tagish First Nation",
+          "abbreviation": "CTFN",
+          "file": "territories/carcross_tagish_first_nation.json"
+        },
+        {
+          "id": "champagne_and_aishihik_first_nations",
+          "name": "Champagne and Aishihik First Nations",
+          "abbreviation": "CAFN",
+          "file": "territories/champagne_and_aishihik_first_nations.json"
+        },
+        {
+          "id": "dease_river_first_nation",
+          "name": "Dease River First Nation",
+          "abbreviation": "DRFN",
+          "file": "territories/dease_river_first_nation.json"
+        },
+        {
+          "id": "first_nation_of_na_cho_nyak_dun",
+          "name": "First Nation of Na-Cho Nyäk Dun",
+          "abbreviation": "FNNND",
+          "file": "territories/first_nation_of_na_cho_nyak_dun.json"
+        },
+        {
+          "id": "gwich_in_tribal_council",
+          "name": "Gwich'in Tribal Council",
+          "abbreviation": "GTC",
+          "file": "territories/gwich_in_tribal_council.json"
+        },
+        {
+          "id": "inuvialuit_game_council",
+          "name": "Inuvialuit Game Council",
+          "abbreviation": "IGC",
+          "file": "territories/inuvialuit_game_council.json"
+        },
+        {
+          "id": "inuvialuit_regional_corporation",
+          "name": "Inuvialuit Regional Corporation",
+          "abbreviation": "IRC",
+          "file": "territories/inuvialuit_regional_corporation.json"
+        },
+        {
+          "id": "kluane_first_nation",
+          "name": "Kluane First Nation",
+          "abbreviation": "KFN",
+          "file": "territories/kluane_first_nation.json"
+        },
+        {
+          "id": "kwadacha_nation",
+          "name": "Kwadacha Nation",
+          "abbreviation": "KN",
+          "file": "territories/kwadacha_nation.json"
+        },
+        {
+          "id": "kwanlin_d_n_first_nation",
+          "name": "Kwanlin Dün First Nation",
+          "abbreviation": "KDFN",
+          "file": "territories/kwanlin_d_n_first_nation.json"
+        },
+        {
+          "id": "liard_first_nation",
+          "name": "Liard First Nation",
+          "abbreviation": "LFN",
+          "file": "territories/liard_first_nation.json"
+        },
+        {
+          "id": "little_salmon_carmacks_first_nation",
+          "name": "Little Salmon/Carmacks First Nation",
+          "abbreviation": "LSCFN",
+          "file": "territories/little_salmon_carmacks_first_nation.json"
+        },
+        {
+          "id": "ross_river_dena_council",
+          "name": "Ross River Dena Council",
+          "abbreviation": "RRDC",
+          "file": "territories/ross_river_dena_council.json"
+        },
+        {
+          "id": "selkirk_first_nation",
+          "name": "Selkirk First Nation",
+          "abbreviation": "SFN",
+          "file": "territories/selkirk_first_nation.json"
+        },
+        {
+          "id": "ta_an_kwach_an_council",
+          "name": "Ta'an Kwäch'än Council",
+          "abbreviation": "TKC",
+          "file": "territories/ta_an_kwach_an_council.json"
+        },
+        {
+          "id": "teslin_tlingit_council",
+          "name": "Teslin Tlingit Council",
+          "abbreviation": "TTC",
+          "file": "territories/teslin_tlingit_council.json"
+        },
+        {
+          "id": "tetlit_gwich_in_council",
+          "name": "Tetlit Gwich'in Council",
+          "abbreviation": "TGC",
+          "file": "territories/tetlit_gwich_in_council.json"
+        },
+        {
+          "id": "tr_ondek_hwech_in_government",
+          "name": "Tr'ondëk Hwëch'in Government",
+          "abbreviation": "THG",
+          "file": "territories/tr_ondek_hwech_in_government.json"
+        },
+        {
+          "id": "vuntut_gwitchin_first_nation",
+          "name": "Vuntut Gwitchin First Nation",
+          "abbreviation": "VGFN",
+          "file": "territories/vuntut_gwitchin_first_nation.json"
+        },
+        {
+          "id": "white_river_first_nation",
+          "name": "White River First Nation",
+          "abbreviation": "WRFN",
+          "file": "territories/white_river_first_nation.json"
+        }
+      ]
+    },
+    {
+      "id": "community",
+      "name": "Community",
+      "enabled": false,
+      "locations": []
+    }
+  ]
+}

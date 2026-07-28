@@ -1,0 +1,1539 @@
+{
+  "schema_version": "1.0",
+  "geography": {
+    "id": "little_salmon_carmacks_first_nation",
+    "type": "territory",
+    "name": "Little Salmon/Carmacks First Nation",
+    "abbreviation": "LSCFN"
+  },
+  "dataset": {
+    "name": "CanDCS-M6",
+    "historical_period": "1971–2000",
+    "near_future_period": "2041–2070",
+    "late_future_period": "2071–2100"
+  },
+  "indicators": [
+    {
+      "id": "tn_min",
+      "name": "Coldest Temperature",
+      "label": "Coldest Temperature (°C)",
+      "units": "°C",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": -46.296,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 2.374,
+            "p50": 4.116,
+            "p90": 7.233
+          },
+          "2071": {
+            "p10": 3.947,
+            "p50": 6.198,
+            "p90": 9.798
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 2.457,
+            "p50": 5.342,
+            "p90": 8.225
+          },
+          "2071": {
+            "p10": 5.047,
+            "p50": 7.887,
+            "p90": 13.208
+          }
+        }
+      }
+    },
+    {
+      "id": "cddcold_18",
+      "name": "Cooling Degree Days > 18°C",
+      "label": "Cooling Degree Days > 18°C (degree-days)",
+      "units": "degree-days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 1.179,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 4.188,
+            "p50": 12.141,
+            "p90": 35.081
+          },
+          "2071": {
+            "p10": 9.432,
+            "p50": 24.712,
+            "p90": 66.987
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 7.121,
+            "p50": 15.179,
+            "p90": 47.736
+          },
+          "2071": {
+            "p10": 17.713,
+            "p50": 57.066,
+            "p90": 134.932
+          }
+        }
+      }
+    },
+    {
+      "id": "txgt_25",
+      "name": "Days with Maximum Temperature > 25°C",
+      "label": "Days with Maximum Temperature > 25°C (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 4.416,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 4.232,
+            "p50": 11.118,
+            "p90": 20.144
+          },
+          "2071": {
+            "p10": 8.892,
+            "p50": 18.986,
+            "p90": 30.58
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 6.455,
+            "p50": 12.682,
+            "p90": 24.082
+          },
+          "2071": {
+            "p10": 12.276,
+            "p50": 30.726,
+            "p90": 44.623
+          }
+        }
+      }
+    },
+    {
+      "id": "txgt_27",
+      "name": "Days with Maximum Temperature > 27°C",
+      "label": "Days with Maximum Temperature > 27°C (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 1.574,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 1.911,
+            "p50": 5.204,
+            "p90": 11.737
+          },
+          "2071": {
+            "p10": 4.541,
+            "p50": 9.614,
+            "p90": 19.589
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 2.987,
+            "p50": 6.021,
+            "p90": 14.55
+          },
+          "2071": {
+            "p10": 6.244,
+            "p50": 17.113,
+            "p90": 31.243
+          }
+        }
+      }
+    },
+    {
+      "id": "txgt_29",
+      "name": "Days with Maximum Temperature > 29°C",
+      "label": "Days with Maximum Temperature > 29°C (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 0.441,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 0.784,
+            "p50": 2.185,
+            "p90": 5.709
+          },
+          "2071": {
+            "p10": 1.91,
+            "p50": 3.914,
+            "p90": 10.533
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 1.225,
+            "p50": 2.527,
+            "p90": 7.958
+          },
+          "2071": {
+            "p10": 2.81,
+            "p50": 7.458,
+            "p90": 19.908
+          }
+        }
+      }
+    },
+    {
+      "id": "txgt_30",
+      "name": "Days with Maximum Temperature > 30°C",
+      "label": "Days with Maximum Temperature > 30°C (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 0.214,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 0.48,
+            "p50": 1.348,
+            "p90": 3.68
+          },
+          "2071": {
+            "p10": 1.093,
+            "p50": 2.356,
+            "p90": 7.088
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 0.717,
+            "p50": 1.53,
+            "p90": 5.396
+          },
+          "2071": {
+            "p10": 1.782,
+            "p50": 4.615,
+            "p90": 15.325
+          }
+        }
+      }
+    },
+    {
+      "id": "txgt_32",
+      "name": "Days with Maximum Temperature > 32°C",
+      "label": "Days with Maximum Temperature > 32°C (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 0.036,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 0.112,
+            "p50": 0.412,
+            "p90": 1.403
+          },
+          "2071": {
+            "p10": 0.305,
+            "p50": 0.733,
+            "p90": 2.655
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 0.194,
+            "p50": 0.499,
+            "p90": 2.246
+          },
+          "2071": {
+            "p10": 0.527,
+            "p50": 1.643,
+            "p90": 7.89
+          }
+        }
+      }
+    },
+    {
+      "id": "tnlt_m15",
+      "name": "Days with Minimum Temperature < -15°C",
+      "label": "Days with Minimum Temperature < -15°C (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 111.443,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -36.598,
+            "p50": -23.436,
+            "p90": -15.297
+          },
+          "2071": {
+            "p10": -51.501,
+            "p50": -32.201,
+            "p90": -20.207
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": -43.528,
+            "p50": -25.345,
+            "p90": -17.081
+          },
+          "2071": {
+            "p10": -65.983,
+            "p50": -41.38,
+            "p90": -24.807
+          }
+        }
+      }
+    },
+    {
+      "id": "tnlt_m25",
+      "name": "Days with Minimum Temperature < -25°C",
+      "label": "Days with Minimum Temperature < -25°C (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 52.526,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -23.954,
+            "p50": -16.319,
+            "p90": -8.808
+          },
+          "2071": {
+            "p10": -31.107,
+            "p50": -22.353,
+            "p90": -13.242
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": -28.019,
+            "p50": -18.173,
+            "p90": -10.789
+          },
+          "2071": {
+            "p10": -40.382,
+            "p50": -27.4,
+            "p90": -17.515
+          }
+        }
+      }
+    },
+    {
+      "id": "pr1mm",
+      "name": "Days with Precipitation ≥ 1 mm",
+      "label": "Days with Precipitation ≥ 1 mm (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 108.171,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 5.577,
+            "p50": 8.515,
+            "p90": 13.347
+          },
+          "2071": {
+            "p10": 7.839,
+            "p50": 10.744,
+            "p90": 18.036
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 5.563,
+            "p50": 9.176,
+            "p90": 12.549
+          },
+          "2071": {
+            "p10": 10.088,
+            "p50": 14.749,
+            "p90": 20.145
+          }
+        }
+      }
+    },
+    {
+      "id": "pr10mm",
+      "name": "Days with Precipitation ≥ 10 mm",
+      "label": "Days with Precipitation ≥ 10 mm (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 1.224,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 0.468,
+            "p50": 1.052,
+            "p90": 1.864
+          },
+          "2071": {
+            "p10": 0.549,
+            "p50": 1.505,
+            "p90": 2.538
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 0.535,
+            "p50": 1.11,
+            "p90": 1.78
+          },
+          "2071": {
+            "p10": 0.933,
+            "p50": 1.975,
+            "p90": 3.289
+          }
+        }
+      }
+    },
+    {
+      "id": "pr20mm",
+      "name": "Days with Precipitation ≥ 20 mm",
+      "label": "Days with Precipitation ≥ 20 mm (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 0.031,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -0.005,
+            "p50": 0.066,
+            "p90": 0.191
+          },
+          "2071": {
+            "p10": 0.008,
+            "p50": 0.091,
+            "p90": 0.242
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 0.006,
+            "p50": 0.079,
+            "p90": 0.2
+          },
+          "2071": {
+            "p10": 0.037,
+            "p50": 0.14,
+            "p90": 0.336
+          }
+        }
+      }
+    },
+    {
+      "id": "sn10mm",
+      "name": "Days with Snowfall ≥ 10 mm",
+      "label": "Days with Snowfall ≥ 10 mm (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 0.074,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -0.021,
+            "p50": 0.076,
+            "p90": 0.185
+          },
+          "2071": {
+            "p10": 0.005,
+            "p50": 0.09,
+            "p90": 0.188
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": -0.026,
+            "p50": 0.065,
+            "p90": 0.162
+          },
+          "2071": {
+            "p10": 0.021,
+            "p50": 0.128,
+            "p90": 0.246
+          }
+        }
+      }
+    },
+    {
+      "id": "sn2mm",
+      "name": "Days with Snowfall ≥ 2 mm",
+      "label": "Days with Snowfall ≥ 2 mm (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 16.896,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -0.462,
+            "p50": 1.814,
+            "p90": 3.879
+          },
+          "2071": {
+            "p10": -0.059,
+            "p50": 2.34,
+            "p90": 4.539
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": -0.019,
+            "p50": 2.039,
+            "p90": 4.584
+          },
+          "2071": {
+            "p10": 0.967,
+            "p50": 3.607,
+            "p90": 5.685
+          }
+        }
+      }
+    },
+    {
+      "id": "nr_cdd",
+      "name": "Dry Periods ≥ 6 Days",
+      "label": "Dry Periods ≥ 6 Days (periods)",
+      "units": "periods",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 14.452,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -1.439,
+            "p50": -0.64,
+            "p90": 0.025
+          },
+          "2071": {
+            "p10": -1.594,
+            "p50": -0.822,
+            "p90": -0.172
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": -1.478,
+            "p50": -0.753,
+            "p90": -0.077
+          },
+          "2071": {
+            "p10": -2.091,
+            "p50": -1.134,
+            "p90": -0.387
+          }
+        }
+      }
+    },
+    {
+      "id": "first_fall_frost",
+      "name": "First Fall Frost",
+      "label": "First Fall Frost",
+      "units": "date",
+      "value_format": "date",
+      "historical": {
+        "period": "1971–2000",
+        "median": 234.44,
+        "display": "22 Aug"
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 8.226,
+            "p50": 16.724,
+            "p90": 25.088,
+            "display": {
+              "p10": "30 Aug",
+              "p50": "07 Sep",
+              "p90": "16 Sep"
+            }
+          },
+          "2071": {
+            "p10": 14.429,
+            "p50": 21.197,
+            "p90": 32.927,
+            "display": {
+              "p10": "05 Sep",
+              "p50": "12 Sep",
+              "p90": "23 Sep"
+            }
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 13.159,
+            "p50": 17.764,
+            "p90": 28.898,
+            "display": {
+              "p10": "04 Sep",
+              "p50": "08 Sep",
+              "p90": "19 Sep"
+            }
+          },
+          "2071": {
+            "p10": 21.289,
+            "p50": 27.447,
+            "p90": 44.222,
+            "display": {
+              "p10": "12 Sep",
+              "p50": "18 Sep",
+              "p90": "05 Oct"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "dlyfrzthw_tx0_tn-1",
+      "name": "Freeze-Thaw Days",
+      "label": "Freeze-Thaw Days (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 101.246,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -19.37,
+            "p50": -8.871,
+            "p90": 0.999
+          },
+          "2071": {
+            "p10": -22.688,
+            "p50": -13.196,
+            "p90": 1.166
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": -20.05,
+            "p50": -9.884,
+            "p90": 0.491
+          },
+          "2071": {
+            "p10": -27.529,
+            "p50": -18.043,
+            "p90": -1.538
+          }
+        }
+      }
+    },
+    {
+      "id": "frost_days",
+      "name": "Frost Days",
+      "label": "Frost Days (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 250.631,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -42.543,
+            "p50": -30.44,
+            "p90": -18.117
+          },
+          "2071": {
+            "p10": -57.933,
+            "p50": -39.435,
+            "p90": -25.493
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": -48.382,
+            "p50": -31.026,
+            "p90": -19.623
+          },
+          "2071": {
+            "p10": -70.928,
+            "p50": -49.871,
+            "p90": -34.98
+          }
+        }
+      }
+    },
+    {
+      "id": "frost_free_season",
+      "name": "Frost-Free Season",
+      "label": "Frost-Free Season (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 78.096,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 20.11,
+            "p50": 33.14,
+            "p90": 45.139
+          },
+          "2071": {
+            "p10": 28.988,
+            "p50": 41.892,
+            "p90": 56.886
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 25.709,
+            "p50": 34.914,
+            "p90": 47.768
+          },
+          "2071": {
+            "p10": 41.724,
+            "p50": 54.421,
+            "p90": 73.914
+          }
+        }
+      }
+    },
+    {
+      "id": "gddgrow_0",
+      "name": "Growing Degree Days > 0°C",
+      "label": "Growing Degree Days > 0°C (degree-days)",
+      "units": "degree-days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 1441.04,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 300.255,
+            "p50": 493.342,
+            "p90": 696.728
+          },
+          "2071": {
+            "p10": 457.747,
+            "p50": 649.537,
+            "p90": 961.547
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 398.174,
+            "p50": 566.444,
+            "p90": 805.607
+          },
+          "2071": {
+            "p10": 666.912,
+            "p50": 883.084,
+            "p90": 1241.7
+          }
+        }
+      }
+    },
+    {
+      "id": "gddgrow_5",
+      "name": "Growing Degree Days > 5°C",
+      "label": "Growing Degree Days > 5°C (degree-days)",
+      "units": "degree-days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 681.622,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 231.756,
+            "p50": 392.551,
+            "p90": 561.355
+          },
+          "2071": {
+            "p10": 356.359,
+            "p50": 528.473,
+            "p90": 729.749
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 295.537,
+            "p50": 437.276,
+            "p90": 608.4
+          },
+          "2071": {
+            "p10": 503.883,
+            "p50": 720.759,
+            "p90": 970.597
+          }
+        }
+      }
+    },
+    {
+      "id": "hddheat_18",
+      "name": "Heating Degree Days < 18°C",
+      "label": "Heating Degree Days < 18°C (degree-days)",
+      "units": "degree-days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 7669.344,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -1433.143,
+            "p50": -1010.09,
+            "p90": -704.72
+          },
+          "2071": {
+            "p10": -1979.501,
+            "p50": -1345.107,
+            "p90": -981.057
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": -1711.959,
+            "p50": -1148.895,
+            "p90": -859.275
+          },
+          "2071": {
+            "p10": -2504.862,
+            "p50": -1736.729,
+            "p90": -1370.132
+          }
+        }
+      }
+    },
+    {
+      "id": "tx_max",
+      "name": "Hottest Temperature",
+      "label": "Hottest Temperature (°C)",
+      "units": "°C",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 26.492,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 1.434,
+            "p50": 2.967,
+            "p90": 4.458
+          },
+          "2071": {
+            "p10": 2.46,
+            "p50": 4.144,
+            "p90": 5.772
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 2.124,
+            "p50": 3.24,
+            "p90": 5.398
+          },
+          "2071": {
+            "p10": 2.948,
+            "p50": 5.391,
+            "p90": 8.036
+          }
+        }
+      }
+    },
+    {
+      "id": "ice_days",
+      "name": "Ice Days",
+      "label": "Ice Days (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 137.29,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -35.243,
+            "p50": -18.938,
+            "p90": -15.475
+          },
+          "2071": {
+            "p10": -42.328,
+            "p50": -27.707,
+            "p90": -20.356
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": -32.037,
+            "p50": -21.082,
+            "p90": -15.976
+          },
+          "2071": {
+            "p10": -52.711,
+            "p50": -33.5,
+            "p90": -24.867
+          }
+        }
+      }
+    },
+    {
+      "id": "last_spring_frost",
+      "name": "Last Spring Frost",
+      "label": "Last Spring Frost",
+      "units": "date",
+      "value_format": "date",
+      "historical": {
+        "period": "1971–2000",
+        "median": 156.163,
+        "display": "05 Jun"
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -23.818,
+            "p50": -15.298,
+            "p90": -9.573,
+            "display": {
+              "p10": "12 May",
+              "p50": "20 May",
+              "p90": "26 May"
+            }
+          },
+          "2071": {
+            "p10": -27.94,
+            "p50": -20.237,
+            "p90": -13.355,
+            "display": {
+              "p10": "08 May",
+              "p50": "15 May",
+              "p90": "22 May"
+            }
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": -25.102,
+            "p50": -16.629,
+            "p90": -11.314,
+            "display": {
+              "p10": "10 May",
+              "p50": "19 May",
+              "p90": "24 May"
+            }
+          },
+          "2071": {
+            "p10": -35.657,
+            "p50": -26.912,
+            "p90": -18.153,
+            "display": {
+              "p10": "30 Apr",
+              "p50": "09 May",
+              "p90": "17 May"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "prx1day",
+      "name": "Maximum 1-Day Precipitation",
+      "label": "Maximum 1-Day Precipitation (mm)",
+      "units": "mm",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 11.791,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 0.909,
+            "p50": 2.088,
+            "p90": 4.155
+          },
+          "2071": {
+            "p10": 0.877,
+            "p50": 2.876,
+            "p90": 4.857
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 1.083,
+            "p50": 2.454,
+            "p90": 4.178
+          },
+          "2071": {
+            "p10": 1.825,
+            "p50": 3.533,
+            "p90": 6.073
+          }
+        }
+      }
+    },
+    {
+      "id": "rax1day",
+      "name": "Maximum 1-Day Rainfall",
+      "label": "Maximum 1-Day Rainfall (mm)",
+      "units": "mm",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 11.589,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 0.886,
+            "p50": 2.025,
+            "p90": 4.199
+          },
+          "2071": {
+            "p10": 0.834,
+            "p50": 2.88,
+            "p90": 4.858
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 1.07,
+            "p50": 2.376,
+            "p90": 4.14
+          },
+          "2071": {
+            "p10": 1.8,
+            "p50": 3.552,
+            "p90": 6.123
+          }
+        }
+      }
+    },
+    {
+      "id": "snx1day",
+      "name": "Maximum 1-Day Snowfall",
+      "label": "Maximum 1-Day Snowfall (mm)",
+      "units": "mm",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 6.186,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 0.053,
+            "p50": 0.835,
+            "p90": 1.526
+          },
+          "2071": {
+            "p10": 0.395,
+            "p50": 1.015,
+            "p90": 1.619
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 0.08,
+            "p50": 0.786,
+            "p90": 1.5
+          },
+          "2071": {
+            "p10": 0.541,
+            "p50": 1.346,
+            "p90": 2.076
+          }
+        }
+      }
+    },
+    {
+      "id": "prx5day",
+      "name": "Maximum 5-Day Precipitation",
+      "label": "Maximum 5-Day Precipitation (mm)",
+      "units": "mm",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 27.356,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 1.848,
+            "p50": 5.042,
+            "p90": 9.373
+          },
+          "2071": {
+            "p10": 1.909,
+            "p50": 6.375,
+            "p90": 11.429
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 2.168,
+            "p50": 5.459,
+            "p90": 9.587
+          },
+          "2071": {
+            "p10": 4.423,
+            "p50": 7.771,
+            "p90": 12.963
+          }
+        }
+      }
+    },
+    {
+      "id": "cdd",
+      "name": "Maximum Consecutive Dry Days",
+      "label": "Maximum Consecutive Dry Days (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 29.408,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -4.864,
+            "p50": -2.11,
+            "p90": 0.793
+          },
+          "2071": {
+            "p10": -5.445,
+            "p50": -2.93,
+            "p90": -0.193
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": -4.6,
+            "p50": -1.993,
+            "p90": 0.779
+          },
+          "2071": {
+            "p10": -6.846,
+            "p50": -3.59,
+            "p90": -0.832
+          }
+        }
+      }
+    },
+    {
+      "id": "tx_mean",
+      "name": "Mean Maximum Temperature",
+      "label": "Mean Maximum Temperature (°C)",
+      "units": "°C",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 3.098,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 1.759,
+            "p50": 2.586,
+            "p90": 3.755
+          },
+          "2071": {
+            "p10": 2.464,
+            "p50": 3.55,
+            "p90": 5.274
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 2.226,
+            "p50": 2.99,
+            "p90": 4.376
+          },
+          "2071": {
+            "p10": 3.651,
+            "p50": 4.6,
+            "p90": 6.601
+          }
+        }
+      }
+    },
+    {
+      "id": "tn_mean",
+      "name": "Mean Minimum Temperature",
+      "label": "Mean Minimum Temperature (°C)",
+      "units": "°C",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": -9.118,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 2.257,
+            "p50": 3.062,
+            "p90": 4.492
+          },
+          "2071": {
+            "p10": 3.152,
+            "p50": 4.175,
+            "p90": 5.982
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 2.463,
+            "p50": 3.359,
+            "p90": 5.384
+          },
+          "2071": {
+            "p10": 3.891,
+            "p50": 5.274,
+            "p90": 8.014
+          }
+        }
+      }
+    },
+    {
+      "id": "tg_mean",
+      "name": "Mean Temperature",
+      "label": "Mean Temperature (°C)",
+      "units": "°C",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": -2.998,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 1.942,
+            "p50": 2.782,
+            "p90": 4.039
+          },
+          "2071": {
+            "p10": 2.715,
+            "p50": 3.753,
+            "p90": 5.626
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 2.405,
+            "p50": 3.202,
+            "p90": 4.82
+          },
+          "2071": {
+            "p10": 3.94,
+            "p50": 4.891,
+            "p90": 7.302
+          }
+        }
+      }
+    },
+    {
+      "id": "tr_18",
+      "name": "Nights > 18°C",
+      "label": "Nights > 18°C (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 0.0,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.027
+          },
+          "2071": {
+            "p10": 0.0,
+            "p50": 0.002,
+            "p90": 0.089
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 0.0,
+            "p50": 0.001,
+            "p90": 0.071
+          },
+          "2071": {
+            "p10": 0.001,
+            "p50": 0.02,
+            "p90": 0.663
+          }
+        }
+      }
+    },
+    {
+      "id": "tr_20",
+      "name": "Nights > 20°C",
+      "label": "Nights > 20°C (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 0.0,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.0
+          },
+          "2071": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.005
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.002
+          },
+          "2071": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.116
+          }
+        }
+      }
+    },
+    {
+      "id": "tr_22",
+      "name": "Nights > 22°C",
+      "label": "Nights > 22°C (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 0.0,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.0
+          },
+          "2071": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.0
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.0
+          },
+          "2071": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.007
+          }
+        }
+      }
+    },
+    {
+      "id": "prtot",
+      "name": "Total Precipitation",
+      "label": "Total Precipitation (mm)",
+      "units": "mm",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 337.052,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 32.647,
+            "p50": 50.719,
+            "p90": 89.525
+          },
+          "2071": {
+            "p10": 39.824,
+            "p50": 71.192,
+            "p90": 121.486
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 34.113,
+            "p50": 56.577,
+            "p90": 81.105
+          },
+          "2071": {
+            "p10": 66.069,
+            "p50": 93.183,
+            "p90": 147.195
+          }
+        }
+      }
+    },
+    {
+      "id": "ratot",
+      "name": "Total Rainfall",
+      "label": "Total Rainfall (mm)",
+      "units": "mm",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 214.083,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 35.454,
+            "p50": 45.428,
+            "p90": 89.849
+          },
+          "2071": {
+            "p10": 41.467,
+            "p50": 61.681,
+            "p90": 126.891
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 34.244,
+            "p50": 53.518,
+            "p90": 87.432
+          },
+          "2071": {
+            "p10": 58.962,
+            "p50": 85.782,
+            "p90": 151.316
+          }
+        }
+      }
+    },
+    {
+      "id": "sntot",
+      "name": "Total Snowfall",
+      "label": "Total Snowfall (mm)",
+      "units": "mm",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 121.386,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -8.956,
+            "p50": 1.582,
+            "p90": 10.07
+          },
+          "2071": {
+            "p10": -10.172,
+            "p50": 1.938,
+            "p90": 10.544
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": -9.372,
+            "p50": 1.809,
+            "p90": 10.986
+          },
+          "2071": {
+            "p10": -5.974,
+            "p50": 4.891,
+            "p90": 13.143
+          }
+        }
+      }
+    }
+  ]
+}
