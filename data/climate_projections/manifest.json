@@ -151,8 +151,417 @@
     {
       "id": "community",
       "name": "Community",
-      "enabled": false,
-      "locations": []
+      "enabled": true,
+      "locations": [
+        {
+          "id": "yukon_beaver_creek",
+          "name": "Beaver Creek, Yukon",
+          "abbreviation": "",
+          "file": "communities/yukon_beaver_creek.json"
+        },
+        {
+          "id": "yukon_burwash_landing",
+          "name": "Burwash Landing, Yukon",
+          "abbreviation": "",
+          "file": "communities/yukon_burwash_landing.json"
+        },
+        {
+          "id": "yukon_carcross",
+          "name": "Carcross, Yukon",
+          "abbreviation": "",
+          "file": "communities/yukon_carcross.json"
+        },
+        {
+          "id": "yukon_carmacks",
+          "name": "Carmacks, Yukon",
+          "abbreviation": "",
+          "file": "communities/yukon_carmacks.json"
+        },
+        {
+          "id": "yukon_dawson_city",
+          "name": "Dawson City, Yukon",
+          "abbreviation": "",
+          "file": "communities/yukon_dawson_city.json"
+        },
+        {
+          "id": "yukon_destruction_bay",
+          "name": "Destruction Bay, Yukon",
+          "abbreviation": "",
+          "file": "communities/yukon_destruction_bay.json"
+        },
+        {
+          "id": "yukon_faro",
+          "name": "Faro, Yukon",
+          "abbreviation": "",
+          "file": "communities/yukon_faro.json"
+        },
+        {
+          "id": "yukon_haines_junction",
+          "name": "Haines Junction, Yukon",
+          "abbreviation": "",
+          "file": "communities/yukon_haines_junction.json"
+        },
+        {
+          "id": "yukon_mayo",
+          "name": "Mayo, Yukon",
+          "abbreviation": "",
+          "file": "communities/yukon_mayo.json"
+        },
+        {
+          "id": "yukon_old_crow",
+          "name": "Old Crow, Yukon",
+          "abbreviation": "",
+          "file": "communities/yukon_old_crow.json"
+        },
+        {
+          "id": "yukon_pelly_crossing",
+          "name": "Pelly Crossing, Yukon",
+          "abbreviation": "",
+          "file": "communities/yukon_pelly_crossing.json"
+        },
+        {
+          "id": "yukon_ross_river",
+          "name": "Ross River, Yukon",
+          "abbreviation": "",
+          "file": "communities/yukon_ross_river.json"
+        },
+        {
+          "id": "yukon_teslin",
+          "name": "Teslin, Yukon",
+          "abbreviation": "",
+          "file": "communities/yukon_teslin.json"
+        },
+        {
+          "id": "yukon_watson_lake",
+          "name": "Watson Lake, Yukon",
+          "abbreviation": "",
+          "file": "communities/yukon_watson_lake.json"
+        },
+        {
+          "id": "yukon_whitehorse",
+          "name": "Whitehorse, Yukon",
+          "abbreviation": "",
+          "file": "communities/yukon_whitehorse.json"
+        },
+        {
+          "id": "northwest_territories_aklavik",
+          "name": "Aklavik, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_aklavik.json"
+        },
+        {
+          "id": "northwest_territories_behchoko",
+          "name": "Behchokǫ̀, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_behchoko.json"
+        },
+        {
+          "id": "northwest_territories_delne",
+          "name": "Délı̨nę, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_delne.json"
+        },
+        {
+          "id": "northwest_territories_enterprise",
+          "name": "Enterprise, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_enterprise.json"
+        },
+        {
+          "id": "northwest_territories_fort_good_hope",
+          "name": "Fort Good Hope, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_fort_good_hope.json"
+        },
+        {
+          "id": "northwest_territories_fort_liard",
+          "name": "Fort Liard, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_fort_liard.json"
+        },
+        {
+          "id": "northwest_territories_fort_mcpherson",
+          "name": "Fort McPherson, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_fort_mcpherson.json"
+        },
+        {
+          "id": "northwest_territories_fort_providence",
+          "name": "Fort Providence, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_fort_providence.json"
+        },
+        {
+          "id": "northwest_territories_fort_resolution",
+          "name": "Fort Resolution, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_fort_resolution.json"
+        },
+        {
+          "id": "northwest_territories_fort_simpson",
+          "name": "Fort Simpson, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_fort_simpson.json"
+        },
+        {
+          "id": "northwest_territories_fort_smith",
+          "name": "Fort Smith, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_fort_smith.json"
+        },
+        {
+          "id": "northwest_territories_gameti",
+          "name": "Gamètì, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_gameti.json"
+        },
+        {
+          "id": "northwest_territories_hay_river",
+          "name": "Hay River, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_hay_river.json"
+        },
+        {
+          "id": "northwest_territories_inuvik",
+          "name": "Inuvik, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_inuvik.json"
+        },
+        {
+          "id": "northwest_territories_jean_marie_river",
+          "name": "Jean Marie River, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_jean_marie_river.json"
+        },
+        {
+          "id": "northwest_territories_kakisa",
+          "name": "Kakisa, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_kakisa.json"
+        },
+        {
+          "id": "northwest_territories_nahanni_butte",
+          "name": "Nahanni Butte, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_nahanni_butte.json"
+        },
+        {
+          "id": "northwest_territories_norman_wells",
+          "name": "Norman Wells, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_norman_wells.json"
+        },
+        {
+          "id": "northwest_territories_paulatuk",
+          "name": "Paulatuk, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_paulatuk.json"
+        },
+        {
+          "id": "northwest_territories_sachs_harbour",
+          "name": "Sachs Harbour, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_sachs_harbour.json"
+        },
+        {
+          "id": "northwest_territories_sambaa_k_e",
+          "name": "Sambaa K'e, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_sambaa_k_e.json"
+        },
+        {
+          "id": "northwest_territories_tsiigehtchic",
+          "name": "Tsiigehtchic, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_tsiigehtchic.json"
+        },
+        {
+          "id": "northwest_territories_tuktoyaktuk",
+          "name": "Tuktoyaktuk, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_tuktoyaktuk.json"
+        },
+        {
+          "id": "northwest_territories_ulukhaktok",
+          "name": "Ulukhaktok, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_ulukhaktok.json"
+        },
+        {
+          "id": "northwest_territories_wekweeti",
+          "name": "Wekweètì, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_wekweeti.json"
+        },
+        {
+          "id": "northwest_territories_whati",
+          "name": "Whatì, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_whati.json"
+        },
+        {
+          "id": "northwest_territories_wrigley",
+          "name": "Wrigley, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_wrigley.json"
+        },
+        {
+          "id": "northwest_territories_yellowknife",
+          "name": "Yellowknife, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_yellowknife.json"
+        },
+        {
+          "id": "northwest_territories_utsel_k_e",
+          "name": "Łutsel K'e, Northwest Territories",
+          "abbreviation": "",
+          "file": "communities/northwest_territories_utsel_k_e.json"
+        },
+        {
+          "id": "nunavut_arctic_bay",
+          "name": "Arctic Bay, Nunavut",
+          "abbreviation": "",
+          "file": "communities/nunavut_arctic_bay.json"
+        },
+        {
+          "id": "nunavut_arviat",
+          "name": "Arviat, Nunavut",
+          "abbreviation": "",
+          "file": "communities/nunavut_arviat.json"
+        },
+        {
+          "id": "nunavut_baker_lake",
+          "name": "Baker Lake, Nunavut",
+          "abbreviation": "",
+          "file": "communities/nunavut_baker_lake.json"
+        },
+        {
+          "id": "nunavut_cambridge_bay",
+          "name": "Cambridge Bay, Nunavut",
+          "abbreviation": "",
+          "file": "communities/nunavut_cambridge_bay.json"
+        },
+        {
+          "id": "nunavut_chesterfield_inlet",
+          "name": "Chesterfield Inlet, Nunavut",
+          "abbreviation": "",
+          "file": "communities/nunavut_chesterfield_inlet.json"
+        },
+        {
+          "id": "nunavut_clyde_river",
+          "name": "Clyde River, Nunavut",
+          "abbreviation": "",
+          "file": "communities/nunavut_clyde_river.json"
+        },
+        {
+          "id": "nunavut_coral_harbour",
+          "name": "Coral Harbour, Nunavut",
+          "abbreviation": "",
+          "file": "communities/nunavut_coral_harbour.json"
+        },
+        {
+          "id": "nunavut_gjoa_haven",
+          "name": "Gjoa Haven, Nunavut",
+          "abbreviation": "",
+          "file": "communities/nunavut_gjoa_haven.json"
+        },
+        {
+          "id": "nunavut_grise_fiord",
+          "name": "Grise Fiord, Nunavut",
+          "abbreviation": "",
+          "file": "communities/nunavut_grise_fiord.json"
+        },
+        {
+          "id": "nunavut_igloolik",
+          "name": "Igloolik, Nunavut",
+          "abbreviation": "",
+          "file": "communities/nunavut_igloolik.json"
+        },
+        {
+          "id": "nunavut_iqaluit",
+          "name": "Iqaluit, Nunavut",
+          "abbreviation": "",
+          "file": "communities/nunavut_iqaluit.json"
+        },
+        {
+          "id": "nunavut_kimmirut",
+          "name": "Kimmirut, Nunavut",
+          "abbreviation": "",
+          "file": "communities/nunavut_kimmirut.json"
+        },
+        {
+          "id": "nunavut_kinngait",
+          "name": "Kinngait, Nunavut",
+          "abbreviation": "",
+          "file": "communities/nunavut_kinngait.json"
+        },
+        {
+          "id": "nunavut_kugluktuk",
+          "name": "Kugluktuk, Nunavut",
+          "abbreviation": "",
+          "file": "communities/nunavut_kugluktuk.json"
+        },
+        {
+          "id": "nunavut_naujaat",
+          "name": "Naujaat, Nunavut",
+          "abbreviation": "",
+          "file": "communities/nunavut_naujaat.json"
+        },
+        {
+          "id": "nunavut_pangnirtung",
+          "name": "Pangnirtung, Nunavut",
+          "abbreviation": "",
+          "file": "communities/nunavut_pangnirtung.json"
+        },
+        {
+          "id": "nunavut_pond_inlet",
+          "name": "Pond Inlet, Nunavut",
+          "abbreviation": "",
+          "file": "communities/nunavut_pond_inlet.json"
+        },
+        {
+          "id": "nunavut_qikiqtarjuaq",
+          "name": "Qikiqtarjuaq, Nunavut",
+          "abbreviation": "",
+          "file": "communities/nunavut_qikiqtarjuaq.json"
+        },
+        {
+          "id": "nunavut_rankin_inlet",
+          "name": "Rankin Inlet, Nunavut",
+          "abbreviation": "",
+          "file": "communities/nunavut_rankin_inlet.json"
+        },
+        {
+          "id": "nunavut_resolute",
+          "name": "Resolute, Nunavut",
+          "abbreviation": "",
+          "file": "communities/nunavut_resolute.json"
+        },
+        {
+          "id": "nunavut_sanikiluaq",
+          "name": "Sanikiluaq, Nunavut",
+          "abbreviation": "",
+          "file": "communities/nunavut_sanikiluaq.json"
+        },
+        {
+          "id": "nunavut_sanirajak",
+          "name": "Sanirajak, Nunavut",
+          "abbreviation": "",
+          "file": "communities/nunavut_sanirajak.json"
+        },
+        {
+          "id": "nunavut_taloyoak",
+          "name": "Taloyoak, Nunavut",
+          "abbreviation": "",
+          "file": "communities/nunavut_taloyoak.json"
+        },
+        {
+          "id": "nunavut_whale_cove",
+          "name": "Whale Cove, Nunavut",
+          "abbreviation": "",
+          "file": "communities/nunavut_whale_cove.json"
+        }
+      ]
     }
   ]
 }

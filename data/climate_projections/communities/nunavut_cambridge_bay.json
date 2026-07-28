@@ -1,0 +1,1585 @@
+{
+  "schema_version": "1.0",
+  "geography": {
+    "id": "nunavut_cambridge_bay",
+    "type": "community",
+    "name": "Cambridge Bay, Nunavut",
+    "abbreviation": "",
+    "community_name": "Cambridge Bay",
+    "territory": "Nunavut",
+    "latitude": 69.117,
+    "longitude": -105.033,
+    "grid_latitude": 69.125,
+    "grid_longitude": -105.042,
+    "grid_distance_km": null
+  },
+  "dataset": {
+    "name": "CanDCS-M6",
+    "historical_period": "1971–2000",
+    "near_future_period": "2041–2070",
+    "late_future_period": "2071–2100"
+  },
+  "indicators": [
+    {
+      "id": "tn_min",
+      "name": "Coldest Temperature",
+      "label": "Coldest Temperature (°C)",
+      "units": "°C",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": -45.35,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 3.623,
+            "p50": 6.211,
+            "p90": 8.404
+          },
+          "2071": {
+            "p10": 4.742,
+            "p50": 8.224,
+            "p90": 11.325
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 3.947,
+            "p50": 6.939,
+            "p90": 9.521
+          },
+          "2071": {
+            "p10": 6.528,
+            "p50": 11.607,
+            "p90": 15.89
+          }
+        }
+      },
+      "definition": "The lowest daily minimum temperature during the year."
+    },
+    {
+      "id": "cddcold_18",
+      "name": "Cooling Degree Days > 18°C",
+      "label": "Cooling Degree Days > 18°C (degree-days)",
+      "units": "degree-days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 0.057,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 0.408,
+            "p50": 0.985,
+            "p90": 9.806
+          },
+          "2071": {
+            "p10": 0.739,
+            "p50": 3.389,
+            "p90": 19.86
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 0.592,
+            "p50": 1.422,
+            "p90": 6.245
+          },
+          "2071": {
+            "p10": 2.391,
+            "p50": 9.627,
+            "p90": 30.839
+          }
+        }
+      },
+      "definition": "A measure of how much and for how long daily temperatures are above 18°C. Higher values indicate greater potential demand for cooling."
+    },
+    {
+      "id": "txgt_25",
+      "name": "Days with Maximum Temperature > 25°C",
+      "label": "Days with Maximum Temperature > 25°C (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 0.1,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 0.217,
+            "p50": 0.467,
+            "p90": 3.25
+          },
+          "2071": {
+            "p10": 0.35,
+            "p50": 0.85,
+            "p90": 4.8
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 0.267,
+            "p50": 0.65,
+            "p90": 1.813
+          },
+          "2071": {
+            "p10": 0.66,
+            "p50": 1.95,
+            "p90": 7.23
+          }
+        }
+      },
+      "definition": "The number of days when the maximum temperature exceeds 25°C."
+    },
+    {
+      "id": "txgt_27",
+      "name": "Days with Maximum Temperature > 27°C",
+      "label": "Days with Maximum Temperature > 27°C (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 0.0,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 0.033,
+            "p50": 0.2,
+            "p90": 1.1
+          },
+          "2071": {
+            "p10": 0.033,
+            "p50": 0.333,
+            "p90": 1.917
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 0.043,
+            "p50": 0.25,
+            "p90": 0.747
+          },
+          "2071": {
+            "p10": 0.277,
+            "p50": 0.533,
+            "p90": 3.327
+          }
+        }
+      },
+      "definition": "The number of days when the maximum temperature exceeds 27°C."
+    },
+    {
+      "id": "txgt_29",
+      "name": "Days with Maximum Temperature > 29°C",
+      "label": "Days with Maximum Temperature > 29°C (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 0.0,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.45
+          },
+          "2071": {
+            "p10": 0.0,
+            "p50": 0.117,
+            "p90": 0.733
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 0.0,
+            "p50": 0.033,
+            "p90": 0.29
+          },
+          "2071": {
+            "p10": 0.033,
+            "p50": 0.15,
+            "p90": 1.393
+          }
+        }
+      },
+      "definition": "The number of days when the maximum temperature exceeds 29°C."
+    },
+    {
+      "id": "txgt_30",
+      "name": "Days with Maximum Temperature > 30°C",
+      "label": "Days with Maximum Temperature > 30°C (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 0.0,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.25
+          },
+          "2071": {
+            "p10": 0.0,
+            "p50": 0.067,
+            "p90": 0.517
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.18
+          },
+          "2071": {
+            "p10": 0.0,
+            "p50": 0.083,
+            "p90": 0.767
+          }
+        }
+      },
+      "definition": "The number of days when the maximum temperature exceeds 30°C."
+    },
+    {
+      "id": "txgt_32",
+      "name": "Days with Maximum Temperature > 32°C",
+      "label": "Days with Maximum Temperature > 32°C (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 0.0,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.083
+          },
+          "2071": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.183
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.057
+          },
+          "2071": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.223
+          }
+        }
+      },
+      "definition": "The number of days when the maximum temperature exceeds 32°C."
+    },
+    {
+      "id": "tnlt_m15",
+      "name": "Days with Minimum Temperature < -15°C",
+      "label": "Days with Minimum Temperature < -15°C (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 200.517,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -47.85,
+            "p50": -30.617,
+            "p90": -21.7
+          },
+          "2071": {
+            "p10": -69.35,
+            "p50": -43.767,
+            "p90": -25.95
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": -51.58,
+            "p50": -32.833,
+            "p90": -22.997
+          },
+          "2071": {
+            "p10": -99.423,
+            "p50": -63.117,
+            "p90": -38.557
+          }
+        }
+      },
+      "definition": "The number of days when the minimum temperature falls below -15°C."
+    },
+    {
+      "id": "tnlt_m25",
+      "name": "Days with Minimum Temperature < -25°C",
+      "label": "Days with Minimum Temperature < -25°C (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 149.033,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -71.933,
+            "p50": -47.75,
+            "p90": -32.5
+          },
+          "2071": {
+            "p10": -103.767,
+            "p50": -68.033,
+            "p90": -44.733
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": -80.947,
+            "p50": -53.2,
+            "p90": -39.8
+          },
+          "2071": {
+            "p10": -128.93,
+            "p50": -95.183,
+            "p90": -63.457
+          }
+        }
+      },
+      "definition": "The number of days when the minimum temperature falls below -25°C."
+    },
+    {
+      "id": "pr1mm",
+      "name": "Days with Precipitation ≥ 1 mm",
+      "label": "Days with Precipitation ≥ 1 mm (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 62.533,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 5.383,
+            "p50": 12.033,
+            "p90": 19.65
+          },
+          "2071": {
+            "p10": 9.533,
+            "p50": 15.933,
+            "p90": 27.55
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 4.42,
+            "p50": 11.7,
+            "p90": 20.567
+          },
+          "2071": {
+            "p10": 12.153,
+            "p50": 21.45,
+            "p90": 48.113
+          }
+        }
+      },
+      "definition": "The number of days receiving at least 1 mm of precipitation."
+    },
+    {
+      "id": "pr10mm",
+      "name": "Days with Precipitation ≥ 10 mm",
+      "label": "Days with Precipitation ≥ 10 mm (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 1.233,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 0.183,
+            "p50": 0.583,
+            "p90": 1.283
+          },
+          "2071": {
+            "p10": 0.267,
+            "p50": 1.017,
+            "p90": 1.333
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 0.32,
+            "p50": 0.7,
+            "p90": 1.1
+          },
+          "2071": {
+            "p10": 0.563,
+            "p50": 1.15,
+            "p90": 1.78
+          }
+        }
+      },
+      "definition": "The number of days receiving at least 10 mm of precipitation."
+    },
+    {
+      "id": "pr20mm",
+      "name": "Days with Precipitation ≥ 20 mm",
+      "label": "Days with Precipitation ≥ 20 mm (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 0.167,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 0.067,
+            "p50": 0.167,
+            "p90": 0.367
+          },
+          "2071": {
+            "p10": 0.0,
+            "p50": 0.217,
+            "p90": 0.367
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 0.0,
+            "p50": 0.15,
+            "p90": 0.327
+          },
+          "2071": {
+            "p10": 0.1,
+            "p50": 0.25,
+            "p90": 0.457
+          }
+        }
+      },
+      "definition": "The number of days receiving at least 20 mm of precipitation."
+    },
+    {
+      "id": "sn10mm",
+      "name": "Days with Snowfall ≥ 10 mm",
+      "label": "Days with Snowfall ≥ 10 mm (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 0.367,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -0.117,
+            "p50": 0.033,
+            "p90": 0.233
+          },
+          "2071": {
+            "p10": -0.183,
+            "p50": 0.0,
+            "p90": 0.217
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": -0.09,
+            "p50": 0.067,
+            "p90": 0.233
+          },
+          "2071": {
+            "p10": -0.19,
+            "p50": 0.05,
+            "p90": 0.313
+          }
+        }
+      },
+      "definition": "The number of days receiving at least 10 mm of snowfall water equivalent."
+    },
+    {
+      "id": "sn2mm",
+      "name": "Days with Snowfall ≥ 2 mm",
+      "label": "Days with Snowfall ≥ 2 mm (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 14.75,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -0.45,
+            "p50": 1.433,
+            "p90": 3.533
+          },
+          "2071": {
+            "p10": 0.35,
+            "p50": 2.483,
+            "p90": 6.15
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 0.203,
+            "p50": 1.717,
+            "p90": 4.57
+          },
+          "2071": {
+            "p10": 1.217,
+            "p50": 3.683,
+            "p90": 8.45
+          }
+        }
+      },
+      "definition": "The number of days receiving at least 2 mm of snowfall water equivalent."
+    },
+    {
+      "id": "nr_cdd",
+      "name": "Dry Periods ≥ 6 Days",
+      "label": "Dry Periods ≥ 6 Days (periods)",
+      "units": "periods",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 18.033,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -1.433,
+            "p50": -0.133,
+            "p90": 0.467
+          },
+          "2071": {
+            "p10": -1.683,
+            "p50": -0.383,
+            "p90": 0.783
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": -1.123,
+            "p50": -0.283,
+            "p90": 0.657
+          },
+          "2071": {
+            "p10": -4.493,
+            "p50": -0.9,
+            "p90": 0.7
+          }
+        }
+      },
+      "definition": "The number of dry periods lasting at least six consecutive days, where each day receives less than 1 mm of precipitation."
+    },
+    {
+      "id": "first_fall_frost",
+      "name": "First Fall Frost",
+      "label": "First Fall Frost",
+      "units": "date",
+      "value_format": "date",
+      "historical": {
+        "period": "1971–2000",
+        "median": 237.467,
+        "display": "25 Aug"
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 6.26,
+            "p50": 14.3,
+            "p90": 33.107,
+            "display": {
+              "p10": "31 Aug",
+              "p50": "08 Sep",
+              "p90": "27 Sep"
+            }
+          },
+          "2071": {
+            "p10": 10.56,
+            "p50": 18.767,
+            "p90": 39.793,
+            "display": {
+              "p10": "04 Sep",
+              "p50": "12 Sep",
+              "p90": "03 Oct"
+            }
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 10.5,
+            "p50": 14.317,
+            "p90": 32.033,
+            "display": {
+              "p10": "04 Sep",
+              "p50": "08 Sep",
+              "p90": "26 Sep"
+            }
+          },
+          "2071": {
+            "p10": 18.023,
+            "p50": 24.667,
+            "p90": 51.947,
+            "display": {
+              "p10": "12 Sep",
+              "p50": "18 Sep",
+              "p90": "15 Oct"
+            }
+          }
+        }
+      },
+      "definition": "The projected date of the first fall day when the minimum temperature falls below 0°C."
+    },
+    {
+      "id": "dlyfrzthw_tx0_tn-1",
+      "name": "Freeze-Thaw Days",
+      "label": "Freeze-Thaw Days (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 24.833,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -8.617,
+            "p50": -1.617,
+            "p90": 4.7
+          },
+          "2071": {
+            "p10": -8.783,
+            "p50": -2.8,
+            "p90": 4.0
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": -7.327,
+            "p50": -3.1,
+            "p90": 3.827
+          },
+          "2071": {
+            "p10": -8.827,
+            "p50": -2.45,
+            "p90": 6.55
+          }
+        }
+      },
+      "definition": "The number of days when the daily maximum temperature is above 0°C and the daily minimum temperature is below -1°C."
+    },
+    {
+      "id": "frost_days",
+      "name": "Frost Days",
+      "label": "Frost Days (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 281.967,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -43.483,
+            "p50": -26.083,
+            "p90": -14.9
+          },
+          "2071": {
+            "p10": -57.117,
+            "p50": -33.75,
+            "p90": -18.55
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": -43.327,
+            "p50": -27.6,
+            "p90": -18.047
+          },
+          "2071": {
+            "p10": -65.417,
+            "p50": -39.633,
+            "p90": -29.143
+          }
+        }
+      },
+      "definition": "The number of days when the daily minimum temperature falls below 0°C."
+    },
+    {
+      "id": "frost_free_season",
+      "name": "Frost-Free Season",
+      "label": "Frost-Free Season (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 61.817,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 12.85,
+            "p50": 26.733,
+            "p90": 48.167
+          },
+          "2071": {
+            "p10": 18.567,
+            "p50": 33.1,
+            "p90": 59.05
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 15.483,
+            "p50": 26.7,
+            "p90": 47.55
+          },
+          "2071": {
+            "p10": 29.247,
+            "p50": 37.783,
+            "p90": 71.613
+          }
+        }
+      },
+      "definition": "The number of days between the last spring frost and the first fall frost."
+    },
+    {
+      "id": "gddgrow_0",
+      "name": "Growing Degree Days > 0°C",
+      "label": "Growing Degree Days > 0°C (degree-days)",
+      "units": "degree-days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 609.14,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 222.5,
+            "p50": 321.333,
+            "p90": 584.203
+          },
+          "2071": {
+            "p10": 291.106,
+            "p50": 441.162,
+            "p90": 820.263
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 231.645,
+            "p50": 346.096,
+            "p90": 596.993
+          },
+          "2071": {
+            "p10": 406.039,
+            "p50": 630.872,
+            "p90": 892.409
+          }
+        }
+      },
+      "definition": "Accumulated warmth above 0°C during the year. This measure is often used to describe conditions for plant growth."
+    },
+    {
+      "id": "gddgrow_5",
+      "name": "Growing Degree Days > 5°C",
+      "label": "Growing Degree Days > 5°C (degree-days)",
+      "units": "degree-days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 204.264,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 132.632,
+            "p50": 196.593,
+            "p90": 406.104
+          },
+          "2071": {
+            "p10": 174.688,
+            "p50": 287.017,
+            "p90": 567.149
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 146.692,
+            "p50": 209.07,
+            "p90": 407.353
+          },
+          "2071": {
+            "p10": 265.386,
+            "p50": 435.833,
+            "p90": 650.667
+          }
+        }
+      },
+      "definition": "Accumulated warmth above 5°C during the year. This measure is often used to describe conditions for plant growth."
+    },
+    {
+      "id": "hddheat_18",
+      "name": "Heating Degree Days < 18°C",
+      "label": "Heating Degree Days < 18°C (degree-days)",
+      "units": "degree-days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 11676.98,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -2500.951,
+            "p50": -1730.806,
+            "p90": -1370.791
+          },
+          "2071": {
+            "p10": -3276.676,
+            "p50": -2286.642,
+            "p90": -1741.134
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": -2498.115,
+            "p50": -1817.202,
+            "p90": -1485.13
+          },
+          "2071": {
+            "p10": -3976.98,
+            "p50": -3109.859,
+            "p90": -2379.614
+          }
+        }
+      },
+      "definition": "A measure of how much and for how long daily temperatures are below 18°C. Higher values indicate greater potential demand for heating."
+    },
+    {
+      "id": "tx_max",
+      "name": "Hottest Temperature",
+      "label": "Hottest Temperature (°C)",
+      "units": "°C",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 19.948,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 1.399,
+            "p50": 2.96,
+            "p90": 6.301
+          },
+          "2071": {
+            "p10": 2.65,
+            "p50": 3.767,
+            "p90": 8.501
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 2.223,
+            "p50": 3.364,
+            "p90": 6.133
+          },
+          "2071": {
+            "p10": 3.748,
+            "p50": 5.205,
+            "p90": 8.997
+          }
+        }
+      },
+      "definition": "The highest daily maximum temperature during the year."
+    },
+    {
+      "id": "ice_days",
+      "name": "Ice Days",
+      "label": "Ice Days (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 247.217,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -35.033,
+            "p50": -21.867,
+            "p90": -12.55
+          },
+          "2071": {
+            "p10": -41.3,
+            "p50": -28.2,
+            "p90": -15.45
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": -33.913,
+            "p50": -22.583,
+            "p90": -12.92
+          },
+          "2071": {
+            "p10": -52.08,
+            "p50": -37.917,
+            "p90": -21.07
+          }
+        }
+      },
+      "definition": "The number of days when the daily maximum temperature remains below 0°C."
+    },
+    {
+      "id": "last_spring_frost",
+      "name": "Last Spring Frost",
+      "label": "Last Spring Frost",
+      "units": "date",
+      "value_format": "date",
+      "historical": {
+        "period": "1971–2000",
+        "median": 175.483,
+        "display": "24 Jun"
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -17.85,
+            "p50": -9.9,
+            "p90": -4.55,
+            "display": {
+              "p10": "06 Jun",
+              "p50": "14 Jun",
+              "p90": "19 Jun"
+            }
+          },
+          "2071": {
+            "p10": -20.25,
+            "p50": -13.717,
+            "p90": -6.583,
+            "display": {
+              "p10": "03 Jun",
+              "p50": "10 Jun",
+              "p90": "17 Jun"
+            }
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": -18.347,
+            "p50": -11.133,
+            "p90": -5.617,
+            "display": {
+              "p10": "05 Jun",
+              "p50": "12 Jun",
+              "p90": "18 Jun"
+            }
+          },
+          "2071": {
+            "p10": -23.277,
+            "p50": -14.567,
+            "p90": -10.063,
+            "display": {
+              "p10": "31 May",
+              "p50": "09 Jun",
+              "p90": "13 Jun"
+            }
+          }
+        }
+      },
+      "definition": "The projected date of the last spring day when the minimum temperature falls below 0°C."
+    },
+    {
+      "id": "prx1day",
+      "name": "Maximum 1-Day Precipitation",
+      "label": "Maximum 1-Day Precipitation (mm)",
+      "units": "mm",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 14.148,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 0.968,
+            "p50": 2.754,
+            "p90": 5.766
+          },
+          "2071": {
+            "p10": -0.155,
+            "p50": 3.625,
+            "p90": 5.528
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 0.616,
+            "p50": 2.934,
+            "p90": 4.471
+          },
+          "2071": {
+            "p10": 2.37,
+            "p50": 4.693,
+            "p90": 9.295
+          }
+        }
+      },
+      "definition": "The greatest amount of precipitation received in a single day."
+    },
+    {
+      "id": "rax1day",
+      "name": "Maximum 1-Day Rainfall",
+      "label": "Maximum 1-Day Rainfall (mm)",
+      "units": "mm",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 11.592,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 1.086,
+            "p50": 3.53,
+            "p90": 6.713
+          },
+          "2071": {
+            "p10": 0.553,
+            "p50": 4.319,
+            "p90": 6.372
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 0.977,
+            "p50": 2.918,
+            "p90": 5.088
+          },
+          "2071": {
+            "p10": 2.471,
+            "p50": 5.064,
+            "p90": 10.276
+          }
+        }
+      },
+      "definition": "The greatest amount of rainfall received in a single day."
+    },
+    {
+      "id": "snx1day",
+      "name": "Maximum 1-Day Snowfall",
+      "label": "Maximum 1-Day Snowfall (mm)",
+      "units": "mm",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 9.45,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -1.126,
+            "p50": 0.687,
+            "p90": 2.302
+          },
+          "2071": {
+            "p10": -0.974,
+            "p50": 0.678,
+            "p90": 2.747
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": -0.478,
+            "p50": 0.78,
+            "p90": 2.243
+          },
+          "2071": {
+            "p10": -0.571,
+            "p50": 1.041,
+            "p90": 2.516
+          }
+        }
+      },
+      "definition": "The greatest snowfall water equivalent received in a single day."
+    },
+    {
+      "id": "prx5day",
+      "name": "Maximum 5-Day Precipitation",
+      "label": "Maximum 5-Day Precipitation (mm)",
+      "units": "mm",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 23.556,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 1.038,
+            "p50": 4.455,
+            "p90": 9.06
+          },
+          "2071": {
+            "p10": 0.282,
+            "p50": 5.725,
+            "p90": 9.245
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 0.781,
+            "p50": 3.922,
+            "p90": 6.834
+          },
+          "2071": {
+            "p10": 3.427,
+            "p50": 6.666,
+            "p90": 13.831
+          }
+        }
+      },
+      "definition": "The greatest total precipitation received over any five consecutive days."
+    },
+    {
+      "id": "cdd",
+      "name": "Maximum Consecutive Dry Days",
+      "label": "Maximum Consecutive Dry Days (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 38.5,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -9.0,
+            "p50": -5.267,
+            "p90": -1.733
+          },
+          "2071": {
+            "p10": -12.183,
+            "p50": -6.967,
+            "p90": -2.183
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": -8.29,
+            "p50": -4.8,
+            "p90": -1.97
+          },
+          "2071": {
+            "p10": -12.467,
+            "p50": -6.1,
+            "p90": -2.987
+          }
+        }
+      },
+      "definition": "The greatest number of consecutive days in a year with less than 1 mm of precipitation."
+    },
+    {
+      "id": "tx_mean",
+      "name": "Mean Maximum Temperature",
+      "label": "Mean Maximum Temperature (°C)",
+      "units": "°C",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": -10.587,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 3.507,
+            "p50": 4.444,
+            "p90": 6.817
+          },
+          "2071": {
+            "p10": 4.474,
+            "p50": 5.897,
+            "p90": 8.808
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 3.866,
+            "p50": 4.707,
+            "p90": 6.776
+          },
+          "2071": {
+            "p10": 6.26,
+            "p50": 8.014,
+            "p90": 10.185
+          }
+        }
+      },
+      "definition": "The average of the daily maximum temperatures over the year."
+    },
+    {
+      "id": "tn_mean",
+      "name": "Mean Minimum Temperature",
+      "label": "Mean Minimum Temperature (°C)",
+      "units": "°C",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": -17.407,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 4.021,
+            "p50": 4.951,
+            "p90": 7.226
+          },
+          "2071": {
+            "p10": 5.064,
+            "p50": 6.668,
+            "p90": 9.651
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 4.254,
+            "p50": 5.271,
+            "p90": 7.151
+          },
+          "2071": {
+            "p10": 6.792,
+            "p50": 8.779,
+            "p90": 11.683
+          }
+        }
+      },
+      "definition": "The average of the daily minimum temperatures over the year."
+    },
+    {
+      "id": "tg_mean",
+      "name": "Mean Temperature",
+      "label": "Mean Temperature (°C)",
+      "units": "°C",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": -13.998,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 3.76,
+            "p50": 4.739,
+            "p90": 6.981
+          },
+          "2071": {
+            "p10": 4.767,
+            "p50": 6.263,
+            "p90": 9.021
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 4.077,
+            "p50": 4.984,
+            "p90": 6.938
+          },
+          "2071": {
+            "p10": 6.526,
+            "p50": 8.527,
+            "p90": 10.923
+          }
+        }
+      },
+      "definition": "The average daily temperature over the year."
+    },
+    {
+      "id": "tr_18",
+      "name": "Nights > 18°C",
+      "label": "Nights > 18°C (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 0.0,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.1
+          },
+          "2071": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.633
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.09
+          },
+          "2071": {
+            "p10": 0.0,
+            "p50": 0.05,
+            "p90": 1.27
+          }
+        }
+      },
+      "definition": "The number of nights when the minimum temperature remains above 18°C."
+    },
+    {
+      "id": "tr_20",
+      "name": "Nights > 20°C",
+      "label": "Nights > 20°C (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 0.0,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.017
+          },
+          "2071": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.067
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.0
+          },
+          "2071": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.19
+          }
+        }
+      },
+      "definition": "The number of nights when the minimum temperature remains above 20°C."
+    },
+    {
+      "id": "tr_22",
+      "name": "Nights > 22°C",
+      "label": "Nights > 22°C (days)",
+      "units": "days",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 0.0,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.0
+          },
+          "2071": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.05
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.0
+          },
+          "2071": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.0
+          }
+        }
+      },
+      "definition": "The number of nights when the minimum temperature remains above 22°C."
+    },
+    {
+      "id": "prtot",
+      "name": "Total Precipitation",
+      "label": "Total Precipitation (mm)",
+      "units": "mm",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 249.021,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 25.105,
+            "p50": 46.82,
+            "p90": 86.049
+          },
+          "2071": {
+            "p10": 38.831,
+            "p50": 67.529,
+            "p90": 109.199
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 33.52,
+            "p50": 52.98,
+            "p90": 83.84
+          },
+          "2071": {
+            "p10": 65.022,
+            "p50": 93.527,
+            "p90": 139.735
+          }
+        }
+      },
+      "definition": "The total amount of rain and snowfall water equivalent received during the year."
+    },
+    {
+      "id": "ratot",
+      "name": "Total Rainfall",
+      "label": "Total Rainfall (mm)",
+      "units": "mm",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 91.145,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": 23.206,
+            "p50": 37.688,
+            "p90": 65.845
+          },
+          "2071": {
+            "p10": 25.347,
+            "p50": 51.481,
+            "p90": 81.648
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 24.018,
+            "p50": 34.775,
+            "p90": 58.942
+          },
+          "2071": {
+            "p10": 44.205,
+            "p50": 59.826,
+            "p90": 121.619
+          }
+        }
+      },
+      "definition": "The total amount of precipitation falling as rain during the year."
+    },
+    {
+      "id": "sntot",
+      "name": "Total Snowfall",
+      "label": "Total Snowfall (mm)",
+      "units": "mm",
+      "value_format": "number",
+      "historical": {
+        "period": "1971–2000",
+        "median": 156.704,
+        "display": null
+      },
+      "scenarios": {
+        "ssp245": {
+          "2041": {
+            "p10": -2.955,
+            "p50": 13.322,
+            "p90": 29.761
+          },
+          "2071": {
+            "p10": 1.116,
+            "p50": 16.286,
+            "p90": 48.623
+          }
+        },
+        "ssp370": {
+          "2041": {
+            "p10": 0.946,
+            "p50": 14.544,
+            "p90": 31.701
+          },
+          "2071": {
+            "p10": 8.896,
+            "p50": 24.893,
+            "p90": 56.565
+          }
+        }
+      },
+      "definition": "The total annual snowfall expressed as water equivalent."
+    }
+  ]
+}

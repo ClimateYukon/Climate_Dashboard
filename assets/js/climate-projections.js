@@ -17,6 +17,12 @@ const geographyTypeSelect =
 const locationSelect =
     document.getElementById("location");
 
+const locationSearch =
+    document.getElementById("location-search");
+
+const locationOptions =
+    document.getElementById("location-options");
+
 const scenarioSelect =
     document.getElementById("scenario");
 
@@ -193,25 +199,52 @@ function populateScenarios() {
 }
 
 
+function getLocationDisplayName(location) {
+    return location.abbreviation
+        ? `${location.name} (${location.abbreviation})`
+        : location.name;
+}
+
+
 function populateLocations() {
     const selectedType =
         getSelectedType();
 
     locationSelect.innerHTML = "";
+    locationOptions.innerHTML = "";
 
     selectedType.locations.forEach(
         location => {
-            const option =
-                document.createElement("option");
+            const displayName =
+                getLocationDisplayName(
+                    location
+                );
 
-            option.value = location.id;
-            option.textContent =
-                location.abbreviation
-                    ? `${location.name} (${location.abbreviation})`
-                    : location.name;
+            const hiddenOption =
+                document.createElement(
+                    "option"
+                );
+
+            hiddenOption.value =
+                location.id;
+
+            hiddenOption.textContent =
+                displayName;
 
             locationSelect.appendChild(
-                option
+                hiddenOption
+            );
+
+            const searchOption =
+                document.createElement(
+                    "option"
+                );
+
+            searchOption.value =
+                displayName;
+
+            locationOptions.appendChild(
+                searchOption
             );
         }
     );
@@ -220,7 +253,8 @@ function populateLocations() {
         !state.locationId
         || !selectedType.locations.some(
             location =>
-                location.id === state.locationId
+                location.id
+                === state.locationId
         )
     ) {
         state.locationId =
@@ -230,6 +264,20 @@ function populateLocations() {
 
     locationSelect.value =
         state.locationId;
+
+    const selectedLocation =
+        selectedType.locations.find(
+            location =>
+                location.id
+                === state.locationId
+        );
+
+    locationSearch.value =
+        selectedLocation
+            ? getLocationDisplayName(
+                selectedLocation
+            )
+            : "";
 
     locationLabel.textContent =
         selectedType.name;
@@ -2072,7 +2120,8 @@ function renderPage() {
             "First Nation territory.";
     } else if (geography.type === "community") {
         geographyMethodText.textContent =
-            "Values represent the selected community area.";
+            "Values represent the CanDCS-M6 grid cell nearest " +
+            "the selected community.";
     } else {
         geographyMethodText.textContent =
             "Values are averaged across the selected area.";
@@ -2210,14 +2259,119 @@ geographyTypeSelect.addEventListener(
 );
 
 
-locationSelect.addEventListener(
-    "change",
-    async event => {
-        state.locationId =
-            event.target.value;
+async function selectLocationFromSearch() {
+    const selectedType =
+        getSelectedType();
 
-        await loadLocationData();
-        updateUrl();
+    const searchText =
+        locationSearch.value
+            .trim()
+            .toLowerCase();
+
+    if (!searchText) {
+        return;
+    }
+
+    let location =
+        selectedType.locations.find(
+            item =>
+                getLocationDisplayName(
+                    item
+                )
+                .toLowerCase()
+                === searchText
+        );
+
+    if (!location) {
+        const matchingLocations =
+            selectedType.locations.filter(
+                item =>
+                    getLocationDisplayName(
+                        item
+                    )
+                    .toLowerCase()
+                    .includes(
+                        searchText
+                    )
+            );
+
+        if (
+            matchingLocations.length
+            === 1
+        ) {
+            location =
+                matchingLocations[0];
+        }
+    }
+
+    if (!location) {
+        return;
+    }
+
+    state.locationId =
+        location.id;
+
+    locationSelect.value =
+        location.id;
+
+    locationSearch.value =
+        getLocationDisplayName(
+            location
+        );
+
+    await loadLocationData();
+    updateUrl();
+}
+
+
+locationSearch.addEventListener(
+    "change",
+    selectLocationFromSearch
+);
+
+
+locationSearch.addEventListener(
+    "keydown",
+    async event => {
+        if (
+            event.key
+            === "Enter"
+        ) {
+            event.preventDefault();
+
+            await selectLocationFromSearch();
+        }
+    }
+);
+
+
+locationSearch.addEventListener(
+    "focus",
+    event => {
+        event.target.select();
+    }
+);
+
+
+locationSearch.addEventListener(
+    "blur",
+    () => {
+        const selectedType =
+            getSelectedType();
+
+        const selectedLocation =
+            selectedType.locations.find(
+                location =>
+                    location.id
+                    === state.locationId
+            );
+
+        if (selectedLocation) {
+            locationSearch.value =
+                getLocationDisplayName(
+                    selectedLocation
+                );
+        }
     }
 );
 
