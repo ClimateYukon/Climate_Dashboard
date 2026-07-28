@@ -77,6 +77,32 @@
                     <select id="scenario">
                     </select>
                 </div>
+
+                <div class="control expert-mode-control">
+                    <span class="expert-mode-label">
+                        Expert mode
+                    </span>
+
+                    <label class="expert-mode-switch">
+                        <input
+                            id="expert-mode"
+                            type="checkbox"
+                            checked
+                        >
+
+                        <span
+                            class="expert-mode-slider"
+                            aria-hidden="true"
+                        ></span>
+
+                        <span
+                            id="expert-mode-status"
+                            class="expert-mode-status"
+                        >
+                            On
+                        </span>
+                    </label>
+                </div>
             </div>
         </section>
 
@@ -222,6 +248,59 @@
 
                     <p
                         id="no-results"
+                        class="no-results"
+                        hidden
+                    >
+                        No climate indicators match that search.
+                    </p>
+                </section>
+
+                <section
+                    id="plain-language-section"
+                    class="plain-language-section"
+                    hidden
+                >
+                    <div class="plain-language-heading">
+                        <div>
+                            <p class="section-label">
+                                PLAIN-LANGUAGE VIEW
+                            </p>
+
+                            <h2>
+                                Projected climate changes
+                            </h2>
+                        </div>
+
+                        <div class="plain-language-search">
+                            <label
+                                for="plain-language-filter"
+                                class="visually-hidden"
+                            >
+                                Search climate indicators
+                            </label>
+
+                            <input
+                                id="plain-language-filter"
+                                type="search"
+                                placeholder="Search indicators"
+                            >
+                        </div>
+                    </div>
+
+                    <p class="plain-language-introduction">
+                        These statements use the median projection.
+                        The model range shows the lower and upper
+                        results across the 26 climate models for the
+                        selected scenario.
+                    </p>
+
+                    <div
+                        id="plain-language-list"
+                        class="plain-language-list"
+                    ></div>
+
+                    <p
+                        id="plain-language-no-results"
                         class="no-results"
                         hidden
                     >
