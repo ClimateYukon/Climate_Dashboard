@@ -752,30 +752,3 @@ tbody td {
         width: 100%;
     }
 }
-
-/* Searchable location control */
-
-.searchable-location {
-    width: 100%;
-}
-
-.searchable-location input {
-    width: 100%;
-    min-height: 44px;
-    padding: 0.68rem 2.2rem 0.68rem 0.82rem;
-    border: 1px solid #c9d3dc;
-    border-radius: 8px;
-    background-color: #ffffff;
-    color: #24313d;
-    font: inherit;
-}
-
-.searchable-location input:focus {
-    border-color: #2f7394;
-    outline: 2px solid rgba(47, 115, 148, 0.18);
-    outline-offset: 1px;
-}
-
-.searchable-location input::placeholder {
-    color: #6d7882;
-}
