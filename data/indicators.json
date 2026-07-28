@@ -102,6 +102,27 @@
     "sort_order": 50
   },
   {
+    "id": "climate-projections",
+    "card_type": "interactive",
+    "title": "Climate projections",
+    "subtitle": "Explore projected climate changes for Yukon First Nation territories using CanDCS-M6 climate projections.",
+    "description": "Explore projected climate changes for Yukon First Nation territories using CanDCS-M6 climate projections.",
+    "date_label": "Updated 2026-06-24",
+    "updated_date": "2026-06-24",
+    "source": "AHCCD",
+    "preview_image": "plots/climate_projections/preview.png",
+    "tags": [
+      "CanDCS-M6",
+      "climate projections",
+      "First Nation",
+      "Yukon",
+      "SSP"
+    ],
+    "plot_count": 1,
+    "href": "climate-projections.html",
+    "sort_order": 20
+  },
+  {
     "id": "annual_temperature_anomalies",
     "card_type": "indicator",
     "title": "2025 Yukon annual temperature anomalies",
