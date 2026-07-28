@@ -254,6 +254,255 @@ function createCell(
 }
 
 
+function closeIndicatorTooltips() {
+    document
+        .querySelectorAll(
+            ".indicator-info-button[aria-expanded='true']"
+        )
+        .forEach(button => {
+            button.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+        });
+
+    document
+        .querySelectorAll(
+            ".indicator-tooltip.is-open"
+        )
+        .forEach(tooltip => {
+            tooltip.classList.remove(
+                "is-open"
+            );
+        });
+}
+
+
+function positionIndicatorTooltip(
+    button,
+    tooltip
+) {
+    const buttonRect =
+        button.getBoundingClientRect();
+
+    const margin = 12;
+    const tooltipWidth = Math.min(
+        340,
+        window.innerWidth - 32
+    );
+
+    tooltip.style.width =
+        `${tooltipWidth}px`;
+
+    tooltip.style.left = "0px";
+    tooltip.style.top = "0px";
+
+    const tooltipHeight =
+        tooltip.offsetHeight;
+
+    let left =
+        buttonRect.left
+        + buttonRect.width / 2
+        - tooltipWidth / 2;
+
+    left = Math.max(
+        16,
+        Math.min(
+            left,
+            window.innerWidth
+            - tooltipWidth
+            - 16
+        )
+    );
+
+    let top =
+        buttonRect.bottom
+        + margin;
+
+    if (
+        top
+        + tooltipHeight
+        > window.innerHeight
+        - 16
+    ) {
+        top =
+            buttonRect.top
+            - tooltipHeight
+            - margin;
+    }
+
+    tooltip.style.left =
+        `${left}px`;
+
+    tooltip.style.top =
+        `${Math.max(16, top)}px`;
+}
+
+
+function createIndicatorCell(indicator) {
+    const cell =
+        document.createElement("td");
+
+    cell.className = "indicator-cell";
+
+    const wrapper =
+        document.createElement("div");
+
+    wrapper.className =
+        "indicator-name-wrapper";
+
+    const label =
+        document.createElement("span");
+
+    label.className =
+        "indicator-name";
+
+    label.textContent =
+        indicator.label;
+
+    const button =
+        document.createElement("button");
+
+    button.type = "button";
+    button.className =
+        "indicator-info-button";
+
+    button.textContent = "i";
+
+    button.setAttribute(
+        "aria-label",
+        `Definition of ${indicator.name}`
+    );
+
+    button.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+    const tooltip =
+        document.createElement("div");
+
+    tooltip.className =
+        "indicator-tooltip";
+
+    tooltip.setAttribute(
+        "role",
+        "tooltip"
+    );
+
+    tooltip.textContent =
+        indicator.definition
+        || "No definition is currently available.";
+
+    document.body.appendChild(
+        tooltip
+    );
+
+    button.addEventListener(
+        "mouseenter",
+        () => {
+            closeIndicatorTooltips();
+
+            tooltip.classList.add(
+                "is-open"
+            );
+
+            positionIndicatorTooltip(
+                button,
+                tooltip
+            );
+        }
+    );
+
+    button.addEventListener(
+        "mouseleave",
+        () => {
+            if (
+                button.getAttribute(
+                    "aria-expanded"
+                ) !== "true"
+            ) {
+                tooltip.classList.remove(
+                    "is-open"
+                );
+            }
+        }
+    );
+
+    button.addEventListener(
+        "focus",
+        () => {
+            tooltip.classList.add(
+                "is-open"
+            );
+
+            positionIndicatorTooltip(
+                button,
+                tooltip
+            );
+        }
+    );
+
+    button.addEventListener(
+        "blur",
+        () => {
+            if (
+                button.getAttribute(
+                    "aria-expanded"
+                ) !== "true"
+            ) {
+                tooltip.classList.remove(
+                    "is-open"
+                );
+            }
+        }
+    );
+
+    button.addEventListener(
+        "click",
+        event => {
+            event.stopPropagation();
+
+            const wasOpen =
+                button.getAttribute(
+                    "aria-expanded"
+                ) === "true";
+
+            closeIndicatorTooltips();
+
+            if (!wasOpen) {
+                button.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+
+                tooltip.classList.add(
+                    "is-open"
+                );
+
+                positionIndicatorTooltip(
+                    button,
+                    tooltip
+                );
+            }
+        }
+    );
+
+    wrapper.appendChild(
+        label
+    );
+
+    wrapper.appendChild(
+        button
+    );
+
+    cell.appendChild(
+        wrapper
+    );
+
+    return cell;
+}
+
 function renderTable() {
     tableBody.innerHTML = "";
 
@@ -307,9 +556,8 @@ function renderTable() {
                     );
 
             row.appendChild(
-                createCell(
-                    indicator.label,
-                    "indicator-cell"
+                createIndicatorCell(
+                    indicator
                 )
             );
 
@@ -644,5 +892,41 @@ filterInput.addEventListener(
     }
 );
 
+
+document.addEventListener(
+    "click",
+    event => {
+        if (
+            !event.target.closest(
+                ".indicator-info-button"
+            )
+        ) {
+            closeIndicatorTooltips();
+        }
+    }
+);
+
+
+document.addEventListener(
+    "keydown",
+    event => {
+        if (event.key === "Escape") {
+            closeIndicatorTooltips();
+        }
+    }
+);
+
+
+window.addEventListener(
+    "resize",
+    closeIndicatorTooltips
+);
+
+
+window.addEventListener(
+    "scroll",
+    closeIndicatorTooltips,
+    true
+);
 
 initialize();

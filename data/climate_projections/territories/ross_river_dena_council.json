@@ -49,7 +49,8 @@
             "p90": 12.932
           }
         }
-      }
+      },
+      "definition": "The lowest daily minimum temperature during the year."
     },
     {
       "id": "cddcold_18",
@@ -87,7 +88,8 @@
             "p90": 112.402
           }
         }
-      }
+      },
+      "definition": "A measure of how much and for how long daily temperatures are above 18°C. Higher values indicate greater potential demand for cooling."
     },
     {
       "id": "txgt_25",
@@ -125,7 +127,8 @@
             "p90": 40.929
           }
         }
-      }
+      },
+      "definition": "The number of days when the maximum temperature exceeds 25°C."
     },
     {
       "id": "txgt_27",
@@ -163,7 +166,8 @@
             "p90": 27.549
           }
         }
-      }
+      },
+      "definition": "The number of days when the maximum temperature exceeds 27°C."
     },
     {
       "id": "txgt_29",
@@ -201,7 +205,8 @@
             "p90": 15.997
           }
         }
-      }
+      },
+      "definition": "The number of days when the maximum temperature exceeds 29°C."
     },
     {
       "id": "txgt_30",
@@ -239,7 +244,8 @@
             "p90": 11.362
           }
         }
-      }
+      },
+      "definition": "The number of days when the maximum temperature exceeds 30°C."
     },
     {
       "id": "txgt_32",
@@ -277,7 +283,8 @@
             "p90": 4.887
           }
         }
-      }
+      },
+      "definition": "The number of days when the maximum temperature exceeds 32°C."
     },
     {
       "id": "tnlt_m15",
@@ -315,7 +322,8 @@
             "p90": -29.907
           }
         }
-      }
+      },
+      "definition": "The number of days when the minimum temperature falls below -15°C."
     },
     {
       "id": "tnlt_m25",
@@ -353,7 +361,8 @@
             "p90": -19.702
           }
         }
-      }
+      },
+      "definition": "The number of days when the minimum temperature falls below -25°C."
     },
     {
       "id": "pr1mm",
@@ -391,7 +400,8 @@
             "p90": 17.659
           }
         }
-      }
+      },
+      "definition": "The number of days receiving at least 1 mm of precipitation."
     },
     {
       "id": "pr10mm",
@@ -429,7 +439,8 @@
             "p90": 5.819
           }
         }
-      }
+      },
+      "definition": "The number of days receiving at least 10 mm of precipitation."
     },
     {
       "id": "pr20mm",
@@ -467,7 +478,8 @@
             "p90": 0.715
           }
         }
-      }
+      },
+      "definition": "The number of days receiving at least 20 mm of precipitation."
     },
     {
       "id": "sn10mm",
@@ -505,7 +517,8 @@
             "p90": 1.233
           }
         }
-      }
+      },
+      "definition": "The number of days receiving at least 10 mm of snowfall water equivalent."
     },
     {
       "id": "sn2mm",
@@ -543,7 +556,8 @@
             "p90": 6.864
           }
         }
-      }
+      },
+      "definition": "The number of days receiving at least 2 mm of snowfall water equivalent."
     },
     {
       "id": "nr_cdd",
@@ -581,7 +595,8 @@
             "p90": -0.346
           }
         }
-      }
+      },
+      "definition": "The number of dry periods lasting at least six consecutive days, where each day receives less than 1 mm of precipitation."
     },
     {
       "id": "first_fall_frost",
@@ -639,7 +654,8 @@
             }
           }
         }
-      }
+      },
+      "definition": "The projected date of the first fall day when the minimum temperature falls below 0°C."
     },
     {
       "id": "dlyfrzthw_tx0_tn-1",
@@ -677,7 +693,8 @@
             "p90": -0.821
           }
         }
-      }
+      },
+      "definition": "The number of days when the daily maximum temperature is above 0°C and the daily minimum temperature is below -1°C."
     },
     {
       "id": "frost_days",
@@ -715,7 +732,8 @@
             "p90": -35.692
           }
         }
-      }
+      },
+      "definition": "The number of days when the daily minimum temperature falls below 0°C."
     },
     {
       "id": "frost_free_season",
@@ -753,7 +771,8 @@
             "p90": 83.215
           }
         }
-      }
+      },
+      "definition": "The number of days between the last spring frost and the first fall frost."
     },
     {
       "id": "gddgrow_0",
@@ -791,7 +810,8 @@
             "p90": 1196.187
           }
         }
-      }
+      },
+      "definition": "Accumulated warmth above 0°C during the year. This measure is often used to describe conditions for plant growth."
     },
     {
       "id": "gddgrow_5",
@@ -829,7 +849,8 @@
             "p90": 925.053
           }
         }
-      }
+      },
+      "definition": "Accumulated warmth above 5°C during the year. This measure is often used to describe conditions for plant growth."
     },
     {
       "id": "hddheat_18",
@@ -867,7 +888,8 @@
             "p90": -1403.596
           }
         }
-      }
+      },
+      "definition": "A measure of how much and for how long daily temperatures are below 18°C. Higher values indicate greater potential demand for heating."
     },
     {
       "id": "tx_max",
@@ -905,7 +927,8 @@
             "p90": 8.091
           }
         }
-      }
+      },
+      "definition": "The highest daily maximum temperature during the year."
     },
     {
       "id": "ice_days",
@@ -943,7 +966,8 @@
             "p90": -24.571
           }
         }
-      }
+      },
+      "definition": "The number of days when the daily maximum temperature remains below 0°C."
     },
     {
       "id": "last_spring_frost",
@@ -1001,7 +1025,8 @@
             }
           }
         }
-      }
+      },
+      "definition": "The projected date of the last spring day when the minimum temperature falls below 0°C."
     },
     {
       "id": "prx1day",
@@ -1039,7 +1064,8 @@
             "p90": 6.838
           }
         }
-      }
+      },
+      "definition": "The greatest amount of precipitation received in a single day."
     },
     {
       "id": "rax1day",
@@ -1077,7 +1103,8 @@
             "p90": 7.4
           }
         }
-      }
+      },
+      "definition": "The greatest amount of rainfall received in a single day."
     },
     {
       "id": "snx1day",
@@ -1115,7 +1142,8 @@
             "p90": 3.578
           }
         }
-      }
+      },
+      "definition": "The greatest snowfall water equivalent received in a single day."
     },
     {
       "id": "prx5day",
@@ -1153,7 +1181,8 @@
             "p90": 14.309
           }
         }
-      }
+      },
+      "definition": "The greatest total precipitation received over any five consecutive days."
     },
     {
       "id": "cdd",
@@ -1191,7 +1220,8 @@
             "p90": 0.724
           }
         }
-      }
+      },
+      "definition": "The greatest number of consecutive days in a year with less than 1 mm of precipitation."
     },
     {
       "id": "tx_mean",
@@ -1229,7 +1259,8 @@
             "p90": 6.75
           }
         }
-      }
+      },
+      "definition": "The average of the daily maximum temperatures over the year."
     },
     {
       "id": "tn_mean",
@@ -1267,7 +1298,8 @@
             "p90": 7.976
           }
         }
-      }
+      },
+      "definition": "The average of the daily minimum temperatures over the year."
     },
     {
       "id": "tg_mean",
@@ -1305,7 +1337,8 @@
             "p90": 7.333
           }
         }
-      }
+      },
+      "definition": "The average daily temperature over the year."
     },
     {
       "id": "tr_18",
@@ -1343,7 +1376,8 @@
             "p90": 0.555
           }
         }
-      }
+      },
+      "definition": "The number of nights when the minimum temperature remains above 18°C."
     },
     {
       "id": "tr_20",
@@ -1381,7 +1415,8 @@
             "p90": 0.06
           }
         }
-      }
+      },
+      "definition": "The number of nights when the minimum temperature remains above 20°C."
     },
     {
       "id": "tr_22",
@@ -1419,7 +1454,8 @@
             "p90": 0.004
           }
         }
-      }
+      },
+      "definition": "The number of nights when the minimum temperature remains above 22°C."
     },
     {
       "id": "prtot",
@@ -1457,7 +1493,8 @@
             "p90": 183.442
           }
         }
-      }
+      },
+      "definition": "The total amount of rain and snowfall water equivalent received during the year."
     },
     {
       "id": "ratot",
@@ -1495,7 +1532,8 @@
             "p90": 197.857
           }
         }
-      }
+      },
+      "definition": "The total amount of precipitation falling as rain during the year."
     },
     {
       "id": "sntot",
@@ -1533,7 +1571,8 @@
             "p90": 27.042
           }
         }
-      }
+      },
+      "definition": "The total annual snowfall expressed as water equivalent."
     }
   ]
 }
