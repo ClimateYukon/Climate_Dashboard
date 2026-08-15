@@ -1,0 +1,480 @@
+{
+  "theme": "Temperature",
+  "source": "ERA5-Land daily reanalysis",
+  "source_path": "/CC/ERA5_Land_Daily/ERA5Land_daily_Alaska_NWT_1950_latest.zarr",
+  "cache_policy": "Derived caches are optional accelerators. Missing or stale caches are rebuilt from the authoritative ERA5-Land source.",
+  "period": "1951–2025",
+  "baseline": "1961–1990",
+  "boundary_method": {
+    "analysis_region": "True Yukon boundary",
+    "extraction_buffer_km": 50.0,
+    "buffer_role": "Computational extraction aid only",
+    "edge_cell_method": "ERA5-Land cells intersecting Yukon are retained. Yukon-wide averages use the actual area of each cell intersecting the true Yukon polygon as the spatial weight.",
+    "final_map_clip": "Raster rendering is clipped to the true, unbuffered Yukon polygon."
+  },
+  "yukon_summary": "Area-weighted mean of ERA5-Land grid cells inside the true Yukon boundary using fractional edge-cell intersection areas.",
+  "community_summary": "Community products use the existing 18 Yukon ERA5-Land community grid-cell series.",
+  "trend_method": "Mean temperature, mean daily maximum temperature, and mean daily minimum temperature use ordinary least-squares linear trends with lag-1 HAC/Newey-West uncertainty. Other temperature indicators use Sen's slope to estimate trend magnitude and the Mann-Kendall test to assess statistical significance. For Sen/Mann-Kendall analyses, the Hamed-Rao variance correction is applied only when significant serial correlation is detected after detrending. Statistical significance is assessed at p < 0.05. For Yukon maps, Benjamini-Hochberg false-discovery-rate correction is applied across grid cells. Community heatmaps use the same multiple-testing control across communities.",
+  "community_multiple_testing": "Community significance is additionally reported using Benjamini-Hochberg FDR correction within each indicator.",
+  "heatmap_design": "For the selected temperature indicator, rows are Yukon communities and columns are annual or seasonal trend summaries. Numbers are physical slopes per decade; colours are standardized for that indicator.",
+  "indicators": {
+    "mean-temperature": {
+      "label": "Mean temperature",
+      "unit": "°C",
+      "trend_unit": "°C per decade",
+      "time_series_mode": "anomaly",
+      "views": {
+        "yukon": [
+          "map",
+          "timeseries"
+        ],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ],
+        "seasonal": [
+          "map",
+          "timeseries"
+        ]
+      },
+      "files": {
+        "annual_map": "figures/temperature/annual/mean-temperature.png",
+        "seasonal_map": "figures/temperature/seasonal/mean-temperature.png"
+      }
+    },
+    "mean-daily-maximum-temperature": {
+      "label": "Mean daily maximum temperature",
+      "unit": "°C",
+      "trend_unit": "°C per decade",
+      "time_series_mode": "anomaly",
+      "views": {
+        "yukon": [
+          "map",
+          "timeseries"
+        ],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ],
+        "seasonal": [
+          "map",
+          "timeseries"
+        ]
+      },
+      "files": {
+        "annual_map": "figures/temperature/annual/mean-daily-maximum-temperature.png",
+        "seasonal_map": "figures/temperature/seasonal/mean-daily-maximum-temperature.png"
+      }
+    },
+    "mean-daily-minimum-temperature": {
+      "label": "Mean daily minimum temperature",
+      "unit": "°C",
+      "trend_unit": "°C per decade",
+      "time_series_mode": "anomaly",
+      "views": {
+        "yukon": [
+          "map",
+          "timeseries"
+        ],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ],
+        "seasonal": [
+          "map",
+          "timeseries"
+        ]
+      },
+      "files": {
+        "annual_map": "figures/temperature/annual/mean-daily-minimum-temperature.png",
+        "seasonal_map": "figures/temperature/seasonal/mean-daily-minimum-temperature.png"
+      }
+    },
+    "coldest-night": {
+      "label": "Coldest night",
+      "unit": "°C",
+      "trend_unit": "°C per decade",
+      "time_series_mode": "anomaly",
+      "views": {
+        "yukon": [
+          "map",
+          "timeseries"
+        ],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ],
+        "seasonal": []
+      },
+      "files": {
+        "annual_map": "figures/temperature/annual/coldest-night.png",
+        "seasonal_map": null
+      }
+    },
+    "hottest-day": {
+      "label": "Hottest day",
+      "unit": "°C",
+      "trend_unit": "°C per decade",
+      "time_series_mode": "anomaly",
+      "views": {
+        "yukon": [
+          "map",
+          "timeseries"
+        ],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ],
+        "seasonal": []
+      },
+      "files": {
+        "annual_map": "figures/temperature/annual/hottest-day.png",
+        "seasonal_map": null
+      }
+    },
+    "days-above-20c": {
+      "label": "Days above 20°C",
+      "unit": "days",
+      "trend_unit": "days per decade",
+      "time_series_mode": "value",
+      "views": {
+        "yukon": [
+          "map",
+          "timeseries"
+        ],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ],
+        "seasonal": []
+      },
+      "files": {
+        "annual_map": "figures/temperature/annual/days-above-20c.png",
+        "seasonal_map": null
+      }
+    },
+    "days-above-25c": {
+      "label": "Days above 25°C",
+      "unit": "days",
+      "trend_unit": "days per decade",
+      "time_series_mode": "value",
+      "views": {
+        "yukon": [
+          "map",
+          "timeseries"
+        ],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ],
+        "seasonal": []
+      },
+      "files": {
+        "annual_map": "figures/temperature/annual/days-above-25c.png",
+        "seasonal_map": null
+      }
+    },
+    "days-above-30c": {
+      "label": "Days above 30°C",
+      "unit": "days",
+      "trend_unit": "days per decade",
+      "time_series_mode": "value",
+      "views": {
+        "yukon": [
+          "map",
+          "timeseries"
+        ],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ],
+        "seasonal": []
+      },
+      "files": {
+        "annual_map": "figures/temperature/annual/days-above-30c.png",
+        "seasonal_map": null
+      }
+    },
+    "nights-above-10c": {
+      "label": "Nights above 10°C",
+      "unit": "days",
+      "trend_unit": "days per decade",
+      "time_series_mode": "value",
+      "views": {
+        "yukon": [
+          "map",
+          "timeseries"
+        ],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ],
+        "seasonal": []
+      },
+      "files": {
+        "annual_map": "figures/temperature/annual/nights-above-10c.png",
+        "seasonal_map": null
+      }
+    },
+    "nights-above-15c": {
+      "label": "Nights above 15°C",
+      "unit": "days",
+      "trend_unit": "days per decade",
+      "time_series_mode": "value",
+      "views": {
+        "yukon": [
+          "map",
+          "timeseries"
+        ],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ],
+        "seasonal": []
+      },
+      "files": {
+        "annual_map": "figures/temperature/annual/nights-above-15c.png",
+        "seasonal_map": null
+      }
+    },
+    "nights-below-minus-20c": {
+      "label": "Nights below -20°C",
+      "unit": "days",
+      "trend_unit": "days per decade",
+      "time_series_mode": "value",
+      "views": {
+        "yukon": [
+          "map",
+          "timeseries"
+        ],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ],
+        "seasonal": []
+      },
+      "files": {
+        "annual_map": "figures/temperature/annual/nights-below-minus-20c.png",
+        "seasonal_map": null
+      }
+    },
+    "nights-below-minus-30c": {
+      "label": "Nights below -30°C",
+      "unit": "days",
+      "trend_unit": "days per decade",
+      "time_series_mode": "value",
+      "views": {
+        "yukon": [
+          "map",
+          "timeseries"
+        ],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ],
+        "seasonal": []
+      },
+      "files": {
+        "annual_map": "figures/temperature/annual/nights-below-minus-30c.png",
+        "seasonal_map": null
+      }
+    },
+    "nights-below-minus-40c": {
+      "label": "Nights below -40°C",
+      "unit": "days",
+      "trend_unit": "days per decade",
+      "time_series_mode": "value",
+      "views": {
+        "yukon": [
+          "map",
+          "timeseries"
+        ],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ],
+        "seasonal": []
+      },
+      "files": {
+        "annual_map": "figures/temperature/annual/nights-below-minus-40c.png",
+        "seasonal_map": null
+      }
+    },
+    "frost-days": {
+      "label": "Frost days",
+      "unit": "days",
+      "trend_unit": "days per decade",
+      "time_series_mode": "value",
+      "views": {
+        "yukon": [
+          "map",
+          "timeseries"
+        ],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ],
+        "seasonal": []
+      },
+      "files": {
+        "annual_map": "figures/temperature/annual/frost-days.png",
+        "seasonal_map": null
+      }
+    },
+    "ice-days": {
+      "label": "Ice days",
+      "unit": "days",
+      "trend_unit": "days per decade",
+      "time_series_mode": "value",
+      "views": {
+        "yukon": [
+          "map",
+          "timeseries"
+        ],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ],
+        "seasonal": []
+      },
+      "files": {
+        "annual_map": "figures/temperature/annual/ice-days.png",
+        "seasonal_map": null
+      }
+    },
+    "freeze-thaw-days": {
+      "label": "Freeze-thaw days",
+      "unit": "days",
+      "trend_unit": "days per decade",
+      "time_series_mode": "value",
+      "views": {
+        "yukon": [
+          "map",
+          "timeseries"
+        ],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ],
+        "seasonal": []
+      },
+      "files": {
+        "annual_map": "figures/temperature/annual/freeze-thaw-days.png",
+        "seasonal_map": null
+      }
+    },
+    "frost-free-season-length": {
+      "label": "Frost-free season length",
+      "unit": "days",
+      "trend_unit": "days per decade",
+      "time_series_mode": "value",
+      "views": {
+        "yukon": [
+          "map",
+          "timeseries"
+        ],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ],
+        "seasonal": []
+      },
+      "files": {
+        "annual_map": "figures/temperature/annual/frost-free-season-length.png",
+        "seasonal_map": null
+      }
+    },
+    "growing-degree-days-above-0c": {
+      "label": "Growing degree days above 0°C",
+      "unit": "°C·days",
+      "trend_unit": "°C·days per decade",
+      "time_series_mode": "value",
+      "views": {
+        "yukon": [
+          "map",
+          "timeseries"
+        ],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ],
+        "seasonal": []
+      },
+      "files": {
+        "annual_map": "figures/temperature/annual/growing-degree-days-above-0c.png",
+        "seasonal_map": null
+      }
+    },
+    "growing-degree-days-above-5c": {
+      "label": "Growing degree days above 5°C",
+      "unit": "°C·days",
+      "trend_unit": "°C·days per decade",
+      "time_series_mode": "value",
+      "views": {
+        "yukon": [
+          "map",
+          "timeseries"
+        ],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ],
+        "seasonal": []
+      },
+      "files": {
+        "annual_map": "figures/temperature/annual/growing-degree-days-above-5c.png",
+        "seasonal_map": null
+      }
+    },
+    "heating-degree-days-below-18c": {
+      "label": "Heating degree days below 18°C",
+      "unit": "°C·days",
+      "trend_unit": "°C·days per decade",
+      "time_series_mode": "value",
+      "views": {
+        "yukon": [
+          "map",
+          "timeseries"
+        ],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ],
+        "seasonal": []
+      },
+      "files": {
+        "annual_map": "figures/temperature/annual/heating-degree-days-below-18c.png",
+        "seasonal_map": null
+      }
+    },
+    "cooling-degree-days-above-18c": {
+      "label": "Cooling degree days above 18°C",
+      "unit": "°C·days",
+      "trend_unit": "°C·days per decade",
+      "time_series_mode": "value",
+      "views": {
+        "yukon": [
+          "map",
+          "timeseries"
+        ],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ],
+        "seasonal": []
+      },
+      "files": {
+        "annual_map": "figures/temperature/annual/cooling-degree-days-above-18c.png",
+        "seasonal_map": null
+      }
+    }
+  },
+  "data_files": {
+    "yukon_timeseries": "yukon_timeseries.json",
+    "seasonal_timeseries": "seasonal_timeseries.json",
+    "community_timeseries": "community_timeseries.json",
+    "community_trends": "community_trends.json",
+    "community_seasonal_trends": "community_seasonal_trends.json"
+  },
+  "map_note": "Black dots indicate grid cells where the trend is not statistically significant after spatial multiple-testing control."
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore observed changes in Yukon climate through public temperature and precipitation indicators.">
+    <title>State of Yukon's Climate</title>
+
+    <link rel="stylesheet" href="css/style.css?v=1786744548">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <div>
+            <div class="eyebrow">Yukon climate indicators</div>
+            <h1>State of Yukon's Climate</h1>
+            <p class="header-description">
+                Explore observed changes in Yukon climate, snow, wildfire,
+                moisture and atmospheric conditions.
+            </p>
+        </div>
+
+        <div class="header-year">
+            <span>Latest climate record</span>
+            <strong>2025</strong>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <section class="intro-section">
+        <div class="section-heading">
+            <div>
+                <div class="eyebrow">Explore the evidence</div>
+                <h2>Climate themes</h2>
+            </div>
+
+            <p>
+                Choose a theme, then select an indicator. Detailed views can
+                include Yukon-wide trends, seasons, communities and maps.
+            </p>
+        </div>
+
+        <div id="theme-cards" class="theme-grid"></div>
+    </section>
+
+
+    <section class="explorer-section">
+
+        <aside class="indicator-sidebar">
+
+            <div class="sidebar-sticky">
+
+                <label for="theme-select">Theme</label>
+
+                <select id="theme-select"></select>
+
+                <div class="indicator-list-heading">
+                    Indicators
+                </div>
+
+                <div id="indicator-list" class="indicator-list"></div>
+
+            </div>
+
+        </aside>
+
+
+        <section class="indicator-content">
+
+            <div id="indicator-empty" class="empty-state">
+                Select an indicator to explore it.
+            </div>
+
+
+            <div id="indicator-panel" class="indicator-panel hidden">
+
+                <div class="indicator-header">
+
+                    <div>
+                        <div id="indicator-theme" class="eyebrow"></div>
+                        <h2 id="indicator-title"></h2>
+                        <div id="indicator-source-theme" class="indicator-subtitle"></div>
+                    </div>
+
+                    <div id="indicator-status" class="status-badge"></div>
+
+                </div>
+
+
+                <nav id="view-tabs" class="view-tabs"></nav>
+
+
+                <div id="view-content" class="view-content"></div>
+
+            </div>
+
+        </section>
+
+    </section>
+
+
+    <section class="summary-section">
+
+        <div class="section-heading">
+
+            <div>
+                <div class="eyebrow">At a glance</div>
+                <h2>Indicator catalogue</h2>
+            </div>
+
+            <p>
+                This table shows the indicators currently retained for the
+                State of the Climate dashboard.
+            </p>
+
+        </div>
+
+        <div class="table-controls">
+
+            <label class="sr-only" for="indicator-search">Search indicators</label>
+
+            <input
+                id="indicator-search"
+                type="search"
+                placeholder="Search indicators..."
+            >
+
+            <label class="sr-only" for="status-filter">Filter indicators by analysis stage</label>
+
+            <select id="status-filter">
+                <option value="all">All stages</option>
+                <option value="available">Available</option>
+                <option value="in-progress">Under analysis</option>
+                <option value="planned">Planned</option>
+            </select>
+
+        </div>
+
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Indicator</th>
+                        <th>Theme</th>
+                        <th>Stage</th>
+                        <th>Relevance</th>
+                    </tr>
+                </thead>
+
+                <tbody id="indicator-table-body"></tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <div>
+        State of Yukon's Climate
+    </div>
+</footer>
+
+
+<script src="js/dashboard.js?v=1786744642"></script>
+
+</body>
+</html>

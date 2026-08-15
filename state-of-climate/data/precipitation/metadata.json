@@ -1,0 +1,182 @@
+{
+  "theme": "Precipitation",
+  "period": "1951–2025",
+  "baseline": "1961–1990",
+  "source": "ERA5-Land daily reanalysis",
+  "source_path": "/CC/ERA5_Land_Daily/ERA5Land_daily_Alaska_NWT_1950_latest.zarr",
+  "cache_policy": "Derived caches are optional accelerators. Missing or stale caches are rebuilt from the authoritative ERA5-Land source.",
+  "community_method": "Nearest ERA5-Land grid cell to each community.",
+  "territorial_method": "True-Yukon area-weighted grid-cell mean.",
+  "trend_method": "Precipitation indicators use Sen's slope to estimate trend magnitude and the Mann-Kendall test to assess statistical significance. The Hamed-Rao variance correction is applied only when significant serial correlation is detected after detrending. Statistical significance is assessed at p < 0.05. For Yukon maps, Benjamini-Hochberg false-discovery-rate correction is applied across grid cells. Community heatmaps use the same multiple-testing control across communities.",
+  "precipitation_note": "Precipitation is more spatially and temporally variable than temperature. ERA5-Land is a reanalysis and northern precipitation observations also carry important uncertainty.",
+  "rainfall_note": "Rainfall is derived as total precipitation minus snowfall water equivalent, clipped at zero.",
+  "indicators": {
+    "total-precipitation": {
+      "label": "Total precipitation",
+      "unit": "mm",
+      "trend_unit": "mm per decade",
+      "time_series_mode": "anomaly_percent",
+      "views": {
+        "yukon": [
+          "map",
+          "timeseries"
+        ],
+        "seasonal": [
+          "map",
+          "timeseries"
+        ],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ]
+      },
+      "files": {
+        "annual_map": "figures/precipitation/annual/total-precipitation.png",
+        "seasonal_map": "figures/precipitation/seasonal/total-precipitation.png"
+      }
+    },
+    "total-rainfall": {
+      "label": "Total rainfall",
+      "unit": "mm",
+      "trend_unit": "mm per decade",
+      "time_series_mode": "value",
+      "views": {
+        "yukon": [
+          "map",
+          "timeseries"
+        ],
+        "seasonal": [],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ]
+      },
+      "files": {
+        "annual_map": "figures/precipitation/annual/total-rainfall.png"
+      }
+    },
+    "wet-days": {
+      "label": "Wet days",
+      "unit": "days",
+      "trend_unit": "days per decade",
+      "time_series_mode": "value",
+      "views": {
+        "yukon": [],
+        "seasonal": [],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ]
+      },
+      "files": {
+        "annual_map": "figures/precipitation/annual/wet-days.png"
+      }
+    },
+    "heavy-precipitation-days": {
+      "label": "Heavy precipitation days",
+      "unit": "days",
+      "trend_unit": "days per decade",
+      "time_series_mode": "value",
+      "views": {
+        "yukon": [],
+        "seasonal": [],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ]
+      },
+      "files": {
+        "annual_map": "figures/precipitation/annual/heavy-precipitation-days.png"
+      }
+    },
+    "very-heavy-precipitation-days": {
+      "label": "Very heavy precipitation days",
+      "unit": "days",
+      "trend_unit": "days per decade",
+      "time_series_mode": "value",
+      "views": {
+        "yukon": [],
+        "seasonal": [],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ]
+      },
+      "files": {
+        "annual_map": "figures/precipitation/annual/very-heavy-precipitation-days.png"
+      }
+    },
+    "maximum-1-day-precipitation": {
+      "label": "Maximum 1-day precipitation",
+      "unit": "mm",
+      "trend_unit": "mm per decade",
+      "time_series_mode": "value",
+      "views": {
+        "yukon": [],
+        "seasonal": [],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ]
+      },
+      "files": {
+        "annual_map": "figures/precipitation/annual/maximum-1-day-precipitation.png"
+      }
+    },
+    "maximum-5-day-precipitation": {
+      "label": "Maximum 5-day precipitation",
+      "unit": "mm",
+      "trend_unit": "mm per decade",
+      "time_series_mode": "value",
+      "views": {
+        "yukon": [],
+        "seasonal": [],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ]
+      },
+      "files": {
+        "annual_map": "figures/precipitation/annual/maximum-5-day-precipitation.png"
+      }
+    },
+    "longest-dry-spell": {
+      "label": "Longest dry spell",
+      "unit": "days",
+      "trend_unit": "days per decade",
+      "time_series_mode": "value",
+      "views": {
+        "yukon": [],
+        "seasonal": [],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ]
+      },
+      "files": {
+        "annual_map": "figures/precipitation/annual/longest-dry-spell.png"
+      }
+    },
+    "snow-fraction": {
+      "label": "Fraction of precipitation falling as snow",
+      "unit": "%",
+      "trend_unit": "percentage points per decade",
+      "time_series_mode": "value",
+      "views": {
+        "yukon": [
+          "map",
+          "timeseries"
+        ],
+        "seasonal": [],
+        "communities": [
+          "heatmap",
+          "timeseries"
+        ]
+      },
+      "files": {
+        "annual_map": "figures/precipitation/annual/snow-fraction.png"
+      }
+    }
+  },
+  "map_note": "Black dots indicate grid cells where the trend is not statistically significant after spatial multiple-testing control."
+}

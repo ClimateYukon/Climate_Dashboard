@@ -1,0 +1,1014 @@
+[
+  {
+    "id": "mean-temperature",
+    "dashboard_theme": "Temperature",
+    "theme": "Temperature",
+    "name": "Mean temperature",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily temperature",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap",
+      "seasonal"
+    ]
+  },
+  {
+    "id": "mean-daily-maximum-temperature",
+    "dashboard_theme": "Temperature",
+    "theme": "Temperature",
+    "name": "Mean daily maximum temperature",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily temperature",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap",
+      "seasonal"
+    ]
+  },
+  {
+    "id": "mean-daily-minimum-temperature",
+    "dashboard_theme": "Temperature",
+    "theme": "Temperature",
+    "name": "Mean daily minimum temperature",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily temperature",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap",
+      "seasonal"
+    ]
+  },
+  {
+    "id": "coldest-night",
+    "dashboard_theme": "Temperature",
+    "theme": "Temperature",
+    "name": "Coldest night",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily temperature",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "hottest-day",
+    "dashboard_theme": "Temperature",
+    "theme": "Temperature",
+    "name": "Hottest day",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily temperature",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "days-above-20c",
+    "dashboard_theme": "Temperature",
+    "theme": "Temperature",
+    "name": "Days above 20°C",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily temperature",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "days-above-25c",
+    "dashboard_theme": "Temperature",
+    "theme": "Temperature",
+    "name": "Days above 25°C",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily temperature",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "days-above-30c",
+    "dashboard_theme": "Temperature",
+    "theme": "Temperature",
+    "name": "Days above 30°C",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily temperature",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "nights-above-10c",
+    "dashboard_theme": "Temperature",
+    "theme": "Temperature",
+    "name": "Nights above 10°C",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily temperature",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "nights-above-15c",
+    "dashboard_theme": "Temperature",
+    "theme": "Temperature",
+    "name": "Nights above 15°C",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily temperature",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "nights-below-minus-20c",
+    "dashboard_theme": "Temperature",
+    "theme": "Temperature",
+    "name": "Nights below -20°C",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily temperature",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "nights-below-minus-30c",
+    "dashboard_theme": "Temperature",
+    "theme": "Temperature",
+    "name": "Nights below -30°C",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily temperature",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "nights-below-minus-40c",
+    "dashboard_theme": "Temperature",
+    "theme": "Temperature",
+    "name": "Nights below -40°C",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily temperature",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "frost-days",
+    "dashboard_theme": "Temperature",
+    "theme": "Temperature",
+    "name": "Frost days",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily temperature",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "ice-days",
+    "dashboard_theme": "Temperature",
+    "theme": "Temperature",
+    "name": "Ice days",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily temperature",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "freeze-thaw-days",
+    "dashboard_theme": "Temperature",
+    "theme": "Temperature",
+    "name": "Freeze-thaw days",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily temperature",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "frost-free-season-length",
+    "dashboard_theme": "Temperature",
+    "theme": "Temperature",
+    "name": "Frost-free season length",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily temperature",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries"
+    ]
+  },
+  {
+    "id": "growing-degree-days-above-0c",
+    "dashboard_theme": "Temperature",
+    "theme": "Temperature",
+    "name": "Growing degree days above 0°C",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily temperature",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "growing-degree-days-above-5c",
+    "dashboard_theme": "Temperature",
+    "theme": "Temperature",
+    "name": "Growing degree days above 5°C",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily temperature",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "heating-degree-days-below-18c",
+    "dashboard_theme": "Temperature",
+    "theme": "Temperature",
+    "name": "Heating degree days below 18°C",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily temperature",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "cooling-degree-days-above-18c",
+    "dashboard_theme": "Temperature",
+    "theme": "Temperature",
+    "name": "Cooling degree days above 18°C",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily temperature",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "total-precipitation",
+    "dashboard_theme": "Precipitation",
+    "theme": "Precipitation",
+    "name": "Total precipitation",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily precipitation",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "seasonal",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "total-rainfall",
+    "dashboard_theme": "Precipitation",
+    "theme": "Precipitation",
+    "name": "Total rainfall",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily precipitation",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "wet-days",
+    "dashboard_theme": "Precipitation",
+    "theme": "Precipitation",
+    "name": "Wet days",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily precipitation",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "heavy-precipitation-days",
+    "dashboard_theme": "Precipitation",
+    "theme": "Precipitation",
+    "name": "Heavy precipitation days",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily precipitation",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "very-heavy-precipitation-days",
+    "dashboard_theme": "Precipitation",
+    "theme": "Precipitation",
+    "name": "Very heavy precipitation days",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily precipitation",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "maximum-1-day-precipitation",
+    "dashboard_theme": "Precipitation",
+    "theme": "Precipitation",
+    "name": "Maximum 1-day precipitation",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily precipitation",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "maximum-5-day-precipitation",
+    "dashboard_theme": "Precipitation",
+    "theme": "Precipitation",
+    "name": "Maximum 5-day precipitation",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily precipitation",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "longest-dry-spell",
+    "dashboard_theme": "Precipitation",
+    "theme": "Precipitation",
+    "name": "Longest dry spell",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily precipitation",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "snow-fraction",
+    "dashboard_theme": "Precipitation",
+    "theme": "Precipitation",
+    "name": "Fraction of precipitation falling as snow",
+    "status": "available",
+    "relevance": null,
+    "source": "ERA5-Land daily precipitation",
+    "views": [
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
+    ]
+  },
+  {
+    "id": "rain-snow-partition",
+    "dashboard_theme": "Snow & ice",
+    "theme": "Rain and snow partition",
+    "name": "Total rainfall and fraction of precipitation falling as snow",
+    "status": "in-progress",
+    "relevance": 2,
+    "source": "ERA5-Land daily SWE/snowfall/snowpack variables; Yukon snow-course and station observations; satellite snow cover recommended for validation",
+    "views": [
+      "yukon",
+      "seasonal",
+      "communities",
+      "map",
+      "about"
+    ]
+  },
+  {
+    "id": "rain-on-snow",
+    "dashboard_theme": "Snow & ice",
+    "theme": "Snow extremes",
+    "name": "Rain-on-snow and midwinter melt events",
+    "status": "in-progress",
+    "relevance": 2,
+    "source": "Water Survey of Canada HYDAT/hydrometric gauges; ERA5-Land runoff only as supporting context; local flood/ice-jam records where available",
+    "views": [
+      "yukon",
+      "communities",
+      "map",
+      "about"
+    ]
+  },
+  {
+    "id": "snow-season-timing",
+    "dashboard_theme": "Snow & ice",
+    "theme": "Snow season timing",
+    "name": "Persistent snow onset, disappearance and season length",
+    "status": "in-progress",
+    "relevance": 4,
+    "source": "ERA5-Land daily SWE/snowfall/snowpack variables; Yukon snow-course and station observations; satellite snow cover recommended for validation",
+    "views": [
+      "yukon",
+      "communities",
+      "map",
+      "about"
+    ]
+  },
+  {
+    "id": "snowfall",
+    "dashboard_theme": "Snow & ice",
+    "theme": "Snowfall",
+    "name": "Total snowfall water equivalent, snowfall days and heavy snowfall days",
+    "status": "in-progress",
+    "relevance": 5,
+    "source": "ERA5-Land daily SWE/snowfall/snowpack variables; Yukon snow-course and station observations; satellite snow cover recommended for validation",
+    "views": [
+      "yukon",
+      "seasonal",
+      "communities",
+      "about"
+    ]
+  },
+  {
+    "id": "snow-depth-density",
+    "dashboard_theme": "Snow & ice",
+    "theme": "Snowpack",
+    "name": "Estimated snow depth and mean snow density",
+    "status": "in-progress",
+    "relevance": 5,
+    "source": "ERA5-Land SWE/snow density-derived depth; Yukon snow-course observations recommended for validation",
+    "views": [
+      "yukon",
+      "communities",
+      "map",
+      "about"
+    ]
+  },
+  {
+    "id": "snowpack-swe",
+    "dashboard_theme": "Snow & ice",
+    "theme": "Snowpack",
+    "name": "Mean and maximum SWE; days with snowpack",
+    "status": "in-progress",
+    "relevance": 5,
+    "source": "ERA5-Land daily SWE/snowfall/snowpack variables; Yukon snow-course and station observations; satellite snow cover recommended for validation",
+    "views": [
+      "yukon",
+      "communities",
+      "map",
+      "about"
+    ]
+  },
+  {
+    "id": "snow-cover-extent",
+    "dashboard_theme": "Snow & ice",
+    "theme": "Snow cover",
+    "name": "Snow-cover extent",
+    "status": "in-progress",
+    "relevance": null,
+    "source": "",
+    "views": [
+      "yukon",
+      "seasonal",
+      "map",
+      "about"
+    ]
+  },
+  {
+    "id": "snow-cover-mass",
+    "dashboard_theme": "Snow & ice",
+    "theme": "Snow cover",
+    "name": "Snow-cover mass",
+    "status": "in-progress",
+    "relevance": null,
+    "source": "",
+    "views": [
+      "yukon",
+      "seasonal",
+      "map",
+      "about"
+    ]
+  },
+  {
+    "id": "snow-days",
+    "dashboard_theme": "Snow & ice",
+    "theme": "Snow cover",
+    "name": "Snow days",
+    "status": "in-progress",
+    "relevance": null,
+    "source": "",
+    "views": [
+      "yukon",
+      "communities",
+      "map",
+      "about"
+    ]
+  },
+  {
+    "id": "glacier-mass",
+    "dashboard_theme": "Snow & ice",
+    "theme": "Glaciers",
+    "name": "Annual and cumulative glacier mass change",
+    "status": "in-progress",
+    "relevance": 5,
+    "source": "WGMS annual mass-change estimates (AMCE); gridded glacier-change product used as consistency check",
+    "views": [
+      "yukon",
+      "map",
+      "about"
+    ]
+  },
+  {
+    "id": "dsr",
+    "dashboard_theme": "Wildfire",
+    "theme": "Fire weather",
+    "name": "Daily Severity Rating, June-August mean",
+    "status": "in-progress",
+    "relevance": 5,
+    "source": "Yukon Wildland Fire Management station weather archive; CEMS gridded DSR product",
+    "views": [
+      "yukon",
+      "communities",
+      "about"
+    ]
+  },
+  {
+    "id": "fwi-bui-dc",
+    "dashboard_theme": "Wildfire",
+    "theme": "Fire weather",
+    "name": "FWI, BUI and Drought Code validation",
+    "status": "in-progress",
+    "relevance": 5,
+    "source": "Yukon Wildland Fire Management station archive; ERA5-derived fire-weather products (CESM/ESCER); CanLEAD for projections",
+    "views": [
+      "yukon",
+      "communities",
+      "about"
+    ]
+  },
+  {
+    "id": "high-fwi",
+    "dashboard_theme": "Wildfire",
+    "theme": "Fire weather",
+    "name": "High-FWI frequency and extreme-event agreement",
+    "status": "in-progress",
+    "relevance": 5,
+    "source": "Yukon Wildland Fire Management station archive; ERA5-derived fire-weather products (CESM/ESCER); CanLEAD for projections",
+    "views": [
+      "yukon",
+      "communities",
+      "about"
+    ]
+  },
+  {
+    "id": "extreme-fire-weather-days",
+    "dashboard_theme": "Wildfire",
+    "theme": "Fire weather",
+    "name": "Extreme fire-weather days",
+    "status": "in-progress",
+    "relevance": null,
+    "source": "",
+    "views": [
+      "yukon",
+      "map",
+      "about"
+    ]
+  },
+  {
+    "id": "area-burned",
+    "dashboard_theme": "Wildfire",
+    "theme": "Wildfire history",
+    "name": "Annual area burned",
+    "status": "in-progress",
+    "relevance": 5,
+    "source": "Government of Yukon wildfire/fire-history polygons and attributes, 1960-2025",
+    "views": [
+      "yukon",
+      "map",
+      "about"
+    ]
+  },
+  {
+    "id": "fire-count",
+    "dashboard_theme": "Wildfire",
+    "theme": "Wildfire history",
+    "name": "Annual fire count",
+    "status": "in-progress",
+    "relevance": 5,
+    "source": "Government of Yukon wildfire/fire-history polygons and attributes, 1960-2025",
+    "views": [
+      "yukon",
+      "map",
+      "about"
+    ]
+  },
+  {
+    "id": "fire-projections",
+    "dashboard_theme": "Wildfire",
+    "theme": "Wildfire projections",
+    "name": "BUI/FWI recurrence under CanLEAD",
+    "status": "in-progress",
+    "relevance": 5,
+    "source": "Yukon Wildland Fire Management station archive; ERA5-derived fire-weather products (CESM/ESCER); CanLEAD for projections",
+    "views": [
+      "yukon",
+      "map",
+      "about"
+    ]
+  },
+  {
+    "id": "soil-moisture",
+    "dashboard_theme": "Water & moisture",
+    "theme": "Soil moisture",
+    "name": "Root-zone and surface soil-moisture anomalies",
+    "status": "in-progress",
+    "relevance": 1,
+    "source": "ERA5-Land soil moisture; independent satellite/observational product recommended for validation",
+    "views": [
+      "yukon",
+      "seasonal",
+      "map",
+      "about"
+    ]
+  },
+  {
+    "id": "surface-soil-moisture",
+    "dashboard_theme": "Water & moisture",
+    "theme": "Soil moisture",
+    "name": "Surface soil-moisture anomaly",
+    "status": "in-progress",
+    "relevance": null,
+    "source": "",
+    "views": [
+      "yukon",
+      "seasonal",
+      "map",
+      "about"
+    ]
+  },
+  {
+    "id": "root-zone-soil-moisture",
+    "dashboard_theme": "Water & moisture",
+    "theme": "Soil moisture",
+    "name": "Root-zone soil-moisture anomaly",
+    "status": "in-progress",
+    "relevance": null,
+    "source": "",
+    "views": [
+      "yukon",
+      "seasonal",
+      "map",
+      "about"
+    ]
+  },
+  {
+    "id": "climatic-water-balance",
+    "dashboard_theme": "Water & moisture",
+    "theme": "Water balance",
+    "name": "Climatic water balance (precipitation minus PET)",
+    "status": "in-progress",
+    "relevance": 1,
+    "source": "ERA5-Land daily precipitation/snowfall; ECCC/AHCCD gauges for validation; CanGRD where appropriate for broad historical comparison",
+    "views": [
+      "yukon",
+      "seasonal",
+      "map",
+      "about"
+    ]
+  },
+  {
+    "id": "pet",
+    "dashboard_theme": "Water & moisture",
+    "theme": "Water balance",
+    "name": "Potential evapotranspiration",
+    "status": "in-progress",
+    "relevance": 2,
+    "source": "ERA5-Land precipitation/PET for spatial context; ECCC/AHCCD station precipitation for validation; SPI/SPEI derived from validated inputs",
+    "views": [
+      "yukon",
+      "seasonal",
+      "map",
+      "about"
+    ]
+  },
+  {
+    "id": "cloud-sunshine",
+    "dashboard_theme": "Atmosphere",
+    "theme": "Cloud and sunshine",
+    "name": "Cloud cover and sunshine duration",
+    "status": "in-progress",
+    "relevance": 4,
+    "source": "ERA5 total cloud cover; ERA5 surface solar radiation for sunshine/radiation context",
+    "views": [
+      "yukon",
+      "seasonal",
+      "communities",
+      "about"
+    ]
+  },
+  {
+    "id": "community-cloud",
+    "dashboard_theme": "Atmosphere",
+    "theme": "Cloud and sunshine",
+    "name": "Total cloud cover by Yukon community, annual and seasonal",
+    "status": "in-progress",
+    "relevance": 4,
+    "source": "ERA5 single-level total_cloud_cover, 1940-present; Yukon community locations",
+    "views": [
+      "yukon",
+      "seasonal",
+      "communities",
+      "about"
+    ]
+  },
+  {
+    "id": "sunshine-duration",
+    "dashboard_theme": "Atmosphere",
+    "theme": "Cloud and sunshine",
+    "name": "Sunshine duration",
+    "status": "in-progress",
+    "relevance": null,
+    "source": "",
+    "views": [
+      "yukon",
+      "seasonal",
+      "communities",
+      "about"
+    ]
+  },
+  {
+    "id": "annual-cloud-anomaly",
+    "dashboard_theme": "Atmosphere",
+    "theme": "Cloud and sunshine",
+    "name": "Annual cloud-cover anomaly",
+    "status": "in-progress",
+    "relevance": null,
+    "source": "",
+    "views": [
+      "yukon",
+      "communities",
+      "about"
+    ]
+  },
+  {
+    "id": "seasonal-cloud-anomaly",
+    "dashboard_theme": "Atmosphere",
+    "theme": "Cloud and sunshine",
+    "name": "Seasonal cloud-cover anomaly",
+    "status": "in-progress",
+    "relevance": null,
+    "source": "",
+    "views": [
+      "seasonal",
+      "communities",
+      "about"
+    ]
+  },
+  {
+    "id": "radiation",
+    "dashboard_theme": "Atmosphere",
+    "theme": "Radiation and surface",
+    "name": "Shortwave, longwave, net radiation and albedo",
+    "status": "in-progress",
+    "relevance": 1,
+    "source": "ERA5-Land surface radiation and albedo variables; satellite products recommended for validation",
+    "views": [
+      "yukon",
+      "seasonal",
+      "map",
+      "about"
+    ]
+  },
+  {
+    "id": "solar-radiation",
+    "dashboard_theme": "Atmosphere",
+    "theme": "Radiation and surface",
+    "name": "Surface solar radiation",
+    "status": "in-progress",
+    "relevance": null,
+    "source": "",
+    "views": [
+      "yukon",
+      "seasonal",
+      "map",
+      "about"
+    ]
+  },
+  {
+    "id": "humidity",
+    "dashboard_theme": "Atmosphere",
+    "theme": "Humidity",
+    "name": "Relative humidity, vapour-pressure deficit and drying power",
+    "status": "in-progress",
+    "relevance": 1,
+    "source": "ERA5/ERA5-Land temperature and dew point/humidity; station observations for validation; radiation/wind needed for UTCI/WBGT",
+    "views": [
+      "yukon",
+      "seasonal",
+      "communities",
+      "about"
+    ]
+  },
+  {
+    "id": "wind",
+    "dashboard_theme": "Atmosphere",
+    "theme": "Wind",
+    "name": "Mean and extreme wind speed, gusts and blizzard conditions",
+    "status": "in-progress",
+    "relevance": 5,
+    "source": "ERA5/ERA5-Land near-surface wind components; ECCC station wind observations for validation",
+    "views": [
+      "yukon",
+      "seasonal",
+      "communities",
+      "map",
+      "about"
+    ]
+  },
+  {
+    "id": "z500",
+    "dashboard_theme": "Climate drivers",
+    "theme": "Atmospheric circulation",
+    "name": "500 hPa geopotential / ridge analysis",
+    "status": "in-progress",
+    "relevance": 1,
+    "source": "ERA5 500 hPa geopotential height (Z500)",
+    "views": [
+      "yukon",
+      "seasonal",
+      "map",
+      "about"
+    ]
+  },
+  {
+    "id": "blocking",
+    "dashboard_theme": "Climate drivers",
+    "theme": "Atmospheric circulation",
+    "name": "Blocking/ridge frequency and persistence",
+    "status": "in-progress",
+    "relevance": 1,
+    "source": "ERA5 500 hPa geopotential height (Z500)",
+    "views": [
+      "yukon",
+      "seasonal",
+      "map",
+      "about"
+    ]
+  },
+  {
+    "id": "climate-indices",
+    "dashboard_theme": "Climate drivers",
+    "theme": "Climate drivers",
+    "name": "AO, PDO, ONI/Niño3.4, NP, NAO, SOI, AMO, PNA and EP-NP",
+    "status": "in-progress",
+    "relevance": 2,
+    "source": "NOAA/CPC and related published climate-index time series; Yukon seasonal temperature series from ERA5-Land",
+    "views": [
+      "yukon",
+      "seasonal",
+      "about"
+    ]
+  },
+  {
+    "id": "enso",
+    "dashboard_theme": "Climate drivers",
+    "theme": "Climate drivers",
+    "name": "ENSO impacts and event magnitude (ONI/RONI) on Yukon temperature/precipitation/snowfall",
+    "status": "in-progress",
+    "relevance": 2,
+    "source": "NOAA ONI/RONI indices; Yukon historical climate fields from project datasets",
+    "views": [
+      "yukon",
+      "seasonal",
+      "map",
+      "about"
+    ]
+  },
+  {
+    "id": "pm25-smoke",
+    "dashboard_theme": "Wildfire",
+    "theme": "Air quality / smoke",
+    "name": "Whitehorse PM2.5 smoke-season mean and hours above thresholds",
+    "status": "in-progress",
+    "relevance": 5,
+    "source": "NAPS hourly PM2.5 for Whitehorse; satellite smoke/AOD and modelled PM2.5 are candidate Yukon-wide sources",
+    "views": [
+      "yukon",
+      "communities",
+      "about"
+    ]
+  }
+]

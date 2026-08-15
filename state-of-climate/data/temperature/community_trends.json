@@ -1,0 +1,2842 @@
+{
+  "theme": "temperature",
+  "description": "For the selected temperature indicator, rows are Yukon communities and columns are annual or seasonal trend summaries. Cell numbers are physical trends per decade; colour is standardized for that indicator.",
+  "community_order": [
+    "Old Crow",
+    "Dawson City",
+    "Mayo",
+    "Pelly Crossing",
+    "Faro",
+    "Carmacks",
+    "Ross River",
+    "Beaver Creek",
+    "Burwash Landing",
+    "Destruction Bay",
+    "Haines Junction",
+    "Mendenhall",
+    "Whitehorse",
+    "Carcross",
+    "Tagish",
+    "Johnson's Crossing",
+    "Teslin",
+    "Watson Lake"
+  ],
+  "indicator_order": [
+    "mean-temperature",
+    "mean-daily-maximum-temperature",
+    "mean-daily-minimum-temperature",
+    "coldest-night",
+    "hottest-day",
+    "days-above-20c",
+    "days-above-25c",
+    "days-above-30c",
+    "nights-above-10c",
+    "nights-above-15c",
+    "nights-below-minus-20c",
+    "nights-below-minus-30c",
+    "nights-below-minus-40c",
+    "frost-days",
+    "ice-days",
+    "freeze-thaw-days",
+    "frost-free-season-length",
+    "growing-degree-days-above-0c",
+    "growing-degree-days-above-5c",
+    "heating-degree-days-below-18c",
+    "cooling-degree-days-above-18c"
+  ],
+  "indicators": {
+    "mean-temperature": {
+      "label": "Mean temperature",
+      "unit": "°C per decade",
+      "standardization_scale": 0.533851,
+      "communities": {
+        "Old Crow": {
+          "slope_per_decade": 0.533851,
+          "standardized": 1.0,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Dawson City": {
+          "slope_per_decade": 0.3354,
+          "standardized": 0.628265,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Mayo": {
+          "slope_per_decade": 0.383827,
+          "standardized": 0.718978,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Pelly Crossing": {
+          "slope_per_decade": 0.358829,
+          "standardized": 0.672152,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Faro": {
+          "slope_per_decade": 0.374562,
+          "standardized": 0.701623,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Carmacks": {
+          "slope_per_decade": 0.380502,
+          "standardized": 0.712749,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Ross River": {
+          "slope_per_decade": 0.36289,
+          "standardized": 0.679759,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Beaver Creek": {
+          "slope_per_decade": 0.33179,
+          "standardized": 0.621503,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Burwash Landing": {
+          "slope_per_decade": 0.370212,
+          "standardized": 0.693474,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Destruction Bay": {
+          "slope_per_decade": 0.336277,
+          "standardized": 0.629908,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Haines Junction": {
+          "slope_per_decade": 0.480458,
+          "standardized": 0.899985,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Mendenhall": {
+          "slope_per_decade": 0.45066,
+          "standardized": 0.844168,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Whitehorse": {
+          "slope_per_decade": 0.400989,
+          "standardized": 0.751125,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Carcross": {
+          "slope_per_decade": 0.381863,
+          "standardized": 0.715299,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Tagish": {
+          "slope_per_decade": 0.388657,
+          "standardized": 0.728025,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Johnson's Crossing": {
+          "slope_per_decade": 0.370541,
+          "standardized": 0.694091,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Teslin": {
+          "slope_per_decade": 0.363374,
+          "standardized": 0.680666,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Watson Lake": {
+          "slope_per_decade": 0.337144,
+          "standardized": 0.631532,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        }
+      }
+    },
+    "mean-daily-maximum-temperature": {
+      "label": "Mean daily maximum temperature",
+      "unit": "°C per decade",
+      "standardization_scale": 0.558953,
+      "communities": {
+        "Old Crow": {
+          "slope_per_decade": 0.558953,
+          "standardized": 1.0,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Dawson City": {
+          "slope_per_decade": 0.274807,
+          "standardized": 0.491646,
+          "p_value": 4.8e-07,
+          "q_value": 5.1e-07,
+          "significant_fdr": true
+        },
+        "Mayo": {
+          "slope_per_decade": 0.331135,
+          "standardized": 0.59242,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Pelly Crossing": {
+          "slope_per_decade": 0.280505,
+          "standardized": 0.50184,
+          "p_value": 1.18e-06,
+          "q_value": 1.18e-06,
+          "significant_fdr": true
+        },
+        "Faro": {
+          "slope_per_decade": 0.346222,
+          "standardized": 0.619412,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Carmacks": {
+          "slope_per_decade": 0.327934,
+          "standardized": 0.586693,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Ross River": {
+          "slope_per_decade": 0.336225,
+          "standardized": 0.601526,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Beaver Creek": {
+          "slope_per_decade": 0.283699,
+          "standardized": 0.507554,
+          "p_value": 2.5e-07,
+          "q_value": 2.8e-07,
+          "significant_fdr": true
+        },
+        "Burwash Landing": {
+          "slope_per_decade": 0.331177,
+          "standardized": 0.592495,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Destruction Bay": {
+          "slope_per_decade": 0.303304,
+          "standardized": 0.542629,
+          "p_value": 3e-08,
+          "q_value": 4e-08,
+          "significant_fdr": true
+        },
+        "Haines Junction": {
+          "slope_per_decade": 0.45255,
+          "standardized": 0.809639,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Mendenhall": {
+          "slope_per_decade": 0.418682,
+          "standardized": 0.749047,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Whitehorse": {
+          "slope_per_decade": 0.384869,
+          "standardized": 0.688553,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Carcross": {
+          "slope_per_decade": 0.364334,
+          "standardized": 0.651815,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Tagish": {
+          "slope_per_decade": 0.383813,
+          "standardized": 0.686664,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Johnson's Crossing": {
+          "slope_per_decade": 0.357521,
+          "standardized": 0.639626,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Teslin": {
+          "slope_per_decade": 0.352495,
+          "standardized": 0.630634,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Watson Lake": {
+          "slope_per_decade": 0.3075,
+          "standardized": 0.550136,
+          "p_value": 5e-08,
+          "q_value": 6e-08,
+          "significant_fdr": true
+        }
+      }
+    },
+    "mean-daily-minimum-temperature": {
+      "label": "Mean daily minimum temperature",
+      "unit": "°C per decade",
+      "standardization_scale": 0.505698,
+      "communities": {
+        "Old Crow": {
+          "slope_per_decade": 0.505698,
+          "standardized": 1.0,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Dawson City": {
+          "slope_per_decade": 0.380004,
+          "standardized": 0.751445,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Mayo": {
+          "slope_per_decade": 0.415547,
+          "standardized": 0.82173,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Pelly Crossing": {
+          "slope_per_decade": 0.418925,
+          "standardized": 0.828409,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Faro": {
+          "slope_per_decade": 0.399565,
+          "standardized": 0.790126,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Carmacks": {
+          "slope_per_decade": 0.425268,
+          "standardized": 0.840953,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Ross River": {
+          "slope_per_decade": 0.389041,
+          "standardized": 0.769315,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Beaver Creek": {
+          "slope_per_decade": 0.379853,
+          "standardized": 0.751146,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Burwash Landing": {
+          "slope_per_decade": 0.403535,
+          "standardized": 0.797976,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Destruction Bay": {
+          "slope_per_decade": 0.366135,
+          "standardized": 0.724019,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Haines Junction": {
+          "slope_per_decade": 0.502027,
+          "standardized": 0.992741,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Mendenhall": {
+          "slope_per_decade": 0.475375,
+          "standardized": 0.940037,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Whitehorse": {
+          "slope_per_decade": 0.415205,
+          "standardized": 0.821053,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Carcross": {
+          "slope_per_decade": 0.396392,
+          "standardized": 0.783851,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Tagish": {
+          "slope_per_decade": 0.390149,
+          "standardized": 0.771506,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Johnson's Crossing": {
+          "slope_per_decade": 0.381733,
+          "standardized": 0.754864,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Teslin": {
+          "slope_per_decade": 0.368112,
+          "standardized": 0.727929,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Watson Lake": {
+          "slope_per_decade": 0.363931,
+          "standardized": 0.719661,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        }
+      }
+    },
+    "coldest-night": {
+      "label": "Coldest night",
+      "unit": "°C per decade",
+      "standardization_scale": 1.143667,
+      "communities": {
+        "Old Crow": {
+          "slope_per_decade": 1.135118,
+          "standardized": 0.992525,
+          "p_value": 3e-08,
+          "q_value": 5.4e-07,
+          "significant_fdr": true
+        },
+        "Dawson City": {
+          "slope_per_decade": 1.087125,
+          "standardized": 0.950561,
+          "p_value": 1.036e-05,
+          "q_value": 6.342e-05,
+          "significant_fdr": true
+        },
+        "Mayo": {
+          "slope_per_decade": 1.143667,
+          "standardized": 1.0,
+          "p_value": 2.789e-05,
+          "q_value": 0.0001004,
+          "significant_fdr": true
+        },
+        "Pelly Crossing": {
+          "slope_per_decade": 1.041909,
+          "standardized": 0.911025,
+          "p_value": 1.057e-05,
+          "q_value": 6.342e-05,
+          "significant_fdr": true
+        },
+        "Faro": {
+          "slope_per_decade": 0.774938,
+          "standardized": 0.677591,
+          "p_value": 8.046e-05,
+          "q_value": 0.00018103,
+          "significant_fdr": true
+        },
+        "Carmacks": {
+          "slope_per_decade": 1.037625,
+          "standardized": 0.907279,
+          "p_value": 1.606e-05,
+          "q_value": 7.227e-05,
+          "significant_fdr": true
+        },
+        "Ross River": {
+          "slope_per_decade": 0.778812,
+          "standardized": 0.680978,
+          "p_value": 0.00089716,
+          "q_value": 0.00109094,
+          "significant_fdr": true
+        },
+        "Beaver Creek": {
+          "slope_per_decade": 1.012045,
+          "standardized": 0.884912,
+          "p_value": 4.157e-05,
+          "q_value": 0.00012471,
+          "significant_fdr": true
+        },
+        "Burwash Landing": {
+          "slope_per_decade": 0.739294,
+          "standardized": 0.646424,
+          "p_value": 0.00015786,
+          "q_value": 0.00028415,
+          "significant_fdr": true
+        },
+        "Destruction Bay": {
+          "slope_per_decade": 0.753781,
+          "standardized": 0.659091,
+          "p_value": 0.00015786,
+          "q_value": 0.00028415,
+          "significant_fdr": true
+        },
+        "Haines Junction": {
+          "slope_per_decade": 0.978741,
+          "standardized": 0.855792,
+          "p_value": 0.00020375,
+          "q_value": 0.00033341,
+          "significant_fdr": true
+        },
+        "Mendenhall": {
+          "slope_per_decade": 1.014727,
+          "standardized": 0.887257,
+          "p_value": 6.028e-05,
+          "q_value": 0.00015501,
+          "significant_fdr": true
+        },
+        "Whitehorse": {
+          "slope_per_decade": 1.015,
+          "standardized": 0.887496,
+          "p_value": 0.00080001,
+          "q_value": 0.00109094,
+          "significant_fdr": true
+        },
+        "Carcross": {
+          "slope_per_decade": 0.905649,
+          "standardized": 0.791882,
+          "p_value": 0.00131834,
+          "q_value": 0.00148313,
+          "significant_fdr": true
+        },
+        "Tagish": {
+          "slope_per_decade": 0.831864,
+          "standardized": 0.727366,
+          "p_value": 0.00090912,
+          "q_value": 0.00109094,
+          "significant_fdr": true
+        },
+        "Johnson's Crossing": {
+          "slope_per_decade": 0.748475,
+          "standardized": 0.654452,
+          "p_value": 0.00081285,
+          "q_value": 0.00109094,
+          "significant_fdr": true
+        },
+        "Teslin": {
+          "slope_per_decade": 0.597878,
+          "standardized": 0.522773,
+          "p_value": 0.00431239,
+          "q_value": 0.00456606,
+          "significant_fdr": true
+        },
+        "Watson Lake": {
+          "slope_per_decade": 0.556919,
+          "standardized": 0.486959,
+          "p_value": 0.01421355,
+          "q_value": 0.01421355,
+          "significant_fdr": true
+        }
+      }
+    },
+    "hottest-day": {
+      "label": "Hottest day",
+      "unit": "°C per decade",
+      "standardization_scale": 0.354615,
+      "communities": {
+        "Old Crow": {
+          "slope_per_decade": 0.354615,
+          "standardized": 1.0,
+          "p_value": 0.0012009,
+          "q_value": 0.00933558,
+          "significant_fdr": true
+        },
+        "Dawson City": {
+          "slope_per_decade": 0.212439,
+          "standardized": 0.599069,
+          "p_value": 0.02470394,
+          "q_value": 0.08142633,
+          "significant_fdr": false
+        },
+        "Mayo": {
+          "slope_per_decade": 0.277192,
+          "standardized": 0.78167,
+          "p_value": 2.9e-07,
+          "q_value": 5.22e-06,
+          "significant_fdr": true
+        },
+        "Pelly Crossing": {
+          "slope_per_decade": 0.15925,
+          "standardized": 0.449079,
+          "p_value": 0.10894789,
+          "q_value": 0.13983153,
+          "significant_fdr": false
+        },
+        "Faro": {
+          "slope_per_decade": 0.245635,
+          "standardized": 0.692681,
+          "p_value": 0.01592293,
+          "q_value": 0.07165318,
+          "significant_fdr": false
+        },
+        "Carmacks": {
+          "slope_per_decade": 0.201167,
+          "standardized": 0.567283,
+          "p_value": 0.08379433,
+          "q_value": 0.1392245,
+          "significant_fdr": false
+        },
+        "Ross River": {
+          "slope_per_decade": 0.1676,
+          "standardized": 0.472625,
+          "p_value": 0.00155593,
+          "q_value": 0.00933558,
+          "significant_fdr": true
+        },
+        "Beaver Creek": {
+          "slope_per_decade": 0.144765,
+          "standardized": 0.408231,
+          "p_value": 0.12207,
+          "q_value": 0.13983153,
+          "significant_fdr": false
+        },
+        "Burwash Landing": {
+          "slope_per_decade": 0.1973,
+          "standardized": 0.556378,
+          "p_value": 0.07368458,
+          "q_value": 0.1392245,
+          "significant_fdr": false
+        },
+        "Destruction Bay": {
+          "slope_per_decade": 0.197618,
+          "standardized": 0.557275,
+          "p_value": 0.09409307,
+          "q_value": 0.1392245,
+          "significant_fdr": false
+        },
+        "Haines Junction": {
+          "slope_per_decade": 0.278,
+          "standardized": 0.783949,
+          "p_value": 0.02714211,
+          "q_value": 0.08142633,
+          "significant_fdr": false
+        },
+        "Mendenhall": {
+          "slope_per_decade": 0.23013,
+          "standardized": 0.648957,
+          "p_value": 0.10055103,
+          "q_value": 0.1392245,
+          "significant_fdr": false
+        },
+        "Whitehorse": {
+          "slope_per_decade": 0.194032,
+          "standardized": 0.547162,
+          "p_value": 0.08461289,
+          "q_value": 0.1392245,
+          "significant_fdr": false
+        },
+        "Carcross": {
+          "slope_per_decade": 0.15019,
+          "standardized": 0.42353,
+          "p_value": 0.19234034,
+          "q_value": 0.19234034,
+          "significant_fdr": false
+        },
+        "Tagish": {
+          "slope_per_decade": 0.206312,
+          "standardized": 0.581792,
+          "p_value": 0.12429469,
+          "q_value": 0.13983153,
+          "significant_fdr": false
+        },
+        "Johnson's Crossing": {
+          "slope_per_decade": 0.182333,
+          "standardized": 0.514172,
+          "p_value": 0.09499177,
+          "q_value": 0.1392245,
+          "significant_fdr": false
+        },
+        "Teslin": {
+          "slope_per_decade": 0.187707,
+          "standardized": 0.529326,
+          "p_value": 0.1323268,
+          "q_value": 0.14011073,
+          "significant_fdr": false
+        },
+        "Watson Lake": {
+          "slope_per_decade": 0.224892,
+          "standardized": 0.634186,
+          "p_value": 0.04132844,
+          "q_value": 0.10627313,
+          "significant_fdr": false
+        }
+      }
+    },
+    "days-above-20c": {
+      "label": "Days above 20°C",
+      "unit": "days per decade",
+      "standardization_scale": 2.051282,
+      "communities": {
+        "Old Crow": {
+          "slope_per_decade": 1.886792,
+          "standardized": 0.919811,
+          "p_value": 0.00058231,
+          "q_value": 0.00841302,
+          "significant_fdr": true
+        },
+        "Dawson City": {
+          "slope_per_decade": 1.333333,
+          "standardized": 0.65,
+          "p_value": 0.02427773,
+          "q_value": 0.03508253,
+          "significant_fdr": true
+        },
+        "Mayo": {
+          "slope_per_decade": 1.923077,
+          "standardized": 0.9375,
+          "p_value": 0.0033236,
+          "q_value": 0.0099708,
+          "significant_fdr": true
+        },
+        "Pelly Crossing": {
+          "slope_per_decade": 2.0,
+          "standardized": 0.975,
+          "p_value": 0.00259743,
+          "q_value": 0.0099708,
+          "significant_fdr": true
+        },
+        "Faro": {
+          "slope_per_decade": 1.538462,
+          "standardized": 0.75,
+          "p_value": 0.003278,
+          "q_value": 0.0099708,
+          "significant_fdr": true
+        },
+        "Carmacks": {
+          "slope_per_decade": 2.051282,
+          "standardized": 1.0,
+          "p_value": 0.00212494,
+          "q_value": 0.0099708,
+          "significant_fdr": true
+        },
+        "Ross River": {
+          "slope_per_decade": 1.37931,
+          "standardized": 0.672414,
+          "p_value": 0.01239464,
+          "q_value": 0.02653312,
+          "significant_fdr": true
+        },
+        "Beaver Creek": {
+          "slope_per_decade": 0.97561,
+          "standardized": 0.47561,
+          "p_value": 0.0339756,
+          "q_value": 0.03822255,
+          "significant_fdr": true
+        },
+        "Burwash Landing": {
+          "slope_per_decade": 1.034483,
+          "standardized": 0.50431,
+          "p_value": 0.02533738,
+          "q_value": 0.03508253,
+          "significant_fdr": true
+        },
+        "Destruction Bay": {
+          "slope_per_decade": 0.47619,
+          "standardized": 0.232143,
+          "p_value": 0.06170248,
+          "q_value": 0.06533204,
+          "significant_fdr": false
+        },
+        "Haines Junction": {
+          "slope_per_decade": 1.333333,
+          "standardized": 0.65,
+          "p_value": 0.00093478,
+          "q_value": 0.00841302,
+          "significant_fdr": true
+        },
+        "Mendenhall": {
+          "slope_per_decade": 1.142857,
+          "standardized": 0.557143,
+          "p_value": 0.00878951,
+          "q_value": 0.0226016,
+          "significant_fdr": true
+        },
+        "Whitehorse": {
+          "slope_per_decade": 1.219512,
+          "standardized": 0.594512,
+          "p_value": 0.01975643,
+          "q_value": 0.0323287,
+          "significant_fdr": true
+        },
+        "Carcross": {
+          "slope_per_decade": 0.416667,
+          "standardized": 0.203125,
+          "p_value": 0.25551298,
+          "q_value": 0.25551298,
+          "significant_fdr": false
+        },
+        "Tagish": {
+          "slope_per_decade": 1.25,
+          "standardized": 0.609375,
+          "p_value": 0.01743197,
+          "q_value": 0.03137755,
+          "significant_fdr": true
+        },
+        "Johnson's Crossing": {
+          "slope_per_decade": 1.176471,
+          "standardized": 0.57353,
+          "p_value": 0.03364054,
+          "q_value": 0.03822255,
+          "significant_fdr": true
+        },
+        "Teslin": {
+          "slope_per_decade": 1.212121,
+          "standardized": 0.590909,
+          "p_value": 0.03175998,
+          "q_value": 0.03822255,
+          "significant_fdr": true
+        },
+        "Watson Lake": {
+          "slope_per_decade": 1.904762,
+          "standardized": 0.928571,
+          "p_value": 0.01326656,
+          "q_value": 0.02653312,
+          "significant_fdr": true
+        }
+      }
+    },
+    "days-above-25c": {
+      "label": "Days above 25°C",
+      "unit": "days per decade",
+      "standardization_scale": 0.677966,
+      "communities": {
+        "Old Crow": {
+          "slope_per_decade": 0.4,
+          "standardized": 0.59,
+          "p_value": 0.00014052,
+          "q_value": 0.00252936,
+          "significant_fdr": true
+        },
+        "Dawson City": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.03126051,
+          "q_value": 0.09517071,
+          "significant_fdr": false
+        },
+        "Mayo": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.03172357,
+          "q_value": 0.09517071,
+          "significant_fdr": false
+        },
+        "Pelly Crossing": {
+          "slope_per_decade": 0.487805,
+          "standardized": 0.719512,
+          "p_value": 0.14122363,
+          "q_value": 0.18157324,
+          "significant_fdr": false
+        },
+        "Faro": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.00979201,
+          "q_value": 0.08812809,
+          "significant_fdr": false
+        },
+        "Carmacks": {
+          "slope_per_decade": 0.263158,
+          "standardized": 0.388158,
+          "p_value": 0.05933787,
+          "q_value": 0.13575096,
+          "significant_fdr": false
+        },
+        "Ross River": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.06385819,
+          "q_value": 0.13575096,
+          "significant_fdr": false
+        },
+        "Beaver Creek": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.31957175,
+          "q_value": 0.31957175,
+          "significant_fdr": false
+        },
+        "Burwash Landing": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.08517996,
+          "q_value": 0.14006412,
+          "significant_fdr": false
+        },
+        "Destruction Bay": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.10559941,
+          "q_value": 0.14621457,
+          "significant_fdr": false
+        },
+        "Haines Junction": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.0301392,
+          "q_value": 0.09517071,
+          "significant_fdr": false
+        },
+        "Mendenhall": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.09388423,
+          "q_value": 0.14082634,
+          "significant_fdr": false
+        },
+        "Whitehorse": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.08559474,
+          "q_value": 0.14006412,
+          "significant_fdr": false
+        },
+        "Carcross": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.25382464,
+          "q_value": 0.2687555,
+          "significant_fdr": false
+        },
+        "Tagish": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.18189401,
+          "q_value": 0.21827281,
+          "significant_fdr": false
+        },
+        "Johnson's Crossing": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.06787548,
+          "q_value": 0.13575096,
+          "significant_fdr": false
+        },
+        "Teslin": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.22611573,
+          "q_value": 0.2543802,
+          "significant_fdr": false
+        },
+        "Watson Lake": {
+          "slope_per_decade": 0.677966,
+          "standardized": 1.0,
+          "p_value": 0.01489267,
+          "q_value": 0.08935602,
+          "significant_fdr": false
+        }
+      }
+    },
+    "days-above-30c": {
+      "label": "Days above 30°C",
+      "unit": "days per decade",
+      "standardization_scale": 1.0,
+      "communities": {
+        "Old Crow": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.100163,
+          "q_value": 0.42288705,
+          "significant_fdr": false
+        },
+        "Dawson City": {
+          "slope_per_decade": null,
+          "standardized": null,
+          "p_value": null,
+          "q_value": null,
+          "significant_fdr": false
+        },
+        "Mayo": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.64589422,
+          "q_value": 0.64589422,
+          "significant_fdr": false
+        },
+        "Pelly Crossing": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.25373223,
+          "q_value": 0.42288705,
+          "significant_fdr": false
+        },
+        "Faro": {
+          "slope_per_decade": null,
+          "standardized": null,
+          "p_value": null,
+          "q_value": null,
+          "significant_fdr": false
+        },
+        "Carmacks": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.23403815,
+          "q_value": 0.42288705,
+          "significant_fdr": false
+        },
+        "Ross River": {
+          "slope_per_decade": null,
+          "standardized": null,
+          "p_value": null,
+          "q_value": null,
+          "significant_fdr": false
+        },
+        "Beaver Creek": {
+          "slope_per_decade": null,
+          "standardized": null,
+          "p_value": null,
+          "q_value": null,
+          "significant_fdr": false
+        },
+        "Burwash Landing": {
+          "slope_per_decade": null,
+          "standardized": null,
+          "p_value": null,
+          "q_value": null,
+          "significant_fdr": false
+        },
+        "Destruction Bay": {
+          "slope_per_decade": null,
+          "standardized": null,
+          "p_value": null,
+          "q_value": null,
+          "significant_fdr": false
+        },
+        "Haines Junction": {
+          "slope_per_decade": null,
+          "standardized": null,
+          "p_value": null,
+          "q_value": null,
+          "significant_fdr": false
+        },
+        "Mendenhall": {
+          "slope_per_decade": null,
+          "standardized": null,
+          "p_value": null,
+          "q_value": null,
+          "significant_fdr": false
+        },
+        "Whitehorse": {
+          "slope_per_decade": null,
+          "standardized": null,
+          "p_value": null,
+          "q_value": null,
+          "significant_fdr": false
+        },
+        "Carcross": {
+          "slope_per_decade": null,
+          "standardized": null,
+          "p_value": null,
+          "q_value": null,
+          "significant_fdr": false
+        },
+        "Tagish": {
+          "slope_per_decade": null,
+          "standardized": null,
+          "p_value": null,
+          "q_value": null,
+          "significant_fdr": false
+        },
+        "Johnson's Crossing": {
+          "slope_per_decade": null,
+          "standardized": null,
+          "p_value": null,
+          "q_value": null,
+          "significant_fdr": false
+        },
+        "Teslin": {
+          "slope_per_decade": null,
+          "standardized": null,
+          "p_value": null,
+          "q_value": null,
+          "significant_fdr": false
+        },
+        "Watson Lake": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.34909609,
+          "q_value": 0.43637011,
+          "significant_fdr": false
+        }
+      }
+    },
+    "nights-above-10c": {
+      "label": "Nights above 10°C",
+      "unit": "days per decade",
+      "standardization_scale": 3.783784,
+      "communities": {
+        "Old Crow": {
+          "slope_per_decade": 1.75,
+          "standardized": 0.4625,
+          "p_value": 0.00155225,
+          "q_value": 0.00164356,
+          "significant_fdr": true
+        },
+        "Dawson City": {
+          "slope_per_decade": 2.727273,
+          "standardized": 0.720779,
+          "p_value": 1.193e-05,
+          "q_value": 2.147e-05,
+          "significant_fdr": true
+        },
+        "Mayo": {
+          "slope_per_decade": 3.043478,
+          "standardized": 0.804348,
+          "p_value": 2.91e-06,
+          "q_value": 1.214e-05,
+          "significant_fdr": true
+        },
+        "Pelly Crossing": {
+          "slope_per_decade": 3.783784,
+          "standardized": 1.0,
+          "p_value": 2.8e-07,
+          "q_value": 2.28e-06,
+          "significant_fdr": true
+        },
+        "Faro": {
+          "slope_per_decade": 2.954545,
+          "standardized": 0.780844,
+          "p_value": 4.39e-06,
+          "q_value": 1.214e-05,
+          "significant_fdr": true
+        },
+        "Carmacks": {
+          "slope_per_decade": 2.916667,
+          "standardized": 0.770833,
+          "p_value": 1.785e-05,
+          "q_value": 2.921e-05,
+          "significant_fdr": true
+        },
+        "Ross River": {
+          "slope_per_decade": 2.105263,
+          "standardized": 0.556391,
+          "p_value": 6.096e-05,
+          "q_value": 7.838e-05,
+          "significant_fdr": true
+        },
+        "Beaver Creek": {
+          "slope_per_decade": 3.023256,
+          "standardized": 0.799003,
+          "p_value": 2.485e-05,
+          "q_value": 3.728e-05,
+          "significant_fdr": true
+        },
+        "Burwash Landing": {
+          "slope_per_decade": 3.333333,
+          "standardized": 0.880952,
+          "p_value": 1e-08,
+          "q_value": 1.8e-07,
+          "significant_fdr": true
+        },
+        "Destruction Bay": {
+          "slope_per_decade": 1.707317,
+          "standardized": 0.451219,
+          "p_value": 8.36e-06,
+          "q_value": 1.672e-05,
+          "significant_fdr": true
+        },
+        "Haines Junction": {
+          "slope_per_decade": 1.707317,
+          "standardized": 0.451219,
+          "p_value": 3.8e-07,
+          "q_value": 2.28e-06,
+          "significant_fdr": true
+        },
+        "Mendenhall": {
+          "slope_per_decade": 2.432432,
+          "standardized": 0.642857,
+          "p_value": 4.72e-06,
+          "q_value": 1.214e-05,
+          "significant_fdr": true
+        },
+        "Whitehorse": {
+          "slope_per_decade": 1.525424,
+          "standardized": 0.403148,
+          "p_value": 3.653e-05,
+          "q_value": 5.058e-05,
+          "significant_fdr": true
+        },
+        "Carcross": {
+          "slope_per_decade": 0.769231,
+          "standardized": 0.203297,
+          "p_value": 0.00140845,
+          "q_value": 0.00158451,
+          "significant_fdr": true
+        },
+        "Tagish": {
+          "slope_per_decade": 1.842105,
+          "standardized": 0.486842,
+          "p_value": 8.36e-06,
+          "q_value": 1.672e-05,
+          "significant_fdr": true
+        },
+        "Johnson's Crossing": {
+          "slope_per_decade": 1.2,
+          "standardized": 0.317143,
+          "p_value": 0.00027466,
+          "q_value": 0.00032959,
+          "significant_fdr": true
+        },
+        "Teslin": {
+          "slope_per_decade": 1.666667,
+          "standardized": 0.440476,
+          "p_value": 0.00187065,
+          "q_value": 0.00187065,
+          "significant_fdr": true
+        },
+        "Watson Lake": {
+          "slope_per_decade": 2.982456,
+          "standardized": 0.78822,
+          "p_value": 4.71e-06,
+          "q_value": 1.214e-05,
+          "significant_fdr": true
+        }
+      }
+    },
+    "nights-above-15c": {
+      "label": "Nights above 15°C",
+      "unit": "days per decade",
+      "standardization_scale": 0.5,
+      "communities": {
+        "Old Crow": {
+          "slope_per_decade": 0.166667,
+          "standardized": 0.333334,
+          "p_value": 1.828e-05,
+          "q_value": 0.00031076,
+          "significant_fdr": true
+        },
+        "Dawson City": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.00061516,
+          "q_value": 0.00261443,
+          "significant_fdr": true
+        },
+        "Mayo": {
+          "slope_per_decade": 0.263158,
+          "standardized": 0.526316,
+          "p_value": 0.02010504,
+          "q_value": 0.02848214,
+          "significant_fdr": true
+        },
+        "Pelly Crossing": {
+          "slope_per_decade": 0.5,
+          "standardized": 1.0,
+          "p_value": 0.00124738,
+          "q_value": 0.00424109,
+          "significant_fdr": true
+        },
+        "Faro": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.16648778,
+          "q_value": 0.18868615,
+          "significant_fdr": false
+        },
+        "Carmacks": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.00786716,
+          "q_value": 0.01337417,
+          "significant_fdr": true
+        },
+        "Ross River": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.00301517,
+          "q_value": 0.00732256,
+          "significant_fdr": true
+        },
+        "Beaver Creek": {
+          "slope_per_decade": 0.208333,
+          "standardized": 0.416666,
+          "p_value": 0.00531541,
+          "q_value": 0.01004022,
+          "significant_fdr": true
+        },
+        "Burwash Landing": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.00029209,
+          "q_value": 0.00179996,
+          "significant_fdr": true
+        },
+        "Destruction Bay": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.0125361,
+          "q_value": 0.01937397,
+          "significant_fdr": true
+        },
+        "Haines Junction": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.00031764,
+          "q_value": 0.00179996,
+          "significant_fdr": true
+        },
+        "Mendenhall": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.00386757,
+          "q_value": 0.00821859,
+          "significant_fdr": true
+        },
+        "Whitehorse": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.19835403,
+          "q_value": 0.21075116,
+          "significant_fdr": false
+        },
+        "Carcross": {
+          "slope_per_decade": null,
+          "standardized": null,
+          "p_value": null,
+          "q_value": null,
+          "significant_fdr": false
+        },
+        "Tagish": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.07126583,
+          "q_value": 0.09319378,
+          "significant_fdr": false
+        },
+        "Johnson's Crossing": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.3092122,
+          "q_value": 0.3092122,
+          "significant_fdr": false
+        },
+        "Teslin": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.09515643,
+          "q_value": 0.11554709,
+          "significant_fdr": false
+        },
+        "Watson Lake": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.00197573,
+          "q_value": 0.0055979,
+          "significant_fdr": true
+        }
+      }
+    },
+    "nights-below-minus-20c": {
+      "label": "Nights below -20°C",
+      "unit": "days per decade",
+      "standardization_scale": 3.90625,
+      "communities": {
+        "Old Crow": {
+          "slope_per_decade": -3.333333,
+          "standardized": -0.853333,
+          "p_value": 4.36e-05,
+          "q_value": 0.0003924,
+          "significant_fdr": true
+        },
+        "Dawson City": {
+          "slope_per_decade": -3.125,
+          "standardized": -0.8,
+          "p_value": 0.00121217,
+          "q_value": 0.0015585,
+          "significant_fdr": true
+        },
+        "Mayo": {
+          "slope_per_decade": -3.181818,
+          "standardized": -0.814545,
+          "p_value": 0.00216858,
+          "q_value": 0.00229614,
+          "significant_fdr": true
+        },
+        "Pelly Crossing": {
+          "slope_per_decade": -3.333333,
+          "standardized": -0.853333,
+          "p_value": 0.00021355,
+          "q_value": 0.00048049,
+          "significant_fdr": true
+        },
+        "Faro": {
+          "slope_per_decade": -2.777778,
+          "standardized": -0.711111,
+          "p_value": 0.0008609,
+          "q_value": 0.00154962,
+          "significant_fdr": true
+        },
+        "Carmacks": {
+          "slope_per_decade": -3.333333,
+          "standardized": -0.853333,
+          "p_value": 0.00017372,
+          "q_value": 0.00044671,
+          "significant_fdr": true
+        },
+        "Ross River": {
+          "slope_per_decade": -2.741935,
+          "standardized": -0.701935,
+          "p_value": 0.00163755,
+          "q_value": 0.00184224,
+          "significant_fdr": true
+        },
+        "Beaver Creek": {
+          "slope_per_decade": -3.606557,
+          "standardized": -0.923279,
+          "p_value": 0.00014847,
+          "q_value": 0.00044541,
+          "significant_fdr": true
+        },
+        "Burwash Landing": {
+          "slope_per_decade": -3.225806,
+          "standardized": -0.825806,
+          "p_value": 8.292e-05,
+          "q_value": 0.00043407,
+          "significant_fdr": true
+        },
+        "Destruction Bay": {
+          "slope_per_decade": -3.142857,
+          "standardized": -0.804571,
+          "p_value": 0.00054032,
+          "q_value": 0.00108064,
+          "significant_fdr": true
+        },
+        "Haines Junction": {
+          "slope_per_decade": -3.90625,
+          "standardized": -1.0,
+          "p_value": 9.646e-05,
+          "q_value": 0.00043407,
+          "significant_fdr": true
+        },
+        "Mendenhall": {
+          "slope_per_decade": -3.333333,
+          "standardized": -0.853333,
+          "p_value": 0.00013247,
+          "q_value": 0.00044541,
+          "significant_fdr": true
+        },
+        "Whitehorse": {
+          "slope_per_decade": -2.75,
+          "standardized": -0.704,
+          "p_value": 0.00095301,
+          "q_value": 0.0015585,
+          "significant_fdr": true
+        },
+        "Carcross": {
+          "slope_per_decade": -2.692308,
+          "standardized": -0.689231,
+          "p_value": 0.00120786,
+          "q_value": 0.0015585,
+          "significant_fdr": true
+        },
+        "Tagish": {
+          "slope_per_decade": -2.765957,
+          "standardized": -0.708085,
+          "p_value": 0.00121121,
+          "q_value": 0.0015585,
+          "significant_fdr": true
+        },
+        "Johnson's Crossing": {
+          "slope_per_decade": -2.5,
+          "standardized": -0.64,
+          "p_value": 0.00237227,
+          "q_value": 0.00237227,
+          "significant_fdr": true
+        },
+        "Teslin": {
+          "slope_per_decade": -2.45283,
+          "standardized": -0.627924,
+          "p_value": 0.00150915,
+          "q_value": 0.00181098,
+          "significant_fdr": true
+        },
+        "Watson Lake": {
+          "slope_per_decade": -3.214286,
+          "standardized": -0.822857,
+          "p_value": 3.647e-05,
+          "q_value": 0.0003924,
+          "significant_fdr": true
+        }
+      }
+    },
+    "nights-below-minus-30c": {
+      "label": "Nights below -30°C",
+      "unit": "days per decade",
+      "standardization_scale": 4.528302,
+      "communities": {
+        "Old Crow": {
+          "slope_per_decade": -4.528302,
+          "standardized": -1.0,
+          "p_value": 6.4e-07,
+          "q_value": 1.152e-05,
+          "significant_fdr": true
+        },
+        "Dawson City": {
+          "slope_per_decade": -2.826087,
+          "standardized": -0.624094,
+          "p_value": 0.00069402,
+          "q_value": 0.00073484,
+          "significant_fdr": true
+        },
+        "Mayo": {
+          "slope_per_decade": -2.857143,
+          "standardized": -0.630952,
+          "p_value": 0.00013962,
+          "q_value": 0.00021163,
+          "significant_fdr": true
+        },
+        "Pelly Crossing": {
+          "slope_per_decade": -2.8,
+          "standardized": -0.618333,
+          "p_value": 0.0001058,
+          "q_value": 0.0002116,
+          "significant_fdr": true
+        },
+        "Faro": {
+          "slope_per_decade": -2.25,
+          "standardized": -0.496875,
+          "p_value": 0.00032005,
+          "q_value": 0.00037179,
+          "significant_fdr": true
+        },
+        "Carmacks": {
+          "slope_per_decade": -2.5,
+          "standardized": -0.552083,
+          "p_value": 0.00031414,
+          "q_value": 0.00037179,
+          "significant_fdr": true
+        },
+        "Ross River": {
+          "slope_per_decade": -2.380952,
+          "standardized": -0.525794,
+          "p_value": 0.00013393,
+          "q_value": 0.00021163,
+          "significant_fdr": true
+        },
+        "Beaver Creek": {
+          "slope_per_decade": -2.222222,
+          "standardized": -0.490741,
+          "p_value": 0.00122375,
+          "q_value": 0.00122375,
+          "significant_fdr": true
+        },
+        "Burwash Landing": {
+          "slope_per_decade": -1.774194,
+          "standardized": -0.391801,
+          "p_value": 3.625e-05,
+          "q_value": 0.0001305,
+          "significant_fdr": true
+        },
+        "Destruction Bay": {
+          "slope_per_decade": -1.538462,
+          "standardized": -0.339744,
+          "p_value": 8.881e-05,
+          "q_value": 0.00019982,
+          "significant_fdr": true
+        },
+        "Haines Junction": {
+          "slope_per_decade": -1.944444,
+          "standardized": -0.429398,
+          "p_value": 0.00033048,
+          "q_value": 0.00037179,
+          "significant_fdr": true
+        },
+        "Mendenhall": {
+          "slope_per_decade": -2.083333,
+          "standardized": -0.460069,
+          "p_value": 2.669e-05,
+          "q_value": 0.00012011,
+          "significant_fdr": true
+        },
+        "Whitehorse": {
+          "slope_per_decade": -2.058824,
+          "standardized": -0.454657,
+          "p_value": 0.00014109,
+          "q_value": 0.00021163,
+          "significant_fdr": true
+        },
+        "Carcross": {
+          "slope_per_decade": -1.875,
+          "standardized": -0.414062,
+          "p_value": 6.826e-05,
+          "q_value": 0.00018422,
+          "significant_fdr": true
+        },
+        "Tagish": {
+          "slope_per_decade": -2.0,
+          "standardized": -0.441667,
+          "p_value": 7.27e-06,
+          "q_value": 6.543e-05,
+          "significant_fdr": true
+        },
+        "Johnson's Crossing": {
+          "slope_per_decade": -2.1875,
+          "standardized": -0.483073,
+          "p_value": 0.00017939,
+          "q_value": 0.00024839,
+          "significant_fdr": true
+        },
+        "Teslin": {
+          "slope_per_decade": -1.818182,
+          "standardized": -0.401515,
+          "p_value": 7.164e-05,
+          "q_value": 0.00018422,
+          "significant_fdr": true
+        },
+        "Watson Lake": {
+          "slope_per_decade": -2.45283,
+          "standardized": -0.541667,
+          "p_value": 1.668e-05,
+          "q_value": 0.00010008,
+          "significant_fdr": true
+        }
+      }
+    },
+    "nights-below-minus-40c": {
+      "label": "Nights below -40°C",
+      "unit": "days per decade",
+      "standardization_scale": 3.090909,
+      "communities": {
+        "Old Crow": {
+          "slope_per_decade": -3.090909,
+          "standardized": -1.0,
+          "p_value": 4e-08,
+          "q_value": 7.2e-07,
+          "significant_fdr": true
+        },
+        "Dawson City": {
+          "slope_per_decade": -1.351351,
+          "standardized": -0.437202,
+          "p_value": 8.534e-05,
+          "q_value": 0.00030722,
+          "significant_fdr": true
+        },
+        "Mayo": {
+          "slope_per_decade": -1.463415,
+          "standardized": -0.473458,
+          "p_value": 0.00131217,
+          "q_value": 0.00236191,
+          "significant_fdr": true
+        },
+        "Pelly Crossing": {
+          "slope_per_decade": -1.470588,
+          "standardized": -0.475778,
+          "p_value": 0.00017714,
+          "q_value": 0.00053142,
+          "significant_fdr": true
+        },
+        "Faro": {
+          "slope_per_decade": -0.434783,
+          "standardized": -0.140665,
+          "p_value": 0.03927714,
+          "q_value": 0.04158756,
+          "significant_fdr": true
+        },
+        "Carmacks": {
+          "slope_per_decade": -1.132075,
+          "standardized": -0.36626,
+          "p_value": 5.923e-05,
+          "q_value": 0.00026653,
+          "significant_fdr": true
+        },
+        "Ross River": {
+          "slope_per_decade": -0.526316,
+          "standardized": -0.170279,
+          "p_value": 0.00023779,
+          "q_value": 0.00061146,
+          "significant_fdr": true
+        },
+        "Beaver Creek": {
+          "slope_per_decade": -0.833333,
+          "standardized": -0.269608,
+          "p_value": 6.1e-06,
+          "q_value": 5.49e-05,
+          "significant_fdr": true
+        },
+        "Burwash Landing": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.00421593,
+          "q_value": 0.00505912,
+          "significant_fdr": true
+        },
+        "Destruction Bay": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.00421593,
+          "q_value": 0.00505912,
+          "significant_fdr": true
+        },
+        "Haines Junction": {
+          "slope_per_decade": -0.327869,
+          "standardized": -0.106075,
+          "p_value": 0.00118394,
+          "q_value": 0.00236191,
+          "significant_fdr": true
+        },
+        "Mendenhall": {
+          "slope_per_decade": -0.333333,
+          "standardized": -0.107843,
+          "p_value": 0.00193745,
+          "q_value": 0.00290617,
+          "significant_fdr": true
+        },
+        "Whitehorse": {
+          "slope_per_decade": -0.606061,
+          "standardized": -0.196079,
+          "p_value": 1.93e-05,
+          "q_value": 0.0001158,
+          "significant_fdr": true
+        },
+        "Carcross": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.08098849,
+          "q_value": 0.08098849,
+          "significant_fdr": false
+        },
+        "Tagish": {
+          "slope_per_decade": -0.163934,
+          "standardized": -0.053037,
+          "p_value": 0.00067453,
+          "q_value": 0.00151769,
+          "significant_fdr": true
+        },
+        "Johnson's Crossing": {
+          "slope_per_decade": -0.833333,
+          "standardized": -0.269608,
+          "p_value": 0.0030492,
+          "q_value": 0.00422197,
+          "significant_fdr": true
+        },
+        "Teslin": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.03634167,
+          "q_value": 0.04088438,
+          "significant_fdr": true
+        },
+        "Watson Lake": {
+          "slope_per_decade": -0.784314,
+          "standardized": -0.253749,
+          "p_value": 0.00174014,
+          "q_value": 0.0028475,
+          "significant_fdr": true
+        }
+      }
+    },
+    "frost-days": {
+      "label": "Frost days",
+      "unit": "days per decade",
+      "standardization_scale": 4.210526,
+      "communities": {
+        "Old Crow": {
+          "slope_per_decade": -2.727273,
+          "standardized": -0.647727,
+          "p_value": 1.32e-06,
+          "q_value": 1.98e-06,
+          "significant_fdr": true
+        },
+        "Dawson City": {
+          "slope_per_decade": -2.0,
+          "standardized": -0.475,
+          "p_value": 8.088e-05,
+          "q_value": 9.099e-05,
+          "significant_fdr": true
+        },
+        "Mayo": {
+          "slope_per_decade": -1.967213,
+          "standardized": -0.467213,
+          "p_value": 4.26e-06,
+          "q_value": 5.9e-06,
+          "significant_fdr": true
+        },
+        "Pelly Crossing": {
+          "slope_per_decade": -1.621622,
+          "standardized": -0.385135,
+          "p_value": 0.0001127,
+          "q_value": 0.0001127,
+          "significant_fdr": true
+        },
+        "Faro": {
+          "slope_per_decade": -3.333333,
+          "standardized": -0.791667,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Carmacks": {
+          "slope_per_decade": -2.428571,
+          "standardized": -0.576786,
+          "p_value": 6.2e-06,
+          "q_value": 7.97e-06,
+          "significant_fdr": true
+        },
+        "Ross River": {
+          "slope_per_decade": -3.181818,
+          "standardized": -0.755682,
+          "p_value": 1e-08,
+          "q_value": 3e-08,
+          "significant_fdr": true
+        },
+        "Beaver Creek": {
+          "slope_per_decade": -1.851852,
+          "standardized": -0.439815,
+          "p_value": 8.779e-05,
+          "q_value": 9.295e-05,
+          "significant_fdr": true
+        },
+        "Burwash Landing": {
+          "slope_per_decade": -3.333333,
+          "standardized": -0.791667,
+          "p_value": 1e-08,
+          "q_value": 3e-08,
+          "significant_fdr": true
+        },
+        "Destruction Bay": {
+          "slope_per_decade": -3.2,
+          "standardized": -0.76,
+          "p_value": 3e-08,
+          "q_value": 5e-08,
+          "significant_fdr": true
+        },
+        "Haines Junction": {
+          "slope_per_decade": -4.210526,
+          "standardized": -1.0,
+          "p_value": 2e-08,
+          "q_value": 4e-08,
+          "significant_fdr": true
+        },
+        "Mendenhall": {
+          "slope_per_decade": -3.5,
+          "standardized": -0.83125,
+          "p_value": 3e-08,
+          "q_value": 5e-08,
+          "significant_fdr": true
+        },
+        "Whitehorse": {
+          "slope_per_decade": -3.636364,
+          "standardized": -0.863637,
+          "p_value": 2e-08,
+          "q_value": 4e-08,
+          "significant_fdr": true
+        },
+        "Carcross": {
+          "slope_per_decade": -4.153846,
+          "standardized": -0.986538,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Tagish": {
+          "slope_per_decade": -3.809524,
+          "standardized": -0.904762,
+          "p_value": 1e-08,
+          "q_value": 3e-08,
+          "significant_fdr": true
+        },
+        "Johnson's Crossing": {
+          "slope_per_decade": -3.333333,
+          "standardized": -0.791667,
+          "p_value": 1e-08,
+          "q_value": 3e-08,
+          "significant_fdr": true
+        },
+        "Teslin": {
+          "slope_per_decade": -3.888889,
+          "standardized": -0.923611,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Watson Lake": {
+          "slope_per_decade": -2.45283,
+          "standardized": -0.582547,
+          "p_value": 7.28e-06,
+          "q_value": 8.74e-06,
+          "significant_fdr": true
+        }
+      }
+    },
+    "ice-days": {
+      "label": "Ice days",
+      "unit": "days per decade",
+      "standardization_scale": 2.666667,
+      "communities": {
+        "Old Crow": {
+          "slope_per_decade": -2.264151,
+          "standardized": -0.849057,
+          "p_value": 1.934e-05,
+          "q_value": 0.00011604,
+          "significant_fdr": true
+        },
+        "Dawson City": {
+          "slope_per_decade": -0.731707,
+          "standardized": -0.27439,
+          "p_value": 0.18874729,
+          "q_value": 0.21936363,
+          "significant_fdr": false
+        },
+        "Mayo": {
+          "slope_per_decade": -1.363636,
+          "standardized": -0.511363,
+          "p_value": 0.01540348,
+          "q_value": 0.0213279,
+          "significant_fdr": true
+        },
+        "Pelly Crossing": {
+          "slope_per_decade": -0.15625,
+          "standardized": -0.058594,
+          "p_value": 0.76599736,
+          "q_value": 0.76599736,
+          "significant_fdr": false
+        },
+        "Faro": {
+          "slope_per_decade": -1.803279,
+          "standardized": -0.67623,
+          "p_value": 0.0036404,
+          "q_value": 0.0081909,
+          "significant_fdr": true
+        },
+        "Carmacks": {
+          "slope_per_decade": -0.769231,
+          "standardized": -0.288462,
+          "p_value": 0.19498989,
+          "q_value": 0.21936363,
+          "significant_fdr": false
+        },
+        "Ross River": {
+          "slope_per_decade": -1.40625,
+          "standardized": -0.527344,
+          "p_value": 0.01504409,
+          "q_value": 0.0213279,
+          "significant_fdr": true
+        },
+        "Beaver Creek": {
+          "slope_per_decade": -0.769231,
+          "standardized": -0.288462,
+          "p_value": 0.2465657,
+          "q_value": 0.26106956,
+          "significant_fdr": false
+        },
+        "Burwash Landing": {
+          "slope_per_decade": -2.121212,
+          "standardized": -0.795454,
+          "p_value": 0.00017954,
+          "q_value": 0.00080793,
+          "significant_fdr": true
+        },
+        "Destruction Bay": {
+          "slope_per_decade": -2.5,
+          "standardized": -0.9375,
+          "p_value": 4.67e-06,
+          "q_value": 7.353e-05,
+          "significant_fdr": true
+        },
+        "Haines Junction": {
+          "slope_per_decade": -2.666667,
+          "standardized": -1.0,
+          "p_value": 8.17e-06,
+          "q_value": 7.353e-05,
+          "significant_fdr": true
+        },
+        "Mendenhall": {
+          "slope_per_decade": -2.162162,
+          "standardized": -0.810811,
+          "p_value": 0.00041425,
+          "q_value": 0.0014913,
+          "significant_fdr": true
+        },
+        "Whitehorse": {
+          "slope_per_decade": -1.964286,
+          "standardized": -0.736607,
+          "p_value": 0.00079015,
+          "q_value": 0.00203181,
+          "significant_fdr": true
+        },
+        "Carcross": {
+          "slope_per_decade": -2.181818,
+          "standardized": -0.818182,
+          "p_value": 0.00075234,
+          "q_value": 0.00203181,
+          "significant_fdr": true
+        },
+        "Tagish": {
+          "slope_per_decade": -1.666667,
+          "standardized": -0.625,
+          "p_value": 0.00445984,
+          "q_value": 0.00891968,
+          "significant_fdr": true
+        },
+        "Johnson's Crossing": {
+          "slope_per_decade": -1.6,
+          "standardized": -0.6,
+          "p_value": 0.00627426,
+          "q_value": 0.01129367,
+          "significant_fdr": true
+        },
+        "Teslin": {
+          "slope_per_decade": -1.730769,
+          "standardized": -0.649038,
+          "p_value": 0.00727143,
+          "q_value": 0.0118987,
+          "significant_fdr": true
+        },
+        "Watson Lake": {
+          "slope_per_decade": -0.833333,
+          "standardized": -0.3125,
+          "p_value": 0.06556146,
+          "q_value": 0.08429331,
+          "significant_fdr": false
+        }
+      }
+    },
+    "freeze-thaw-days": {
+      "label": "Freeze-thaw days",
+      "unit": "days per decade",
+      "standardization_scale": 2.368421,
+      "communities": {
+        "Old Crow": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.81177452,
+          "q_value": 0.81177452,
+          "significant_fdr": false
+        },
+        "Dawson City": {
+          "slope_per_decade": -1.219512,
+          "standardized": -0.514905,
+          "p_value": 0.03886415,
+          "q_value": 0.06359588,
+          "significant_fdr": false
+        },
+        "Mayo": {
+          "slope_per_decade": -0.666667,
+          "standardized": -0.281482,
+          "p_value": 0.17223003,
+          "q_value": 0.19375878,
+          "significant_fdr": false
+        },
+        "Pelly Crossing": {
+          "slope_per_decade": -1.538462,
+          "standardized": -0.649573,
+          "p_value": 0.01059087,
+          "q_value": 0.03717617,
+          "significant_fdr": true
+        },
+        "Faro": {
+          "slope_per_decade": -1.515152,
+          "standardized": -0.639731,
+          "p_value": 0.01320362,
+          "q_value": 0.03717617,
+          "significant_fdr": true
+        },
+        "Carmacks": {
+          "slope_per_decade": -1.578947,
+          "standardized": -0.666667,
+          "p_value": 0.0144574,
+          "q_value": 0.03717617,
+          "significant_fdr": true
+        },
+        "Ross River": {
+          "slope_per_decade": -1.538462,
+          "standardized": -0.649573,
+          "p_value": 0.01150236,
+          "q_value": 0.03717617,
+          "significant_fdr": true
+        },
+        "Beaver Creek": {
+          "slope_per_decade": -1.111111,
+          "standardized": -0.469136,
+          "p_value": 0.0636588,
+          "q_value": 0.08184703,
+          "significant_fdr": false
+        },
+        "Burwash Landing": {
+          "slope_per_decade": -1.052632,
+          "standardized": -0.444445,
+          "p_value": 0.04389634,
+          "q_value": 0.06584451,
+          "significant_fdr": false
+        },
+        "Destruction Bay": {
+          "slope_per_decade": -0.735294,
+          "standardized": -0.310457,
+          "p_value": 0.1887442,
+          "q_value": 0.1998468,
+          "significant_fdr": false
+        },
+        "Haines Junction": {
+          "slope_per_decade": -1.219512,
+          "standardized": -0.514905,
+          "p_value": 0.05503116,
+          "q_value": 0.07619699,
+          "significant_fdr": false
+        },
+        "Mendenhall": {
+          "slope_per_decade": -1.0,
+          "standardized": -0.422222,
+          "p_value": 0.10707319,
+          "q_value": 0.12848783,
+          "significant_fdr": false
+        },
+        "Whitehorse": {
+          "slope_per_decade": -1.25,
+          "standardized": -0.527778,
+          "p_value": 0.03318663,
+          "q_value": 0.06359588,
+          "significant_fdr": false
+        },
+        "Carcross": {
+          "slope_per_decade": -1.5,
+          "standardized": -0.633333,
+          "p_value": 0.01378207,
+          "q_value": 0.03717617,
+          "significant_fdr": true
+        },
+        "Tagish": {
+          "slope_per_decade": -2.368421,
+          "standardized": -1.0,
+          "p_value": 0.00037821,
+          "q_value": 0.00575622,
+          "significant_fdr": true
+        },
+        "Johnson's Crossing": {
+          "slope_per_decade": -1.388889,
+          "standardized": -0.58642,
+          "p_value": 0.02284289,
+          "q_value": 0.0513965,
+          "significant_fdr": false
+        },
+        "Teslin": {
+          "slope_per_decade": -2.0,
+          "standardized": -0.844444,
+          "p_value": 0.00063958,
+          "q_value": 0.00575622,
+          "significant_fdr": true
+        },
+        "Watson Lake": {
+          "slope_per_decade": -1.22807,
+          "standardized": -0.518518,
+          "p_value": 0.03561005,
+          "q_value": 0.06359588,
+          "significant_fdr": false
+        }
+      }
+    },
+    "frost-free-season-length": {
+      "label": "Frost-free season length",
+      "unit": "days per decade",
+      "standardization_scale": 5.227273,
+      "communities": {
+        "Old Crow": {
+          "slope_per_decade": 3.2,
+          "standardized": 0.612174,
+          "p_value": 0.00051292,
+          "q_value": 0.00054309,
+          "significant_fdr": true
+        },
+        "Dawson City": {
+          "slope_per_decade": 3.030303,
+          "standardized": 0.57971,
+          "p_value": 0.00034406,
+          "q_value": 0.00038707,
+          "significant_fdr": true
+        },
+        "Mayo": {
+          "slope_per_decade": 3.235294,
+          "standardized": 0.618926,
+          "p_value": 4.607e-05,
+          "q_value": 6.379e-05,
+          "significant_fdr": true
+        },
+        "Pelly Crossing": {
+          "slope_per_decade": 1.777778,
+          "standardized": 0.340097,
+          "p_value": 0.00690843,
+          "q_value": 0.00690843,
+          "significant_fdr": true
+        },
+        "Faro": {
+          "slope_per_decade": 3.823529,
+          "standardized": 0.731458,
+          "p_value": 4.58e-06,
+          "q_value": 1.031e-05,
+          "significant_fdr": true
+        },
+        "Carmacks": {
+          "slope_per_decade": 3.333333,
+          "standardized": 0.637681,
+          "p_value": 3.87e-06,
+          "q_value": 9.95e-06,
+          "significant_fdr": true
+        },
+        "Ross River": {
+          "slope_per_decade": 2.923077,
+          "standardized": 0.559197,
+          "p_value": 8.604e-05,
+          "q_value": 0.00011062,
+          "significant_fdr": true
+        },
+        "Beaver Creek": {
+          "slope_per_decade": 3.157895,
+          "standardized": 0.604119,
+          "p_value": 6.22e-06,
+          "q_value": 1.244e-05,
+          "significant_fdr": true
+        },
+        "Burwash Landing": {
+          "slope_per_decade": 4.0625,
+          "standardized": 0.777174,
+          "p_value": 3e-07,
+          "q_value": 1.98e-06,
+          "significant_fdr": true
+        },
+        "Destruction Bay": {
+          "slope_per_decade": 3.529412,
+          "standardized": 0.675192,
+          "p_value": 2.349e-05,
+          "q_value": 3.524e-05,
+          "significant_fdr": true
+        },
+        "Haines Junction": {
+          "slope_per_decade": 5.0,
+          "standardized": 0.956522,
+          "p_value": 5.1e-07,
+          "q_value": 2.3e-06,
+          "significant_fdr": true
+        },
+        "Mendenhall": {
+          "slope_per_decade": 4.285714,
+          "standardized": 0.819876,
+          "p_value": 1.38e-06,
+          "q_value": 4.97e-06,
+          "significant_fdr": true
+        },
+        "Whitehorse": {
+          "slope_per_decade": 3.939394,
+          "standardized": 0.753623,
+          "p_value": 1.045e-05,
+          "q_value": 1.71e-05,
+          "significant_fdr": true
+        },
+        "Carcross": {
+          "slope_per_decade": 5.227273,
+          "standardized": 1.0,
+          "p_value": 7e-08,
+          "q_value": 1.26e-06,
+          "significant_fdr": true
+        },
+        "Tagish": {
+          "slope_per_decade": 3.461538,
+          "standardized": 0.662207,
+          "p_value": 8.59e-06,
+          "q_value": 1.546e-05,
+          "significant_fdr": true
+        },
+        "Johnson's Crossing": {
+          "slope_per_decade": 4.166667,
+          "standardized": 0.797101,
+          "p_value": 2.75e-06,
+          "q_value": 8.25e-06,
+          "significant_fdr": true
+        },
+        "Teslin": {
+          "slope_per_decade": 4.4,
+          "standardized": 0.841739,
+          "p_value": 3.3e-07,
+          "q_value": 1.98e-06,
+          "significant_fdr": true
+        },
+        "Watson Lake": {
+          "slope_per_decade": 2.5,
+          "standardized": 0.478261,
+          "p_value": 0.00029874,
+          "q_value": 0.00035849,
+          "significant_fdr": true
+        }
+      }
+    },
+    "growing-degree-days-above-0c": {
+      "label": "Growing degree days above 0°C",
+      "unit": "°C·days per decade",
+      "standardization_scale": 60.346423,
+      "communities": {
+        "Old Crow": {
+          "slope_per_decade": 46.7236,
+          "standardized": 0.774256,
+          "p_value": 3e-08,
+          "q_value": 1.8e-07,
+          "significant_fdr": true
+        },
+        "Dawson City": {
+          "slope_per_decade": 38.98063,
+          "standardized": 0.645948,
+          "p_value": 2.81e-06,
+          "q_value": 3.16e-06,
+          "significant_fdr": true
+        },
+        "Mayo": {
+          "slope_per_decade": 45.063969,
+          "standardized": 0.746755,
+          "p_value": 9.9e-07,
+          "q_value": 1.37e-06,
+          "significant_fdr": true
+        },
+        "Pelly Crossing": {
+          "slope_per_decade": 44.26375,
+          "standardized": 0.733494,
+          "p_value": 6.76e-06,
+          "q_value": 7.16e-06,
+          "significant_fdr": true
+        },
+        "Faro": {
+          "slope_per_decade": 49.613735,
+          "standardized": 0.822149,
+          "p_value": 6e-08,
+          "q_value": 2.3e-07,
+          "significant_fdr": true
+        },
+        "Carmacks": {
+          "slope_per_decade": 49.519256,
+          "standardized": 0.820583,
+          "p_value": 2.9e-07,
+          "q_value": 5.2e-07,
+          "significant_fdr": true
+        },
+        "Ross River": {
+          "slope_per_decade": 46.276652,
+          "standardized": 0.76685,
+          "p_value": 8e-08,
+          "q_value": 2.3e-07,
+          "significant_fdr": true
+        },
+        "Beaver Creek": {
+          "slope_per_decade": 37.461674,
+          "standardized": 0.620777,
+          "p_value": 1.036e-05,
+          "q_value": 1.036e-05,
+          "significant_fdr": true
+        },
+        "Burwash Landing": {
+          "slope_per_decade": 52.392627,
+          "standardized": 0.868198,
+          "p_value": 9e-08,
+          "q_value": 2.3e-07,
+          "significant_fdr": true
+        },
+        "Destruction Bay": {
+          "slope_per_decade": 44.064545,
+          "standardized": 0.730193,
+          "p_value": 9.4e-07,
+          "q_value": 1.37e-06,
+          "significant_fdr": true
+        },
+        "Haines Junction": {
+          "slope_per_decade": 60.346423,
+          "standardized": 1.0,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Mendenhall": {
+          "slope_per_decade": 53.812702,
+          "standardized": 0.89173,
+          "p_value": 1e-08,
+          "q_value": 9e-08,
+          "significant_fdr": true
+        },
+        "Whitehorse": {
+          "slope_per_decade": 49.784864,
+          "standardized": 0.824985,
+          "p_value": 9e-08,
+          "q_value": 2.3e-07,
+          "significant_fdr": true
+        },
+        "Carcross": {
+          "slope_per_decade": 48.422314,
+          "standardized": 0.802406,
+          "p_value": 1.4e-07,
+          "q_value": 3.2e-07,
+          "significant_fdr": true
+        },
+        "Tagish": {
+          "slope_per_decade": 51.604152,
+          "standardized": 0.855132,
+          "p_value": 1.8e-07,
+          "q_value": 3.6e-07,
+          "significant_fdr": true
+        },
+        "Johnson's Crossing": {
+          "slope_per_decade": 44.622723,
+          "standardized": 0.739443,
+          "p_value": 1.08e-06,
+          "q_value": 1.39e-06,
+          "significant_fdr": true
+        },
+        "Teslin": {
+          "slope_per_decade": 45.8866,
+          "standardized": 0.760386,
+          "p_value": 1.56e-06,
+          "q_value": 1.87e-06,
+          "significant_fdr": true
+        },
+        "Watson Lake": {
+          "slope_per_decade": 45.131763,
+          "standardized": 0.747878,
+          "p_value": 3.5e-07,
+          "q_value": 5.7e-07,
+          "significant_fdr": true
+        }
+      }
+    },
+    "growing-degree-days-above-5c": {
+      "label": "Growing degree days above 5°C",
+      "unit": "°C·days per decade",
+      "standardization_scale": 43.548812,
+      "communities": {
+        "Old Crow": {
+          "slope_per_decade": 33.228133,
+          "standardized": 0.763009,
+          "p_value": 5.1e-07,
+          "q_value": 2.02e-06,
+          "significant_fdr": true
+        },
+        "Dawson City": {
+          "slope_per_decade": 31.368537,
+          "standardized": 0.720308,
+          "p_value": 4.57e-06,
+          "q_value": 5.88e-06,
+          "significant_fdr": true
+        },
+        "Mayo": {
+          "slope_per_decade": 36.012679,
+          "standardized": 0.82695,
+          "p_value": 1.88e-06,
+          "q_value": 3.69e-06,
+          "significant_fdr": true
+        },
+        "Pelly Crossing": {
+          "slope_per_decade": 36.417017,
+          "standardized": 0.836234,
+          "p_value": 5.94e-06,
+          "q_value": 7.13e-06,
+          "significant_fdr": true
+        },
+        "Faro": {
+          "slope_per_decade": 37.264436,
+          "standardized": 0.855694,
+          "p_value": 5.6e-07,
+          "q_value": 2.02e-06,
+          "significant_fdr": true
+        },
+        "Carmacks": {
+          "slope_per_decade": 37.546538,
+          "standardized": 0.862171,
+          "p_value": 1.3e-06,
+          "q_value": 3.34e-06,
+          "significant_fdr": true
+        },
+        "Ross River": {
+          "slope_per_decade": 33.980909,
+          "standardized": 0.780295,
+          "p_value": 1.08e-06,
+          "q_value": 3.24e-06,
+          "significant_fdr": true
+        },
+        "Beaver Creek": {
+          "slope_per_decade": 29.475519,
+          "standardized": 0.676839,
+          "p_value": 2.015e-05,
+          "q_value": 2.134e-05,
+          "significant_fdr": true
+        },
+        "Burwash Landing": {
+          "slope_per_decade": 38.094,
+          "standardized": 0.874743,
+          "p_value": 4.6e-07,
+          "q_value": 2.02e-06,
+          "significant_fdr": true
+        },
+        "Destruction Bay": {
+          "slope_per_decade": 30.849263,
+          "standardized": 0.708384,
+          "p_value": 2.46e-06,
+          "q_value": 3.69e-06,
+          "significant_fdr": true
+        },
+        "Haines Junction": {
+          "slope_per_decade": 43.548812,
+          "standardized": 1.0,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Mendenhall": {
+          "slope_per_decade": 38.923259,
+          "standardized": 0.893785,
+          "p_value": 1.8e-07,
+          "q_value": 1.62e-06,
+          "significant_fdr": true
+        },
+        "Whitehorse": {
+          "slope_per_decade": 34.9388,
+          "standardized": 0.802291,
+          "p_value": 2.35e-06,
+          "q_value": 3.69e-06,
+          "significant_fdr": true
+        },
+        "Carcross": {
+          "slope_per_decade": 31.443593,
+          "standardized": 0.722031,
+          "p_value": 4.19e-06,
+          "q_value": 5.8e-06,
+          "significant_fdr": true
+        },
+        "Tagish": {
+          "slope_per_decade": 36.756804,
+          "standardized": 0.844037,
+          "p_value": 2.15e-06,
+          "q_value": 3.69e-06,
+          "significant_fdr": true
+        },
+        "Johnson's Crossing": {
+          "slope_per_decade": 30.249465,
+          "standardized": 0.694611,
+          "p_value": 3.996e-05,
+          "q_value": 3.996e-05,
+          "significant_fdr": true
+        },
+        "Teslin": {
+          "slope_per_decade": 32.196538,
+          "standardized": 0.739321,
+          "p_value": 1.389e-05,
+          "q_value": 1.563e-05,
+          "significant_fdr": true
+        },
+        "Watson Lake": {
+          "slope_per_decade": 36.390622,
+          "standardized": 0.835628,
+          "p_value": 1.56e-06,
+          "q_value": 3.51e-06,
+          "significant_fdr": true
+        }
+      }
+    },
+    "heating-degree-days-below-18c": {
+      "label": "Heating degree days below 18°C",
+      "unit": "°C·days per decade",
+      "standardization_scale": 191.973429,
+      "communities": {
+        "Old Crow": {
+          "slope_per_decade": -191.973429,
+          "standardized": -1.0,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Dawson City": {
+          "slope_per_decade": -117.1189,
+          "standardized": -0.610079,
+          "p_value": 2.69e-06,
+          "q_value": 2.69e-06,
+          "significant_fdr": true
+        },
+        "Mayo": {
+          "slope_per_decade": -134.158286,
+          "standardized": -0.698838,
+          "p_value": 4e-08,
+          "q_value": 6e-08,
+          "significant_fdr": true
+        },
+        "Pelly Crossing": {
+          "slope_per_decade": -128.12051,
+          "standardized": -0.667387,
+          "p_value": 2.57e-06,
+          "q_value": 2.69e-06,
+          "significant_fdr": true
+        },
+        "Faro": {
+          "slope_per_decade": -137.38025,
+          "standardized": -0.715621,
+          "p_value": 1e-08,
+          "q_value": 2e-08,
+          "significant_fdr": true
+        },
+        "Carmacks": {
+          "slope_per_decade": -141.253022,
+          "standardized": -0.735795,
+          "p_value": 6e-08,
+          "q_value": 8e-08,
+          "significant_fdr": true
+        },
+        "Ross River": {
+          "slope_per_decade": -135.268854,
+          "standardized": -0.704623,
+          "p_value": 1e-08,
+          "q_value": 2e-08,
+          "significant_fdr": true
+        },
+        "Beaver Creek": {
+          "slope_per_decade": -118.299577,
+          "standardized": -0.616229,
+          "p_value": 1.8e-07,
+          "q_value": 2.2e-07,
+          "significant_fdr": true
+        },
+        "Burwash Landing": {
+          "slope_per_decade": -137.675206,
+          "standardized": -0.717158,
+          "p_value": 1e-08,
+          "q_value": 2e-08,
+          "significant_fdr": true
+        },
+        "Destruction Bay": {
+          "slope_per_decade": -127.340577,
+          "standardized": -0.663324,
+          "p_value": 5e-08,
+          "q_value": 7e-08,
+          "significant_fdr": true
+        },
+        "Haines Junction": {
+          "slope_per_decade": -174.430571,
+          "standardized": -0.908618,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Mendenhall": {
+          "slope_per_decade": -161.400393,
+          "standardized": -0.840743,
+          "p_value": 0.0,
+          "q_value": 0.0,
+          "significant_fdr": true
+        },
+        "Whitehorse": {
+          "slope_per_decade": -144.211173,
+          "standardized": -0.751204,
+          "p_value": 1e-08,
+          "q_value": 2e-08,
+          "significant_fdr": true
+        },
+        "Carcross": {
+          "slope_per_decade": -139.213527,
+          "standardized": -0.725171,
+          "p_value": 1e-08,
+          "q_value": 2e-08,
+          "significant_fdr": true
+        },
+        "Tagish": {
+          "slope_per_decade": -138.053439,
+          "standardized": -0.719128,
+          "p_value": 1e-08,
+          "q_value": 2e-08,
+          "significant_fdr": true
+        },
+        "Johnson's Crossing": {
+          "slope_per_decade": -133.296036,
+          "standardized": -0.694346,
+          "p_value": 3e-08,
+          "q_value": 5e-08,
+          "significant_fdr": true
+        },
+        "Teslin": {
+          "slope_per_decade": -128.966486,
+          "standardized": -0.671793,
+          "p_value": 3e-08,
+          "q_value": 5e-08,
+          "significant_fdr": true
+        },
+        "Watson Lake": {
+          "slope_per_decade": -121.525786,
+          "standardized": -0.633034,
+          "p_value": 2.4e-07,
+          "q_value": 2.7e-07,
+          "significant_fdr": true
+        }
+      }
+    },
+    "cooling-degree-days-above-18c": {
+      "label": "Cooling degree days above 18°C",
+      "unit": "°C·days per decade",
+      "standardization_scale": 3.262,
+      "communities": {
+        "Old Crow": {
+          "slope_per_decade": 1.957522,
+          "standardized": 0.600099,
+          "p_value": 9.906e-05,
+          "q_value": 0.00178308,
+          "significant_fdr": true
+        },
+        "Dawson City": {
+          "slope_per_decade": 1.258243,
+          "standardized": 0.385727,
+          "p_value": 0.02164714,
+          "q_value": 0.03896485,
+          "significant_fdr": true
+        },
+        "Mayo": {
+          "slope_per_decade": 1.7703,
+          "standardized": 0.542704,
+          "p_value": 0.01632673,
+          "q_value": 0.03896485,
+          "significant_fdr": true
+        },
+        "Pelly Crossing": {
+          "slope_per_decade": 3.262,
+          "standardized": 1.0,
+          "p_value": 0.00937144,
+          "q_value": 0.03896485,
+          "significant_fdr": true
+        },
+        "Faro": {
+          "slope_per_decade": 0.635083,
+          "standardized": 0.194691,
+          "p_value": 0.0184513,
+          "q_value": 0.03896485,
+          "significant_fdr": true
+        },
+        "Carmacks": {
+          "slope_per_decade": 1.169679,
+          "standardized": 0.358577,
+          "p_value": 0.02062378,
+          "q_value": 0.03896485,
+          "significant_fdr": true
+        },
+        "Ross River": {
+          "slope_per_decade": 0.369917,
+          "standardized": 0.113402,
+          "p_value": 0.0215025,
+          "q_value": 0.03896485,
+          "significant_fdr": true
+        },
+        "Beaver Creek": {
+          "slope_per_decade": 0.5219,
+          "standardized": 0.159994,
+          "p_value": 0.03254284,
+          "q_value": 0.04184079,
+          "significant_fdr": true
+        },
+        "Burwash Landing": {
+          "slope_per_decade": 0.366973,
+          "standardized": 0.112499,
+          "p_value": 0.00314766,
+          "q_value": 0.01888596,
+          "significant_fdr": true
+        },
+        "Destruction Bay": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.02972984,
+          "q_value": 0.04116439,
+          "significant_fdr": true
+        },
+        "Haines Junction": {
+          "slope_per_decade": 0.042429,
+          "standardized": 0.013007,
+          "p_value": 0.05625732,
+          "q_value": 0.05956657,
+          "significant_fdr": false
+        },
+        "Mendenhall": {
+          "slope_per_decade": 0.316437,
+          "standardized": 0.097007,
+          "p_value": 0.02861077,
+          "q_value": 0.04116439,
+          "significant_fdr": true
+        },
+        "Whitehorse": {
+          "slope_per_decade": 0.2146,
+          "standardized": 0.065788,
+          "p_value": 0.01718281,
+          "q_value": 0.03896485,
+          "significant_fdr": true
+        },
+        "Carcross": {
+          "slope_per_decade": -0.0,
+          "standardized": -0.0,
+          "p_value": 0.11365374,
+          "q_value": 0.11365374,
+          "significant_fdr": false
+        },
+        "Tagish": {
+          "slope_per_decade": 0.255703,
+          "standardized": 0.078388,
+          "p_value": 0.05351281,
+          "q_value": 0.05956657,
+          "significant_fdr": false
+        },
+        "Johnson's Crossing": {
+          "slope_per_decade": 0.088805,
+          "standardized": 0.027224,
+          "p_value": 0.02903212,
+          "q_value": 0.04116439,
+          "significant_fdr": true
+        },
+        "Teslin": {
+          "slope_per_decade": 0.474105,
+          "standardized": 0.145342,
+          "p_value": 0.04367655,
+          "q_value": 0.05241186,
+          "significant_fdr": false
+        },
+        "Watson Lake": {
+          "slope_per_decade": 1.68635,
+          "standardized": 0.516968,
+          "p_value": 0.00208024,
+          "q_value": 0.01872216,
+          "significant_fdr": true
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,27 @@
 [
   {
+    "id": "state_of_yukon_climate",
+    "card_type": "interactive",
+    "title": "State of Yukon's Climate",
+    "subtitle": "Long-term climate trends",
+    "description": "Explore long-term changes in Yukon's temperature and precipitation, with Yukon-wide, community, seasonal and spatial views.",
+    "date_label": "Updated 2026-08-14",
+    "updated_date": "2026-08-14",
+    "source": "ERA5-Land",
+    "preview_image": "state-of-climate/preview-card.png",
+    "tags": [
+      "climate",
+      "temperature",
+      "precipitation",
+      "trends",
+      "Yukon",
+      "interactive"
+    ],
+    "plot_count": 1,
+    "href": "state-of-climate/index.html",
+    "sort_order": 5
+  },
+  {
     "id": "ahccd_temperature",
     "card_type": "interactive",
     "title": "Daily temperature observations",
