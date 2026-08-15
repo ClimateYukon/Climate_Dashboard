@@ -2194,8 +2194,8 @@ function renderTemperatureCommunityHeatmap(
 
                             const significanceText =
                                 significant
-                                    ? "significant after FDR correction"
-                                    : "not significant after FDR correction";
+                                    ? "significant after accounting for multiple comparisons"
+                                    : "not significant after accounting for multiple comparisons";
 
 
                             return `
@@ -2324,7 +2324,7 @@ function renderTemperatureCommunityHeatmap(
                 }
 
                 Values in parentheses are not statistically
-                significant after Benjamini-Hochberg correction
+                significant after accounting for multiple comparisons
                 across communities.
 
             </div>
@@ -5629,8 +5629,8 @@ function renderPrecipitationCommunityHeatmap(
 
                         const significanceText =
                             significant
-                                ? "significant after FDR correction"
-                                : "not significant after FDR correction";
+                                ? "significant after accounting for multiple comparisons"
+                                : "not significant after accounting for multiple comparisons";
 
 
                         html += `
@@ -5727,7 +5727,7 @@ function renderPrecipitationCommunityHeatmap(
                 }
 
                 Values in parentheses are not statistically
-                significant after Benjamini-Hochberg FDR
+                significant after accounting for multiple comparisons
                 correction across communities. Hover over a
                 cell for its p-value and adjusted q-value.
 

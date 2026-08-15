@@ -263,11 +263,15 @@
     "dashboard_theme": "Temperature",
     "theme": "Temperature",
     "name": "Frost-free season length",
-    "status": "in-progress",
+    "status": "available",
     "relevance": null,
-    "source": "ERA5-Land daily temperature; indicator definition under review",
+    "source": "ERA5-Land daily temperature",
     "views": [
-      "about"
+      "yukon",
+      "map",
+      "timeseries",
+      "communities",
+      "heatmap"
     ]
   },
   {

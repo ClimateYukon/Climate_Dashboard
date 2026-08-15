@@ -14,7 +14,7 @@
       "baseline_mean": 556.1585,
       "trend": {
         "method": "Sen slope with Mann-Kendall",
-        "slope_per_decade": 9.320308,
+        "slope_per_decade": 9.320252,
         "p_value": 0.00052569,
         "significant_p05": true,
         "serial_correlation_adjusted": false,
@@ -260,7 +260,7 @@
       "baseline_mean": 288.2478,
       "trend": {
         "method": "Sen slope with Mann-Kendall",
-        "slope_per_decade": 6.806367,
+        "slope_per_decade": 6.806364,
         "p_value": 2.186e-05,
         "significant_p05": true,
         "serial_correlation_adjusted": false,
@@ -506,7 +506,7 @@
       "baseline_mean": 46.0353,
       "trend": {
         "method": "Sen slope with Mann-Kendall",
-        "slope_per_decade": -0.511167,
+        "slope_per_decade": -0.511233,
         "p_value": 0.012505,
         "significant_p05": true,
         "serial_correlation_adjusted": false,

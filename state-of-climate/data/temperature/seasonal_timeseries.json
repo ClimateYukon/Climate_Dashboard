@@ -1,7 +1,7 @@
 {
   "theme": "temperature",
   "region": "Yukon",
-  "spatial_summary": "Area-weighted mean across the Yukon admin-1 boundary (Natural Earth 1:10m)",
+  "spatial_summary": "Area-weighted mean across the true Yukon boundary",
   "weighting": "Each ERA5-Land grid cell is weighted by the actual area of that cell lying inside Yukon.",
   "period": "1951–2025",
   "baseline": "1961–1990",
@@ -28,7 +28,7 @@
           "baseline_mean": -23.0102,
           "trend": {
             "method": "OLS linear trend with lag-1 HAC uncertainty",
-            "slope_per_decade": 0.68225,
+            "slope_per_decade": 0.682251,
             "p_value": 0.0,
             "significant_p05": true
           },
@@ -270,7 +270,7 @@
           "trend": {
             "method": "OLS linear trend with lag-1 HAC uncertainty",
             "slope_per_decade": 0.328973,
-            "p_value": 2.698e-05,
+            "p_value": 2.697e-05,
             "significant_p05": true
           },
           "years": [
@@ -751,8 +751,8 @@
           "baseline_mean": -7.4395,
           "trend": {
             "method": "OLS linear trend with lag-1 HAC uncertainty",
-            "slope_per_decade": 0.296688,
-            "p_value": 0.00030017,
+            "slope_per_decade": 0.296687,
+            "p_value": 0.00030014,
             "significant_p05": true
           },
           "years": [
@@ -1240,8 +1240,8 @@
           "baseline_mean": -2.0733,
           "trend": {
             "method": "OLS linear trend with lag-1 HAC uncertainty",
-            "slope_per_decade": 0.312539,
-            "p_value": 6.809e-05,
+            "slope_per_decade": 0.312538,
+            "p_value": 6.81e-05,
             "significant_p05": true
           },
           "years": [
@@ -1481,7 +1481,7 @@
           "baseline_mean": 14.3918,
           "trend": {
             "method": "OLS linear trend with lag-1 HAC uncertainty",
-            "slope_per_decade": 0.213001,
+            "slope_per_decade": 0.213002,
             "p_value": 7.983e-05,
             "significant_p05": true
           },
@@ -1722,8 +1722,8 @@
           "baseline_mean": -3.7086,
           "trend": {
             "method": "OLS linear trend with lag-1 HAC uncertainty",
-            "slope_per_decade": 0.235991,
-            "p_value": 0.00304789,
+            "slope_per_decade": 0.235992,
+            "p_value": 0.00304787,
             "significant_p05": true
           },
           "years": [
@@ -1970,7 +1970,7 @@
           "baseline_mean": -25.7339,
           "trend": {
             "method": "OLS linear trend with lag-1 HAC uncertainty",
-            "slope_per_decade": 0.689152,
+            "slope_per_decade": 0.68915,
             "p_value": 0.0,
             "significant_p05": true
           },
@@ -2211,8 +2211,8 @@
           "baseline_mean": -10.6866,
           "trend": {
             "method": "OLS linear trend with lag-1 HAC uncertainty",
-            "slope_per_decade": 0.3287,
-            "p_value": 1.864e-05,
+            "slope_per_decade": 0.328702,
+            "p_value": 1.863e-05,
             "significant_p05": true
           },
           "years": [
@@ -2452,7 +2452,7 @@
           "baseline_mean": 5.6579,
           "trend": {
             "method": "OLS linear trend with lag-1 HAC uncertainty",
-            "slope_per_decade": 0.268329,
+            "slope_per_decade": 0.26833,
             "p_value": 0.0,
             "significant_p05": true
           },
@@ -2693,7 +2693,7 @@
           "baseline_mean": -10.3549,
           "trend": {
             "method": "OLS linear trend with lag-1 HAC uncertainty",
-            "slope_per_decade": 0.347975,
+            "slope_per_decade": 0.347976,
             "p_value": 4.374e-05,
             "significant_p05": true
           },

@@ -36,132 +36,132 @@
     "total-precipitation": {
       "label": "Total precipitation",
       "unit": "mm per decade",
-      "standardization_scale": 21.167577,
+      "standardization_scale": 21.1676,
       "communities": {
         "Old Crow": {
-          "slope_per_decade": -0.255045,
-          "standardized": -0.012049,
-          "p_value": 0.94165598,
-          "q_value": 0.94165598,
+          "slope_per_decade": -0.255,
+          "standardized": -0.012,
+          "p_value": 0.941656,
+          "q_value": 0.941656,
           "significant_fdr": false
         },
         "Dawson City": {
           "slope_per_decade": 6.8346,
-          "standardized": 0.322881,
-          "p_value": 0.03156175,
-          "q_value": 0.0516465,
+          "standardized": 0.3229,
+          "p_value": 0.031562,
+          "q_value": 0.051646,
           "significant_fdr": false
         },
         "Mayo": {
-          "slope_per_decade": 10.582031,
-          "standardized": 0.499917,
-          "p_value": 0.00211263,
-          "q_value": 0.00760547,
+          "slope_per_decade": 10.582,
+          "standardized": 0.4999,
+          "p_value": 0.002113,
+          "q_value": 0.007605,
           "significant_fdr": true
         },
         "Pelly Crossing": {
-          "slope_per_decade": 9.168103,
-          "standardized": 0.43312,
-          "p_value": 0.00124028,
-          "q_value": 0.00558126,
+          "slope_per_decade": 9.1681,
+          "standardized": 0.4331,
+          "p_value": 0.00124,
+          "q_value": 0.005581,
           "significant_fdr": true
         },
         "Faro": {
-          "slope_per_decade": 8.13623,
-          "standardized": 0.384372,
-          "p_value": 0.00735045,
-          "q_value": 0.01323081,
+          "slope_per_decade": 8.1362,
+          "standardized": 0.3844,
+          "p_value": 0.00735,
+          "q_value": 0.013231,
           "significant_fdr": true
         },
         "Carmacks": {
-          "slope_per_decade": 9.411086,
-          "standardized": 0.444599,
-          "p_value": 0.00351834,
-          "q_value": 0.00904716,
+          "slope_per_decade": 9.4111,
+          "standardized": 0.4446,
+          "p_value": 0.003518,
+          "q_value": 0.009047,
           "significant_fdr": true
         },
         "Ross River": {
-          "slope_per_decade": 5.14075,
-          "standardized": 0.24286,
-          "p_value": 0.04225644,
-          "q_value": 0.05850892,
+          "slope_per_decade": 5.1407,
+          "standardized": 0.2429,
+          "p_value": 0.042256,
+          "q_value": 0.058509,
           "significant_fdr": false
         },
         "Beaver Creek": {
-          "slope_per_decade": 12.508095,
-          "standardized": 0.590908,
-          "p_value": 0.00089716,
-          "q_value": 0.00538296,
+          "slope_per_decade": 12.5081,
+          "standardized": 0.5909,
+          "p_value": 0.000897,
+          "q_value": 0.005383,
           "significant_fdr": true
         },
         "Burwash Landing": {
-          "slope_per_decade": 21.167577,
+          "slope_per_decade": 21.1676,
           "standardized": 1.0,
-          "p_value": 1.19e-06,
-          "q_value": 2.142e-05,
+          "p_value": 1e-06,
+          "q_value": 2.1e-05,
           "significant_fdr": true
         },
         "Destruction Bay": {
-          "slope_per_decade": 20.589757,
-          "standardized": 0.972703,
-          "p_value": 1.278e-05,
-          "q_value": 0.00011502,
+          "slope_per_decade": 20.5898,
+          "standardized": 0.9727,
+          "p_value": 1.3e-05,
+          "q_value": 0.000115,
           "significant_fdr": true
         },
         "Haines Junction": {
-          "slope_per_decade": 16.128191,
-          "standardized": 0.761929,
-          "p_value": 0.00331729,
-          "q_value": 0.00904716,
+          "slope_per_decade": 16.1282,
+          "standardized": 0.7619,
+          "p_value": 0.003317,
+          "q_value": 0.009047,
           "significant_fdr": true
         },
         "Mendenhall": {
-          "slope_per_decade": 11.033167,
-          "standardized": 0.52123,
-          "p_value": 0.00469991,
-          "q_value": 0.00939982,
+          "slope_per_decade": 11.0331,
+          "standardized": 0.5212,
+          "p_value": 0.0047,
+          "q_value": 0.0094,
           "significant_fdr": true
         },
         "Whitehorse": {
-          "slope_per_decade": 11.511048,
-          "standardized": 0.543806,
-          "p_value": 0.0041898,
-          "q_value": 0.00939982,
+          "slope_per_decade": 11.511,
+          "standardized": 0.5438,
+          "p_value": 0.00419,
+          "q_value": 0.0094,
           "significant_fdr": true
         },
         "Carcross": {
           "slope_per_decade": 8.0067,
-          "standardized": 0.378253,
-          "p_value": 0.0959043,
-          "q_value": 0.11206172,
+          "standardized": 0.3783,
+          "p_value": 0.095904,
+          "q_value": 0.112062,
           "significant_fdr": false
         },
         "Tagish": {
-          "slope_per_decade": 8.30065,
-          "standardized": 0.39214,
-          "p_value": 0.06593497,
-          "q_value": 0.08477353,
+          "slope_per_decade": 8.3006,
+          "standardized": 0.3921,
+          "p_value": 0.065935,
+          "q_value": 0.084774,
           "significant_fdr": false
         },
         "Johnson's Crossing": {
           "slope_per_decade": 7.2092,
-          "standardized": 0.340577,
-          "p_value": 0.09961042,
-          "q_value": 0.11206172,
+          "standardized": 0.3406,
+          "p_value": 0.09961,
+          "q_value": 0.112062,
           "significant_fdr": false
         },
         "Teslin": {
-          "slope_per_decade": 6.780757,
-          "standardized": 0.320337,
-          "p_value": 0.03982352,
-          "q_value": 0.05850892,
+          "slope_per_decade": 6.7807,
+          "standardized": 0.3203,
+          "p_value": 0.039824,
+          "q_value": 0.058509,
           "significant_fdr": false
         },
         "Watson Lake": {
           "slope_per_decade": 4.227,
-          "standardized": 0.199692,
-          "p_value": 0.35548265,
-          "q_value": 0.37639339,
+          "standardized": 0.1997,
+          "p_value": 0.355483,
+          "q_value": 0.376393,
           "significant_fdr": false
         }
       }
@@ -172,129 +172,129 @@
       "standardization_scale": 17.4028,
       "communities": {
         "Old Crow": {
-          "slope_per_decade": 1.438129,
-          "standardized": 0.082638,
-          "p_value": 0.58935808,
-          "q_value": 0.58935808,
+          "slope_per_decade": 1.4381,
+          "standardized": 0.0826,
+          "p_value": 0.589358,
+          "q_value": 0.589358,
           "significant_fdr": false
         },
         "Dawson City": {
-          "slope_per_decade": 5.525298,
-          "standardized": 0.317495,
-          "p_value": 0.04043446,
-          "q_value": 0.05070773,
+          "slope_per_decade": 5.5253,
+          "standardized": 0.3175,
+          "p_value": 0.040434,
+          "q_value": 0.050708,
           "significant_fdr": false
         },
         "Mayo": {
-          "slope_per_decade": 7.175022,
-          "standardized": 0.412291,
-          "p_value": 6.736e-05,
-          "q_value": 0.00024847,
+          "slope_per_decade": 7.175,
+          "standardized": 0.4123,
+          "p_value": 6.7e-05,
+          "q_value": 0.000248,
           "significant_fdr": true
         },
         "Pelly Crossing": {
-          "slope_per_decade": 6.070211,
-          "standardized": 0.348807,
-          "p_value": 0.02746751,
-          "q_value": 0.04120127,
+          "slope_per_decade": 6.0702,
+          "standardized": 0.3488,
+          "p_value": 0.027468,
+          "q_value": 0.041201,
           "significant_fdr": true
         },
         "Faro": {
-          "slope_per_decade": 6.204889,
-          "standardized": 0.356545,
-          "p_value": 0.00937144,
-          "q_value": 0.01533508,
+          "slope_per_decade": 6.2049,
+          "standardized": 0.3565,
+          "p_value": 0.009371,
+          "q_value": 0.015335,
           "significant_fdr": true
         },
         "Carmacks": {
-          "slope_per_decade": 6.601088,
-          "standardized": 0.379312,
-          "p_value": 0.00755386,
-          "q_value": 0.01359695,
+          "slope_per_decade": 6.6011,
+          "standardized": 0.3793,
+          "p_value": 0.007554,
+          "q_value": 0.013597,
           "significant_fdr": true
         },
         "Ross River": {
-          "slope_per_decade": 4.756658,
-          "standardized": 0.273327,
-          "p_value": 0.04225644,
-          "q_value": 0.05070773,
+          "slope_per_decade": 4.7567,
+          "standardized": 0.2733,
+          "p_value": 0.042256,
+          "q_value": 0.050708,
           "significant_fdr": false
         },
         "Beaver Creek": {
           "slope_per_decade": 10.1738,
-          "standardized": 0.584607,
-          "p_value": 0.00150064,
-          "q_value": 0.00300128,
+          "standardized": 0.5846,
+          "p_value": 0.001501,
+          "q_value": 0.003001,
           "significant_fdr": true
         },
         "Burwash Landing": {
           "slope_per_decade": 17.4028,
           "standardized": 1.0,
-          "p_value": 1.5e-07,
-          "q_value": 1.62e-06,
+          "p_value": 0.0,
+          "q_value": 2e-06,
           "significant_fdr": true
         },
         "Destruction Bay": {
-          "slope_per_decade": 17.146167,
-          "standardized": 0.985253,
-          "p_value": 1.8e-07,
-          "q_value": 1.62e-06,
+          "slope_per_decade": 17.1462,
+          "standardized": 0.9853,
+          "p_value": 0.0,
+          "q_value": 2e-06,
           "significant_fdr": true
         },
         "Haines Junction": {
-          "slope_per_decade": 13.769581,
-          "standardized": 0.791228,
-          "p_value": 1.19e-06,
-          "q_value": 7.14e-06,
+          "slope_per_decade": 13.7696,
+          "standardized": 0.7912,
+          "p_value": 1e-06,
+          "q_value": 7e-06,
           "significant_fdr": true
         },
         "Mendenhall": {
-          "slope_per_decade": 9.59335,
-          "standardized": 0.551253,
-          "p_value": 0.00021124,
-          "q_value": 0.00063372,
+          "slope_per_decade": 9.5933,
+          "standardized": 0.5513,
+          "p_value": 0.000211,
+          "q_value": 0.000634,
           "significant_fdr": true
         },
         "Whitehorse": {
-          "slope_per_decade": 11.030067,
-          "standardized": 0.63381,
-          "p_value": 0.00028125,
-          "q_value": 0.00072321,
+          "slope_per_decade": 11.0301,
+          "standardized": 0.6338,
+          "p_value": 0.000281,
+          "q_value": 0.000723,
           "significant_fdr": true
         },
         "Carcross": {
-          "slope_per_decade": 10.977792,
-          "standardized": 0.630806,
-          "p_value": 6.902e-05,
-          "q_value": 0.00024847,
+          "slope_per_decade": 10.9778,
+          "standardized": 0.6308,
+          "p_value": 6.9e-05,
+          "q_value": 0.000248,
           "significant_fdr": true
         },
         "Tagish": {
-          "slope_per_decade": 8.510943,
-          "standardized": 0.489056,
-          "p_value": 0.00124028,
-          "q_value": 0.00279063,
+          "slope_per_decade": 8.5109,
+          "standardized": 0.4891,
+          "p_value": 0.00124,
+          "q_value": 0.002791,
           "significant_fdr": true
         },
         "Johnson's Crossing": {
-          "slope_per_decade": 6.141278,
-          "standardized": 0.35289,
-          "p_value": 0.03084505,
-          "q_value": 0.04270853,
+          "slope_per_decade": 6.1413,
+          "standardized": 0.3529,
+          "p_value": 0.030845,
+          "q_value": 0.042709,
           "significant_fdr": true
         },
         "Teslin": {
-          "slope_per_decade": 5.168821,
-          "standardized": 0.297011,
-          "p_value": 0.07745008,
-          "q_value": 0.08713134,
+          "slope_per_decade": 5.1688,
+          "standardized": 0.297,
+          "p_value": 0.07745,
+          "q_value": 0.087131,
           "significant_fdr": false
         },
         "Watson Lake": {
-          "slope_per_decade": 2.67702,
-          "standardized": 0.153827,
-          "p_value": 0.44765367,
-          "q_value": 0.47398624,
+          "slope_per_decade": 2.677,
+          "standardized": 0.1538,
+          "p_value": 0.447654,
+          "q_value": 0.473986,
           "significant_fdr": false
         }
       }
@@ -302,132 +302,132 @@
     "wet-days": {
       "label": "Wet days",
       "unit": "days per decade",
-      "standardization_scale": 2.340426,
+      "standardization_scale": 2.3404,
       "communities": {
         "Old Crow": {
-          "slope_per_decade": 0.333333,
-          "standardized": 0.142424,
-          "p_value": 0.51848052,
-          "q_value": 0.58329058,
+          "slope_per_decade": 0.3333,
+          "standardized": 0.1424,
+          "p_value": 0.518481,
+          "q_value": 0.583291,
           "significant_fdr": false
         },
         "Dawson City": {
-          "slope_per_decade": 1.052632,
-          "standardized": 0.449761,
-          "p_value": 0.18588771,
-          "q_value": 0.27883157,
+          "slope_per_decade": 1.0526,
+          "standardized": 0.4498,
+          "p_value": 0.185888,
+          "q_value": 0.278832,
           "significant_fdr": false
         },
         "Mayo": {
           "slope_per_decade": 1.25,
-          "standardized": 0.534091,
-          "p_value": 0.14795043,
-          "q_value": 0.2421007,
+          "standardized": 0.5341,
+          "p_value": 0.14795,
+          "q_value": 0.242101,
           "significant_fdr": false
         },
         "Pelly Crossing": {
-          "slope_per_decade": 2.195122,
-          "standardized": 0.937916,
-          "p_value": 0.02333013,
-          "q_value": 0.05249279,
+          "slope_per_decade": 2.1951,
+          "standardized": 0.9379,
+          "p_value": 0.02333,
+          "q_value": 0.052493,
           "significant_fdr": false
         },
         "Faro": {
-          "slope_per_decade": 1.639344,
-          "standardized": 0.700447,
-          "p_value": 0.06909978,
-          "q_value": 0.1243796,
+          "slope_per_decade": 1.6393,
+          "standardized": 0.7004,
+          "p_value": 0.0691,
+          "q_value": 0.12438,
           "significant_fdr": false
         },
         "Carmacks": {
-          "slope_per_decade": 1.803279,
-          "standardized": 0.770492,
-          "p_value": 0.02184384,
-          "q_value": 0.05249279,
+          "slope_per_decade": 1.8033,
+          "standardized": 0.7705,
+          "p_value": 0.021844,
+          "q_value": 0.052493,
           "significant_fdr": false
         },
         "Ross River": {
-          "slope_per_decade": 1.481481,
-          "standardized": 0.632996,
-          "p_value": 0.06239027,
-          "q_value": 0.1243796,
+          "slope_per_decade": 1.4815,
+          "standardized": 0.633,
+          "p_value": 0.06239,
+          "q_value": 0.12438,
           "significant_fdr": false
         },
         "Beaver Creek": {
-          "slope_per_decade": 1.935484,
-          "standardized": 0.826979,
-          "p_value": 0.00643788,
-          "q_value": 0.02897046,
+          "slope_per_decade": 1.9355,
+          "standardized": 0.827,
+          "p_value": 0.006438,
+          "q_value": 0.02897,
           "significant_fdr": true
         },
         "Burwash Landing": {
           "slope_per_decade": 2.25,
-          "standardized": 0.961363,
-          "p_value": 0.00158003,
-          "q_value": 0.01422027,
+          "standardized": 0.9614,
+          "p_value": 0.00158,
+          "q_value": 0.01422,
           "significant_fdr": true
         },
         "Destruction Bay": {
-          "slope_per_decade": 2.340426,
+          "slope_per_decade": 2.3404,
           "standardized": 1.0,
-          "p_value": 0.00124838,
-          "q_value": 0.01422027,
+          "p_value": 0.001248,
+          "q_value": 0.01422,
           "significant_fdr": true
         },
         "Haines Junction": {
-          "slope_per_decade": 2.264151,
-          "standardized": 0.96741,
-          "p_value": 0.00884676,
-          "q_value": 0.03184834,
+          "slope_per_decade": 2.2642,
+          "standardized": 0.9674,
+          "p_value": 0.008847,
+          "q_value": 0.031848,
           "significant_fdr": true
         },
         "Mendenhall": {
           "slope_per_decade": 2.0,
-          "standardized": 0.854545,
-          "p_value": 0.00274149,
-          "q_value": 0.01644894,
+          "standardized": 0.8545,
+          "p_value": 0.002741,
+          "q_value": 0.016449,
           "significant_fdr": true
         },
         "Whitehorse": {
-          "slope_per_decade": 1.956522,
-          "standardized": 0.835968,
-          "p_value": 0.01376223,
-          "q_value": 0.04128669,
+          "slope_per_decade": 1.9565,
+          "standardized": 0.836,
+          "p_value": 0.013762,
+          "q_value": 0.041287,
           "significant_fdr": true
         },
         "Carcross": {
-          "slope_per_decade": 0.576923,
-          "standardized": 0.246503,
-          "p_value": 0.49816012,
-          "q_value": 0.58329058,
+          "slope_per_decade": 0.5769,
+          "standardized": 0.2465,
+          "p_value": 0.49816,
+          "q_value": 0.583291,
           "significant_fdr": false
         },
         "Tagish": {
-          "slope_per_decade": 0.857143,
-          "standardized": 0.366234,
-          "p_value": 0.20645895,
-          "q_value": 0.28586624,
+          "slope_per_decade": 0.8571,
+          "standardized": 0.3662,
+          "p_value": 0.206459,
+          "q_value": 0.285866,
           "significant_fdr": false
         },
         "Johnson's Crossing": {
-          "slope_per_decade": 0.983607,
-          "standardized": 0.420268,
-          "p_value": 0.29038162,
-          "q_value": 0.3733478,
+          "slope_per_decade": 0.9836,
+          "standardized": 0.4203,
+          "p_value": 0.290382,
+          "q_value": 0.373348,
           "significant_fdr": false
         },
         "Teslin": {
-          "slope_per_decade": 0.416667,
-          "standardized": 0.17803,
-          "p_value": 0.6905005,
-          "q_value": 0.73111818,
+          "slope_per_decade": 0.4167,
+          "standardized": 0.178,
+          "p_value": 0.6905,
+          "q_value": 0.731118,
           "significant_fdr": false
         },
         "Watson Lake": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.93067595,
-          "q_value": 0.93067595,
+          "standardized": -0.0,
+          "p_value": 0.930676,
+          "q_value": 0.930676,
           "significant_fdr": false
         }
       }
@@ -435,132 +435,132 @@
     "heavy-precipitation-days": {
       "label": "Heavy precipitation days",
       "unit": "days per decade",
-      "standardization_scale": 0.606061,
+      "standardization_scale": 0.6061,
       "communities": {
         "Old Crow": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.8021932,
-          "q_value": 0.8021932,
+          "standardized": -0.0,
+          "p_value": 0.802193,
+          "q_value": 0.802193,
           "significant_fdr": false
         },
         "Dawson City": {
-          "slope_per_decade": 0.238095,
-          "standardized": 0.392856,
-          "p_value": 0.01591094,
-          "q_value": 0.04091385,
+          "slope_per_decade": 0.2381,
+          "standardized": 0.3929,
+          "p_value": 0.015911,
+          "q_value": 0.040914,
           "significant_fdr": true
         },
         "Mayo": {
-          "slope_per_decade": 0.243902,
-          "standardized": 0.402438,
-          "p_value": 0.00669456,
-          "q_value": 0.02008368,
+          "slope_per_decade": 0.2439,
+          "standardized": 0.4024,
+          "p_value": 0.006695,
+          "q_value": 0.020084,
           "significant_fdr": true
         },
         "Pelly Crossing": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.12254106,
-          "q_value": 0.15755279,
+          "standardized": -0.0,
+          "p_value": 0.122541,
+          "q_value": 0.157553,
           "significant_fdr": false
         },
         "Faro": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.1425521,
-          "q_value": 0.17106252,
+          "standardized": -0.0,
+          "p_value": 0.142552,
+          "q_value": 0.171063,
           "significant_fdr": false
         },
         "Carmacks": {
-          "slope_per_decade": 0.333333,
-          "standardized": 0.549999,
-          "p_value": 0.00244152,
-          "q_value": 0.00878947,
+          "slope_per_decade": 0.3333,
+          "standardized": 0.55,
+          "p_value": 0.002442,
+          "q_value": 0.008789,
           "significant_fdr": true
         },
         "Ross River": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.63057334,
-          "q_value": 0.66766589,
+          "standardized": -0.0,
+          "p_value": 0.630573,
+          "q_value": 0.667666,
           "significant_fdr": false
         },
         "Beaver Creek": {
-          "slope_per_decade": 0.263158,
-          "standardized": 0.43421,
-          "p_value": 0.09685155,
-          "q_value": 0.13410215,
+          "slope_per_decade": 0.2632,
+          "standardized": 0.4342,
+          "p_value": 0.096852,
+          "q_value": 0.134102,
           "significant_fdr": false
         },
         "Burwash Landing": {
-          "slope_per_decade": 0.576923,
-          "standardized": 0.951922,
-          "p_value": 0.00018753,
-          "q_value": 0.00337554,
+          "slope_per_decade": 0.5769,
+          "standardized": 0.9519,
+          "p_value": 0.000188,
+          "q_value": 0.003376,
           "significant_fdr": true
         },
         "Destruction Bay": {
-          "slope_per_decade": 0.606061,
+          "slope_per_decade": 0.6061,
           "standardized": 1.0,
           "p_value": 0.001226,
           "q_value": 0.007356,
           "significant_fdr": true
         },
         "Haines Junction": {
-          "slope_per_decade": 0.588235,
-          "standardized": 0.970587,
-          "p_value": 0.00234992,
-          "q_value": 0.00878947,
+          "slope_per_decade": 0.5882,
+          "standardized": 0.9706,
+          "p_value": 0.00235,
+          "q_value": 0.008789,
           "significant_fdr": true
         },
         "Mendenhall": {
-          "slope_per_decade": 0.277778,
-          "standardized": 0.458333,
-          "p_value": 0.04156663,
-          "q_value": 0.07481993,
+          "slope_per_decade": 0.2778,
+          "standardized": 0.4583,
+          "p_value": 0.041567,
+          "q_value": 0.07482,
           "significant_fdr": false
         },
         "Whitehorse": {
-          "slope_per_decade": 0.454545,
-          "standardized": 0.749999,
-          "p_value": 0.00117461,
+          "slope_per_decade": 0.4545,
+          "standardized": 0.75,
+          "p_value": 0.001175,
           "q_value": 0.007356,
           "significant_fdr": true
         },
         "Carcross": {
-          "slope_per_decade": 0.37037,
-          "standardized": 0.61111,
-          "p_value": 0.02418269,
-          "q_value": 0.05441105,
+          "slope_per_decade": 0.3704,
+          "standardized": 0.6111,
+          "p_value": 0.024183,
+          "q_value": 0.054411,
           "significant_fdr": false
         },
         "Tagish": {
-          "slope_per_decade": 0.227273,
+          "slope_per_decade": 0.2273,
           "standardized": 0.375,
-          "p_value": 0.05907507,
-          "q_value": 0.0938949,
+          "p_value": 0.059075,
+          "q_value": 0.093895,
           "significant_fdr": false
         },
         "Johnson's Crossing": {
-          "slope_per_decade": 0.307692,
-          "standardized": 0.507691,
-          "p_value": 0.03390265,
-          "q_value": 0.0678053,
+          "slope_per_decade": 0.3077,
+          "standardized": 0.5077,
+          "p_value": 0.033903,
+          "q_value": 0.067805,
           "significant_fdr": false
         },
         "Teslin": {
-          "slope_per_decade": 0.232558,
-          "standardized": 0.38372,
-          "p_value": 0.0625966,
-          "q_value": 0.0938949,
+          "slope_per_decade": 0.2326,
+          "standardized": 0.3837,
+          "p_value": 0.062597,
+          "q_value": 0.093895,
           "significant_fdr": false
         },
         "Watson Lake": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.49614395,
-          "q_value": 0.55816194,
+          "standardized": -0.0,
+          "p_value": 0.496144,
+          "q_value": 0.558162,
           "significant_fdr": false
         }
       }
@@ -572,128 +572,128 @@
       "communities": {
         "Old Crow": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.31309277,
-          "q_value": 0.64250344,
+          "standardized": -0.0,
+          "p_value": 0.313093,
+          "q_value": 0.642503,
           "significant_fdr": false
         },
         "Dawson City": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.32125172,
-          "q_value": 0.64250344,
+          "standardized": -0.0,
+          "p_value": 0.321252,
+          "q_value": 0.642503,
           "significant_fdr": false
         },
         "Mayo": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.63999556,
-          "q_value": 0.76799467,
+          "standardized": -0.0,
+          "p_value": 0.639996,
+          "q_value": 0.767995,
           "significant_fdr": false
         },
         "Pelly Crossing": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.01139434,
-          "q_value": 0.06836604,
+          "standardized": -0.0,
+          "p_value": 0.011394,
+          "q_value": 0.068366,
           "significant_fdr": false
         },
         "Faro": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.57775267,
-          "q_value": 0.76799467,
+          "standardized": -0.0,
+          "p_value": 0.577753,
+          "q_value": 0.767995,
           "significant_fdr": false
         },
         "Carmacks": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.9179718,
-          "q_value": 0.9179718,
+          "standardized": -0.0,
+          "p_value": 0.917972,
+          "q_value": 0.917972,
           "significant_fdr": false
         },
         "Ross River": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.60898302,
-          "q_value": 0.76799467,
+          "standardized": -0.0,
+          "p_value": 0.608983,
+          "q_value": 0.767995,
           "significant_fdr": false
         },
         "Beaver Creek": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.82856515,
-          "q_value": 0.9179718,
+          "standardized": -0.0,
+          "p_value": 0.828565,
+          "q_value": 0.917972,
           "significant_fdr": false
         },
         "Burwash Landing": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.00467242,
-          "q_value": 0.04205178,
+          "standardized": -0.0,
+          "p_value": 0.004672,
+          "q_value": 0.042052,
           "significant_fdr": true
         },
         "Destruction Bay": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.00332081,
-          "q_value": 0.04205178,
+          "standardized": -0.0,
+          "p_value": 0.003321,
+          "q_value": 0.042052,
           "significant_fdr": true
         },
         "Haines Junction": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.20560414,
-          "q_value": 0.64250344,
+          "standardized": -0.0,
+          "p_value": 0.205604,
+          "q_value": 0.642503,
           "significant_fdr": false
         },
         "Mendenhall": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.10350414,
-          "q_value": 0.46576863,
+          "standardized": -0.0,
+          "p_value": 0.103504,
+          "q_value": 0.465769,
           "significant_fdr": false
         },
         "Whitehorse": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.27403544,
-          "q_value": 0.64250344,
+          "standardized": -0.0,
+          "p_value": 0.274035,
+          "q_value": 0.642503,
           "significant_fdr": false
         },
         "Carcross": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.88383101,
-          "q_value": 0.9179718,
+          "standardized": -0.0,
+          "p_value": 0.883831,
+          "q_value": 0.917972,
           "significant_fdr": false
         },
         "Tagish": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.52123347,
-          "q_value": 0.76799467,
+          "standardized": -0.0,
+          "p_value": 0.521233,
+          "q_value": 0.767995,
           "significant_fdr": false
         },
         "Johnson's Crossing": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.51507332,
-          "q_value": 0.76799467,
+          "standardized": -0.0,
+          "p_value": 0.515073,
+          "q_value": 0.767995,
           "significant_fdr": false
         },
         "Teslin": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.25047069,
-          "q_value": 0.64250344,
+          "standardized": -0.0,
+          "p_value": 0.250471,
+          "q_value": 0.642503,
           "significant_fdr": false
         },
         "Watson Lake": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.39228792,
-          "q_value": 0.70611826,
+          "standardized": -0.0,
+          "p_value": 0.392288,
+          "q_value": 0.706118,
           "significant_fdr": false
         }
       }
@@ -701,104 +701,104 @@
     "maximum-1-day-precipitation": {
       "label": "Maximum 1-day precipitation",
       "unit": "mm per decade",
-      "standardization_scale": 0.873571,
+      "standardization_scale": 0.8735,
       "communities": {
         "Old Crow": {
-          "slope_per_decade": -0.428977,
-          "standardized": -0.491061,
-          "p_value": 0.14724926,
-          "q_value": 0.37864095,
+          "slope_per_decade": -0.429,
+          "standardized": -0.4911,
+          "p_value": 0.147249,
+          "q_value": 0.378641,
           "significant_fdr": false
         },
         "Dawson City": {
-          "slope_per_decade": 0.177952,
-          "standardized": 0.203706,
-          "p_value": 0.37485675,
-          "q_value": 0.61340195,
+          "slope_per_decade": 0.1779,
+          "standardized": 0.2037,
+          "p_value": 0.374857,
+          "q_value": 0.613402,
           "significant_fdr": false
         },
         "Mayo": {
-          "slope_per_decade": 0.48737,
-          "standardized": 0.557905,
-          "p_value": 0.03229269,
-          "q_value": 0.21701214,
+          "slope_per_decade": 0.4874,
+          "standardized": 0.558,
+          "p_value": 0.032293,
+          "q_value": 0.217012,
           "significant_fdr": false
         },
         "Pelly Crossing": {
-          "slope_per_decade": 0.689475,
-          "standardized": 0.78926,
-          "p_value": 0.01871366,
-          "q_value": 0.21701214,
+          "slope_per_decade": 0.6895,
+          "standardized": 0.7893,
+          "p_value": 0.018714,
+          "q_value": 0.217012,
           "significant_fdr": false
         },
         "Faro": {
-          "slope_per_decade": 0.258258,
-          "standardized": 0.295635,
-          "p_value": 0.34603691,
-          "q_value": 0.61340195,
+          "slope_per_decade": 0.2583,
+          "standardized": 0.2957,
+          "p_value": 0.346037,
+          "q_value": 0.613402,
           "significant_fdr": false
         },
         "Carmacks": {
-          "slope_per_decade": 0.40785,
-          "standardized": 0.466877,
-          "p_value": 0.07295333,
-          "q_value": 0.2843937,
+          "slope_per_decade": 0.4078,
+          "standardized": 0.4669,
+          "p_value": 0.072953,
+          "q_value": 0.284394,
           "significant_fdr": false
         },
         "Ross River": {
-          "slope_per_decade": 0.101758,
-          "standardized": 0.116485,
-          "p_value": 0.71440732,
-          "q_value": 0.78553258,
+          "slope_per_decade": 0.1018,
+          "standardized": 0.1165,
+          "p_value": 0.714407,
+          "q_value": 0.785533,
           "significant_fdr": false
         },
         "Beaver Creek": {
-          "slope_per_decade": -0.143687,
-          "standardized": -0.164482,
-          "p_value": 0.57056999,
-          "q_value": 0.68468399,
+          "slope_per_decade": -0.1437,
+          "standardized": -0.1645,
+          "p_value": 0.57057,
+          "q_value": 0.684684,
           "significant_fdr": false
         },
         "Burwash Landing": {
-          "slope_per_decade": 0.71132,
-          "standardized": 0.814267,
-          "p_value": 0.07899825,
-          "q_value": 0.2843937,
+          "slope_per_decade": 0.7113,
+          "standardized": 0.8143,
+          "p_value": 0.078998,
+          "q_value": 0.284394,
           "significant_fdr": false
         },
         "Destruction Bay": {
-          "slope_per_decade": 0.873571,
+          "slope_per_decade": 0.8735,
           "standardized": 1.0,
-          "p_value": 0.03616869,
-          "q_value": 0.21701214,
+          "p_value": 0.036169,
+          "q_value": 0.217012,
           "significant_fdr": false
         },
         "Haines Junction": {
-          "slope_per_decade": 0.84554,
-          "standardized": 0.967912,
-          "p_value": 0.18770586,
-          "q_value": 0.42233818,
+          "slope_per_decade": 0.8455,
+          "standardized": 0.968,
+          "p_value": 0.187706,
+          "q_value": 0.422338,
           "significant_fdr": false
         },
         "Mendenhall": {
-          "slope_per_decade": 0.640308,
-          "standardized": 0.732978,
-          "p_value": 0.10150586,
-          "q_value": 0.30451758,
+          "slope_per_decade": 0.6403,
+          "standardized": 0.733,
+          "p_value": 0.101506,
+          "q_value": 0.304518,
           "significant_fdr": false
         },
         "Whitehorse": {
-          "slope_per_decade": 0.330433,
-          "standardized": 0.378255,
-          "p_value": 0.24242895,
-          "q_value": 0.4848579,
+          "slope_per_decade": 0.3304,
+          "standardized": 0.3783,
+          "p_value": 0.242429,
+          "q_value": 0.484858,
           "significant_fdr": false
         },
         "Carcross": {
-          "slope_per_decade": -0.116818,
-          "standardized": -0.133725,
-          "p_value": 0.74189188,
-          "q_value": 0.78553258,
+          "slope_per_decade": -0.1168,
+          "standardized": -0.1337,
+          "p_value": 0.741892,
+          "q_value": 0.785533,
           "significant_fdr": false
         },
         "Tagish": {
@@ -810,23 +810,23 @@
         },
         "Johnson's Crossing": {
           "slope_per_decade": 0.1608,
-          "standardized": 0.184072,
-          "p_value": 0.51008966,
-          "q_value": 0.65582956,
+          "standardized": 0.1841,
+          "p_value": 0.51009,
+          "q_value": 0.65583,
           "significant_fdr": false
         },
         "Teslin": {
-          "slope_per_decade": 0.175212,
-          "standardized": 0.20057,
-          "p_value": 0.42077615,
-          "q_value": 0.63116423,
+          "slope_per_decade": 0.1752,
+          "standardized": 0.2006,
+          "p_value": 0.420776,
+          "q_value": 0.631164,
           "significant_fdr": false
         },
         "Watson Lake": {
-          "slope_per_decade": 0.342259,
-          "standardized": 0.391793,
-          "p_value": 0.48115817,
-          "q_value": 0.65582956,
+          "slope_per_decade": 0.3422,
+          "standardized": 0.3918,
+          "p_value": 0.481158,
+          "q_value": 0.65583,
           "significant_fdr": false
         }
       }
@@ -834,132 +834,132 @@
     "maximum-5-day-precipitation": {
       "label": "Maximum 5-day precipitation",
       "unit": "mm per decade",
-      "standardization_scale": 1.812849,
+      "standardization_scale": 1.8128,
       "communities": {
         "Old Crow": {
           "slope_per_decade": -0.9265,
-          "standardized": -0.511074,
-          "p_value": 0.08882349,
-          "q_value": 0.39970571,
+          "standardized": -0.5111,
+          "p_value": 0.088823,
+          "q_value": 0.399706,
           "significant_fdr": false
         },
         "Dawson City": {
-          "slope_per_decade": 0.472345,
-          "standardized": 0.260554,
-          "p_value": 0.25661653,
-          "q_value": 0.47800428,
+          "slope_per_decade": 0.4723,
+          "standardized": 0.2605,
+          "p_value": 0.256617,
+          "q_value": 0.478004,
           "significant_fdr": false
         },
         "Mayo": {
-          "slope_per_decade": 0.392159,
-          "standardized": 0.216322,
-          "p_value": 0.39487026,
-          "q_value": 0.54674344,
+          "slope_per_decade": 0.3922,
+          "standardized": 0.2163,
+          "p_value": 0.39487,
+          "q_value": 0.546743,
           "significant_fdr": false
         },
         "Pelly Crossing": {
-          "slope_per_decade": 0.620943,
-          "standardized": 0.342523,
-          "p_value": 0.19078934,
-          "q_value": 0.47800428,
+          "slope_per_decade": 0.6209,
+          "standardized": 0.3425,
+          "p_value": 0.190789,
+          "q_value": 0.478004,
           "significant_fdr": false
         },
         "Faro": {
-          "slope_per_decade": 0.032759,
-          "standardized": 0.01807,
-          "p_value": 0.96440679,
-          "q_value": 0.96440679,
+          "slope_per_decade": 0.0328,
+          "standardized": 0.0181,
+          "p_value": 0.964407,
+          "q_value": 0.964407,
           "significant_fdr": false
         },
         "Carmacks": {
-          "slope_per_decade": 0.658534,
-          "standardized": 0.363259,
-          "p_value": 0.17283868,
-          "q_value": 0.47800428,
+          "slope_per_decade": 0.6585,
+          "standardized": 0.3633,
+          "p_value": 0.172839,
+          "q_value": 0.478004,
           "significant_fdr": false
         },
         "Ross River": {
-          "slope_per_decade": -0.085154,
-          "standardized": -0.046972,
-          "p_value": 0.8836235,
-          "q_value": 0.93560135,
+          "slope_per_decade": -0.0852,
+          "standardized": -0.047,
+          "p_value": 0.883624,
+          "q_value": 0.935601,
           "significant_fdr": false
         },
         "Beaver Creek": {
           "slope_per_decade": 0.6354,
-          "standardized": 0.350498,
-          "p_value": 0.22543578,
-          "q_value": 0.47800428,
+          "standardized": 0.3505,
+          "p_value": 0.227196,
+          "q_value": 0.478004,
           "significant_fdr": false
         },
         "Burwash Landing": {
-          "slope_per_decade": 1.499903,
-          "standardized": 0.827373,
-          "p_value": 0.02559814,
-          "q_value": 0.27760545,
+          "slope_per_decade": 1.4999,
+          "standardized": 0.8274,
+          "p_value": 0.025598,
+          "q_value": 0.277605,
           "significant_fdr": false
         },
         "Destruction Bay": {
-          "slope_per_decade": 1.812849,
+          "slope_per_decade": 1.8128,
           "standardized": 1.0,
-          "p_value": 0.03084505,
-          "q_value": 0.27760545,
+          "p_value": 0.030845,
+          "q_value": 0.277605,
           "significant_fdr": false
         },
         "Haines Junction": {
-          "slope_per_decade": 1.131471,
-          "standardized": 0.62414,
-          "p_value": 0.27629433,
-          "q_value": 0.47800428,
+          "slope_per_decade": 1.1315,
+          "standardized": 0.6242,
+          "p_value": 0.276294,
+          "q_value": 0.478004,
           "significant_fdr": false
         },
         "Mendenhall": {
-          "slope_per_decade": 0.904586,
-          "standardized": 0.498986,
-          "p_value": 0.06593884,
-          "q_value": 0.39563304,
+          "slope_per_decade": 0.9046,
+          "standardized": 0.499,
+          "p_value": 0.065939,
+          "q_value": 0.395633,
           "significant_fdr": false
         },
         "Whitehorse": {
-          "slope_per_decade": 0.670056,
-          "standardized": 0.369615,
-          "p_value": 0.2134232,
-          "q_value": 0.47800428,
+          "slope_per_decade": 0.6701,
+          "standardized": 0.3696,
+          "p_value": 0.213423,
+          "q_value": 0.478004,
           "significant_fdr": false
         },
         "Carcross": {
-          "slope_per_decade": 0.253771,
-          "standardized": 0.139985,
-          "p_value": 0.72124543,
-          "q_value": 0.81140111,
+          "slope_per_decade": 0.2538,
+          "standardized": 0.14,
+          "p_value": 0.721245,
+          "q_value": 0.811401,
           "significant_fdr": false
         },
         "Tagish": {
-          "slope_per_decade": 0.528103,
-          "standardized": 0.291311,
-          "p_value": 0.31866952,
-          "q_value": 0.47800428,
+          "slope_per_decade": 0.5281,
+          "standardized": 0.2913,
+          "p_value": 0.31867,
+          "q_value": 0.478004,
           "significant_fdr": false
         },
         "Johnson's Crossing": {
-          "slope_per_decade": 0.360697,
-          "standardized": 0.198967,
-          "p_value": 0.44765367,
-          "q_value": 0.57555472,
+          "slope_per_decade": 0.3607,
+          "standardized": 0.199,
+          "p_value": 0.447654,
+          "q_value": 0.575555,
           "significant_fdr": false
         },
         "Teslin": {
-          "slope_per_decade": 0.42431,
-          "standardized": 0.234057,
-          "p_value": 0.30987093,
-          "q_value": 0.47800428,
+          "slope_per_decade": 0.4243,
+          "standardized": 0.2341,
+          "p_value": 0.309871,
+          "q_value": 0.478004,
           "significant_fdr": false
         },
         "Watson Lake": {
-          "slope_per_decade": 0.199486,
-          "standardized": 0.11004,
-          "p_value": 0.65395067,
-          "q_value": 0.7847408,
+          "slope_per_decade": 0.1995,
+          "standardized": 0.11,
+          "p_value": 0.653951,
+          "q_value": 0.784741,
           "significant_fdr": false
         }
       }
@@ -971,91 +971,91 @@
       "communities": {
         "Old Crow": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.87258297,
-          "q_value": 0.92391138,
+          "standardized": -0.0,
+          "p_value": 0.872583,
+          "q_value": 0.923911,
           "significant_fdr": false
         },
         "Dawson City": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.86171966,
-          "q_value": 0.92391138,
+          "standardized": -0.0,
+          "p_value": 0.86172,
+          "q_value": 0.923911,
           "significant_fdr": false
         },
         "Mayo": {
           "slope_per_decade": -0.25,
           "standardized": -0.4,
-          "p_value": 0.40910425,
-          "q_value": 0.73391958,
+          "p_value": 0.409104,
+          "q_value": 0.73392,
           "significant_fdr": false
         },
         "Pelly Crossing": {
           "slope_per_decade": -0.625,
           "standardized": -1.0,
-          "p_value": 0.16497102,
-          "q_value": 0.59389567,
+          "p_value": 0.164971,
+          "q_value": 0.593896,
           "significant_fdr": false
         },
         "Faro": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.41876355,
-          "q_value": 0.73391958,
+          "standardized": -0.0,
+          "p_value": 0.418764,
+          "q_value": 0.73392,
           "significant_fdr": false
         },
         "Carmacks": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.93426268,
-          "q_value": 0.93426268,
+          "standardized": -0.0,
+          "p_value": 0.934263,
+          "q_value": 0.934263,
           "significant_fdr": false
         },
         "Ross River": {
-          "slope_per_decade": -0.588235,
-          "standardized": -0.941176,
-          "p_value": 0.03036843,
-          "q_value": 0.27331587,
+          "slope_per_decade": -0.5882,
+          "standardized": -0.9412,
+          "p_value": 0.030368,
+          "q_value": 0.273316,
           "significant_fdr": false
         },
         "Beaver Creek": {
-          "slope_per_decade": -0.434783,
-          "standardized": -0.695653,
-          "p_value": 0.27718681,
-          "q_value": 0.70730552,
+          "slope_per_decade": -0.4348,
+          "standardized": -0.6957,
+          "p_value": 0.277187,
+          "q_value": 0.707306,
           "significant_fdr": false
         },
         "Burwash Landing": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.58539272,
-          "q_value": 0.7890855,
+          "standardized": -0.0,
+          "p_value": 0.585393,
+          "q_value": 0.789086,
           "significant_fdr": false
         },
         "Destruction Bay": {
-          "slope_per_decade": -0.416667,
-          "standardized": -0.666667,
-          "p_value": 0.21584859,
-          "q_value": 0.64754577,
+          "slope_per_decade": -0.4167,
+          "standardized": -0.6667,
+          "p_value": 0.215849,
+          "q_value": 0.647546,
           "significant_fdr": false
         },
         "Haines Junction": {
-          "slope_per_decade": -0.338983,
-          "standardized": -0.542373,
-          "p_value": 0.1557086,
-          "q_value": 0.59389567,
+          "slope_per_decade": -0.339,
+          "standardized": -0.5424,
+          "p_value": 0.155709,
+          "q_value": 0.593896,
           "significant_fdr": false
         },
         "Mendenhall": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.61373317,
-          "q_value": 0.7890855,
+          "standardized": -0.0,
+          "p_value": 0.613733,
+          "q_value": 0.789086,
           "significant_fdr": false
         },
         "Whitehorse": {
-          "slope_per_decade": -0.138889,
-          "standardized": -0.222222,
+          "slope_per_decade": -0.1389,
+          "standardized": -0.2222,
           "p_value": 0.0,
           "q_value": 0.0,
           "significant_fdr": true
@@ -1063,36 +1063,36 @@
         "Carcross": {
           "slope_per_decade": -0.4,
           "standardized": -0.64,
-          "p_value": 0.07466359,
-          "q_value": 0.44798154,
+          "p_value": 0.074664,
+          "q_value": 0.447982,
           "significant_fdr": false
         },
         "Tagish": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.44850641,
-          "q_value": 0.73391958,
+          "standardized": -0.0,
+          "p_value": 0.448506,
+          "q_value": 0.73392,
           "significant_fdr": false
         },
         "Johnson's Crossing": {
-          "slope_per_decade": -0.188679,
-          "standardized": -0.301886,
-          "p_value": 0.31435801,
-          "q_value": 0.70730552,
+          "slope_per_decade": -0.1887,
+          "standardized": -0.3019,
+          "p_value": 0.314358,
+          "q_value": 0.707306,
           "significant_fdr": false
         },
         "Teslin": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.58805885,
-          "q_value": 0.7890855,
+          "standardized": -0.0,
+          "p_value": 0.588059,
+          "q_value": 0.789086,
           "significant_fdr": false
         },
         "Watson Lake": {
           "slope_per_decade": -0.0,
-          "standardized": 0.0,
-          "p_value": 0.66235146,
-          "q_value": 0.79482175,
+          "standardized": -0.0,
+          "p_value": 0.662351,
+          "q_value": 0.794822,
           "significant_fdr": false
         }
       }
@@ -1100,132 +1100,132 @@
     "snow-fraction": {
       "label": "Fraction of precipitation falling as snow",
       "unit": "percentage points per decade",
-      "standardization_scale": 1.548831,
+      "standardization_scale": 1.5488,
       "communities": {
         "Old Crow": {
-          "slope_per_decade": -0.537018,
-          "standardized": -0.346725,
-          "p_value": 0.19390995,
-          "q_value": 0.2684907,
+          "slope_per_decade": -0.537,
+          "standardized": -0.3467,
+          "p_value": 0.19391,
+          "q_value": 0.268491,
           "significant_fdr": false
         },
         "Dawson City": {
-          "slope_per_decade": -0.210958,
-          "standardized": -0.136205,
-          "p_value": 0.53387365,
-          "q_value": 0.68640898,
+          "slope_per_decade": -0.211,
+          "standardized": -0.1362,
+          "p_value": 0.533874,
+          "q_value": 0.686409,
           "significant_fdr": false
         },
         "Mayo": {
-          "slope_per_decade": -0.070722,
-          "standardized": -0.045662,
-          "p_value": 0.8048991,
-          "q_value": 0.85224611,
+          "slope_per_decade": -0.0707,
+          "standardized": -0.0457,
+          "p_value": 0.804899,
+          "q_value": 0.852246,
           "significant_fdr": false
         },
         "Pelly Crossing": {
-          "slope_per_decade": 0.177484,
-          "standardized": 0.114592,
-          "p_value": 0.64736256,
-          "q_value": 0.77683507,
+          "slope_per_decade": 0.1775,
+          "standardized": 0.1146,
+          "p_value": 0.647363,
+          "q_value": 0.776835,
           "significant_fdr": false
         },
         "Faro": {
-          "slope_per_decade": -0.440222,
-          "standardized": -0.284229,
-          "p_value": 0.19390995,
-          "q_value": 0.2684907,
+          "slope_per_decade": -0.4402,
+          "standardized": -0.2842,
+          "p_value": 0.19391,
+          "q_value": 0.268491,
           "significant_fdr": false
         },
         "Carmacks": {
           "slope_per_decade": -0.122,
-          "standardized": -0.078769,
-          "p_value": 0.69322955,
-          "q_value": 0.77988324,
+          "standardized": -0.0787,
+          "p_value": 0.69323,
+          "q_value": 0.779883,
           "significant_fdr": false
         },
         "Ross River": {
-          "slope_per_decade": -0.404242,
-          "standardized": -0.260998,
-          "p_value": 0.18465932,
-          "q_value": 0.2684907,
+          "slope_per_decade": -0.4042,
+          "standardized": -0.261,
+          "p_value": 0.184659,
+          "q_value": 0.268491,
           "significant_fdr": false
         },
         "Beaver Creek": {
-          "slope_per_decade": -0.472583,
-          "standardized": -0.305122,
-          "p_value": 0.12655882,
-          "q_value": 0.25311764,
+          "slope_per_decade": -0.4726,
+          "standardized": -0.3051,
+          "p_value": 0.126559,
+          "q_value": 0.253118,
           "significant_fdr": false
         },
         "Burwash Landing": {
-          "slope_per_decade": -1.325682,
-          "standardized": -0.855924,
-          "p_value": 0.0008401,
-          "q_value": 0.00378045,
+          "slope_per_decade": -1.3257,
+          "standardized": -0.8559,
+          "p_value": 0.00084,
+          "q_value": 0.00378,
           "significant_fdr": true
         },
         "Destruction Bay": {
-          "slope_per_decade": -1.46629,
-          "standardized": -0.946708,
-          "p_value": 0.00037255,
-          "q_value": 0.0022353,
+          "slope_per_decade": -1.4663,
+          "standardized": -0.9467,
+          "p_value": 0.000373,
+          "q_value": 0.002235,
           "significant_fdr": true
         },
         "Haines Junction": {
-          "slope_per_decade": -1.548831,
+          "slope_per_decade": -1.5488,
           "standardized": -1.0,
-          "p_value": 0.00015216,
-          "q_value": 0.0022353,
+          "p_value": 0.000152,
+          "q_value": 0.002235,
           "significant_fdr": true
         },
         "Mendenhall": {
-          "slope_per_decade": -1.192804,
-          "standardized": -0.770132,
-          "p_value": 0.00269328,
-          "q_value": 0.00969581,
+          "slope_per_decade": -1.1928,
+          "standardized": -0.7701,
+          "p_value": 0.002693,
+          "q_value": 0.009696,
           "significant_fdr": true
         },
         "Whitehorse": {
-          "slope_per_decade": -1.078667,
-          "standardized": -0.696439,
-          "p_value": 0.00362297,
-          "q_value": 0.01086891,
+          "slope_per_decade": -1.0787,
+          "standardized": -0.6964,
+          "p_value": 0.003623,
+          "q_value": 0.010869,
           "significant_fdr": true
         },
         "Carcross": {
           "slope_per_decade": -1.302,
-          "standardized": -0.840634,
-          "p_value": 0.0003127,
-          "q_value": 0.0022353,
+          "standardized": -0.8406,
+          "p_value": 0.000313,
+          "q_value": 0.002235,
           "significant_fdr": true
         },
         "Tagish": {
-          "slope_per_decade": -0.950941,
-          "standardized": -0.613973,
-          "p_value": 0.00605892,
-          "q_value": 0.01558008,
+          "slope_per_decade": -0.9509,
+          "standardized": -0.614,
+          "p_value": 0.006059,
+          "q_value": 0.01558,
           "significant_fdr": true
         },
         "Johnson's Crossing": {
           "slope_per_decade": -0.631,
-          "standardized": -0.407404,
-          "p_value": 0.05025383,
-          "q_value": 0.11307112,
+          "standardized": -0.4074,
+          "p_value": 0.050254,
+          "q_value": 0.113071,
           "significant_fdr": false
         },
         "Teslin": {
-          "slope_per_decade": -0.468588,
-          "standardized": -0.302543,
-          "p_value": 0.14077204,
-          "q_value": 0.25338967,
+          "slope_per_decade": -0.4686,
+          "standardized": -0.3025,
+          "p_value": 0.140772,
+          "q_value": 0.25339,
           "significant_fdr": false
         },
         "Watson Lake": {
-          "slope_per_decade": 0.028813,
-          "standardized": 0.018603,
-          "p_value": 0.9562249,
-          "q_value": 0.9562249,
+          "slope_per_decade": 0.0288,
+          "standardized": 0.0186,
+          "p_value": 0.956225,
+          "q_value": 0.956225,
           "significant_fdr": false
         }
       }
