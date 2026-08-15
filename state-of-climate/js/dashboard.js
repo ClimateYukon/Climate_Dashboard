@@ -1759,6 +1759,615 @@ function renderTemperatureSeasonalTimeseries(
 }
 
 
+function renderTemperatureCommunityHeatmap(
+    container
+) {
+
+    const annualPackage =
+        temperaturePackage.communityTrends;
+
+    const seasonalPackage =
+        temperaturePackage.communitySeasonalTrends;
+
+
+    const annualIndicator =
+        annualPackage
+        ?.indicators
+        ?.[selectedIndicator.id];
+
+
+    if (!annualIndicator) {
+
+        container.innerHTML = `
+            <div class="visual-panel">
+                <div class="empty-state">
+                    Community trend data are not available
+                    for this indicator.
+                </div>
+            </div>
+        `;
+
+        return;
+    }
+
+
+    const seasonalIndicator =
+        seasonalPackage
+        ?.indicators
+        ?.[selectedIndicator.id]
+        || null;
+
+
+    const communityOrder =
+        Array.from(
+            new Set([
+                ...(
+                    annualPackage.community_order
+                    || []
+                ),
+                ...(
+                    seasonalPackage?.community_order
+                    || []
+                ),
+                ...Object.keys(
+                    annualIndicator.communities
+                    || {}
+                ),
+                ...Object.keys(
+                    seasonalIndicator?.communities
+                    || {}
+                )
+            ])
+        )
+        .sort(
+            (a, b) =>
+                a.localeCompare(
+                    b,
+                    undefined,
+                    {
+                        sensitivity: "base"
+                    }
+                )
+        );
+
+
+    const seasonOrder =
+        seasonalPackage?.season_order
+        || [
+            "DJF",
+            "MAM",
+            "JJA",
+            "SON"
+        ];
+
+
+    const seasonNames =
+        seasonalPackage?.season_names
+        || {
+            DJF: "Winter",
+            MAM: "Spring",
+            JJA: "Summer",
+            SON: "Fall"
+        };
+
+
+    // ========================================================
+    // Columns
+    //
+    // Annual is always present.
+    // Seasonal columns appear only when this indicator has
+    // actual seasonal community results.
+    // ========================================================
+
+    const columns = [];
+
+
+    if (
+        seasonalIndicator
+        &&
+        seasonalIndicator.communities
+    ) {
+
+        seasonOrder.forEach(
+            seasonCode => {
+
+                columns.push({
+                    key: seasonCode,
+                    label:
+                        seasonNames[seasonCode]
+                        || seasonCode,
+                    type: "seasonal"
+                });
+            }
+        );
+    }
+
+
+    // Annual summary always comes last.
+    columns.push({
+        key: "annual",
+        label: "Annual",
+        type: "annual"
+    });
+
+
+    // ========================================================
+    // Cell lookup
+    // ========================================================
+
+    function getCell(
+        community,
+        column
+    ) {
+
+        if (
+            column.type
+            === "annual"
+        ) {
+
+            return (
+                annualIndicator
+                .communities
+                ?.[community]
+                || null
+            );
+        }
+
+
+        return (
+            seasonalIndicator
+            ?.communities
+            ?.[community]
+            ?.[column.key]
+            || null
+        );
+    }
+
+
+    // ========================================================
+    // Common symmetric colour scale across Annual + seasons
+    // ========================================================
+
+    const magnitudes = [];
+
+
+    communityOrder.forEach(
+        community => {
+
+            columns.forEach(
+                column => {
+
+                    const cell =
+                        getCell(
+                            community,
+                            column
+                        );
+
+                    const value =
+                        Number(
+                            cell?.slope_per_decade
+                        );
+
+
+                    if (
+                        Number.isFinite(
+                            value
+                        )
+                    ) {
+
+                        magnitudes.push(
+                            Math.abs(value)
+                        );
+                    }
+                }
+            );
+        }
+    );
+
+
+    const colourLimit =
+        magnitudes.length
+            ? Math.max(...magnitudes)
+            : 1;
+
+
+    // ========================================================
+    // Temperature palette
+    //
+    // Negative -> blue
+    // Zero     -> near-white
+    // Positive -> red
+    // ========================================================
+
+    function temperatureColour(
+        value
+    ) {
+
+        const x =
+            Math.max(
+                -1,
+                Math.min(
+                    1,
+                    value / colourLimit
+                )
+            );
+
+
+        if (x < 0) {
+
+            const t =
+                Math.abs(x);
+
+            const r =
+                Math.round(
+                    247 + (49 - 247) * t
+                );
+
+            const g =
+                Math.round(
+                    247 + (111 - 247) * t
+                );
+
+            const b =
+                Math.round(
+                    247 + (156 - 247) * t
+                );
+
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+
+
+        const t = x;
+
+        const r =
+            Math.round(
+                247 + (181 - 247) * t
+            );
+
+        const g =
+            Math.round(
+                247 + (76 - 247) * t
+            );
+
+        const b =
+            Math.round(
+                247 + (55 - 247) * t
+            );
+
+        return `rgb(${r}, ${g}, ${b})`;
+    }
+
+
+    // ========================================================
+    // Header
+    // ========================================================
+
+    const header = `
+
+        <div class="seasonal-community-corner">
+            Community
+        </div>
+
+        ${
+            columns
+            .map(
+                column => `
+                    <div
+                        class="seasonal-community-header"
+                    >
+                        ${
+                            escapeHtml(
+                                column.label
+                            )
+                        }
+                    </div>
+                `
+            )
+            .join("")
+        }
+    `;
+
+
+    // ========================================================
+    // Rows
+    // ========================================================
+
+    const rows =
+        communityOrder
+        .map(
+            community => {
+
+                const cells =
+                    columns
+                    .map(
+                        column => {
+
+                            const cell =
+                                getCell(
+                                    community,
+                                    column
+                                );
+
+
+                            if (!cell) {
+
+                                return `
+                                    <div
+                                        class="
+                                            seasonal-community-cell
+                                            seasonal-community-missing
+                                        "
+                                        title="No data"
+                                    >
+                                        ·
+                                    </div>
+                                `;
+                            }
+
+
+                            const slope =
+                                Number(
+                                    cell.slope_per_decade
+                                );
+
+
+                            if (
+                                !Number.isFinite(
+                                    slope
+                                )
+                            ) {
+
+                                return `
+                                    <div
+                                        class="
+                                            seasonal-community-cell
+                                            seasonal-community-missing
+                                        "
+                                        title="No data"
+                                    >
+                                        ·
+                                    </div>
+                                `;
+                            }
+
+
+                            const display =
+                                formatHeatmapSlope(
+                                    slope,
+                                    annualIndicator.unit
+                                );
+
+
+                            const significant =
+                                Boolean(
+                                    cell.significant_fdr
+                                );
+
+
+                            const shownValue =
+                                significant
+                                    ? display
+                                    : `(${display})`;
+
+
+                            const pValue =
+                                Number(
+                                    cell.p_value
+                                );
+
+
+                            const qValue =
+                                Number(
+                                    cell.q_value
+                                );
+
+
+                            const pText =
+                                Number.isFinite(pValue)
+                                    ? formatPValue(pValue)
+                                    : "p not available";
+
+
+                            const qText =
+                                Number.isFinite(qValue)
+                                    ? (
+                                        qValue < 0.001
+                                            ? "q < 0.001"
+                                            : `q = ${qValue.toFixed(3)}`
+                                    )
+                                    : "q not available";
+
+
+                            const significanceText =
+                                significant
+                                    ? "significant after FDR correction"
+                                    : "not significant after FDR correction";
+
+
+                            return `
+                                <div
+                                    class="
+                                        seasonal-community-cell
+                                        ${
+                                            significant
+                                                ? "significant"
+                                                : "not-significant"
+                                        }
+                                    "
+                                    style="
+                                        background:
+                                            ${
+                                                temperatureColour(
+                                                    slope
+                                                )
+                                            };
+                                    "
+                                    title="${
+                                        escapeHtml(
+                                            `${community}, `
+                                            + `${column.label}: `
+                                            + `${display} `
+                                            + `${annualIndicator.unit}; `
+                                            + `${pText}; `
+                                            + `${qText}; `
+                                            + significanceText
+                                        )
+                                    }"
+                                >
+                                    ${shownValue}
+                                </div>
+                            `;
+                        }
+                    )
+                    .join("");
+
+
+                return `
+
+                    <div
+                        class="seasonal-community-name"
+                    >
+                        ${
+                            escapeHtml(
+                                community
+                            )
+                        }
+                    </div>
+
+                    ${cells}
+                `;
+            }
+        )
+        .join("");
+
+
+    // ========================================================
+    // Grid sizing
+    // ========================================================
+
+    const gridTemplate =
+        [
+            "minmax(170px, 1.6fr)",
+            ...columns.map(
+                () =>
+                    "minmax(92px, 1fr)"
+            )
+        ]
+        .join(" ");
+
+
+    const period =
+        seasonalPackage?.period
+        ||
+        annualPackage?.period
+        ||
+        "1951–2025";
+
+
+    // ========================================================
+    // Render
+    // ========================================================
+
+    container.innerHTML = `
+
+        <div class="visual-panel">
+
+            <div class="visual-title">
+                ${
+                    escapeHtml(
+                        annualIndicator.label
+                    )
+                }
+                trends near Yukon communities
+            </div>
+
+
+            <div class="visual-subtitle">
+                ${
+                    escapeHtml(period)
+                }
+                ·
+                ${
+                    escapeHtml(
+                        annualIndicator.unit
+                    )
+                }
+            </div>
+
+
+            <div class="heatmap-explanation">
+
+                Numbers show change per decade near each
+                community.
+
+                ${
+                    columns.length > 1
+                        ? (
+                            "Annual, winter, spring, summer and fall " +
+                            "trends are shown on the same scale. "
+                        )
+                        : ""
+                }
+
+                Values in parentheses are not statistically
+                significant after Benjamini-Hochberg correction
+                across communities.
+
+            </div>
+
+
+            <div
+                class="seasonal-community-heatmap"
+                style="
+                    display: grid;
+                    grid-template-columns:
+                        ${gridTemplate};
+                    width: 100%;
+                    max-width:
+                        ${
+                            columns.length > 1
+                                ? "1000px"
+                                : "620px"
+                        };
+                "
+            >
+
+                ${header}
+                ${rows}
+
+            </div>
+
+
+            <div class="trend-heatmap-legend">
+
+                <span>
+                    Stronger cooling
+                </span>
+
+                <div
+                    class="trend-heatmap-legend-bar"
+                    style="
+                        background:
+                            linear-gradient(
+                                to right,
+                                rgb(49,111,156),
+                                rgb(247,247,247),
+                                rgb(181,76,55)
+                            );
+                    "
+                ></div>
+
+                <span>
+                    Stronger warming
+                </span>
+
+            </div>
+
+        </div>
+    `;
+}
+
+
 function renderTemperatureCommunityTimeseries(
     container
 ) {
@@ -2455,41 +3064,127 @@ function renderTrendMetrics(
     period,
     community = null
 ) {
+
     const slope =
-        trend && Number.isFinite(Number(trend.slope_per_decade))
-            ? `${formatSigned(
-                trend.slope_per_decade,
-                trendUnit.includes("C") || trendUnit.includes("°C") ? 2 : 1
-              )} ${trendUnit}`
+        trend
+        &&
+        Number.isFinite(
+            Number(
+                trend.slope_per_decade
+            )
+        )
+            ? (
+                `${
+                    formatSigned(
+                        trend.slope_per_decade,
+                        (
+                            trendUnit.includes("C")
+                            ||
+                            trendUnit.includes("°C")
+                        )
+                            ? 2
+                            : 1
+                    )
+                } ${trendUnit}`
+            )
             : "Not available";
 
-    const pValue = trend ? formatPValue(trend.p_value) : "Not available";
+
+    const pValue =
+        trend
+            ? formatPValue(
+                trend.p_value
+            )
+            : "Not available";
+
 
     const significant =
-        trend &&
+        trend
+        &&
         (
             trend.significant_p05
-            ?? trend.significant
+            ??
+            trend.significant
         );
 
+
     return `
+
         <div class="metric-column">
-            ${community ? `
-                <div class="metric">
-                    <div class="metric-label">Community</div>
-                    <div class="metric-value">${escapeHtml(community)}</div>
+
+            ${
+                community
+                    ? `
+                        <div class="metric">
+
+                            <div class="metric-label">
+                                Community
+                            </div>
+
+                            <div class="metric-value">
+                                ${escapeHtml(community)}
+                            </div>
+
+                        </div>
+                    `
+                    : ""
+            }
+
+
+            <div class="metric">
+
+                <div class="metric-label">
+                    Long-term trend
                 </div>
-            ` : ""}
 
-            <div class="metric">
-                <div class="metric-label">Long-term trend</div>
-                <div class="metric-value">${slope}</div>
+                <div class="metric-value">
+                    ${slope}
+                </div>
+
             </div>
 
+
             <div class="metric">
-                <div class="metric-label">Period</div>
-                <div class="metric-value">${period}</div>
+
+                <div class="metric-label">
+                    p-value
+                </div>
+
+                <div class="metric-value">
+                    ${pValue}
+                </div>
+
+                ${
+                    significant !== null
+                    &&
+                    significant !== undefined
+                        ? `
+                            <div class="metric-note">
+                                ${
+                                    significant
+                                        ? "Statistically significant"
+                                        : "Not statistically significant"
+                                }
+                            </div>
+                        `
+                        : ""
+                }
+
             </div>
+
+
+            <div class="metric">
+
+                <div class="metric-label">
+                    Period
+                </div>
+
+                <div class="metric-value">
+                    ${period}
+                </div>
+
+            </div>
+
         </div>
     `;
 }
@@ -5781,3 +6476,231 @@ function renderTable() {
         }
     );
 }
+
+
+// ============================================================
+// Full-screen dashboard figure viewer
+// ============================================================
+
+function ensureDashboardFigureLightbox() {
+    if (document.getElementById("dashboardFigureLightbox")) {
+        return;
+    }
+
+    const lightbox = document.createElement("div");
+
+    lightbox.id = "dashboardFigureLightbox";
+    lightbox.className = "dashboard-figure-lightbox";
+
+    lightbox.innerHTML = `
+        <button
+            class="dashboard-figure-lightbox-close"
+            type="button"
+            aria-label="Close full-screen figure"
+        >&times;</button>
+
+        <div
+            id="dashboardFigureLightboxContent"
+            class="dashboard-figure-lightbox-content"
+        ></div>
+    `;
+
+    document.body.appendChild(lightbox);
+
+    lightbox.addEventListener("click", (event) => {
+        if (
+            event.target === lightbox ||
+            event.target.classList.contains(
+                "dashboard-figure-lightbox-close"
+            )
+        ) {
+            // Prevent the document-level delegated click handler
+            // from seeing this same click and reopening the figure.
+            event.stopPropagation();
+
+            closeDashboardFigureLightbox();
+        }
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeDashboardFigureLightbox();
+        }
+    });
+}
+
+
+function openDashboardFigureLightbox(element) {
+    if (!element) {
+        return;
+    }
+
+    ensureDashboardFigureLightbox();
+
+    const lightbox = document.getElementById(
+        "dashboardFigureLightbox"
+    );
+
+    const content = document.getElementById(
+        "dashboardFigureLightboxContent"
+    );
+
+    if (!lightbox || !content) {
+        return;
+    }
+
+    content.innerHTML = "";
+
+    const clone = element.cloneNode(true);
+
+    clone.removeAttribute("width");
+    clone.removeAttribute("height");
+
+    clone.classList.remove(
+        "dashboard-figure-lightbox-open-hint"
+    );
+
+    if (clone.tagName.toLowerCase() === "img") {
+        clone.removeAttribute("loading");
+    }
+
+    content.appendChild(clone);
+
+    lightbox.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeDashboardFigureLightbox() {
+    const lightbox = document.getElementById(
+        "dashboardFigureLightbox"
+    );
+
+    const content = document.getElementById(
+        "dashboardFigureLightboxContent"
+    );
+
+    if (!lightbox) {
+        return;
+    }
+
+    lightbox.classList.remove("is-open");
+    document.body.style.overflow = "";
+
+    if (content) {
+        content.innerHTML = "";
+    }
+}
+
+
+// ============================================================
+// Attach click-to-expand to dashboard figures.
+//
+// We support both publication-map images and SVG charts.
+// ============================================================
+
+function enableDashboardFigureLightboxes(root = document) {
+    const candidates = root.querySelectorAll(
+        ".dashboard-climate-map img, " +
+        ".dashboard-climate-map svg, " +
+        ".dashboard-chart svg, " +
+        ".chart-container svg, " +
+        ".dashboard-timeseries svg, " +
+        ".dashboard-seasonal-chart svg"
+    );
+
+    candidates.forEach((element) => {
+        if (
+            element.dataset.dashboardLightboxBound === "true"
+        ) {
+            return;
+        }
+
+        element.dataset.dashboardLightboxBound = "true";
+
+        element.classList.add(
+            "dashboard-figure-lightbox-open-hint"
+        );
+
+        element.title =
+            element.title ||
+            "Click to expand";
+
+        element.addEventListener("click", () => {
+            openDashboardFigureLightbox(element);
+        });
+    });
+}
+
+
+// ============================================================
+// Dashboard content is rendered dynamically, so watch for new
+// figures and bind them as they appear.
+// ============================================================
+
+document.addEventListener("DOMContentLoaded", () => {
+    enableDashboardFigureLightboxes();
+
+    const observer = new MutationObserver(() => {
+        enableDashboardFigureLightboxes();
+    });
+
+    observer.observe(
+        document.body,
+        {
+            childList: true,
+            subtree: true
+        }
+    );
+});
+
+
+// ============================================================
+// Universal delegated figure click handler
+//
+// This intentionally does not depend on chart class names.
+// Any IMG or SVG inside <main> can be expanded, except when it
+// is inside an interactive control such as a button or link.
+// ============================================================
+
+document.addEventListener("click", (event) => {
+    if (!(event.target instanceof Element)) {
+        return;
+    }
+
+    // Ignore the lightbox itself.
+    if (
+        event.target.closest(
+            "#dashboardFigureLightbox"
+        )
+    ) {
+        return;
+    }
+
+    // Do not hijack buttons, links, inputs or other controls.
+    if (
+        event.target.closest(
+            "button, a, input, select, textarea, label"
+        )
+    ) {
+        return;
+    }
+
+    const figure = event.target.closest(
+        "img, svg"
+    );
+
+    if (!figure) {
+        return;
+    }
+
+    const main = document.querySelector("main");
+
+    if (!main || !main.contains(figure)) {
+        return;
+    }
+
+    openDashboardFigureLightbox(
+        figure
+    );
+});
