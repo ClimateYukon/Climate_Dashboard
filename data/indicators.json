@@ -7,7 +7,7 @@
     "description": "Explore long-term changes in Yukon's temperature and precipitation, with Yukon-wide, community, seasonal and spatial views.",
     "date_label": "Updated 2026-08-14",
     "updated_date": "2026-08-14",
-    "source": "ERA5-Land",
+    "source": "ERA5-Land reanalysis",
     "preview_image": "state-of-climate/preview-card.png",
     "tags": [
       "climate",

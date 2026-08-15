@@ -1,7 +1,7 @@
 {
   "theme": "temperature",
   "region": "Yukon",
-  "spatial_summary": "Area-weighted mean across the true Yukon boundary",
+  "spatial_summary": "Area-weighted mean across the Yukon admin-1 boundary (Natural Earth 1:10m)",
   "weighting": "Each ERA5-Land grid cell is weighted by the actual area of that cell lying inside Yukon.",
   "boundary_method": "A 50 km buffered Yukon boundary is used only for source-data extraction. Final spatial weighting uses intersection with the true unbuffered Yukon boundary.",
   "period": "1951–2025",

@@ -549,10 +549,21 @@ function selectIndicator(id) {
         selectedIndicator.name;
 
 
+    const selectedMetadata =
+        isTemperatureIndicator(selectedIndicator)
+            ? temperaturePackage?.metadata?.indicators?.[selectedIndicator.id]
+            : (
+                isPrecipitationIndicator(selectedIndicator)
+                    ? precipitationPackage?.metadata?.indicators?.[selectedIndicator.id]
+                    : null
+            );
+
+
     document.getElementById(
         "indicator-source-theme"
     ).textContent =
-        selectedIndicator.theme;
+        selectedMetadata?.description
+        || selectedIndicator.theme;
 
 
     const badge =
@@ -1222,7 +1233,10 @@ function renderTemperatureYukonTimeseries(
                                 useAnomaly,
 
                             yAxisLabel:
-                                ylabel
+                                ylabel,
+
+                            ariaLabel:
+                                `${info.label} Yukon time series, ${temperaturePackage.yukon.period}`
                         }
                     )
                 }
@@ -2341,7 +2355,7 @@ function renderTemperatureCommunityHeatmap(
             <div class="trend-heatmap-legend">
 
                 <span>
-                    Stronger cooling
+                    Stronger decrease
                 </span>
 
                 <div
@@ -2358,7 +2372,7 @@ function renderTemperatureCommunityHeatmap(
                 ></div>
 
                 <span>
-                    Stronger warming
+                    Stronger increase
                 </span>
 
             </div>
@@ -2400,6 +2414,15 @@ function renderTemperatureCommunityTimeseries(
                     .communities[
                         community
                     ]
+            )
+            .slice()
+            .sort(
+                (a, b) =>
+                    a.localeCompare(
+                        b,
+                        undefined,
+                        { sensitivity: "base" }
+                    )
             );
 
     if (
@@ -2566,7 +2589,10 @@ function drawTemperatureCommunitySeries() {
                                 .slope_per_decade,
 
                             zeroLine:
-                                useAnomaly
+                                useAnomaly,
+
+                            ariaLabel:
+                                `${selectedCommunity} ${indicator.label} time series, ${temperaturePackage.communities.period}`
                         }
                     )
                 }
@@ -2923,6 +2949,7 @@ function buildLineChartSvg(
             viewBox="0 0 ${width} ${height}"
             preserveAspectRatio="xMidYMid meet"
             role="img"
+            aria-label="${escapeHtml(options.ariaLabel || "Climate time-series chart")}"
         >
 
             ${
@@ -3195,39 +3222,39 @@ function renderTrendMetrics(
 // ============================================================
 
 function renderAbout(container) {
-    if (isTemperatureIndicator(selectedIndicator)) {
-        const metadata = temperaturePackage.metadata;
+    if (
+        isTemperatureIndicator(selectedIndicator)
+        || isPrecipitationIndicator(selectedIndicator)
+    ) {
+        const isTemperature = isTemperatureIndicator(selectedIndicator);
+        const metadata = isTemperature
+            ? temperaturePackage.metadata
+            : precipitationPackage.metadata;
         const indicator = metadata.indicators[selectedIndicator.id];
-        container.innerHTML = `
-            <div class="about-panel">
-                <h3>About this indicator</h3>
-                <div class="about-row"><div class="about-label">Indicator</div><div>${escapeHtml(indicator.label)}</div></div>
-                <div class="about-row"><div class="about-label">Period</div><div>${metadata.period}</div></div>
-                <div class="about-row"><div class="about-label">Data source</div><div>ERA5-Land daily temperature</div></div>
-                <div class="about-row"><div class="about-label">Yukon summary</div><div>${escapeHtml(metadata.yukon_summary)}</div></div>
-                <div class="about-row"><div class="about-label">Trend and significance</div><div>${escapeHtml(metadata.trend_method)}</div></div>
-                <div class="about-row"><div class="about-label">Map significance</div><div>${escapeHtml(metadata.map_note || "")}</div></div>
-                <div class="about-row"><div class="about-label">Community analysis</div><div>${escapeHtml(metadata.community_summary)}</div></div>
-            </div>
-        `;
-        return;
-    }
+        const baselineRelevant = ["anomaly", "anomaly_percent"].includes(
+            indicator.time_series_mode
+        );
+        const communityText = isTemperature
+            ? metadata.community_summary
+            : metadata.community_method;
+        const extraNote = !isTemperature
+            ? metadata.precipitation_note
+            : "";
 
-    if (isPrecipitationIndicator(selectedIndicator)) {
-        const metadata = precipitationPackage.metadata;
-        const indicator = metadata.indicators[selectedIndicator.id];
         container.innerHTML = `
             <div class="about-panel">
                 <h3>About this indicator</h3>
-                <div class="about-row"><div class="about-label">Indicator</div><div>${escapeHtml(indicator.label)}</div></div>
+                <div class="about-row"><div class="about-label">Definition</div><div>${escapeHtml(indicator.definition || indicator.description || "")}</div></div>
+                ${indicator.review_note ? `<div class="about-row"><div class="about-label">Status</div><div>${escapeHtml(indicator.review_note)}</div></div>` : ""}
                 <div class="about-row"><div class="about-label">Period</div><div>${escapeHtml(metadata.period)}</div></div>
-                <div class="about-row"><div class="about-label">Baseline</div><div>${escapeHtml(metadata.baseline)}</div></div>
-                <div class="about-row"><div class="about-label">Data source</div><div>${escapeHtml(metadata.source || "ERA5-Land")}</div></div>
-                <div class="about-row"><div class="about-label">Yukon summary</div><div>${escapeHtml(metadata.territorial_method || "")}</div></div>
+                ${baselineRelevant ? `<div class="about-row"><div class="about-label">Baseline</div><div>${escapeHtml(metadata.baseline)}</div></div>` : ""}
+                <div class="about-row"><div class="about-label">Data source</div><div>${escapeHtml(metadata.source || "ERA5-Land daily reanalysis")}</div></div>
+                <div class="about-row"><div class="about-label">Yukon value</div><div>${escapeHtml(metadata.yukon_value_note || metadata.yukon_summary || metadata.territorial_method || "")}</div></div>
+                <div class="about-row"><div class="about-label">Boundary</div><div>${escapeHtml(metadata.boundary_summary || "")}</div></div>
                 <div class="about-row"><div class="about-label">Trend and significance</div><div>${escapeHtml(metadata.trend_method || "")}</div></div>
                 <div class="about-row"><div class="about-label">Map significance</div><div>${escapeHtml(metadata.map_note || "")}</div></div>
-                <div class="about-row"><div class="about-label">Community analysis</div><div>${escapeHtml(metadata.community_method || "")}</div></div>
-                <div class="heatmap-explanation" style="margin-top: 22px;">${escapeHtml(metadata.precipitation_note || "")}</div>
+                <div class="about-row"><div class="about-label">Community analysis</div><div>${escapeHtml(communityText || "")}</div></div>
+                ${extraNote ? `<div class="heatmap-explanation" style="margin-top: 22px;">${escapeHtml(extraNote)}</div>` : ""}
             </div>
         `;
         return;
@@ -5290,8 +5317,16 @@ function renderPrecipitationCommunityHeatmap(
 
 
     const communityOrder =
-        annualPackage
-            .community_order;
+        (annualPackage.community_order || [])
+        .slice()
+        .sort(
+            (a, b) =>
+                a.localeCompare(
+                    b,
+                    undefined,
+                    { sensitivity: "base" }
+                )
+        );
 
 
     const seasonalPackage =
@@ -5564,6 +5599,40 @@ function renderPrecipitationCommunityHeatmap(
                             );
 
 
+                        const pValue =
+                            Number(
+                                cell.p_value
+                            );
+
+
+                        const qValue =
+                            Number(
+                                cell.q_value
+                            );
+
+
+                        const pText =
+                            Number.isFinite(pValue)
+                                ? formatPValue(pValue)
+                                : "p not available";
+
+
+                        const qText =
+                            Number.isFinite(qValue)
+                                ? (
+                                    qValue < 0.001
+                                        ? "q < 0.001"
+                                        : `q = ${qValue.toFixed(3)}`
+                                )
+                                : "q not available";
+
+
+                        const significanceText =
+                            significant
+                                ? "significant after FDR correction"
+                                : "not significant after FDR correction";
+
+
                         html += `
                             <div
                                 class="
@@ -5586,7 +5655,9 @@ function renderPrecipitationCommunityHeatmap(
                                     escapeHtml(
                                         `${community}, `
                                         + `${column.label}: `
-                                        + `${displayed} ${annualIndicator.unit}`
+                                        + `${displayed} ${annualIndicator.unit}; `
+                                        + `${pText}; ${qText}; `
+                                        + significanceText
                                     )
                                 }"
                             >
@@ -5656,7 +5727,9 @@ function renderPrecipitationCommunityHeatmap(
                 }
 
                 Values in parentheses are not statistically
-                significant.
+                significant after Benjamini-Hochberg FDR
+                correction across communities. Hover over a
+                cell for its p-value and adjusted q-value.
 
             </div>
 
@@ -5747,7 +5820,16 @@ function renderPrecipitationCommunityTimeseries(
     const communities =
         precipitationPackage
             .communities
-            .community_order;
+            .community_order
+            .slice()
+            .sort(
+                (a, b) =>
+                    a.localeCompare(
+                        b,
+                        undefined,
+                        { sensitivity: "base" }
+                    )
+            );
 
 
     if (
@@ -6094,87 +6176,7 @@ function precipitationHeatmapColour(
 }
 
 
-function heatmapColour(
-    standardized
-) {
 
-    const value =
-        Math.max(
-            -1,
-            Math.min(
-                1,
-                Number(
-                    standardized
-                )
-            )
-        );
-
-    const cold = [
-        49,
-        111,
-        156
-    ];
-
-    const neutral = [
-        247,
-        247,
-        243
-    ];
-
-    const warm = [
-        181,
-        76,
-        55
-    ];
-
-    let start;
-    let end;
-    let fraction;
-
-    if (
-        value <= 0
-    ) {
-
-        start =
-            cold;
-
-        end =
-            neutral;
-
-        fraction =
-            value + 1;
-    }
-    else {
-
-        start =
-            neutral;
-
-        end =
-            warm;
-
-        fraction =
-            value;
-    }
-
-    const rgb =
-        start.map(
-            (
-                channel,
-                index
-            ) =>
-                Math.round(
-                    channel
-                    +
-                    (
-                        end[index]
-                        - channel
-                    )
-                    * fraction
-                )
-        );
-
-    return `rgb(${rgb.join(",")})`;
-}
 
 
 function formatHeatmapSlope(
@@ -6227,35 +6229,7 @@ function temperatureDecimals(
 }
 
 
-function formatTrend(
-    trend,
-    unit
-) {
 
-    if (
-        !trend
-        ||
-        !Number.isFinite(
-            Number(
-                trend
-                .slope_per_decade
-            )
-        )
-    ) {
-        return "Trend unavailable";
-    }
-
-    return (
-        `${formatSigned(
-            trend.slope_per_decade,
-            unit.includes(
-                "°C"
-            )
-                ? 2
-                : 1
-        )} ${unit}`
-    );
-}
 
 
 function formatSigned(
@@ -6556,10 +6530,6 @@ function openDashboardFigureLightbox(element) {
     clone.removeAttribute("width");
     clone.removeAttribute("height");
 
-    clone.classList.remove(
-        "dashboard-figure-lightbox-open-hint"
-    );
-
     if (clone.tagName.toLowerCase() === "img") {
         clone.removeAttribute("loading");
     }
@@ -6591,68 +6561,6 @@ function closeDashboardFigureLightbox() {
         content.innerHTML = "";
     }
 }
-
-
-// ============================================================
-// Attach click-to-expand to dashboard figures.
-//
-// We support both publication-map images and SVG charts.
-// ============================================================
-
-function enableDashboardFigureLightboxes(root = document) {
-    const candidates = root.querySelectorAll(
-        ".dashboard-climate-map img, " +
-        ".dashboard-climate-map svg, " +
-        ".dashboard-chart svg, " +
-        ".chart-container svg, " +
-        ".dashboard-timeseries svg, " +
-        ".dashboard-seasonal-chart svg"
-    );
-
-    candidates.forEach((element) => {
-        if (
-            element.dataset.dashboardLightboxBound === "true"
-        ) {
-            return;
-        }
-
-        element.dataset.dashboardLightboxBound = "true";
-
-        element.classList.add(
-            "dashboard-figure-lightbox-open-hint"
-        );
-
-        element.title =
-            element.title ||
-            "Click to expand";
-
-        element.addEventListener("click", () => {
-            openDashboardFigureLightbox(element);
-        });
-    });
-}
-
-
-// ============================================================
-// Dashboard content is rendered dynamically, so watch for new
-// figures and bind them as they appear.
-// ============================================================
-
-document.addEventListener("DOMContentLoaded", () => {
-    enableDashboardFigureLightboxes();
-
-    const observer = new MutationObserver(() => {
-        enableDashboardFigureLightboxes();
-    });
-
-    observer.observe(
-        document.body,
-        {
-            childList: true,
-            subtree: true
-        }
-    );
-});
 
 
 // ============================================================

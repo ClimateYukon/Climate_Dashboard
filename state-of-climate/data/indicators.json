@@ -263,13 +263,11 @@
     "dashboard_theme": "Temperature",
     "theme": "Temperature",
     "name": "Frost-free season length",
-    "status": "available",
+    "status": "in-progress",
     "relevance": null,
-    "source": "ERA5-Land daily temperature",
+    "source": "ERA5-Land daily temperature; indicator definition under review",
     "views": [
-      "yukon",
-      "map",
-      "timeseries"
+      "about"
     ]
   },
   {
@@ -380,9 +378,9 @@
     "views": [
       "yukon",
       "map",
-      "timeseries",
       "communities",
-      "heatmap"
+      "heatmap",
+      "timeseries"
     ]
   },
   {
@@ -396,9 +394,9 @@
     "views": [
       "yukon",
       "map",
-      "timeseries",
       "communities",
-      "heatmap"
+      "heatmap",
+      "timeseries"
     ]
   },
   {
@@ -412,9 +410,9 @@
     "views": [
       "yukon",
       "map",
-      "timeseries",
       "communities",
-      "heatmap"
+      "heatmap",
+      "timeseries"
     ]
   },
   {
@@ -428,9 +426,9 @@
     "views": [
       "yukon",
       "map",
-      "timeseries",
       "communities",
-      "heatmap"
+      "heatmap",
+      "timeseries"
     ]
   },
   {
@@ -444,9 +442,9 @@
     "views": [
       "yukon",
       "map",
-      "timeseries",
       "communities",
-      "heatmap"
+      "heatmap",
+      "timeseries"
     ]
   },
   {
@@ -460,9 +458,9 @@
     "views": [
       "yukon",
       "map",
-      "timeseries",
       "communities",
-      "heatmap"
+      "heatmap",
+      "timeseries"
     ]
   },
   {

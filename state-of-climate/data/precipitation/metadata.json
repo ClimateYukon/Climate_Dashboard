@@ -3,11 +3,9 @@
   "period": "1951–2025",
   "baseline": "1961–1990",
   "source": "ERA5-Land daily reanalysis",
-  "source_path": "/CC/ERA5_Land_Daily/ERA5Land_daily_Alaska_NWT_1950_latest.zarr",
-  "cache_policy": "Derived caches are optional accelerators. Missing or stale caches are rebuilt from the authoritative ERA5-Land source.",
   "community_method": "Nearest ERA5-Land grid cell to each community.",
-  "territorial_method": "True-Yukon area-weighted grid-cell mean.",
-  "trend_method": "Precipitation indicators use Sen's slope to estimate trend magnitude and the Mann-Kendall test to assess statistical significance. The Hamed-Rao variance correction is applied only when significant serial correlation is detected after detrending. Statistical significance is assessed at p < 0.05. For Yukon maps, Benjamini-Hochberg false-discovery-rate correction is applied across grid cells. Community heatmaps use the same multiple-testing control across communities.",
+  "territorial_method": "Area-weighted mean of ERA5-Land grid-cell indicator values using fractional overlap with the Yukon boundary.",
+  "trend_method": "Precipitation indicators use Sen's slope to estimate trend magnitude and the Mann-Kendall test to assess statistical significance. The Hamed-Rao variance correction is applied only when significant lag-1 serial correlation is detected after detrending. Statistical significance is assessed at p < 0.05. For Yukon maps, Benjamini-Hochberg false-discovery-rate correction is applied across grid cells. Community heatmaps use the same multiple-testing control across communities.",
   "precipitation_note": "Precipitation is more spatially and temporally variable than temperature. ERA5-Land is a reanalysis and northern precipitation observations also carry important uncertainty.",
   "rainfall_note": "Rainfall is derived as total precipitation minus snowfall water equivalent, clipped at zero.",
   "indicators": {
@@ -33,7 +31,9 @@
       "files": {
         "annual_map": "figures/precipitation/annual/total-precipitation.png",
         "seasonal_map": "figures/precipitation/seasonal/total-precipitation.png"
-      }
+      },
+      "description": "Total rain and snowfall water equivalent received over the year.",
+      "definition": "Annual sum of daily total precipitation, expressed as liquid-water equivalent in millimetres."
     },
     "total-rainfall": {
       "label": "Total rainfall",
@@ -53,7 +53,9 @@
       },
       "files": {
         "annual_map": "figures/precipitation/annual/total-rainfall.png"
-      }
+      },
+      "description": "Total liquid precipitation received over the year.",
+      "definition": "Annual rainfall estimated as total precipitation minus snowfall water equivalent, clipped at zero."
     },
     "wet-days": {
       "label": "Wet days",
@@ -61,7 +63,9 @@
       "trend_unit": "days per decade",
       "time_series_mode": "value",
       "views": {
-        "yukon": [],
+        "yukon": [
+          "map"
+        ],
         "seasonal": [],
         "communities": [
           "heatmap",
@@ -70,7 +74,9 @@
       },
       "files": {
         "annual_map": "figures/precipitation/annual/wet-days.png"
-      }
+      },
+      "description": "Number of days each year with at least 1 mm of precipitation.",
+      "definition": "Count of days with total precipitation ≥ 1 mm."
     },
     "heavy-precipitation-days": {
       "label": "Heavy precipitation days",
@@ -78,7 +84,9 @@
       "trend_unit": "days per decade",
       "time_series_mode": "value",
       "views": {
-        "yukon": [],
+        "yukon": [
+          "map"
+        ],
         "seasonal": [],
         "communities": [
           "heatmap",
@@ -87,7 +95,9 @@
       },
       "files": {
         "annual_map": "figures/precipitation/annual/heavy-precipitation-days.png"
-      }
+      },
+      "description": "Number of days each year with at least 10 mm of precipitation.",
+      "definition": "Count of days with total precipitation ≥ 10 mm."
     },
     "very-heavy-precipitation-days": {
       "label": "Very heavy precipitation days",
@@ -95,7 +105,9 @@
       "trend_unit": "days per decade",
       "time_series_mode": "value",
       "views": {
-        "yukon": [],
+        "yukon": [
+          "map"
+        ],
         "seasonal": [],
         "communities": [
           "heatmap",
@@ -104,7 +116,9 @@
       },
       "files": {
         "annual_map": "figures/precipitation/annual/very-heavy-precipitation-days.png"
-      }
+      },
+      "description": "Number of days each year with at least 20 mm of precipitation.",
+      "definition": "Count of days with total precipitation ≥ 20 mm."
     },
     "maximum-1-day-precipitation": {
       "label": "Maximum 1-day precipitation",
@@ -112,7 +126,9 @@
       "trend_unit": "mm per decade",
       "time_series_mode": "value",
       "views": {
-        "yukon": [],
+        "yukon": [
+          "map"
+        ],
         "seasonal": [],
         "communities": [
           "heatmap",
@@ -121,7 +137,9 @@
       },
       "files": {
         "annual_map": "figures/precipitation/annual/maximum-1-day-precipitation.png"
-      }
+      },
+      "description": "Largest precipitation total in any single day of the year.",
+      "definition": "Maximum daily precipitation total within each year."
     },
     "maximum-5-day-precipitation": {
       "label": "Maximum 5-day precipitation",
@@ -129,7 +147,9 @@
       "trend_unit": "mm per decade",
       "time_series_mode": "value",
       "views": {
-        "yukon": [],
+        "yukon": [
+          "map"
+        ],
         "seasonal": [],
         "communities": [
           "heatmap",
@@ -138,7 +158,9 @@
       },
       "files": {
         "annual_map": "figures/precipitation/annual/maximum-5-day-precipitation.png"
-      }
+      },
+      "description": "Largest precipitation total over any consecutive 5-day period.",
+      "definition": "Maximum rolling 5-day precipitation total within each year."
     },
     "longest-dry-spell": {
       "label": "Longest dry spell",
@@ -146,7 +168,9 @@
       "trend_unit": "days per decade",
       "time_series_mode": "value",
       "views": {
-        "yukon": [],
+        "yukon": [
+          "map"
+        ],
         "seasonal": [],
         "communities": [
           "heatmap",
@@ -155,7 +179,9 @@
       },
       "files": {
         "annual_map": "figures/precipitation/annual/longest-dry-spell.png"
-      }
+      },
+      "description": "Longest run of consecutive days each year with less than 1 mm of precipitation.",
+      "definition": "Maximum number of consecutive days with total precipitation < 1 mm."
     },
     "snow-fraction": {
       "label": "Fraction of precipitation falling as snow",
@@ -175,8 +201,13 @@
       },
       "files": {
         "annual_map": "figures/precipitation/annual/snow-fraction.png"
-      }
+      },
+      "description": "Percentage of annual precipitation that fell as snow, expressed as water equivalent.",
+      "definition": "100 × annual snowfall water equivalent / annual total precipitation, bounded from 0% to 100%."
     }
   },
-  "map_note": "Black dots indicate grid cells where the trend is not statistically significant after spatial multiple-testing control."
+  "map_note": "Black dots indicate grid cells where the trend is not statistically significant after spatial multiple-testing control.",
+  "boundary_summary": "Yukon admin-1 boundary from Natural Earth 1:10m. A 50 km buffer is used only to extract source data; final statistics and maps use the unbuffered boundary.",
+  "yukon_value_note": "Each indicator is calculated at each ERA5-Land grid cell, then area-weighted across Yukon. For counts and extremes, the Yukon value is a spatial average of local indicator values, not a territory-wide event count.",
+  "heatmap_design": "Rows are Yukon communities. Seasonal columns are shown first where available, followed by Annual. Values are physical slopes per decade; Precipitation uses a brown-white-green diverging scale. Parentheses indicate results that are not significant after Benjamini-Hochberg FDR correction across communities."
 }

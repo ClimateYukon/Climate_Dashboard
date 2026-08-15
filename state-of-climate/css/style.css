@@ -371,9 +371,10 @@ section {
 }
 
 .indicator-subtitle {
+    max-width: 760px;
     color: var(--muted);
-
-    font-size: 0.9rem;
+    font-size: 0.94rem;
+    line-height: 1.45;
 }
 
 .status-badge {
@@ -1787,6 +1788,7 @@ footer {
 
     width: 96vw;
     height: 92vh;
+    pointer-events: none;
 }
 
 .dashboard-figure-lightbox-content img,
@@ -1806,6 +1808,7 @@ footer {
 
     box-shadow:
         0 24px 80px rgba(0, 0, 0, 0.45);
+    pointer-events: auto;
 }
 
 .dashboard-figure-lightbox-content svg {
@@ -1834,6 +1837,7 @@ footer {
     line-height: 1;
 
     cursor: pointer;
+    pointer-events: auto;
 
     box-shadow:
         0 10px 30px rgba(0, 0, 0, 0.28);
@@ -1843,9 +1847,6 @@ footer {
     background: #ffffff;
 }
 
-.dashboard-figure-lightbox-open-hint {
-    cursor: zoom-in;
-}
 
 @media (max-width: 800px) {
     .dashboard-figure-lightbox {
@@ -1875,26 +1876,6 @@ footer {
     }
 }
 
-/* ------------------------------------------------------------
-   Lightbox click-through fix
-
-   The content wrapper fills most of the viewport. It must not
-   intercept clicks in the empty area around the figure.
-   The actual figure remains clickable.
-   ------------------------------------------------------------ */
-
-.dashboard-figure-lightbox-content {
-    pointer-events: none;
-}
-
-.dashboard-figure-lightbox-content img,
-.dashboard-figure-lightbox-content svg {
-    pointer-events: auto;
-}
-
-.dashboard-figure-lightbox-close {
-    pointer-events: auto;
-}
 
 
 /* ------------------------------------------------------------
@@ -1912,4 +1893,11 @@ footer {
     color: #ffffff;
     text-decoration: underline;
     text-underline-offset: 3px;
+}
+
+
+/* Clickable publication figures */
+.visual-panel img,
+.visual-panel svg {
+    cursor: zoom-in;
 }

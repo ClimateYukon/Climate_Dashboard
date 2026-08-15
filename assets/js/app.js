@@ -66,6 +66,10 @@ function isEventPlot(plot) {
 }
 
 function getIndicatorCountLabel(indicator) {
+  if (indicator.card_type === "interactive") {
+    return "Interactive";
+  }
+
   const count = indicator.plot_count || 0;
 
   if (indicator.scope === "territory" || indicator.plot_scope === "territory") {

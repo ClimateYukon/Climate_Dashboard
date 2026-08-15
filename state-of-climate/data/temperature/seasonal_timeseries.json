@@ -1,7 +1,7 @@
 {
   "theme": "temperature",
   "region": "Yukon",
-  "spatial_summary": "Area-weighted mean across the true Yukon boundary",
+  "spatial_summary": "Area-weighted mean across the Yukon admin-1 boundary (Natural Earth 1:10m)",
   "weighting": "Each ERA5-Land grid cell is weighted by the actual area of that cell lying inside Yukon.",
   "period": "1951–2025",
   "baseline": "1961–1990",
