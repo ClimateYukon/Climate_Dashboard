@@ -564,6 +564,7 @@ function selectIndicator(id) {
         "indicator-source-theme"
     ).textContent =
         selectedMetadata?.description
+        || selectedIndicator.description
         || selectedIndicator.theme;
 
 

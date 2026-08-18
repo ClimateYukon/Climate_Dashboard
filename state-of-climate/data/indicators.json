@@ -14,7 +14,9 @@
       "communities",
       "heatmap",
       "seasonal"
-    ]
+    ],
+    "description": "Average daily temperature over the year.",
+    "definition": "Annual mean of daily mean 2 m air temperature."
   },
   {
     "id": "mean-daily-maximum-temperature",
@@ -31,7 +33,9 @@
       "communities",
       "heatmap",
       "seasonal"
-    ]
+    ],
+    "description": "Average of the daily high temperatures over the year.",
+    "definition": "Annual mean of daily maximum 2 m air temperature."
   },
   {
     "id": "mean-daily-minimum-temperature",
@@ -48,7 +52,9 @@
       "communities",
       "heatmap",
       "seasonal"
-    ]
+    ],
+    "description": "Average of the daily low temperatures over the year.",
+    "definition": "Annual mean of daily minimum 2 m air temperature."
   },
   {
     "id": "coldest-night",
@@ -64,7 +70,9 @@
       "timeseries",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Lowest minimum temperature reached during the year.",
+    "definition": "Annual minimum of daily minimum 2 m air temperature."
   },
   {
     "id": "hottest-day",
@@ -80,7 +88,9 @@
       "timeseries",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Highest maximum temperature reached during the year.",
+    "definition": "Annual maximum of daily maximum 2 m air temperature."
   },
   {
     "id": "days-above-20c",
@@ -96,7 +106,9 @@
       "timeseries",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Number of days each year when the maximum temperature rises above 20°C.",
+    "definition": "Count of days with daily maximum 2 m air temperature > 20°C."
   },
   {
     "id": "days-above-25c",
@@ -112,7 +124,9 @@
       "timeseries",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Number of days each year when the maximum temperature rises above 25°C.",
+    "definition": "Count of days with daily maximum 2 m air temperature > 25°C."
   },
   {
     "id": "days-above-30c",
@@ -128,7 +142,9 @@
       "timeseries",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Number of days each year when the maximum temperature rises above 30°C.",
+    "definition": "Count of days with daily maximum 2 m air temperature > 30°C."
   },
   {
     "id": "nights-above-10c",
@@ -144,7 +160,9 @@
       "timeseries",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Number of nights each year when the minimum temperature stays above 10°C.",
+    "definition": "Count of days with daily minimum 2 m air temperature > 10°C."
   },
   {
     "id": "nights-above-15c",
@@ -160,7 +178,9 @@
       "timeseries",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Number of nights each year when the minimum temperature stays above 15°C.",
+    "definition": "Count of days with daily minimum 2 m air temperature > 15°C."
   },
   {
     "id": "nights-below-minus-20c",
@@ -176,7 +196,9 @@
       "timeseries",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Number of nights each year when the minimum temperature falls below -20°C.",
+    "definition": "Count of days with daily minimum 2 m air temperature < -20°C."
   },
   {
     "id": "nights-below-minus-30c",
@@ -192,7 +214,9 @@
       "timeseries",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Number of nights each year when the minimum temperature falls below -30°C.",
+    "definition": "Count of days with daily minimum 2 m air temperature < -30°C."
   },
   {
     "id": "nights-below-minus-40c",
@@ -208,7 +232,9 @@
       "timeseries",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Number of nights each year when the minimum temperature falls below -40°C.",
+    "definition": "Count of days with daily minimum 2 m air temperature < -40°C."
   },
   {
     "id": "frost-days",
@@ -224,7 +250,9 @@
       "timeseries",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Number of days each year when the minimum temperature falls below freezing.",
+    "definition": "Count of days with daily minimum 2 m air temperature < 0°C."
   },
   {
     "id": "ice-days",
@@ -240,7 +268,9 @@
       "timeseries",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Number of days each year when the temperature stays below freezing all day.",
+    "definition": "Count of days with daily maximum 2 m air temperature < 0°C."
   },
   {
     "id": "freeze-thaw-days",
@@ -256,7 +286,9 @@
       "timeseries",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Number of days each year when temperatures fall below freezing and rise above freezing on the same day.",
+    "definition": "Count of days with daily minimum temperature < 0°C and daily maximum temperature > 0°C."
   },
   {
     "id": "frost-free-season-length",
@@ -272,7 +304,9 @@
       "timeseries",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Length of the period between the last spring frost and the first fall frost.",
+    "definition": "Number of days between the last day with daily minimum temperature < 0°C before July 15 and the first day with daily minimum temperature < 0°C on or after July 15."
   },
   {
     "id": "growing-degree-days-above-0c",
@@ -288,7 +322,9 @@
       "timeseries",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Accumulated warmth above 0°C over the year.",
+    "definition": "Annual sum of max(daily mean temperature - 0°C, 0), in °C·days."
   },
   {
     "id": "growing-degree-days-above-5c",
@@ -304,7 +340,9 @@
       "timeseries",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Accumulated warmth above 5°C over the year.",
+    "definition": "Annual sum of max(daily mean temperature - 5°C, 0), in °C·days."
   },
   {
     "id": "heating-degree-days-below-18c",
@@ -320,7 +358,9 @@
       "timeseries",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Accumulated cold below 18°C, used as an indicator of heating demand.",
+    "definition": "Annual sum of max(18°C - daily mean temperature, 0), in °C·days."
   },
   {
     "id": "cooling-degree-days-above-18c",
@@ -336,7 +376,9 @@
       "timeseries",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Accumulated warmth above 18°C, used as an indicator of cooling demand.",
+    "definition": "Annual sum of max(daily mean temperature - 18°C, 0), in °C·days."
   },
   {
     "id": "total-precipitation",
@@ -353,7 +395,9 @@
       "seasonal",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Total rain and snowfall received over the year, expressed as water equivalent.",
+    "definition": "Annual sum of daily total precipitation, expressed as liquid-water equivalent in millimetres."
   },
   {
     "id": "wet-days",
@@ -370,7 +414,9 @@
       "seasonal",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Number of days each year with at least 1 mm of precipitation.",
+    "definition": "Count of days with total precipitation ≥ 1 mm."
   },
   {
     "id": "heavy-precipitation-days",
@@ -387,7 +433,9 @@
       "seasonal",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Number of days each year with at least 10 mm of precipitation.",
+    "definition": "Count of days with total precipitation ≥ 10 mm."
   },
   {
     "id": "very-heavy-precipitation-days",
@@ -404,7 +452,9 @@
       "seasonal",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Number of days each year with at least 20 mm of precipitation.",
+    "definition": "Count of days with total precipitation ≥ 20 mm."
   },
   {
     "id": "maximum-1-day-precipitation",
@@ -421,7 +471,9 @@
       "seasonal",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Largest amount of precipitation received in a single day.",
+    "definition": "Maximum daily precipitation total within each year."
   },
   {
     "id": "maximum-5-day-precipitation",
@@ -438,7 +490,9 @@
       "seasonal",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Largest amount of precipitation received over any five consecutive days.",
+    "definition": "Maximum rolling 5-day precipitation total within each year."
   },
   {
     "id": "longest-dry-spell",
@@ -455,7 +509,9 @@
       "seasonal",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Longest stretch each year with less than 1 mm of precipitation per day.",
+    "definition": "Maximum number of consecutive days with total precipitation < 1 mm."
   },
   {
     "id": "snow-fraction",
@@ -471,7 +527,9 @@
       "timeseries",
       "communities",
       "heatmap"
-    ]
+    ],
+    "description": "Percentage of the year's precipitation that fell as snow.",
+    "definition": "100 × annual snowfall water equivalent / annual total precipitation, bounded from 0% to 100%."
   },
   {
     "id": "rain-snow-partition",

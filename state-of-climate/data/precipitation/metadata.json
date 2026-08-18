@@ -4,8 +4,8 @@
   "baseline": "1961–1990",
   "source": "ERA5-Land daily reanalysis",
   "community_method": "Nearest ERA5-Land grid cell to each community.",
-  "territorial_method": "Area-weighted mean of locally calculated ERA5-Land grid-cell indicators using fractional overlap with the Yukon boundary.",
-  "trend_method": "Precipitation indicators use Sen's slope to estimate trend magnitude and the Mann-Kendall test to assess statistical significance. The Hamed-Rao variance correction is applied only when significant lag-1 serial correlation is detected after detrending. Statistical significance is assessed at p < 0.05. Yukon maps use Benjamini-Hochberg false-discovery-rate correction across grid cells. Community heatmaps use the same correction across communities separately for each indicator and season.",
+  "territorial_method": "Area-weighted mean of ERA5-Land grid-cell indicator values using fractional overlap with the Yukon boundary.",
+  "trend_method": "Precipitation indicators use Sen's slope to estimate trend magnitude and the Mann-Kendall test to assess statistical significance. The Hamed-Rao variance correction is applied only when significant lag-1 serial correlation is detected after detrending. Statistical significance is assessed at p < 0.05. For Yukon maps, Benjamini-Hochberg false-discovery-rate correction is applied across grid cells. Community heatmaps use the same multiple-testing control across communities.",
   "precipitation_note": "ERA5-Land is a reanalysis. Precipitation is more spatially and temporally variable than temperature, and northern precipitation observations carry important uncertainty.",
   "indicators": {
     "total-precipitation": {
@@ -30,7 +30,9 @@
       "files": {
         "annual_map": "figures/precipitation/annual/total-precipitation.png",
         "seasonal_map": "figures/precipitation/seasonal/total-precipitation.png"
-      }
+      },
+      "description": "Total rain and snowfall received over the year, expressed as water equivalent.",
+      "definition": "Annual sum of daily total precipitation, expressed as liquid-water equivalent in millimetres."
     },
     "wet-days": {
       "label": "Wet days",
@@ -54,7 +56,9 @@
       "files": {
         "annual_map": "figures/precipitation/annual/wet-days.png",
         "seasonal_map": "figures/precipitation/seasonal/wet-days.png"
-      }
+      },
+      "description": "Number of days each year with at least 1 mm of precipitation.",
+      "definition": "Count of days with total precipitation ≥ 1 mm."
     },
     "heavy-precipitation-days": {
       "label": "Heavy precipitation days",
@@ -78,7 +82,9 @@
       "files": {
         "annual_map": "figures/precipitation/annual/heavy-precipitation-days.png",
         "seasonal_map": "figures/precipitation/seasonal/heavy-precipitation-days.png"
-      }
+      },
+      "description": "Number of days each year with at least 10 mm of precipitation.",
+      "definition": "Count of days with total precipitation ≥ 10 mm."
     },
     "very-heavy-precipitation-days": {
       "label": "Very heavy precipitation days",
@@ -102,7 +108,9 @@
       "files": {
         "annual_map": "figures/precipitation/annual/very-heavy-precipitation-days.png",
         "seasonal_map": "figures/precipitation/seasonal/very-heavy-precipitation-days.png"
-      }
+      },
+      "description": "Number of days each year with at least 20 mm of precipitation.",
+      "definition": "Count of days with total precipitation ≥ 20 mm."
     },
     "maximum-1-day-precipitation": {
       "label": "Maximum 1-day precipitation",
@@ -126,7 +134,9 @@
       "files": {
         "annual_map": "figures/precipitation/annual/maximum-1-day-precipitation.png",
         "seasonal_map": "figures/precipitation/seasonal/maximum-1-day-precipitation.png"
-      }
+      },
+      "description": "Largest amount of precipitation received in a single day.",
+      "definition": "Maximum daily precipitation total within each year."
     },
     "maximum-5-day-precipitation": {
       "label": "Maximum 5-day precipitation",
@@ -150,7 +160,9 @@
       "files": {
         "annual_map": "figures/precipitation/annual/maximum-5-day-precipitation.png",
         "seasonal_map": "figures/precipitation/seasonal/maximum-5-day-precipitation.png"
-      }
+      },
+      "description": "Largest amount of precipitation received over any five consecutive days.",
+      "definition": "Maximum rolling 5-day precipitation total within each year."
     },
     "longest-dry-spell": {
       "label": "Longest dry spell",
@@ -174,7 +186,9 @@
       "files": {
         "annual_map": "figures/precipitation/annual/longest-dry-spell.png",
         "seasonal_map": "figures/precipitation/seasonal/longest-dry-spell.png"
-      }
+      },
+      "description": "Longest stretch each year with less than 1 mm of precipitation per day.",
+      "definition": "Maximum number of consecutive days with total precipitation < 1 mm."
     },
     "snow-fraction": {
       "label": "Fraction of precipitation falling as snow",
@@ -195,7 +209,13 @@
       "files": {
         "annual_map": "figures/precipitation/annual/snow-fraction.png",
         "seasonal_map": null
-      }
+      },
+      "description": "Percentage of the year's precipitation that fell as snow.",
+      "definition": "100 × annual snowfall water equivalent / annual total precipitation, bounded from 0% to 100%."
     }
-  }
+  },
+  "boundary_summary": "Yukon admin-1 boundary from Natural Earth 1:10m. A 50 km buffer is used only to extract source data; final statistics and maps use the unbuffered boundary.",
+  "yukon_value_note": "Each indicator is calculated at each ERA5-Land grid cell, then area-weighted across Yukon. For counts and extremes, the Yukon value is a spatial average of local indicator values, not a territory-wide event count.",
+  "map_note": "Hatching shows areas where the trend is not statistically significant after accounting for the many grid cells tested across the map.",
+  "heatmap_design": "Rows are Yukon communities. Seasonal results are shown first where available, followed by the annual result. Values show the rate of change per decade. Precipitation uses a brown-white-green scale. Values in parentheses are not statistically significant after accounting for the number of communities tested."
 }
