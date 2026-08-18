@@ -47,7 +47,7 @@ const visualizationLabels = {
 
 const statusLabels = {
     available: "Available",
-    "in-progress": "Under analysis",
+    "in-progress": "Not yet available",
     planned: "Planned"
 };
 
@@ -303,7 +303,7 @@ function buildThemeCards() {
         const isPublished = publishedThemes.has(theme);
         const statusText = isPublished
             ? `${themeIndicators.length} available`
-            : "Under analysis";
+            : "Not yet available";
 
         return `
             <button
