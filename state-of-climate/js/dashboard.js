@@ -3543,16 +3543,12 @@ function renderPrecipitationYukonMap(
             ];
 
 
-    if (
-        !metadata
-        ||
-        !series
-    ) {
+    if (!metadata) {
 
         container.innerHTML = `
             <div class="visual-panel">
                 <div class="empty-state">
-                    Yukon-wide data are not available
+                    Map metadata are not available
                     for this indicator.
                 </div>
             </div>
@@ -3617,14 +3613,16 @@ function renderPrecipitationYukonMap(
             </div>
 
             ${
-                renderTrendMetrics(
-                    series.trend,
-                    metadata.trend_unit,
-                    precipitationPackage
-                        .metadata
-                        .period
-                    || "1951–2025"
-                )
+                series
+                    ? renderTrendMetrics(
+                        series.trend,
+                        metadata.trend_unit,
+                        precipitationPackage
+                            .metadata
+                            .period
+                        || "1951–2025"
+                    )
+                    : ""
             }
 
         </div>
