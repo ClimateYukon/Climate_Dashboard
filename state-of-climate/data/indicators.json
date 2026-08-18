@@ -356,22 +356,6 @@
     ]
   },
   {
-    "id": "total-rainfall",
-    "dashboard_theme": "Precipitation",
-    "theme": "Precipitation",
-    "name": "Total rainfall",
-    "status": "available",
-    "relevance": null,
-    "source": "ERA5-Land daily precipitation",
-    "views": [
-      "yukon",
-      "map",
-      "timeseries",
-      "communities",
-      "heatmap"
-    ]
-  },
-  {
     "id": "wet-days",
     "dashboard_theme": "Precipitation",
     "theme": "Precipitation",
@@ -382,9 +366,10 @@
     "views": [
       "yukon",
       "map",
+      "timeseries",
+      "seasonal",
       "communities",
-      "heatmap",
-      "timeseries"
+      "heatmap"
     ]
   },
   {
@@ -398,9 +383,10 @@
     "views": [
       "yukon",
       "map",
+      "timeseries",
+      "seasonal",
       "communities",
-      "heatmap",
-      "timeseries"
+      "heatmap"
     ]
   },
   {
@@ -414,9 +400,10 @@
     "views": [
       "yukon",
       "map",
+      "timeseries",
+      "seasonal",
       "communities",
-      "heatmap",
-      "timeseries"
+      "heatmap"
     ]
   },
   {
@@ -430,9 +417,10 @@
     "views": [
       "yukon",
       "map",
+      "timeseries",
+      "seasonal",
       "communities",
-      "heatmap",
-      "timeseries"
+      "heatmap"
     ]
   },
   {
@@ -446,9 +434,10 @@
     "views": [
       "yukon",
       "map",
+      "timeseries",
+      "seasonal",
       "communities",
-      "heatmap",
-      "timeseries"
+      "heatmap"
     ]
   },
   {
@@ -462,9 +451,10 @@
     "views": [
       "yukon",
       "map",
+      "timeseries",
+      "seasonal",
       "communities",
-      "heatmap",
-      "timeseries"
+      "heatmap"
     ]
   },
   {

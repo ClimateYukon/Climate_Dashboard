@@ -10,6 +10,7 @@ let selectedView = null;
 let selectedVisualization = null;
 
 let selectedCommunity = "Whitehorse";
+let selectedPrecipitationCommunityPeriod = "annual";
 
 let temperaturePackage = null;
 let precipitationPackage = null;
@@ -1413,8 +1414,7 @@ function renderTemperatureSeasonalTimeseries(
         seasons
         .flatMap(
             item =>
-                item.records
-                .map(
+                item.records.map(
                     record =>
                         Number(
                             record.value
@@ -3777,6 +3777,26 @@ function renderPrecipitationLineChart(
     }
 
 
+    const baselineMean =
+        Number(
+            options.baselineMean
+        );
+
+
+    if (Number.isFinite(baselineMean)) {
+        yMinimum =
+            Math.min(
+                yMinimum,
+                baselineMean
+            );
+        yMaximum =
+            Math.max(
+                yMaximum,
+                baselineMean
+            );
+    }
+
+
     let yRange =
         yMaximum
         - yMinimum;
@@ -4050,6 +4070,25 @@ function renderPrecipitationLineChart(
             : "";
 
 
+    const baselineLine =
+        Number.isFinite(baselineMean)
+            ? `
+                <line
+                    x1="${margin.left}"
+                    y1="${yScale(baselineMean)}"
+                    x2="${margin.left + plotWidth}"
+                    y2="${yScale(baselineMean)}"
+                    stroke="#777"
+                    stroke-width="1.5"
+                    stroke-dasharray="3 4"
+                    opacity="0.9"
+                >
+                    <title>1961–1990 average: ${baselineMean.toFixed(1)} ${escapeHtml(options.yLabel || "")}</title>
+                </line>
+            `
+            : "";
+
+
     const svg = `
 
         <svg
@@ -4159,6 +4198,7 @@ function renderPrecipitationLineChart(
 
 
             ${zeroLine}
+            ${baselineLine}
 
 
             <path
@@ -4365,7 +4405,12 @@ function renderPrecipitationYukonTimeseries(
                 ),
 
             zeroLine:
+                usePercent,
+
+            baselineMean:
                 usePercent
+                    ? null
+                    : indicator.baseline_mean
         }
     );
 }
@@ -4758,6 +4803,27 @@ function buildPrecipitationSeasonalChartSvg(
             }
 
 
+            ${
+                Number.isFinite(
+                    Number(
+                        options.baselineMean
+                    )
+                )
+                    ? `
+                        <line
+                            x1="${margin.left}"
+                            y1="${yScale(Number(options.baselineMean))}"
+                            x2="${margin.left + plotWidth}"
+                            y2="${yScale(Number(options.baselineMean))}"
+                            stroke="#777"
+                            stroke-width="1.3"
+                            stroke-dasharray="3 4"
+                            opacity="0.9"
+                        />
+                    `
+                    : ""
+            }
+
             <path
                 d="${linePath}"
                 class="seasonal-precip-data-line"
@@ -4871,16 +4937,8 @@ function renderPrecipitationSeasonalTimeseries(
 
 
                 const sourceValues =
-                    (
-                        season.anomalies
-                        &&
-                        season.anomalies.length
-                    )
-                        ? season.anomalies
-                        : (
-                            season.values
-                            || []
-                        );
+                    season.values
+                    || [];
 
 
                 const records =
@@ -5201,7 +5259,9 @@ function renderPrecipitationSeasonalTimeseries(
                                         unit:
                                             indicator.unit
                                             || "",
-                                        trend
+                                        trend,
+                                        baselineMean:
+                                            item.season.baseline_mean
                                     }
                                 )
                             }
@@ -5260,9 +5320,8 @@ function renderPrecipitationSeasonalTimeseries(
 
 
             <div class="visual-subtitle">
-                Seasonal difference from each season's
-                ${escapeHtml(baseline)} average
-                · ${escapeHtml(period)}
+                Seasonal value · ${escapeHtml(period)}
+                · reference: ${escapeHtml(baseline)} average
             </div>
 
 
@@ -5273,9 +5332,9 @@ function renderPrecipitationSeasonalTimeseries(
 
             <div class="seasonal-precip-note">
                 All four seasons use the same vertical scale.
-                The solid line shows the annual seasonal anomaly;
-                the dashed line shows the long-term trend.
-                Zero represents the ${escapeHtml(baseline)} seasonal average.
+                The solid line shows the seasonal value, the short-dashed
+                reference line shows the ${escapeHtml(baseline)} seasonal
+                average, and the long-dashed line shows the long-term trend.
             </div>
 
         </div>
@@ -5332,14 +5391,18 @@ function renderPrecipitationCommunityHeatmap(
             .communitySeasonalTrends;
 
 
+    const seasonalIndicator =
+        seasonalPackage
+        ?.indicators
+        ?.[selectedIndicator.id]
+        || null;
+
+
     const hasSeasonal =
         Boolean(
-            seasonalPackage
+            seasonalIndicator
             &&
-            seasonalPackage.indicator
-                === selectedIndicator.id
-            &&
-            seasonalPackage.seasons
+            seasonalIndicator.communities
         );
 
 
@@ -5408,24 +5471,11 @@ function renderPrecipitationCommunityHeatmap(
         }
 
 
-        const season =
-            seasonalPackage
-                .seasons[
-                    column.key
-                ];
-
-
-        if (!season) {
-
-            return null;
-        }
-
-
         return (
-            season
-                .communities[
-                    community
-                ]
+            seasonalIndicator
+            ?.communities
+            ?.[community]
+            ?.[column.key]
             || null
         );
     }
@@ -5791,7 +5841,6 @@ function renderPrecipitationCommunityHeatmap(
 function renderPrecipitationCommunityTimeseries(
     container
 ) {
-
     const indicator =
         precipitationPackage
             .communities
@@ -5799,9 +5848,7 @@ function renderPrecipitationCommunityTimeseries(
                 selectedIndicator.id
             ];
 
-
     if (!indicator) {
-
         container.innerHTML = `
             <div class="visual-panel">
                 <div class="empty-state">
@@ -5810,10 +5857,8 @@ function renderPrecipitationCommunityTimeseries(
                 </div>
             </div>
         `;
-
         return;
     }
-
 
     const communities =
         precipitationPackage
@@ -5829,7 +5874,6 @@ function renderPrecipitationCommunityTimeseries(
                     )
             );
 
-
     if (
         !selectedCommunity
         ||
@@ -5837,21 +5881,19 @@ function renderPrecipitationCommunityTimeseries(
             selectedCommunity
         )
     ) {
-
         selectedCommunity =
-            communities[0];
+            communities.includes("Whitehorse")
+                ? "Whitehorse"
+                : communities[0];
     }
 
-
-    const series =
+    const annualSeries =
         indicator
             .communities[
                 selectedCommunity
             ];
 
-
-    if (!series) {
-
+    if (!annualSeries) {
         container.innerHTML = `
             <div class="visual-panel">
                 <div class="empty-state">
@@ -5860,146 +5902,178 @@ function renderPrecipitationCommunityTimeseries(
                 </div>
             </div>
         `;
-
         return;
     }
 
+    const seasonNames =
+        precipitationPackage
+            .communities
+            .season_names
+        || indicator.season_names
+        || {
+            DJF: "Winter",
+            MAM: "Spring",
+            JJA: "Summer",
+            SON: "Fall"
+        };
 
-    const usePercent =
-        indicator
-            .time_series_mode
-        === "anomaly_percent";
+    const seasonOrder =
+        precipitationPackage
+            .communities
+            .season_order
+        || indicator.season_order
+        || ["DJF", "MAM", "JJA", "SON"];
 
+    const availableSeasons =
+        seasonOrder.filter(
+            code =>
+                annualSeries.seasons
+                && annualSeries.seasons[code]
+        );
+
+    const availablePeriods =
+        ["annual", ...availableSeasons];
+
+    if (
+        !availablePeriods.includes(
+            selectedPrecipitationCommunityPeriod
+        )
+    ) {
+        selectedPrecipitationCommunityPeriod = "annual";
+    }
+
+    const periodSeries =
+        selectedPrecipitationCommunityPeriod === "annual"
+            ? annualSeries
+            : annualSeries
+                .seasons[
+                    selectedPrecipitationCommunityPeriod
+                ];
+
+    const periodLabel =
+        selectedPrecipitationCommunityPeriod === "annual"
+            ? "Annual"
+            : (
+                periodSeries.name
+                || seasonNames[
+                    selectedPrecipitationCommunityPeriod
+                ]
+                || selectedPrecipitationCommunityPeriod
+            );
 
     container.innerHTML = `
-
-        <div
-            style="
-                margin-bottom: 14px;
-                display: flex;
-                align-items: center;
-                gap: 10px;
-            "
-        >
-
-            <label
-                for="precipitation-community-select"
-                style="font-weight: 700;"
-            >
+        <div class="community-toolbar">
+            <label for="precipitation-community-select">
                 Community
             </label>
-
-
-            <select
-                id="precipitation-community-select"
-            >
-
+            <select id="precipitation-community-select">
                 ${
                     communities
                     .map(
                         community => `
-
                             <option
-                                value="${
-                                    escapeHtml(
-                                        community
-                                    )
-                                }"
+                                value="${escapeHtml(community)}"
                                 ${
-                                    community
-                                    === selectedCommunity
+                                    community === selectedCommunity
                                         ? "selected"
                                         : ""
                                 }
                             >
-                                ${
-                                    escapeHtml(
-                                        community
-                                    )
-                                }
+                                ${escapeHtml(community)}
                             </option>
                         `
                     )
                     .join("")
                 }
-
             </select>
 
+            ${
+                availableSeasons.length
+                    ? `
+                        <label for="precipitation-community-period-select">
+                            Period
+                        </label>
+                        <select id="precipitation-community-period-select">
+                            <option
+                                value="annual"
+                                ${
+                                    selectedPrecipitationCommunityPeriod === "annual"
+                                        ? "selected"
+                                        : ""
+                                }
+                            >Annual</option>
+                            ${
+                                availableSeasons
+                                .map(
+                                    code => `
+                                        <option
+                                            value="${code}"
+                                            ${
+                                                selectedPrecipitationCommunityPeriod === code
+                                                    ? "selected"
+                                                    : ""
+                                            }
+                                        >
+                                            ${escapeHtml(seasonNames[code] || code)}
+                                        </option>
+                                    `
+                                )
+                                .join("")
+                            }
+                        </select>
+                    `
+                    : ""
+            }
         </div>
 
-
-        <div
-            id="precipitation-community-chart"
-        ></div>
+        <div id="precipitation-community-chart"></div>
     `;
-
 
     const chart =
         document.getElementById(
             "precipitation-community-chart"
         );
 
-
     renderPrecipitationLineChart(
         chart,
         {
             title:
                 `${indicator.label} near ${selectedCommunity}`,
-
             subtitle:
-                usePercent
-                    ? (
-                        "Annual difference from the " +
-                        "1961–1990 average"
-                    )
-                    : (
-                        "Annual value near the selected community"
-                    ),
-
+                `${periodLabel} value near the selected community · `
+                + `reference: ${
+                    precipitationPackage.communities.baseline
+                    || "1961–1990"
+                } average`,
             years:
-                (
-                    series.years
-                    ||
-                    precipitationPackage
-                        .communities
-                        .years
-                ),
-
+                periodSeries.years
+                || precipitationPackage
+                    .communities
+                    .years,
             values:
-                usePercent
-                    ? series.anomalies
-                    : series.values,
-
+                periodSeries.values,
             yLabel:
-                usePercent
-                    ? "%"
-                    : indicator.unit,
-
+                indicator.unit,
             trend:
-                series.trend,
-
+                periodSeries.trend,
             trendUnit:
                 indicator.trend_unit,
-
             period:
-                (
-                    precipitationPackage
-                        .communities
-                        .period
-                    || precipitationPackage
-                        .metadata
-                        .period
-                    || "1951–2025"
-                ),
-
+                precipitationPackage
+                    .communities
+                    .period
+                || precipitationPackage
+                    .metadata
+                    .period
+                || "1951–2025",
             community:
                 selectedCommunity,
-
             zeroLine:
-                usePercent
+                false,
+            baselineMean:
+                periodSeries.baseline_mean
         }
     );
-
 
     document
         .getElementById(
@@ -6008,20 +6082,32 @@ function renderPrecipitationCommunityTimeseries(
         .addEventListener(
             "change",
             event => {
-
                 selectedCommunity =
-                    event
-                        .target
-                        .value;
-
-
+                    event.target.value;
                 renderPrecipitationCommunityTimeseries(
                     container
                 );
             }
         );
-}
 
+    const periodSelect =
+        document.getElementById(
+            "precipitation-community-period-select"
+        );
+
+    if (periodSelect) {
+        periodSelect.addEventListener(
+            "change",
+            event => {
+                selectedPrecipitationCommunityPeriod =
+                    event.target.value;
+                renderPrecipitationCommunityTimeseries(
+                    container
+                );
+            }
+        );
+    }
+}
 
 // ============================================================
 // About precipitation

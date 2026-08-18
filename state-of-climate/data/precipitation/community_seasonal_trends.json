@@ -1,15 +1,13 @@
 {
-  "period": "1951-2025",
-  "indicator": "total-precipitation",
-  "label": "Total precipitation",
-  "unit": "mm per decade",
+  "theme": "Precipitation",
+  "period": "1951–2025",
   "season_order": [
     "DJF",
     "MAM",
     "JJA",
     "SON"
   ],
-  "season_labels": {
+  "season_names": {
     "DJF": "Winter",
     "MAM": "Spring",
     "JJA": "Summer",
@@ -35,456 +33,3326 @@
     "Watson Lake",
     "Whitehorse"
   ],
-  "seasons": {
-    "DJF": {
-      "label": "Winter",
+  "significance": {
+    "alpha": 0.05,
+    "multiple_testing": "Benjamini-Hochberg FDR across communities separately for each indicator and season"
+  },
+  "indicators": {
+    "total-precipitation": {
+      "label": "Total precipitation",
+      "unit": "mm per decade",
       "communities": {
         "Beaver Creek": {
-          "slope_per_decade": 0.852563,
-          "p_value": 0.39051739,
-          "p_value_fdr": 0.43933206,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 1.026127,
+            "p_value": 0.29697671,
+            "q_value": 0.31444593,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 1.713175,
+            "p_value": 0.18770586,
+            "q_value": 0.30715504,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 6.840388,
+            "p_value": 0.02013941,
+            "q_value": 0.04756896,
+            "significant_fdr": true
+          },
+          "SON": {
+            "slope_per_decade": 3.681699,
+            "p_value": 0.00888376,
+            "q_value": 0.03557833,
+            "significant_fdr": true
+          }
         },
         "Burwash Landing": {
-          "slope_per_decade": 2.141612,
-          "p_value": 0.15599006,
-          "p_value_fdr": 0.28306013,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 2.494748,
+            "p_value": 0.08712075,
+            "q_value": 0.17897958,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 3.337931,
+            "p_value": 0.01014779,
+            "q_value": 0.12156174,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 11.292333,
+            "p_value": 0.0008401,
+            "q_value": 0.0050406,
+            "significant_fdr": true
+          },
+          "SON": {
+            "slope_per_decade": 4.405422,
+            "p_value": 0.01421355,
+            "q_value": 0.04264065,
+            "significant_fdr": true
+          }
         },
         "Carcross": {
-          "slope_per_decade": 2.402825,
-          "p_value": 0.28311442,
-          "p_value_fdr": 0.36400425,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 3.101458,
+            "p_value": 0.1757394,
+            "q_value": 0.22972666,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.273171,
+            "p_value": 0.84048835,
+            "q_value": 0.84048835,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 6.130332,
+            "p_value": 0.00128056,
+            "q_value": 0.00576252,
+            "significant_fdr": true
+          },
+          "SON": {
+            "slope_per_decade": -1.780057,
+            "p_value": 0.48115817,
+            "q_value": 0.86608471,
+            "significant_fdr": false
+          }
         },
         "Carmacks": {
-          "slope_per_decade": 0.935681,
-          "p_value": 0.37061408,
-          "p_value_fdr": 0.43933206,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 1.094825,
+            "p_value": 0.2134232,
+            "q_value": 0.25165674,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 1.385803,
+            "p_value": 0.17867629,
+            "q_value": 0.30715504,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 2.796054,
+            "p_value": 0.27227866,
+            "q_value": 0.4455469,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 4.073783,
+            "p_value": 0.00277531,
+            "q_value": 0.01665186,
+            "significant_fdr": true
+          }
         },
         "Dawson City": {
-          "slope_per_decade": 1.699753,
-          "p_value": 0.07164613,
-          "p_value_fdr": 0.25792607,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 1.737944,
+            "p_value": 0.05133741,
+            "q_value": 0.16068996,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 1.732478,
+            "p_value": 0.14077204,
+            "q_value": 0.30715504,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.557932,
+            "p_value": 0.79782701,
+            "q_value": 0.79782701,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 4.216075,
+            "p_value": 0.00988287,
+            "q_value": 0.03557833,
+            "significant_fdr": true
+          }
         },
         "Destruction Bay": {
-          "slope_per_decade": 2.674193,
-          "p_value": 0.17298119,
-          "p_value_fdr": 0.28306013,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 3.092504,
+            "p_value": 0.0959043,
+            "q_value": 0.17897958,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 2.852694,
+            "p_value": 0.01350686,
+            "q_value": 0.12156174,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 11.654999,
+            "p_value": 0.000219,
+            "q_value": 0.001971,
+            "significant_fdr": true
+          },
+          "SON": {
+            "slope_per_decade": 2.412929,
+            "p_value": 0.19390995,
+            "q_value": 0.43629739,
+            "significant_fdr": false
+          }
         },
         "Faro": {
-          "slope_per_decade": 0.880883,
-          "p_value": 0.5386581,
-          "p_value_fdr": 0.5386581,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 1.145681,
+            "p_value": 0.41239089,
+            "q_value": 0.41239089,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 2.104936,
+            "p_value": 0.05825727,
+            "q_value": 0.30715504,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 1.441751,
+            "p_value": 0.47548099,
+            "q_value": 0.57057719,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 2.284605,
+            "p_value": 0.10342992,
+            "q_value": 0.26596265,
+            "significant_fdr": false
+          }
         },
         "Haines Junction": {
-          "slope_per_decade": 4.71658,
-          "p_value": 0.07164613,
-          "p_value_fdr": 0.25792607,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 5.33493,
+            "p_value": 0.03616869,
+            "q_value": 0.16068996,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 1.632837,
+            "p_value": 0.21680858,
+            "q_value": 0.32521287,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 7.388812,
+            "p_value": 0.0001895,
+            "q_value": 0.001971,
+            "significant_fdr": true
+          },
+          "SON": {
+            "slope_per_decade": -0.118582,
+            "p_value": 0.96351515,
+            "q_value": 0.96351515,
+            "significant_fdr": false
+          }
         },
         "Johnson's Crossing": {
-          "slope_per_decade": 1.836728,
-          "p_value": 0.17298119,
-          "p_value_fdr": 0.28306013,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 2.243436,
+            "p_value": 0.10937641,
+            "q_value": 0.17897958,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.516117,
+            "p_value": 0.67387565,
+            "q_value": 0.80865078,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 2.046461,
+            "p_value": 0.36508944,
+            "q_value": 0.50550846,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.055392,
+            "p_value": 0.96351515,
+            "q_value": 0.96351515,
+            "significant_fdr": false
+          }
         },
         "Mayo": {
-          "slope_per_decade": 2.590242,
-          "p_value": 0.00848741,
-          "p_value_fdr": 0.07638669,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 2.646385,
+            "p_value": 0.00557094,
+            "q_value": 0.06615405,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 1.605931,
+            "p_value": 0.11772179,
+            "q_value": 0.30715504,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 2.017662,
+            "p_value": 0.36026594,
+            "q_value": 0.50550846,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 5.191664,
+            "p_value": 0.00078642,
+            "q_value": 0.01189827,
+            "significant_fdr": true
+          }
         },
         "Mendenhall": {
-          "slope_per_decade": 2.374869,
-          "p_value": 0.15873042,
-          "p_value_fdr": 0.28306013,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 2.71273,
+            "p_value": 0.09230938,
+            "q_value": 0.17897958,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 1.679836,
+            "p_value": 0.08217011,
+            "q_value": 0.30715504,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 4.746114,
+            "p_value": 0.02114176,
+            "q_value": 0.04756896,
+            "significant_fdr": true
+          },
+          "SON": {
+            "slope_per_decade": 0.682074,
+            "p_value": 0.69403209,
+            "q_value": 0.96096751,
+            "significant_fdr": false
+          }
         },
         "Old Crow": {
-          "slope_per_decade": 2.131852,
-          "p_value": 0.00381124,
-          "p_value_fdr": 0.06860232,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 1.976551,
+            "p_value": 0.00735045,
+            "q_value": 0.06615405,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -1.152563,
+            "p_value": 0.15618183,
+            "q_value": 0.30715504,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -1.687389,
+            "p_value": 0.45867201,
+            "q_value": 0.57057719,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.623607,
+            "p_value": 0.67387565,
+            "q_value": 0.96096751,
+            "significant_fdr": false
+          }
         },
         "Pelly Crossing": {
-          "slope_per_decade": 1.590974,
-          "p_value": 0.04999238,
-          "p_value_fdr": 0.25792607,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 1.568142,
+            "p_value": 0.04043446,
+            "q_value": 0.16068996,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 1.35552,
+            "p_value": 0.15352825,
+            "q_value": 0.30715504,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 2.153091,
+            "p_value": 0.26436764,
+            "q_value": 0.4455469,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 4.317614,
+            "p_value": 0.00132203,
+            "q_value": 0.01189827,
+            "significant_fdr": true
+          }
         },
         "Ross River": {
-          "slope_per_decade": 1.056311,
-          "p_value": 0.44238559,
-          "p_value_fdr": 0.46840827,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 1.299521,
+            "p_value": 0.22369488,
+            "q_value": 0.25165674,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 1.565103,
+            "p_value": 0.16435135,
+            "q_value": 0.30715504,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.921737,
+            "p_value": 0.57680091,
+            "q_value": 0.64890102,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.575867,
+            "p_value": 0.67562706,
+            "q_value": 0.96096751,
+            "significant_fdr": false
+          }
         },
         "Tagish": {
-          "slope_per_decade": 2.265767,
-          "p_value": 0.17005708,
-          "p_value_fdr": 0.28306013,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 2.540764,
+            "p_value": 0.10150586,
+            "q_value": 0.17897958,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.919676,
+            "p_value": 0.36995306,
+            "q_value": 0.5122427,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 4.570453,
+            "p_value": 0.02114176,
+            "q_value": 0.04756896,
+            "significant_fdr": true
+          },
+          "SON": {
+            "slope_per_decade": -0.633093,
+            "p_value": 0.75576119,
+            "q_value": 0.96351515,
+            "significant_fdr": false
+          }
         },
         "Teslin": {
-          "slope_per_decade": 1.80429,
-          "p_value": 0.23221034,
-          "p_value_fdr": 0.32152201,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 2.168169,
+            "p_value": 0.15618183,
+            "q_value": 0.22972666,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.374014,
+            "p_value": 0.75576119,
+            "q_value": 0.82240121,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 2.741148,
+            "p_value": 0.20676725,
+            "q_value": 0.4135345,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.166323,
+            "p_value": 0.9562249,
+            "q_value": 0.96351515,
+            "significant_fdr": false
+          }
         },
         "Watson Lake": {
-          "slope_per_decade": 1.68706,
-          "p_value": 0.21794223,
-          "p_value_fdr": 0.32152201,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 1.830008,
+            "p_value": 0.17867629,
+            "q_value": 0.22972666,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.451039,
+            "p_value": 0.77671225,
+            "q_value": 0.82240121,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 1.138848,
+            "p_value": 0.63426931,
+            "q_value": 0.67157927,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.40095,
+            "p_value": 0.87640671,
+            "q_value": 0.96351515,
+            "significant_fdr": false
+          }
         },
         "Whitehorse": {
-          "slope_per_decade": 2.620524,
-          "p_value": 0.08937724,
-          "p_value_fdr": 0.26813172,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 2.86475,
+            "p_value": 0.05356332,
+            "q_value": 0.16068996,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.459377,
+            "p_value": 0.56437132,
+            "q_value": 0.72562027,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 6.072866,
+            "p_value": 0.00676939,
+            "q_value": 0.0243698,
+            "significant_fdr": true
+          },
+          "SON": {
+            "slope_per_decade": 1.474707,
+            "p_value": 0.46423768,
+            "q_value": 0.86608471,
+            "significant_fdr": false
+          }
         }
       }
     },
-    "MAM": {
-      "label": "Spring",
+    "wet-days": {
+      "label": "Wet days",
+      "unit": "days per decade",
       "communities": {
         "Beaver Creek": {
-          "slope_per_decade": 1.713186,
-          "p_value": 0.18770586,
-          "p_value_fdr": 0.30715504,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 0.344828,
+            "p_value": 0.2365458,
+            "q_value": 0.36585811,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.333333,
+            "p_value": 0.24020579,
+            "q_value": 0.81623363,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.588235,
+            "p_value": 0.19620453,
+            "q_value": 0.50452593,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.8,
+            "p_value": 0.00898035,
+            "q_value": 0.08082315,
+            "significant_fdr": false
+          }
         },
         "Burwash Landing": {
-          "slope_per_decade": 3.337926,
-          "p_value": 0.01014779,
-          "p_value_fdr": 0.12156174,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 0.322581,
+            "p_value": 0.24390541,
+            "q_value": 0.36585811,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.5,
+            "p_value": 0.09320959,
+            "q_value": 0.5974233,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 1.363636,
+            "p_value": 0.00246547,
+            "q_value": 0.02759697,
+            "significant_fdr": true
+          },
+          "SON": {
+            "slope_per_decade": 0.428571,
+            "p_value": 0.19621393,
+            "q_value": 0.45896135,
+            "significant_fdr": false
+          }
         },
         "Carcross": {
-          "slope_per_decade": 0.27317,
-          "p_value": 0.84048835,
-          "p_value_fdr": 0.84048835,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.7761782,
+            "q_value": 0.7761782,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.185185,
+            "p_value": 0.53295804,
+            "q_value": 0.93549133,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.833333,
+            "p_value": 0.02246506,
+            "q_value": 0.10109277,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.84009837,
+            "q_value": 0.85810554,
+            "significant_fdr": false
+          }
         },
         "Carmacks": {
-          "slope_per_decade": 1.385803,
-          "p_value": 0.17867629,
-          "p_value_fdr": 0.30715504,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 0.425532,
+            "p_value": 0.1645597,
+            "q_value": 0.3291194,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.27027,
+            "p_value": 0.30406403,
+            "q_value": 0.81623363,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.15625,
+            "p_value": 0.64686859,
+            "q_value": 0.72772716,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.9375,
+            "p_value": 0.01990786,
+            "q_value": 0.11944716,
+            "significant_fdr": false
+          }
         },
         "Dawson City": {
-          "slope_per_decade": 1.732474,
-          "p_value": 0.14077204,
-          "p_value_fdr": 0.30715504,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 0.487805,
+            "p_value": 0.13740757,
+            "q_value": 0.3291194,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.54163655,
+            "q_value": 0.93549133,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.69669131,
+            "q_value": 0.73767315,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.731707,
+            "p_value": 0.04870117,
+            "q_value": 0.17532421,
+            "significant_fdr": false
+          }
         },
         "Destruction Bay": {
-          "slope_per_decade": 2.852695,
-          "p_value": 0.01350686,
-          "p_value_fdr": 0.12156174,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 0.204082,
+            "p_value": 0.52412588,
+            "q_value": 0.58964162,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.625,
+            "p_value": 0.04412065,
+            "q_value": 0.5974233,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 1.25,
+            "p_value": 0.0090367,
+            "q_value": 0.0542202,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.238095,
+            "p_value": 0.31864116,
+            "q_value": 0.49305531,
+            "significant_fdr": false
+          }
         },
         "Faro": {
-          "slope_per_decade": 2.104929,
-          "p_value": 0.05825727,
-          "p_value_fdr": 0.30715504,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 0.47619,
+            "p_value": 0.16444125,
+            "q_value": 0.3291194,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.77257444,
+            "q_value": 0.93549133,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.333333,
+            "p_value": 0.40696501,
+            "q_value": 0.70472136,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.645161,
+            "p_value": 0.10470737,
+            "q_value": 0.31412211,
+            "significant_fdr": false
+          }
         },
         "Haines Junction": {
-          "slope_per_decade": 1.632837,
-          "p_value": 0.21680858,
-          "p_value_fdr": 0.32521287,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 0.333333,
+            "p_value": 0.27121981,
+            "q_value": 0.37553512,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.27027,
+            "p_value": 0.31742419,
+            "q_value": 0.81623363,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 1.034483,
+            "p_value": 0.00306633,
+            "q_value": 0.02759697,
+            "significant_fdr": true
+          },
+          "SON": {
+            "slope_per_decade": 0.333333,
+            "p_value": 0.32188777,
+            "q_value": 0.49305531,
+            "significant_fdr": false
+          }
         },
         "Johnson's Crossing": {
-          "slope_per_decade": 0.516112,
-          "p_value": 0.67387565,
-          "p_value_fdr": 0.80865078,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 0.357143,
+            "p_value": 0.4430246,
+            "q_value": 0.53162952,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.96343427,
+            "q_value": 0.96343427,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.222222,
+            "p_value": 0.59829719,
+            "q_value": 0.71795663,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.169492,
+            "p_value": 0.60931281,
+            "q_value": 0.73117537,
+            "significant_fdr": false
+          }
         },
         "Mayo": {
-          "slope_per_decade": 1.605931,
-          "p_value": 0.11772179,
-          "p_value_fdr": 0.30715504,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 0.612245,
+            "p_value": 0.05932405,
+            "q_value": 0.3291194,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.74098962,
+            "q_value": 0.93549133,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.357143,
+            "p_value": 0.36912699,
+            "q_value": 0.70472136,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.714286,
+            "p_value": 0.02839341,
+            "q_value": 0.12777035,
+            "significant_fdr": false
+          }
         },
         "Mendenhall": {
-          "slope_per_decade": 1.679834,
-          "p_value": 0.08217011,
-          "p_value_fdr": 0.30715504,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 0.540541,
+            "p_value": 0.12556553,
+            "q_value": 0.3291194,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.27027,
+            "p_value": 0.28291007,
+            "q_value": 0.81623363,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.8,
+            "p_value": 0.03462949,
+            "q_value": 0.12466616,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.294118,
+            "p_value": 0.3688856,
+            "q_value": 0.51076468,
+            "significant_fdr": false
+          }
         },
         "Old Crow": {
-          "slope_per_decade": -1.152566,
-          "p_value": 0.15618183,
-          "p_value_fdr": 0.30715504,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 0.487805,
+            "p_value": 0.04539199,
+            "q_value": 0.3291194,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.77957611,
+            "q_value": 0.93549133,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.85817531,
+            "q_value": 0.85817531,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.217391,
+            "p_value": 0.43281297,
+            "q_value": 0.55647382,
+            "significant_fdr": false
+          }
         },
         "Pelly Crossing": {
-          "slope_per_decade": 1.355516,
-          "p_value": 0.15352825,
-          "p_value_fdr": 0.30715504,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 0.47619,
+            "p_value": 0.05056695,
+            "q_value": 0.3291194,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.444444,
+            "p_value": 0.09957055,
+            "q_value": 0.5974233,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.208333,
+            "p_value": 0.48880294,
+            "q_value": 0.70472136,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 1.0,
+            "p_value": 0.00202627,
+            "q_value": 0.03647286,
+            "significant_fdr": true
+          }
         },
         "Ross River": {
-          "slope_per_decade": 1.565098,
-          "p_value": 0.16435135,
-          "p_value_fdr": 0.30715504,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 0.47619,
+            "p_value": 0.16285063,
+            "q_value": 0.3291194,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.88691349,
+            "q_value": 0.93908487,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.384615,
+            "p_value": 0.32427047,
+            "q_value": 0.70472136,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.79038555,
+            "q_value": 0.85810554,
+            "significant_fdr": false
+          }
         },
         "Tagish": {
-          "slope_per_decade": 0.91968,
-          "p_value": 0.36995306,
-          "p_value_fdr": 0.5122427,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 0.46875,
+            "p_value": 0.14874399,
+            "q_value": 0.3291194,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.8508615,
+            "q_value": 0.93908487,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.178571,
+            "p_value": 0.53291212,
+            "q_value": 0.70472136,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.4,
+            "p_value": 0.20398282,
+            "q_value": 0.45896135,
+            "significant_fdr": false
+          }
         },
         "Teslin": {
-          "slope_per_decade": -0.374017,
-          "p_value": 0.75576119,
-          "p_value_fdr": 0.82240121,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.75164964,
+            "q_value": 0.7761782,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.64974097,
+            "q_value": 0.93549133,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.192308,
+            "p_value": 0.54811661,
+            "q_value": 0.70472136,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.85810554,
+            "q_value": 0.85810554,
+            "significant_fdr": false
+          }
         },
         "Watson Lake": {
-          "slope_per_decade": -0.451046,
-          "p_value": 0.77671225,
-          "p_value_fdr": 0.82240121,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 0.263158,
+            "p_value": 0.40386278,
+            "q_value": 0.51925215,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.75505722,
+            "q_value": 0.93549133,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.243902,
+            "p_value": 0.48032112,
+            "q_value": 0.70472136,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.333333,
+            "p_value": 0.32870354,
+            "q_value": 0.49305531,
+            "significant_fdr": false
+          }
         },
         "Whitehorse": {
-          "slope_per_decade": 0.459378,
-          "p_value": 0.56437132,
-          "p_value_fdr": 0.72562027,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": 0.434783,
+            "p_value": 0.20749377,
+            "q_value": 0.36585811,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.48501167,
+            "q_value": 0.93549133,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.588235,
+            "p_value": 0.15377155,
+            "q_value": 0.46131465,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.441176,
+            "p_value": 0.26347995,
+            "q_value": 0.49305531,
+            "significant_fdr": false
+          }
         }
       }
     },
-    "JJA": {
-      "label": "Summer",
+    "heavy-precipitation-days": {
+      "label": "Heavy precipitation days",
+      "unit": "days per decade",
       "communities": {
         "Beaver Creek": {
-          "slope_per_decade": 6.840393,
-          "p_value": 0.02013941,
-          "p_value_fdr": 0.04756896,
-          "significant_fdr": true
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.32634427,
+            "q_value": 0.47138617,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.86403954,
+            "q_value": 0.91135144,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.172414,
+            "p_value": 0.13500193,
+            "q_value": 0.27000386,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.16853798,
+            "q_value": 0.60673673,
+            "significant_fdr": false
+          }
         },
         "Burwash Landing": {
-          "slope_per_decade": 11.292328,
-          "p_value": 0.0008401,
-          "p_value_fdr": 0.0050406,
-          "significant_fdr": true
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.00779587,
+            "q_value": 0.10134631,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.08134995,
+            "q_value": 0.36607478,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.307692,
+            "p_value": 0.0210728,
+            "q_value": 0.0541872,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.53430966,
+            "q_value": 0.90055652,
+            "significant_fdr": false
+          }
         },
         "Carcross": {
-          "slope_per_decade": 6.130322,
-          "p_value": 0.00128056,
-          "p_value_fdr": 0.00576252,
-          "significant_fdr": true
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.17568225,
+            "q_value": 0.28548366,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.44078513,
+            "q_value": 0.76264303,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.212766,
+            "p_value": 0.0,
+            "q_value": 0.0,
+            "significant_fdr": true
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.8563964,
+            "q_value": 0.90055652,
+            "significant_fdr": false
+          }
         },
         "Carmacks": {
-          "slope_per_decade": 2.796067,
-          "p_value": 0.27227866,
-          "p_value_fdr": 0.4455469,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.7278449,
+            "q_value": 0.87341388,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.232558,
+            "p_value": 0.00911541,
+            "q_value": 0.03281548,
+            "significant_fdr": true
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.14777281,
+            "q_value": 0.60673673,
+            "significant_fdr": false
+          }
         },
         "Dawson City": {
-          "slope_per_decade": 0.557935,
-          "p_value": 0.79782701,
-          "p_value_fdr": 0.79782701,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.93003314,
+            "q_value": 0.93003314,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.15318589,
+            "q_value": 0.52907984,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.60284136,
+            "q_value": 0.72340963,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.012802,
+            "q_value": 0.230436,
+            "significant_fdr": false
+          }
         },
         "Destruction Bay": {
-          "slope_per_decade": 11.654991,
-          "p_value": 0.000219,
-          "p_value_fdr": 0.001971,
-          "significant_fdr": true
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.0585914,
+            "q_value": 0.19042205,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.20575327,
+            "q_value": 0.52907984,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.4,
+            "p_value": 0.00088668,
+            "q_value": 0.00532008,
+            "significant_fdr": true
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.69329794,
+            "q_value": 0.90055652,
+            "significant_fdr": false
+          }
         },
         "Faro": {
-          "slope_per_decade": 1.441751,
-          "p_value": 0.47548099,
-          "p_value_fdr": 0.57057719,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.02358586,
+            "q_value": 0.10513629,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.04365111,
+            "q_value": 0.29010618,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.41955318,
+            "q_value": 0.53942552,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.90055652,
+            "q_value": 0.90055652,
+            "significant_fdr": false
+          }
         },
         "Haines Junction": {
-          "slope_per_decade": 7.388818,
-          "p_value": 0.0001895,
-          "p_value_fdr": 0.001971,
-          "significant_fdr": true
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.17059305,
+            "q_value": 0.28548366,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.19319736,
+            "q_value": 0.52907984,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.02056377,
+            "q_value": 0.0541872,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.39498605,
+            "q_value": 0.90055652,
+            "significant_fdr": false
+          }
         },
         "Johnson's Crossing": {
-          "slope_per_decade": 2.046471,
-          "p_value": 0.36508944,
-          "p_value_fdr": 0.50550846,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.07841818,
+            "q_value": 0.20388727,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.79978689,
+            "q_value": 0.89976025,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.175031,
+            "q_value": 0.28641436,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.25929183,
+            "q_value": 0.77787549,
+            "significant_fdr": false
+          }
         },
         "Mayo": {
-          "slope_per_decade": 2.017662,
-          "p_value": 0.36026594,
-          "p_value_fdr": 0.50550846,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.04835103,
+            "q_value": 0.29010618,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.34584335,
+            "q_value": 0.47886002,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.04065208,
+            "q_value": 0.24391248,
+            "significant_fdr": false
+          }
         },
         "Mendenhall": {
-          "slope_per_decade": 4.7461,
-          "p_value": 0.02114176,
-          "p_value_fdr": 0.04756896,
-          "significant_fdr": true
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.48670287,
+            "q_value": 0.52726144,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.00447719,
+            "q_value": 0.08058942,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.10419543,
+            "q_value": 0.23443972,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.85133838,
+            "q_value": 0.90055652,
+            "significant_fdr": false
+          }
         },
         "Old Crow": {
-          "slope_per_decade": -1.687395,
-          "p_value": 0.45867201,
-          "p_value_fdr": 0.57057719,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.38234822,
+            "q_value": 0.76264303,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.98508187,
+            "q_value": 0.98508187,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.69920044,
+            "q_value": 0.90055652,
+            "significant_fdr": false
+          }
         },
         "Pelly Crossing": {
-          "slope_per_decade": 2.153084,
-          "p_value": 0.26436764,
-          "p_value_fdr": 0.4455469,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.55896387,
+            "q_value": 0.76264303,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.83713085,
+            "q_value": 0.94177221,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.02713188,
+            "q_value": 0.24391248,
+            "significant_fdr": false
+          }
         },
         "Ross River": {
-          "slope_per_decade": 0.92175,
-          "p_value": 0.57680091,
-          "p_value_fdr": 0.64890102,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.565703,
+            "q_value": 0.76264303,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.16990498,
+            "q_value": 0.28641436,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.87930582,
+            "q_value": 0.90055652,
+            "significant_fdr": false
+          }
         },
         "Tagish": {
-          "slope_per_decade": 4.570449,
-          "p_value": 0.02114176,
-          "p_value_fdr": 0.04756896,
-          "significant_fdr": true
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.13286246,
+            "q_value": 0.28548366,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.53074509,
+            "q_value": 0.76264303,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.217391,
+            "p_value": 4.47e-06,
+            "q_value": 4.023e-05,
+            "significant_fdr": true
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.64427356,
+            "q_value": 0.90055652,
+            "significant_fdr": false
+          }
         },
         "Teslin": {
-          "slope_per_decade": 2.741124,
-          "p_value": 0.20676725,
-          "p_value_fdr": 0.4135345,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.44207219,
+            "q_value": 0.52244895,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.38068364,
+            "q_value": 0.76264303,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.24842322,
+            "q_value": 0.37263483,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.49681056,
+            "q_value": 0.90055652,
+            "significant_fdr": false
+          }
         },
         "Watson Lake": {
-          "slope_per_decade": 1.138852,
-          "p_value": 0.63426931,
-          "p_value_fdr": 0.67157927,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.37257756,
+            "q_value": 0.48435083,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.5931668,
+            "q_value": 0.76264303,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.9336944,
+            "q_value": 0.98508187,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.82800882,
+            "q_value": 0.90055652,
+            "significant_fdr": false
+          }
         },
         "Whitehorse": {
-          "slope_per_decade": 6.072871,
-          "p_value": 0.00676939,
-          "p_value_fdr": 0.0243698,
-          "significant_fdr": true
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.02426222,
+            "q_value": 0.10513629,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.91135144,
+            "q_value": 0.91135144,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.285714,
+            "p_value": 0.00417687,
+            "q_value": 0.01879591,
+            "significant_fdr": true
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.40158697,
+            "q_value": 0.90055652,
+            "significant_fdr": false
+          }
         }
       }
     },
-    "SON": {
-      "label": "Fall",
+    "very-heavy-precipitation-days": {
+      "label": "Very heavy precipitation days",
+      "unit": "days per decade",
       "communities": {
         "Beaver Creek": {
-          "slope_per_decade": 3.68169,
-          "p_value": 0.00888376,
-          "p_value_fdr": 0.03557833,
-          "significant_fdr": true
+          "DJF": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.73014427,
+            "q_value": 0.91350714,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          }
         },
         "Burwash Landing": {
-          "slope_per_decade": 4.405429,
-          "p_value": 0.01421355,
-          "p_value_fdr": 0.04264065,
-          "significant_fdr": true
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.34077442,
+            "q_value": 0.51116163,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.03438335,
+            "q_value": 0.25787512,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.31531038,
+            "q_value": 0.73572422,
+            "significant_fdr": false
+          }
         },
         "Carcross": {
-          "slope_per_decade": -1.780061,
-          "p_value": 0.48115817,
-          "p_value_fdr": 0.86608471,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.77240974,
+            "q_value": 0.77240974,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.70110528,
+            "q_value": 0.98154739,
+            "significant_fdr": false
+          }
         },
         "Carmacks": {
-          "slope_per_decade": 4.073779,
-          "p_value": 0.00277531,
-          "p_value_fdr": 0.01665186,
-          "significant_fdr": true
+          "DJF": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.86904332,
+            "q_value": 0.91350714,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          }
         },
         "Dawson City": {
-          "slope_per_decade": 4.216084,
-          "p_value": 0.00988287,
-          "p_value_fdr": 0.03557833,
-          "significant_fdr": true
+          "DJF": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.24470796,
+            "q_value": 0.7059624,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          }
         },
         "Destruction Bay": {
-          "slope_per_decade": 2.41293,
-          "p_value": 0.19390995,
-          "p_value_fdr": 0.43629739,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.07457128,
+            "q_value": 0.35635263,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.09779359,
+            "q_value": 0.48896795,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.285471,
+            "q_value": 0.73572422,
+            "significant_fdr": false
+          }
         },
         "Faro": {
-          "slope_per_decade": 2.284605,
-          "p_value": 0.10342992,
-          "p_value_fdr": 0.26596265,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.69326523,
+            "q_value": 0.91350714,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          }
         },
         "Haines Junction": {
-          "slope_per_decade": -0.11859,
-          "p_value": 0.96351515,
-          "p_value_fdr": 0.96351515,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.11878421,
+            "q_value": 0.35635263,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.50736144,
+            "q_value": 0.8456024,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.55748521,
+            "q_value": 0.97559912,
+            "significant_fdr": false
+          }
         },
         "Johnson's Crossing": {
-          "slope_per_decade": 0.055377,
-          "p_value": 0.96351515,
-          "p_value_fdr": 0.96351515,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.03465178,
+            "q_value": 0.24256246,
+            "significant_fdr": false
+          }
         },
         "Mayo": {
-          "slope_per_decade": 5.191659,
-          "p_value": 0.00078642,
-          "p_value_fdr": 0.01189827,
-          "significant_fdr": true
+          "DJF": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.49647957,
+            "q_value": 0.8456024,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          }
         },
         "Mendenhall": {
-          "slope_per_decade": 0.68208,
-          "p_value": 0.69403209,
-          "p_value_fdr": 0.96096751,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.4545913,
+            "q_value": 0.54550956,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.28238496,
+            "q_value": 0.7059624,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 1.0,
+            "q_value": 1.0,
+            "significant_fdr": false
+          }
         },
         "Old Crow": {
-          "slope_per_decade": -0.623602,
-          "p_value": 0.67387565,
-          "p_value_fdr": 0.96096751,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.35120662,
+            "q_value": 0.75258561,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          }
         },
         "Pelly Crossing": {
-          "slope_per_decade": 4.317614,
-          "p_value": 0.00132203,
-          "p_value_fdr": 0.01189827,
-          "significant_fdr": true
+          "DJF": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.01139434,
+            "q_value": 0.1709151,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          }
         },
         "Ross River": {
-          "slope_per_decade": 0.575867,
-          "p_value": 0.67562706,
-          "p_value_fdr": 0.96096751,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.91350714,
+            "q_value": 0.91350714,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          }
         },
         "Tagish": {
-          "slope_per_decade": -0.633099,
-          "p_value": 0.75576119,
-          "p_value_fdr": 0.96351515,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.28403966,
+            "q_value": 0.51116163,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          }
         },
         "Teslin": {
-          "slope_per_decade": -0.16633,
-          "p_value": 0.9562249,
-          "p_value_fdr": 0.96351515,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.84468083,
+            "q_value": 0.91350714,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          }
         },
         "Watson Lake": {
-          "slope_per_decade": -0.400984,
-          "p_value": 0.87640671,
-          "p_value_fdr": 0.96351515,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.83865203,
+            "q_value": 0.83865203,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.84135987,
+            "q_value": 0.91350714,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.90710944,
+            "q_value": 1.0,
+            "significant_fdr": false
+          }
         },
         "Whitehorse": {
-          "slope_per_decade": 1.474729,
-          "p_value": 0.46423768,
-          "p_value_fdr": 0.86608471,
-          "significant_fdr": false
+          "DJF": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.19387303,
+            "q_value": 0.7059624,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": null,
+            "p_value": null,
+            "q_value": null,
+            "significant_fdr": false
+          }
+        }
+      }
+    },
+    "maximum-1-day-precipitation": {
+      "label": "Maximum 1-day precipitation",
+      "unit": "mm per decade",
+      "communities": {
+        "Beaver Creek": {
+          "DJF": {
+            "slope_per_decade": 0.036527,
+            "p_value": 0.86200448,
+            "q_value": 0.86200448,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.048612,
+            "p_value": 0.83334188,
+            "q_value": 0.93560135,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.017892,
+            "p_value": 0.97810421,
+            "q_value": 0.98540179,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.025174,
+            "p_value": 0.90532955,
+            "q_value": 1.0,
+            "significant_fdr": false
+          }
+        },
+        "Burwash Landing": {
+          "DJF": {
+            "slope_per_decade": 0.621828,
+            "p_value": 0.06729228,
+            "q_value": 0.17303729,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.721065,
+            "p_value": 0.01612483,
+            "q_value": 0.11228196,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.533681,
+            "p_value": 0.15887006,
+            "q_value": 0.35745764,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.342441,
+            "p_value": 0.29697671,
+            "q_value": 0.7636544,
+            "significant_fdr": false
+          }
+        },
+        "Carcross": {
+          "DJF": {
+            "slope_per_decade": 0.23881,
+            "p_value": 0.42077615,
+            "q_value": 0.45113776,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.020117,
+            "p_value": 0.8836235,
+            "q_value": 0.93560135,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.575357,
+            "p_value": 0.03782661,
+            "q_value": 0.17796929,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.076955,
+            "p_value": 0.86200448,
+            "q_value": 1.0,
+            "significant_fdr": false
+          }
+        },
+        "Carmacks": {
+          "DJF": {
+            "slope_per_decade": 0.081679,
+            "p_value": 0.42607455,
+            "q_value": 0.45113776,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.187325,
+            "p_value": 0.28858275,
+            "q_value": 0.47222632,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.400453,
+            "p_value": 0.11348869,
+            "q_value": 0.29182806,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.372257,
+            "p_value": 0.01965397,
+            "q_value": 0.17688573,
+            "significant_fdr": false
+          }
+        },
+        "Dawson City": {
+          "DJF": {
+            "slope_per_decade": 0.213331,
+            "p_value": 0.10150586,
+            "q_value": 0.21472984,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.310549,
+            "p_value": 0.08544446,
+            "q_value": 0.19225004,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.152725,
+            "p_value": 0.56437132,
+            "q_value": 0.84243676,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.32071,
+            "p_value": 0.0700759,
+            "q_value": 0.25227324,
+            "significant_fdr": false
+          }
+        },
+        "Destruction Bay": {
+          "DJF": {
+            "slope_per_decade": 0.846237,
+            "p_value": 0.06263743,
+            "q_value": 0.17303729,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.510679,
+            "p_value": 0.0481441,
+            "q_value": 0.16411845,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.588098,
+            "p_value": 0.08544446,
+            "q_value": 0.29182806,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.247657,
+            "p_value": 0.51008966,
+            "q_value": 0.93193431,
+            "significant_fdr": false
+          }
+        },
+        "Faro": {
+          "DJF": {
+            "slope_per_decade": 0.194307,
+            "p_value": 0.10736492,
+            "q_value": 0.21472984,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.468387,
+            "p_value": 0.00384076,
+            "q_value": 0.06913368,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.003607,
+            "p_value": 0.98540179,
+            "q_value": 0.98540179,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.031401,
+            "p_value": 0.87640671,
+            "q_value": 1.0,
+            "significant_fdr": false
+          }
+        },
+        "Haines Junction": {
+          "DJF": {
+            "slope_per_decade": 0.647393,
+            "p_value": 0.22369488,
+            "q_value": 0.32502951,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.359448,
+            "p_value": 0.07295333,
+            "q_value": 0.18759428,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.705565,
+            "p_value": 0.01385622,
+            "q_value": 0.17796929,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.026496,
+            "p_value": 0.97080846,
+            "q_value": 1.0,
+            "significant_fdr": false
+          }
+        },
+        "Johnson's Crossing": {
+          "DJF": {
+            "slope_per_decade": 0.407383,
+            "p_value": 0.03536323,
+            "q_value": 0.13020728,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.011637,
+            "p_value": 0.9562249,
+            "q_value": 0.9562249,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.120418,
+            "p_value": 0.60842655,
+            "q_value": 0.84243676,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.119653,
+            "p_value": 0.49262241,
+            "q_value": 0.93193431,
+            "significant_fdr": false
+          }
+        },
+        "Mayo": {
+          "DJF": {
+            "slope_per_decade": 0.24341,
+            "p_value": 0.02746751,
+            "q_value": 0.13020728,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.289744,
+            "p_value": 0.05470615,
+            "q_value": 0.16411845,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.063808,
+            "p_value": 0.8119872,
+            "q_value": 0.9134856,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.660829,
+            "p_value": 0.00277531,
+            "q_value": 0.04995558,
+            "significant_fdr": true
+          }
+        },
+        "Mendenhall": {
+          "DJF": {
+            "slope_per_decade": 0.229105,
+            "p_value": 0.41029613,
+            "q_value": 0.45113776,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.359321,
+            "p_value": 0.01871366,
+            "q_value": 0.11228196,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.389382,
+            "p_value": 0.20676725,
+            "q_value": 0.4135345,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.00097,
+            "p_value": 1.0,
+            "q_value": 1.0,
+            "significant_fdr": false
+          }
+        },
+        "Old Crow": {
+          "DJF": {
+            "slope_per_decade": 0.121761,
+            "p_value": 0.18164952,
+            "q_value": 0.29724467,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.207569,
+            "p_value": 0.14577312,
+            "q_value": 0.29154624,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.564178,
+            "p_value": 0.24465705,
+            "q_value": 0.44038269,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.126292,
+            "p_value": 0.52191198,
+            "q_value": 0.93193431,
+            "significant_fdr": false
+          }
+        },
+        "Pelly Crossing": {
+          "DJF": {
+            "slope_per_decade": 0.212889,
+            "p_value": 0.00988287,
+            "q_value": 0.13020728,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.173808,
+            "p_value": 0.25280073,
+            "q_value": 0.45504131,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.705537,
+            "p_value": 0.02877819,
+            "q_value": 0.17796929,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.318257,
+            "p_value": 0.03229269,
+            "q_value": 0.19375614,
+            "significant_fdr": false
+          }
+        },
+        "Ross River": {
+          "DJF": {
+            "slope_per_decade": 0.282629,
+            "p_value": 0.02877819,
+            "q_value": 0.13020728,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.333841,
+            "p_value": 0.03867952,
+            "q_value": 0.16411845,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.152005,
+            "p_value": 0.60842655,
+            "q_value": 0.84243676,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.065966,
+            "p_value": 0.62128954,
+            "q_value": 0.93193431,
+            "significant_fdr": false
+          }
+        },
+        "Tagish": {
+          "DJF": {
+            "slope_per_decade": 0.281519,
+            "p_value": 0.24528818,
+            "q_value": 0.32502951,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.029005,
+            "p_value": 0.8728008,
+            "q_value": 0.93560135,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.508418,
+            "p_value": 0.03954873,
+            "q_value": 0.17796929,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.024887,
+            "p_value": 0.92347201,
+            "q_value": 1.0,
+            "significant_fdr": false
+          }
+        },
+        "Teslin": {
+          "DJF": {
+            "slope_per_decade": 0.44312,
+            "p_value": 0.03616869,
+            "q_value": 0.13020728,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.116438,
+            "p_value": 0.43678735,
+            "q_value": 0.65518103,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.104554,
+            "p_value": 0.71558555,
+            "q_value": 0.89027026,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.298505,
+            "p_value": 0.15887006,
+            "q_value": 0.47661018,
+            "significant_fdr": false
+          }
+        },
+        "Watson Lake": {
+          "DJF": {
+            "slope_per_decade": 0.238136,
+            "p_value": 0.25280073,
+            "q_value": 0.32502951,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.051984,
+            "p_value": 0.8119872,
+            "q_value": 0.93560135,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.159108,
+            "p_value": 0.74189188,
+            "q_value": 0.89027026,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.472605,
+            "p_value": 0.06199783,
+            "q_value": 0.25227324,
+            "significant_fdr": false
+          }
+        },
+        "Whitehorse": {
+          "DJF": {
+            "slope_per_decade": 0.277185,
+            "p_value": 0.14577312,
+            "q_value": 0.26239162,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.071238,
+            "p_value": 0.66056585,
+            "q_value": 0.91462964,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.408106,
+            "p_value": 0.11348869,
+            "q_value": 0.29182806,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.11034,
+            "p_value": 0.59568359,
+            "q_value": 0.93193431,
+            "significant_fdr": false
+          }
+        }
+      }
+    },
+    "maximum-5-day-precipitation": {
+      "label": "Maximum 5-day precipitation",
+      "unit": "mm per decade",
+      "communities": {
+        "Beaver Creek": {
+          "DJF": {
+            "slope_per_decade": 0.117334,
+            "p_value": 0.78373303,
+            "q_value": 0.78373303,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.075506,
+            "p_value": 0.89808552,
+            "q_value": 0.95091408,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.832269,
+            "p_value": 0.09409307,
+            "q_value": 0.26703828,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.187966,
+            "p_value": 0.70759207,
+            "q_value": 0.89750964,
+            "significant_fdr": false
+          }
+        },
+        "Burwash Landing": {
+          "DJF": {
+            "slope_per_decade": 1.001179,
+            "p_value": 0.05244049,
+            "q_value": 0.09439288,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 1.397,
+            "p_value": 0.0010559,
+            "q_value": 0.01630337,
+            "significant_fdr": true
+          },
+          "JJA": {
+            "slope_per_decade": 1.440978,
+            "p_value": 0.09230938,
+            "q_value": 0.26703828,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.217057,
+            "p_value": 0.62128954,
+            "q_value": 0.89750964,
+            "significant_fdr": false
+          }
+        },
+        "Carcross": {
+          "DJF": {
+            "slope_per_decade": 0.964177,
+            "p_value": 0.15352825,
+            "q_value": 0.17271928,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.42777,
+            "p_value": 0.18770586,
+            "q_value": 0.37541172,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 1.234548,
+            "p_value": 0.01572543,
+            "q_value": 0.14152887,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.544255,
+            "p_value": 0.41029613,
+            "q_value": 0.89750964,
+            "significant_fdr": false
+          }
+        },
+        "Carmacks": {
+          "DJF": {
+            "slope_per_decade": 0.156179,
+            "p_value": 0.28348218,
+            "q_value": 0.3001576,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.374594,
+            "p_value": 0.29697671,
+            "q_value": 0.44546506,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.579746,
+            "p_value": 0.25280073,
+            "q_value": 0.45504131,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.365787,
+            "p_value": 0.21007614,
+            "q_value": 0.89750964,
+            "significant_fdr": false
+          }
+        },
+        "Dawson City": {
+          "DJF": {
+            "slope_per_decade": 0.381096,
+            "p_value": 0.0686725,
+            "q_value": 0.10300875,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.689088,
+            "p_value": 0.05586925,
+            "q_value": 0.16760775,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.353001,
+            "p_value": 0.50423147,
+            "q_value": 0.6482976,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 1.121786,
+            "p_value": 0.00526562,
+            "q_value": 0.07783677,
+            "significant_fdr": false
+          }
+        },
+        "Destruction Bay": {
+          "DJF": {
+            "slope_per_decade": 1.280708,
+            "p_value": 0.05825727,
+            "q_value": 0.09533008,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 1.16362,
+            "p_value": 0.00261347,
+            "q_value": 0.01630337,
+            "significant_fdr": true
+          },
+          "JJA": {
+            "slope_per_decade": 1.299059,
+            "p_value": 0.0700759,
+            "q_value": 0.26703828,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.142231,
+            "p_value": 0.82620915,
+            "q_value": 0.89750964,
+            "significant_fdr": false
+          }
+        },
+        "Faro": {
+          "DJF": {
+            "slope_per_decade": 0.551377,
+            "p_value": 0.00444906,
+            "q_value": 0.07439904,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.96201,
+            "p_value": 0.00303529,
+            "q_value": 0.01630337,
+            "significant_fdr": true
+          },
+          "JJA": {
+            "slope_per_decade": -0.194727,
+            "p_value": 0.75300397,
+            "q_value": 0.79077147,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.156274,
+            "p_value": 0.59568359,
+            "q_value": 0.89750964,
+            "significant_fdr": false
+          }
+        },
+        "Haines Junction": {
+          "DJF": {
+            "slope_per_decade": 1.59719,
+            "p_value": 0.12655882,
+            "q_value": 0.15187058,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.594819,
+            "p_value": 0.09409307,
+            "q_value": 0.24195361,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.890796,
+            "p_value": 0.13351914,
+            "q_value": 0.26703828,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.412657,
+            "p_value": 0.60203987,
+            "q_value": 0.89750964,
+            "significant_fdr": false
+          }
+        },
+        "Johnson's Crossing": {
+          "DJF": {
+            "slope_per_decade": 0.872731,
+            "p_value": 0.02499997,
+            "q_value": 0.07499991,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.177526,
+            "p_value": 0.53387365,
+            "q_value": 0.67724558,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.334311,
+            "p_value": 0.40511482,
+            "q_value": 0.56092821,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.087697,
+            "p_value": 0.70375772,
+            "q_value": 0.89750964,
+            "significant_fdr": false
+          }
+        },
+        "Mayo": {
+          "DJF": {
+            "slope_per_decade": 0.544556,
+            "p_value": 0.01653312,
+            "q_value": 0.07439904,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.423639,
+            "p_value": 0.26830312,
+            "q_value": 0.44546506,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.09174,
+            "p_value": 0.78373303,
+            "q_value": 0.79077147,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.90905,
+            "p_value": 0.00864853,
+            "q_value": 0.07783677,
+            "significant_fdr": false
+          }
+        },
+        "Mendenhall": {
+          "DJF": {
+            "slope_per_decade": 1.084674,
+            "p_value": 0.05244049,
+            "q_value": 0.09439288,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.804744,
+            "p_value": 0.00362297,
+            "q_value": 0.01630337,
+            "significant_fdr": true
+          },
+          "JJA": {
+            "slope_per_decade": 0.489274,
+            "p_value": 0.12967131,
+            "q_value": 0.26703828,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.087269,
+            "p_value": 0.84764799,
+            "q_value": 0.89750964,
+            "significant_fdr": false
+          }
+        },
+        "Old Crow": {
+          "DJF": {
+            "slope_per_decade": 0.450339,
+            "p_value": 0.04319317,
+            "q_value": 0.09439288,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.014927,
+            "p_value": 0.97810421,
+            "q_value": 0.97810421,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.926499,
+            "p_value": 0.12207781,
+            "q_value": 0.26703828,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.363725,
+            "p_value": 0.41002836,
+            "q_value": 0.89750964,
+            "significant_fdr": false
+          }
+        },
+        "Pelly Crossing": {
+          "DJF": {
+            "slope_per_decade": 0.46795,
+            "p_value": 0.01653312,
+            "q_value": 0.07439904,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.180587,
+            "p_value": 0.56437132,
+            "q_value": 0.67724558,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.513724,
+            "p_value": 0.3798004,
+            "q_value": 0.56092821,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.368892,
+            "p_value": 0.1757394,
+            "q_value": 0.89750964,
+            "significant_fdr": false
+          }
+        },
+        "Ross River": {
+          "DJF": {
+            "slope_per_decade": 0.484812,
+            "p_value": 0.02499997,
+            "q_value": 0.07499991,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.622941,
+            "p_value": 0.04043446,
+            "q_value": 0.14556406,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.155788,
+            "p_value": 0.73498821,
+            "q_value": 0.79077147,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.074676,
+            "p_value": 0.79782701,
+            "q_value": 0.89750964,
+            "significant_fdr": false
+          }
+        },
+        "Tagish": {
+          "DJF": {
+            "slope_per_decade": 0.739436,
+            "p_value": 0.11772179,
+            "q_value": 0.15187058,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.283329,
+            "p_value": 0.48752093,
+            "q_value": 0.67502898,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 1.341273,
+            "p_value": 0.00605892,
+            "q_value": 0.10906056,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.182257,
+            "p_value": 0.66720766,
+            "q_value": 0.89750964,
+            "significant_fdr": false
+          }
+        },
+        "Teslin": {
+          "DJF": {
+            "slope_per_decade": 0.985712,
+            "p_value": 0.01283139,
+            "q_value": 0.07439904,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.220993,
+            "p_value": 0.28444632,
+            "q_value": 0.44546506,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.417224,
+            "p_value": 0.39487026,
+            "q_value": 0.56092821,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.286138,
+            "p_value": 0.42607455,
+            "q_value": 0.89750964,
+            "significant_fdr": false
+          }
+        },
+        "Watson Lake": {
+          "DJF": {
+            "slope_per_decade": 0.594652,
+            "p_value": 0.12655882,
+            "q_value": 0.15187058,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.163833,
+            "p_value": 0.77671225,
+            "q_value": 0.87380128,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.18236,
+            "p_value": 0.79077147,
+            "q_value": 0.79077147,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": 0.411281,
+            "p_value": 0.35548265,
+            "q_value": 0.89750964,
+            "significant_fdr": false
+          }
+        },
+        "Whitehorse": {
+          "DJF": {
+            "slope_per_decade": 0.758976,
+            "p_value": 0.05133741,
+            "q_value": 0.09439288,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.438588,
+            "p_value": 0.11772179,
+            "q_value": 0.26487403,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 1.128799,
+            "p_value": 0.04225644,
+            "q_value": 0.25353864,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.030033,
+            "p_value": 0.94165598,
+            "q_value": 0.94165598,
+            "significant_fdr": false
+          }
+        }
+      }
+    },
+    "longest-dry-spell": {
+      "label": "Longest dry spell",
+      "unit": "days per decade",
+      "communities": {
+        "Beaver Creek": {
+          "DJF": {
+            "slope_per_decade": -0.8,
+            "p_value": 0.03603987,
+            "q_value": 0.16217942,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": 0.27027,
+            "p_value": 0.43308708,
+            "q_value": 0.95328547,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.43797523,
+            "q_value": 0.46373848,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.652174,
+            "p_value": 0.0411927,
+            "q_value": 0.51299361,
+            "significant_fdr": false
+          }
+        },
+        "Burwash Landing": {
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.97074066,
+            "q_value": 0.97074066,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.566038,
+            "p_value": 0.07141123,
+            "q_value": 0.64270107,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.576923,
+            "p_value": 0.0026824,
+            "q_value": 0.0160944,
+            "significant_fdr": true
+          },
+          "SON": {
+            "slope_per_decade": -0.196078,
+            "p_value": 0.30775616,
+            "q_value": 0.79265826,
+            "significant_fdr": false
+          }
+        },
+        "Carcross": {
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.48801868,
+            "q_value": 0.62745259,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.68982618,
+            "q_value": 0.95328547,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.30303,
+            "p_value": 0.11042287,
+            "q_value": 0.24845146,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.48102327,
+            "q_value": 0.86584189,
+            "significant_fdr": false
+          }
+        },
+        "Carmacks": {
+          "DJF": {
+            "slope_per_decade": -0.416667,
+            "p_value": 0.30661625,
+            "q_value": 0.49276533,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.97802746,
+            "q_value": 0.97802746,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.322581,
+            "p_value": 0.04102484,
+            "q_value": 0.14768942,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.434783,
+            "p_value": 0.13243704,
+            "q_value": 0.79265826,
+            "significant_fdr": false
+          }
+        },
+        "Dawson City": {
+          "DJF": {
+            "slope_per_decade": -0.5,
+            "p_value": 0.25975638,
+            "q_value": 0.46756148,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.81875377,
+            "q_value": 0.95328547,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.68146682,
+            "q_value": 0.68146682,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.227273,
+            "p_value": 0.30825599,
+            "q_value": 0.79265826,
+            "significant_fdr": false
+          }
+        },
+        "Destruction Bay": {
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.72754505,
+            "q_value": 0.77034182,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.555556,
+            "p_value": 0.05234833,
+            "q_value": 0.64270107,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.434783,
+            "p_value": 0.03253778,
+            "q_value": 0.14642001,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.64244429,
+            "q_value": 0.87604441,
+            "significant_fdr": false
+          }
+        },
+        "Faro": {
+          "DJF": {
+            "slope_per_decade": -0.357143,
+            "p_value": 0.21225238,
+            "q_value": 0.42450476,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.69312234,
+            "q_value": 0.95328547,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.27027,
+            "p_value": 0.09042541,
+            "q_value": 0.23252248,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.96332886,
+            "q_value": 0.96332886,
+            "significant_fdr": false
+          }
+        },
+        "Haines Junction": {
+          "DJF": {
+            "slope_per_decade": -0.512821,
+            "p_value": 0.06165678,
+            "q_value": 0.20521221,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.55382513,
+            "q_value": 0.95328547,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.833333,
+            "p_value": 4.201e-05,
+            "q_value": 0.00075618,
+            "significant_fdr": true
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.76517708,
+            "q_value": 0.87604441,
+            "significant_fdr": false
+          }
+        },
+        "Johnson's Crossing": {
+          "DJF": {
+            "slope_per_decade": -0.243902,
+            "p_value": 0.32851022,
+            "q_value": 0.49276533,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.75832866,
+            "q_value": 0.95328547,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.31821492,
+            "q_value": 0.40147842,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.46984096,
+            "q_value": 0.86584189,
+            "significant_fdr": false
+          }
+        },
+        "Mayo": {
+          "DJF": {
+            "slope_per_decade": -0.816327,
+            "p_value": 0.02527387,
+            "q_value": 0.16217942,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.81517785,
+            "q_value": 0.95328547,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": 0.15873,
+            "p_value": 0.23670109,
+            "q_value": 0.3617747,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.699257,
+            "q_value": 0.87604441,
+            "significant_fdr": false
+          }
+        },
+        "Mendenhall": {
+          "DJF": {
+            "slope_per_decade": -0.212766,
+            "p_value": 0.06840407,
+            "q_value": 0.20521221,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.192308,
+            "p_value": 0.49154478,
+            "q_value": 0.95328547,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.606061,
+            "p_value": 0.00206412,
+            "q_value": 0.0160944,
+            "significant_fdr": true
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.9498916,
+            "q_value": 0.96332886,
+            "significant_fdr": false
+          }
+        },
+        "Old Crow": {
+          "DJF": {
+            "slope_per_decade": -0.789474,
+            "p_value": 0.03264246,
+            "q_value": 0.16217942,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.66658197,
+            "q_value": 0.95328547,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.15873,
+            "p_value": 0.37527249,
+            "q_value": 0.42218155,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.196078,
+            "p_value": 0.41426692,
+            "q_value": 0.86584189,
+            "significant_fdr": false
+          }
+        },
+        "Pelly Crossing": {
+          "DJF": {
+            "slope_per_decade": -0.930233,
+            "p_value": 0.02146444,
+            "q_value": 0.16217942,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.84736486,
+            "q_value": 0.95328547,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.21746583,
+            "q_value": 0.3617747,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.689655,
+            "p_value": 0.05699929,
+            "q_value": 0.51299361,
+            "significant_fdr": false
+          }
+        },
+        "Ross River": {
+          "DJF": {
+            "slope_per_decade": -0.454545,
+            "p_value": 0.16735184,
+            "q_value": 0.42450476,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.95975375,
+            "q_value": 0.97802746,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.16129,
+            "p_value": 0.26128173,
+            "q_value": 0.3617747,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.57746911,
+            "q_value": 0.87604441,
+            "significant_fdr": false
+          }
+        },
+        "Tagish": {
+          "DJF": {
+            "slope_per_decade": -0.338983,
+            "p_value": 0.19401781,
+            "q_value": 0.42450476,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.73074789,
+            "q_value": 0.95328547,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.15873,
+            "p_value": 0.33456535,
+            "q_value": 0.40147842,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.153846,
+            "p_value": 0.23291744,
+            "q_value": 0.79265826,
+            "significant_fdr": false
+          }
+        },
+        "Teslin": {
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.45116412,
+            "q_value": 0.62468878,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.64599739,
+            "q_value": 0.95328547,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.25,
+            "p_value": 0.1578985,
+            "q_value": 0.315797,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.77870614,
+            "q_value": 0.87604441,
+            "significant_fdr": false
+          }
+        },
+        "Watson Lake": {
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.64269002,
+            "q_value": 0.72302627,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.46196443,
+            "q_value": 0.95328547,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.185185,
+            "p_value": 0.25025754,
+            "q_value": 0.3617747,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.20440804,
+            "q_value": 0.79265826,
+            "significant_fdr": false
+          }
+        },
+        "Whitehorse": {
+          "DJF": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.64241618,
+            "q_value": 0.72302627,
+            "significant_fdr": false
+          },
+          "MAM": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.73757461,
+            "q_value": 0.95328547,
+            "significant_fdr": false
+          },
+          "JJA": {
+            "slope_per_decade": -0.30303,
+            "p_value": 0.08439927,
+            "q_value": 0.23252248,
+            "significant_fdr": false
+          },
+          "SON": {
+            "slope_per_decade": -0.0,
+            "p_value": 0.67580059,
+            "q_value": 0.87604441,
+            "significant_fdr": false
+          }
         }
       }
     }
