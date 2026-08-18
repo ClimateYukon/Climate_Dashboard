@@ -38,8 +38,8 @@
         ]
       },
       "files": {
-        "annual_map": "../../figures/temperature/annual/mean-temperature.png",
-        "seasonal_map": "../../figures/temperature/seasonal/mean-temperature.png"
+        "annual_map": "figures/temperature/annual/mean-temperature.png",
+        "seasonal_map": "figures/temperature/seasonal/mean-temperature.png"
       }
     },
     "mean-daily-maximum-temperature": {
@@ -62,8 +62,8 @@
         ]
       },
       "files": {
-        "annual_map": "../../figures/temperature/annual/mean-daily-maximum-temperature.png",
-        "seasonal_map": "../../figures/temperature/seasonal/mean-daily-maximum-temperature.png"
+        "annual_map": "figures/temperature/annual/mean-daily-maximum-temperature.png",
+        "seasonal_map": "figures/temperature/seasonal/mean-daily-maximum-temperature.png"
       }
     },
     "mean-daily-minimum-temperature": {
@@ -86,8 +86,8 @@
         ]
       },
       "files": {
-        "annual_map": "../../figures/temperature/annual/mean-daily-minimum-temperature.png",
-        "seasonal_map": "../../figures/temperature/seasonal/mean-daily-minimum-temperature.png"
+        "annual_map": "figures/temperature/annual/mean-daily-minimum-temperature.png",
+        "seasonal_map": "figures/temperature/seasonal/mean-daily-minimum-temperature.png"
       }
     },
     "coldest-night": {
@@ -107,7 +107,7 @@
         "seasonal": []
       },
       "files": {
-        "annual_map": "../../figures/temperature/annual/coldest-night.png",
+        "annual_map": "figures/temperature/annual/coldest-night.png",
         "seasonal_map": null
       }
     },
@@ -128,7 +128,7 @@
         "seasonal": []
       },
       "files": {
-        "annual_map": "../../figures/temperature/annual/hottest-day.png",
+        "annual_map": "figures/temperature/annual/hottest-day.png",
         "seasonal_map": null
       }
     },
@@ -149,7 +149,7 @@
         "seasonal": []
       },
       "files": {
-        "annual_map": "../../figures/temperature/annual/days-above-20c.png",
+        "annual_map": "figures/temperature/annual/days-above-20c.png",
         "seasonal_map": null
       }
     },
@@ -170,7 +170,7 @@
         "seasonal": []
       },
       "files": {
-        "annual_map": "../../figures/temperature/annual/days-above-25c.png",
+        "annual_map": "figures/temperature/annual/days-above-25c.png",
         "seasonal_map": null
       }
     },
@@ -191,7 +191,7 @@
         "seasonal": []
       },
       "files": {
-        "annual_map": "../../figures/temperature/annual/days-above-30c.png",
+        "annual_map": "figures/temperature/annual/days-above-30c.png",
         "seasonal_map": null
       }
     },
@@ -212,7 +212,7 @@
         "seasonal": []
       },
       "files": {
-        "annual_map": "../../figures/temperature/annual/nights-above-10c.png",
+        "annual_map": "figures/temperature/annual/nights-above-10c.png",
         "seasonal_map": null
       }
     },
@@ -233,7 +233,7 @@
         "seasonal": []
       },
       "files": {
-        "annual_map": "../../figures/temperature/annual/nights-above-15c.png",
+        "annual_map": "figures/temperature/annual/nights-above-15c.png",
         "seasonal_map": null
       }
     },
@@ -254,7 +254,7 @@
         "seasonal": []
       },
       "files": {
-        "annual_map": "../../figures/temperature/annual/nights-below-minus-20c.png",
+        "annual_map": "figures/temperature/annual/nights-below-minus-20c.png",
         "seasonal_map": null
       }
     },
@@ -275,7 +275,7 @@
         "seasonal": []
       },
       "files": {
-        "annual_map": "../../figures/temperature/annual/nights-below-minus-30c.png",
+        "annual_map": "figures/temperature/annual/nights-below-minus-30c.png",
         "seasonal_map": null
       }
     },
@@ -296,7 +296,7 @@
         "seasonal": []
       },
       "files": {
-        "annual_map": "../../figures/temperature/annual/nights-below-minus-40c.png",
+        "annual_map": "figures/temperature/annual/nights-below-minus-40c.png",
         "seasonal_map": null
       }
     },
@@ -317,7 +317,7 @@
         "seasonal": []
       },
       "files": {
-        "annual_map": "../../figures/temperature/annual/frost-days.png",
+        "annual_map": "figures/temperature/annual/frost-days.png",
         "seasonal_map": null
       }
     },
@@ -338,7 +338,7 @@
         "seasonal": []
       },
       "files": {
-        "annual_map": "../../figures/temperature/annual/ice-days.png",
+        "annual_map": "figures/temperature/annual/ice-days.png",
         "seasonal_map": null
       }
     },
@@ -359,7 +359,7 @@
         "seasonal": []
       },
       "files": {
-        "annual_map": "../../figures/temperature/annual/freeze-thaw-days.png",
+        "annual_map": "figures/temperature/annual/freeze-thaw-days.png",
         "seasonal_map": null
       }
     },
@@ -380,7 +380,7 @@
         "seasonal": []
       },
       "files": {
-        "annual_map": "../../figures/temperature/annual/frost-free-season-length.png",
+        "annual_map": "figures/temperature/annual/frost-free-season-length.png",
         "seasonal_map": null
       }
     },
@@ -401,7 +401,7 @@
         "seasonal": []
       },
       "files": {
-        "annual_map": "../../figures/temperature/annual/growing-degree-days-above-0c.png",
+        "annual_map": "figures/temperature/annual/growing-degree-days-above-0c.png",
         "seasonal_map": null
       }
     },
@@ -422,7 +422,7 @@
         "seasonal": []
       },
       "files": {
-        "annual_map": "../../figures/temperature/annual/growing-degree-days-above-5c.png",
+        "annual_map": "figures/temperature/annual/growing-degree-days-above-5c.png",
         "seasonal_map": null
       }
     },
@@ -443,7 +443,7 @@
         "seasonal": []
       },
       "files": {
-        "annual_map": "../../figures/temperature/annual/heating-degree-days-below-18c.png",
+        "annual_map": "figures/temperature/annual/heating-degree-days-below-18c.png",
         "seasonal_map": null
       }
     },
@@ -464,7 +464,7 @@
         "seasonal": []
       },
       "files": {
-        "annual_map": "../../figures/temperature/annual/cooling-degree-days-above-18c.png",
+        "annual_map": "figures/temperature/annual/cooling-degree-days-above-18c.png",
         "seasonal_map": null
       }
     }
