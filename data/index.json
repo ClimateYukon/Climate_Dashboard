@@ -853,7 +853,7 @@
     "subtitle": "ERA5, 1979-2026",
     "community": "Northern Canada",
     "description": "Monthly and annual area-average 2 m temperature rankings. Rank 1 is the warmest year for that month or annual row.",
-    "date_label": "Updated 2026-06-15",
+    "date_label": "Updated 2026-07-08",
     "source": "ERA5 2 m temperature from Copernicus Climate Change Service / ECMWF",
     "preview_image": "plots/monthly_temperature_rankings/northern_canada_2026_monthly_temperature_rankings/preview.png",
     "full_image": "plots/monthly_temperature_rankings/northern_canada_2026_monthly_temperature_rankings/full.png",
@@ -870,8 +870,8 @@
       "area_label": "Northern Canada",
       "start_year": 1979,
       "latest_year": 2026,
-      "latest_complete_month_context": "May 2026",
-      "created_utc": "2026-06-15T07:16:32Z"
+      "latest_complete_month_context": "June 2026",
+      "created_utc": "2026-07-08T07:26:25Z"
     },
     "_metadata_path": "plots/monthly_temperature_rankings/northern_canada_2026_monthly_temperature_rankings/metadata.json"
   },
@@ -884,7 +884,7 @@
     "subtitle": "ERA5, 1979-2026",
     "community": "Yukon",
     "description": "Monthly and annual area-average 2 m temperature rankings. Rank 1 is the warmest year for that month or annual row.",
-    "date_label": "Updated 2026-06-15",
+    "date_label": "Updated 2026-07-08",
     "source": "ERA5 2 m temperature from Copernicus Climate Change Service / ECMWF",
     "preview_image": "plots/monthly_temperature_rankings/yukon_2026_monthly_temperature_rankings/preview.png",
     "full_image": "plots/monthly_temperature_rankings/yukon_2026_monthly_temperature_rankings/full.png",
@@ -901,10 +901,73 @@
       "area_label": "Yukon",
       "start_year": 1979,
       "latest_year": 2026,
-      "latest_complete_month_context": "May 2026",
-      "created_utc": "2026-06-15T07:15:27Z"
+      "latest_complete_month_context": "June 2026",
+      "created_utc": "2026-07-08T07:25:30Z"
     },
     "_metadata_path": "plots/monthly_temperature_rankings/yukon_2026_monthly_temperature_rankings/metadata.json"
+  },
+  {
+    "id": "northern_warming_northwest_territories",
+    "indicator_id": "northern_warming_comparisons",
+    "indicator_title": "Northern warming comparisons",
+    "indicator_description": "Compare annual warming rates for Yukon, Northwest Territories, and Nunavut with global and Canadian reference areas.",
+    "title": "Northwest Territories warming comparisons",
+    "card_title": "Northwest Territories",
+    "description": "Annual temperature warming rate comparisons for Northwest Territories.",
+    "date_label": "Updated 2026-07-13",
+    "source": "ERA5 2 m temperature from Copernicus Climate Change Service / ECMWF",
+    "preview_image": "plots/northern_warming_comparisons/northwest_territories/preview.png",
+    "tags": [
+      "ERA5",
+      "temperature",
+      "warming",
+      "Northwest Territories"
+    ],
+    "plot_scope": "territory",
+    "location_label": "Northwest Territories",
+    "href": "plots/northern_warming_comparisons/northwest_territories/index.html"
+  },
+  {
+    "id": "northern_warming_nunavut",
+    "indicator_id": "northern_warming_comparisons",
+    "indicator_title": "Northern warming comparisons",
+    "indicator_description": "Compare annual warming rates for Yukon, Northwest Territories, and Nunavut with global and Canadian reference areas.",
+    "title": "Nunavut warming comparisons",
+    "card_title": "Nunavut",
+    "description": "Annual temperature warming rate comparisons for Nunavut.",
+    "date_label": "Updated 2026-07-13",
+    "source": "ERA5 2 m temperature from Copernicus Climate Change Service / ECMWF",
+    "preview_image": "plots/northern_warming_comparisons/nunavut/preview.png",
+    "tags": [
+      "ERA5",
+      "temperature",
+      "warming",
+      "Nunavut"
+    ],
+    "plot_scope": "territory",
+    "location_label": "Nunavut",
+    "href": "plots/northern_warming_comparisons/nunavut/index.html"
+  },
+  {
+    "id": "northern_warming_yukon",
+    "indicator_id": "northern_warming_comparisons",
+    "indicator_title": "Northern warming comparisons",
+    "indicator_description": "Compare annual warming rates for Yukon, Northwest Territories, and Nunavut with global and Canadian reference areas.",
+    "title": "Yukon warming comparisons",
+    "card_title": "Yukon",
+    "description": "Annual temperature warming rate comparisons for Yukon.",
+    "date_label": "Updated 2026-07-13",
+    "source": "ERA5 2 m temperature from Copernicus Climate Change Service / ECMWF",
+    "preview_image": "plots/northern_warming_comparisons/yukon/preview.png",
+    "tags": [
+      "ERA5",
+      "temperature",
+      "warming",
+      "Yukon"
+    ],
+    "plot_scope": "territory",
+    "location_label": "Yukon",
+    "href": "plots/northern_warming_comparisons/yukon/index.html"
   },
   {
     "indicator_id": "seasonal_temperature_anomalies",
@@ -967,68 +1030,5 @@
       "created_utc": "2026-05-31T00:53:33Z"
     },
     "_metadata_path": "plots/seasonal_temperature_anomalies/yukon_2025_seasonal_temperature_anomalies_context/metadata.json"
-  },
-  {
-    "id": "northern_warming_yukon",
-    "indicator_id": "northern_warming_comparisons",
-    "indicator_title": "Northern warming comparisons",
-    "indicator_description": "Compare annual warming rates for Yukon, Northwest Territories, and Nunavut with global and Canadian reference areas.",
-    "title": "Yukon warming comparisons",
-    "card_title": "Yukon",
-    "description": "Annual temperature warming rate comparisons for Yukon.",
-    "date_label": "Updated 2026-07-13",
-    "source": "ERA5 2 m temperature from Copernicus Climate Change Service / ECMWF",
-    "preview_image": "plots/northern_warming_comparisons/yukon/preview.png",
-    "tags": [
-      "ERA5",
-      "temperature",
-      "warming",
-      "Yukon"
-    ],
-    "plot_scope": "territory",
-    "location_label": "Yukon",
-    "href": "plots/northern_warming_comparisons/yukon/index.html"
-  },
-  {
-    "id": "northern_warming_northwest_territories",
-    "indicator_id": "northern_warming_comparisons",
-    "indicator_title": "Northern warming comparisons",
-    "indicator_description": "Compare annual warming rates for Yukon, Northwest Territories, and Nunavut with global and Canadian reference areas.",
-    "title": "Northwest Territories warming comparisons",
-    "card_title": "Northwest Territories",
-    "description": "Annual temperature warming rate comparisons for Northwest Territories.",
-    "date_label": "Updated 2026-07-13",
-    "source": "ERA5 2 m temperature from Copernicus Climate Change Service / ECMWF",
-    "preview_image": "plots/northern_warming_comparisons/northwest_territories/preview.png",
-    "tags": [
-      "ERA5",
-      "temperature",
-      "warming",
-      "Northwest Territories"
-    ],
-    "plot_scope": "territory",
-    "location_label": "Northwest Territories",
-    "href": "plots/northern_warming_comparisons/northwest_territories/index.html"
-  },
-  {
-    "id": "northern_warming_nunavut",
-    "indicator_id": "northern_warming_comparisons",
-    "indicator_title": "Northern warming comparisons",
-    "indicator_description": "Compare annual warming rates for Yukon, Northwest Territories, and Nunavut with global and Canadian reference areas.",
-    "title": "Nunavut warming comparisons",
-    "card_title": "Nunavut",
-    "description": "Annual temperature warming rate comparisons for Nunavut.",
-    "date_label": "Updated 2026-07-13",
-    "source": "ERA5 2 m temperature from Copernicus Climate Change Service / ECMWF",
-    "preview_image": "plots/northern_warming_comparisons/nunavut/preview.png",
-    "tags": [
-      "ERA5",
-      "temperature",
-      "warming",
-      "Nunavut"
-    ],
-    "plot_scope": "territory",
-    "location_label": "Nunavut",
-    "href": "plots/northern_warming_comparisons/nunavut/index.html"
   }
 ]

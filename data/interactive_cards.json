@@ -1,16 +1,66 @@
 [
   {
+    "id": "state_of_yukon_climate",
+    "card_type": "interactive",
+    "title": "State of Yukon's Climate",
+    "subtitle": "Long-term climate trends",
+    "description": "Explore long-term changes in Yukon's temperature and precipitation, with Yukon-wide, community, seasonal and spatial views.",
+    "date_label": "Updated 2026-08-14",
+    "updated_date": "2026-08-14",
+    "source": "ERA5-Land reanalysis",
+    "preview_image": "state-of-climate/preview-card.png",
+    "tags": [
+      "climate",
+      "temperature",
+      "precipitation",
+      "trends",
+      "Yukon",
+      "interactive"
+    ],
+    "plot_count": 1,
+    "href": "state-of-climate/index.html",
+    "sort_order": 5
+  },
+  {
     "id": "ahccd_temperature",
     "card_type": "interactive",
-    "title": "AHCCD temperature stations",
+    "title": "Daily temperature observations",
     "subtitle": "Interactive station dashboard",
-    "description": "Explore AHCCD temperature records for Yukon stations.",
+    "description": "Explore daily station temperatures with historical normals, records, and unusually warm or cold days.",
     "date_label": "Updated 2026-06-24",
     "updated_date": "2026-06-24",
     "source": "AHCCD",
     "preview_image": "interactive/ahccd-temperature-preview.png",
-    "tags": ["temperature", "stations", "AHCCD", "interactive"],
+    "tags": [
+      "AHCCD",
+      "temperature",
+      "stations",
+      "daily",
+      "interactive"
+    ],
     "plot_count": 1,
-    "href": "interactive/ahccd-temperature.html"
+    "href": "interactive/ahccd-temperature.html",
+    "sort_order": 10
+  },
+  {
+    "id": "climate-projections",
+    "card_type": "interactive",
+    "title": "Climate projections",
+    "subtitle": "Explore projected climate changes for Yukon First Nation territories using CanDCS-M6 climate projections.",
+    "description": "Explore projected climate changes for Yukon First Nation territories using CanDCS-M6 climate projections.",
+    "date_label": "Updated 2026-06-24",
+    "updated_date": "2026-06-24",
+    "source": "CanDCS-M6 climate projections, Environment and Climate Change Canada",
+    "preview_image": "plots/climate_projections/preview.png",
+    "tags": [
+      "CanDCS-M6",
+      "climate projections",
+      "First Nation",
+      "Yukon",
+      "SSP"
+    ],
+    "plot_count": 1,
+    "href": "climate-projections.html",
+    "sort_order": 30
   }
 ]
