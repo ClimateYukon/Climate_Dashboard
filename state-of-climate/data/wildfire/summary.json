@@ -1,0 +1,1043 @@
+{
+  "theme": "Wildfire",
+  "status": "prototype",
+  "smoke_included": false,
+  "observed_fire_activity": {
+    "period": "1960-2025",
+    "source": "Government of Yukon wildfire/fire-history polygons",
+    "area_burned_trend": {
+      "n_years": 66.0,
+      "slope_per_year": 1414.669085,
+      "slope_per_decade": 14146.690849,
+      "ci_low_per_decade": 2869.294324,
+      "ci_high_per_decade": 28895.610953,
+      "intercept": -2745556.977908,
+      "kendall_tau": 0.237818,
+      "p_value": 0.004766,
+      "significant_p05": true
+    },
+    "timeseries": [
+      {
+        "year": 1960,
+        "area_burned_ha": 8716.65,
+        "fire_count": 5
+      },
+      {
+        "year": 1961,
+        "area_burned_ha": 44371.82,
+        "fire_count": 5
+      },
+      {
+        "year": 1962,
+        "area_burned_ha": 13168.07,
+        "fire_count": 6
+      },
+      {
+        "year": 1963,
+        "area_burned_ha": 17153.05,
+        "fire_count": 4
+      },
+      {
+        "year": 1964,
+        "area_burned_ha": 0.0,
+        "fire_count": 0
+      },
+      {
+        "year": 1965,
+        "area_burned_ha": 17678.97,
+        "fire_count": 9
+      },
+      {
+        "year": 1966,
+        "area_burned_ha": 190143.15,
+        "fire_count": 13
+      },
+      {
+        "year": 1967,
+        "area_burned_ha": 126082.14,
+        "fire_count": 24
+      },
+      {
+        "year": 1968,
+        "area_burned_ha": 11229.28,
+        "fire_count": 12
+      },
+      {
+        "year": 1969,
+        "area_burned_ha": 609088.32,
+        "fire_count": 56
+      },
+      {
+        "year": 1970,
+        "area_burned_ha": 0.0,
+        "fire_count": 0
+      },
+      {
+        "year": 1971,
+        "area_burned_ha": 305753.36,
+        "fire_count": 34
+      },
+      {
+        "year": 1972,
+        "area_burned_ha": 67979.46,
+        "fire_count": 25
+      },
+      {
+        "year": 1973,
+        "area_burned_ha": 6724.69,
+        "fire_count": 4
+      },
+      {
+        "year": 1974,
+        "area_burned_ha": 2792.39,
+        "fire_count": 4
+      },
+      {
+        "year": 1975,
+        "area_burned_ha": 16384.33,
+        "fire_count": 20
+      },
+      {
+        "year": 1976,
+        "area_burned_ha": 52474.65,
+        "fire_count": 7
+      },
+      {
+        "year": 1977,
+        "area_burned_ha": 187914.47,
+        "fire_count": 18
+      },
+      {
+        "year": 1978,
+        "area_burned_ha": 5454.11,
+        "fire_count": 3
+      },
+      {
+        "year": 1979,
+        "area_burned_ha": 7122.03,
+        "fire_count": 4
+      },
+      {
+        "year": 1980,
+        "area_burned_ha": 147208.43,
+        "fire_count": 18
+      },
+      {
+        "year": 1981,
+        "area_burned_ha": 13356.99,
+        "fire_count": 4
+      },
+      {
+        "year": 1982,
+        "area_burned_ha": 315419.82,
+        "fire_count": 33
+      },
+      {
+        "year": 1983,
+        "area_burned_ha": 46424.64,
+        "fire_count": 39
+      },
+      {
+        "year": 1984,
+        "area_burned_ha": 24077.96,
+        "fire_count": 16
+      },
+      {
+        "year": 1985,
+        "area_burned_ha": 11967.55,
+        "fire_count": 7
+      },
+      {
+        "year": 1986,
+        "area_burned_ha": 97590.07,
+        "fire_count": 50
+      },
+      {
+        "year": 1987,
+        "area_burned_ha": 78362.89,
+        "fire_count": 13
+      },
+      {
+        "year": 1988,
+        "area_burned_ha": 4945.83,
+        "fire_count": 6
+      },
+      {
+        "year": 1989,
+        "area_burned_ha": 367790.77,
+        "fire_count": 75
+      },
+      {
+        "year": 1990,
+        "area_burned_ha": 149811.56,
+        "fire_count": 25
+      },
+      {
+        "year": 1991,
+        "area_burned_ha": 107552.63,
+        "fire_count": 50
+      },
+      {
+        "year": 1992,
+        "area_burned_ha": 46651.25,
+        "fire_count": 13
+      },
+      {
+        "year": 1993,
+        "area_burned_ha": 104374.43,
+        "fire_count": 29
+      },
+      {
+        "year": 1994,
+        "area_burned_ha": 394524.99,
+        "fire_count": 85
+      },
+      {
+        "year": 1995,
+        "area_burned_ha": 274464.59,
+        "fire_count": 36
+      },
+      {
+        "year": 1996,
+        "area_burned_ha": 80685.85,
+        "fire_count": 28
+      },
+      {
+        "year": 1997,
+        "area_burned_ha": 10346.81,
+        "fire_count": 12
+      },
+      {
+        "year": 1998,
+        "area_burned_ha": 300820.66,
+        "fire_count": 48
+      },
+      {
+        "year": 1999,
+        "area_burned_ha": 217040.53,
+        "fire_count": 56
+      },
+      {
+        "year": 2000,
+        "area_burned_ha": 8780.1,
+        "fire_count": 11
+      },
+      {
+        "year": 2001,
+        "area_burned_ha": 17544.87,
+        "fire_count": 19
+      },
+      {
+        "year": 2002,
+        "area_burned_ha": 34460.35,
+        "fire_count": 10
+      },
+      {
+        "year": 2003,
+        "area_burned_ha": 49707.5,
+        "fire_count": 27
+      },
+      {
+        "year": 2004,
+        "area_burned_ha": 1726196.4,
+        "fire_count": 173
+      },
+      {
+        "year": 2005,
+        "area_burned_ha": 222984.23,
+        "fire_count": 24
+      },
+      {
+        "year": 2006,
+        "area_burned_ha": 90833.94,
+        "fire_count": 32
+      },
+      {
+        "year": 2007,
+        "area_burned_ha": 36446.5,
+        "fire_count": 52
+      },
+      {
+        "year": 2008,
+        "area_burned_ha": 11407.9,
+        "fire_count": 29
+      },
+      {
+        "year": 2009,
+        "area_burned_ha": 214948.14,
+        "fire_count": 53
+      },
+      {
+        "year": 2010,
+        "area_burned_ha": 147709.22,
+        "fire_count": 39
+      },
+      {
+        "year": 2011,
+        "area_burned_ha": 33438.43,
+        "fire_count": 20
+      },
+      {
+        "year": 2012,
+        "area_burned_ha": 54017.7,
+        "fire_count": 63
+      },
+      {
+        "year": 2013,
+        "area_burned_ha": 175073.23,
+        "fire_count": 108
+      },
+      {
+        "year": 2014,
+        "area_burned_ha": 3213.65,
+        "fire_count": 10
+      },
+      {
+        "year": 2015,
+        "area_burned_ha": 149900.39,
+        "fire_count": 50
+      },
+      {
+        "year": 2016,
+        "area_burned_ha": 19062.66,
+        "fire_count": 4
+      },
+      {
+        "year": 2017,
+        "area_burned_ha": 404166.0,
+        "fire_count": 52
+      },
+      {
+        "year": 2018,
+        "area_burned_ha": 159409.08,
+        "fire_count": 25
+      },
+      {
+        "year": 2019,
+        "area_burned_ha": 273722.4,
+        "fire_count": 47
+      },
+      {
+        "year": 2020,
+        "area_burned_ha": 15939.71,
+        "fire_count": 4
+      },
+      {
+        "year": 2021,
+        "area_burned_ha": 129251.96,
+        "fire_count": 43
+      },
+      {
+        "year": 2022,
+        "area_burned_ha": 203815.74,
+        "fire_count": 201
+      },
+      {
+        "year": 2023,
+        "area_burned_ha": 399417.17,
+        "fire_count": 119
+      },
+      {
+        "year": 2024,
+        "area_burned_ha": 182487.55,
+        "fire_count": 80
+      },
+      {
+        "year": 2025,
+        "area_burned_ha": 172744.31,
+        "fire_count": 82
+      }
+    ]
+  },
+  "historical_fire_weather": {
+    "period": "1981-2025",
+    "baseline": "1981-2010",
+    "source": "Yukon Wildland Fire Management station archive",
+    "fixed_panel_station_count": 18,
+    "trends": {
+      "FWI95d_pct": {
+        "n_years": 45.0,
+        "slope_per_year": 0.054816,
+        "slope_per_decade": 0.548159,
+        "ci_low_per_decade": -0.088221,
+        "ci_high_per_decade": 1.128346,
+        "intercept": -105.816341,
+        "kendall_tau": 0.179798,
+        "p_value": 0.081639,
+        "significant_p05": false
+      },
+      "FWI95": {
+        "n_years": 45.0,
+        "slope_per_year": 0.068459,
+        "slope_per_decade": 0.684595,
+        "ci_low_per_decade": -0.220535,
+        "ci_high_per_decade": 1.496818,
+        "intercept": -112.457675,
+        "kendall_tau": 0.157576,
+        "p_value": 0.126999,
+        "significant_p05": false
+      },
+      "FWI90d": {
+        "n_years": 45.0,
+        "slope_per_year": 0.072017,
+        "slope_per_decade": 0.720175,
+        "ci_low_per_decade": 0.12834,
+        "ci_high_per_decade": 1.288963,
+        "intercept": -130.723979,
+        "kendall_tau": 0.234343,
+        "p_value": 0.023238,
+        "significant_p05": true
+      }
+    },
+    "timeseries": [
+      {
+        "year": 1981,
+        "FWI95d_pct": 3.525446,
+        "FWI95": 24.891863,
+        "FWI90d": 15.076668,
+        "stations": 10
+      },
+      {
+        "year": 1982,
+        "FWI95d_pct": 10.526316,
+        "FWI95": 30.838963,
+        "FWI90d": 16.881845,
+        "stations": 9
+      },
+      {
+        "year": 1983,
+        "FWI95d_pct": 3.543003,
+        "FWI95": 24.880537,
+        "FWI90d": 10.71314,
+        "stations": 8
+      },
+      {
+        "year": 1984,
+        "FWI95d_pct": 3.020987,
+        "FWI95": 23.141037,
+        "FWI90d": 10.626453,
+        "stations": 8
+      },
+      {
+        "year": 1985,
+        "FWI95d_pct": 3.979974,
+        "FWI95": 23.934274,
+        "FWI90d": 13.263598,
+        "stations": 10
+      },
+      {
+        "year": 1986,
+        "FWI95d_pct": 2.58202,
+        "FWI95": 22.04634,
+        "FWI90d": 11.477458,
+        "stations": 10
+      },
+      {
+        "year": 1987,
+        "FWI95d_pct": 0.660073,
+        "FWI95": 19.889733,
+        "FWI90d": 10.605887,
+        "stations": 12
+      },
+      {
+        "year": 1988,
+        "FWI95d_pct": 0.816964,
+        "FWI95": 19.24493,
+        "FWI90d": 9.355042,
+        "stations": 14
+      },
+      {
+        "year": 1989,
+        "FWI95d_pct": 5.113193,
+        "FWI95": 25.27367,
+        "FWI90d": 12.986103,
+        "stations": 16
+      },
+      {
+        "year": 1990,
+        "FWI95d_pct": 5.263158,
+        "FWI95": 25.775477,
+        "FWI90d": 12.529913,
+        "stations": 17
+      },
+      {
+        "year": 1991,
+        "FWI95d_pct": 2.724978,
+        "FWI95": 24.167575,
+        "FWI90d": 13.80054,
+        "stations": 18
+      },
+      {
+        "year": 1992,
+        "FWI95d_pct": 2.754153,
+        "FWI95": 22.392248,
+        "FWI90d": 11.810042,
+        "stations": 16
+      },
+      {
+        "year": 1993,
+        "FWI95d_pct": 1.470588,
+        "FWI95": 21.221616,
+        "FWI90d": 11.389682,
+        "stations": 17
+      },
+      {
+        "year": 1994,
+        "FWI95d_pct": 5.376344,
+        "FWI95": 25.195078,
+        "FWI90d": 12.402746,
+        "stations": 17
+      },
+      {
+        "year": 1995,
+        "FWI95d_pct": 3.699029,
+        "FWI95": 24.57474,
+        "FWI90d": 14.826842,
+        "stations": 18
+      },
+      {
+        "year": 1996,
+        "FWI95d_pct": 4.853453,
+        "FWI95": 24.240904,
+        "FWI90d": 13.654495,
+        "stations": 16
+      },
+      {
+        "year": 1997,
+        "FWI95d_pct": 0.689655,
+        "FWI95": 17.271565,
+        "FWI90d": 8.480624,
+        "stations": 15
+      },
+      {
+        "year": 1998,
+        "FWI95d_pct": 12.334656,
+        "FWI95": 32.042097,
+        "FWI90d": 20.091329,
+        "stations": 14
+      },
+      {
+        "year": 1999,
+        "FWI95d_pct": 6.122449,
+        "FWI95": 24.741329,
+        "FWI90d": 13.527012,
+        "stations": 15
+      },
+      {
+        "year": 2000,
+        "FWI95d_pct": 1.176471,
+        "FWI95": 21.724283,
+        "FWI90d": 12.332826,
+        "stations": 15
+      },
+      {
+        "year": 2001,
+        "FWI95d_pct": 0.916391,
+        "FWI95": 20.393389,
+        "FWI90d": 9.863984,
+        "stations": 18
+      },
+      {
+        "year": 2002,
+        "FWI95d_pct": 4.294479,
+        "FWI95": 24.666671,
+        "FWI90d": 15.249311,
+        "stations": 17
+      },
+      {
+        "year": 2003,
+        "FWI95d_pct": 4.736842,
+        "FWI95": 25.488782,
+        "FWI90d": 15.169416,
+        "stations": 18
+      },
+      {
+        "year": 2004,
+        "FWI95d_pct": 8.0,
+        "FWI95": 28.862014,
+        "FWI90d": 16.739511,
+        "stations": 17
+      },
+      {
+        "year": 2005,
+        "FWI95d_pct": 2.520263,
+        "FWI95": 21.258259,
+        "FWI90d": 12.064062,
+        "stations": 18
+      },
+      {
+        "year": 2006,
+        "FWI95d_pct": 5.747886,
+        "FWI95": 23.830983,
+        "FWI90d": 12.117619,
+        "stations": 18
+      },
+      {
+        "year": 2007,
+        "FWI95d_pct": 5.640097,
+        "FWI95": 24.90901,
+        "FWI90d": 16.016506,
+        "stations": 18
+      },
+      {
+        "year": 2008,
+        "FWI95d_pct": 2.769895,
+        "FWI95": 22.114462,
+        "FWI90d": 12.978666,
+        "stations": 18
+      },
+      {
+        "year": 2009,
+        "FWI95d_pct": 9.66764,
+        "FWI95": 30.282966,
+        "FWI90d": 17.088115,
+        "stations": 18
+      },
+      {
+        "year": 2010,
+        "FWI95d_pct": 7.574224,
+        "FWI95": 31.187856,
+        "FWI90d": 18.988154,
+        "stations": 18
+      },
+      {
+        "year": 2011,
+        "FWI95d_pct": 2.147381,
+        "FWI95": 20.087483,
+        "FWI90d": 11.095731,
+        "stations": 18
+      },
+      {
+        "year": 2012,
+        "FWI95d_pct": 1.517826,
+        "FWI95": 21.964972,
+        "FWI90d": 11.601979,
+        "stations": 18
+      },
+      {
+        "year": 2013,
+        "FWI95d_pct": 3.356395,
+        "FWI95": 22.986976,
+        "FWI90d": 13.957192,
+        "stations": 18
+      },
+      {
+        "year": 2014,
+        "FWI95d_pct": 3.327571,
+        "FWI95": 21.791886,
+        "FWI90d": 12.881628,
+        "stations": 18
+      },
+      {
+        "year": 2015,
+        "FWI95d_pct": 8.883078,
+        "FWI95": 29.433748,
+        "FWI90d": 18.307581,
+        "stations": 16
+      },
+      {
+        "year": 2016,
+        "FWI95d_pct": 5.462185,
+        "FWI95": 26.547478,
+        "FWI90d": 15.102013,
+        "stations": 17
+      },
+      {
+        "year": 2017,
+        "FWI95d_pct": 6.508876,
+        "FWI95": 27.872487,
+        "FWI90d": 15.046388,
+        "stations": 17
+      },
+      {
+        "year": 2018,
+        "FWI95d_pct": 6.350475,
+        "FWI95": 28.924703,
+        "FWI90d": 15.164091,
+        "stations": 16
+      },
+      {
+        "year": 2019,
+        "FWI95d_pct": 13.297872,
+        "FWI95": 31.803796,
+        "FWI90d": 18.966019,
+        "stations": 17
+      },
+      {
+        "year": 2020,
+        "FWI95d_pct": 2.469136,
+        "FWI95": 22.050433,
+        "FWI90d": 12.00908,
+        "stations": 17
+      },
+      {
+        "year": 2021,
+        "FWI95d_pct": 7.549451,
+        "FWI95": 28.294062,
+        "FWI90d": 14.934152,
+        "stations": 18
+      },
+      {
+        "year": 2022,
+        "FWI95d_pct": 1.910828,
+        "FWI95": 21.606372,
+        "FWI90d": 12.615174,
+        "stations": 17
+      },
+      {
+        "year": 2023,
+        "FWI95d_pct": 6.493506,
+        "FWI95": 27.60203,
+        "FWI90d": 15.459221,
+        "stations": 17
+      },
+      {
+        "year": 2024,
+        "FWI95d_pct": 5.882353,
+        "FWI95": 28.508861,
+        "FWI90d": 14.568672,
+        "stations": 17
+      },
+      {
+        "year": 2025,
+        "FWI95d_pct": 3.184713,
+        "FWI95": 25.771777,
+        "FWI90d": 14.546575,
+        "stations": 17
+      }
+    ],
+    "fixed_station_panel": [
+      {
+        "Station": "Atlin",
+        "Station ID": 34,
+        "First usable year": 1991,
+        "Last usable year": 2025,
+        "Usable years": 33
+      },
+      {
+        "Station": "Barlow",
+        "Station ID": 1,
+        "First usable year": 1989,
+        "Last usable year": 2025,
+        "Usable years": 33
+      },
+      {
+        "Station": "Beaver Creek",
+        "Station ID": 2,
+        "First usable year": 1981,
+        "Last usable year": 2021,
+        "Usable years": 35
+      },
+      {
+        "Station": "Braeburn",
+        "Station ID": 3,
+        "First usable year": 1988,
+        "Last usable year": 2025,
+        "Usable years": 38
+      },
+      {
+        "Station": "Burwash",
+        "Station ID": 4,
+        "First usable year": 1981,
+        "Last usable year": 2025,
+        "Usable years": 45
+      },
+      {
+        "Station": "Carmacks",
+        "Station ID": 5,
+        "First usable year": 1981,
+        "Last usable year": 2025,
+        "Usable years": 45
+      },
+      {
+        "Station": "Dawson",
+        "Station ID": 6,
+        "First usable year": 1981,
+        "Last usable year": 2025,
+        "Usable years": 45
+      },
+      {
+        "Station": "Faro",
+        "Station ID": 9,
+        "First usable year": 1986,
+        "Last usable year": 2025,
+        "Usable years": 40
+      },
+      {
+        "Station": "Hasselberg",
+        "Station ID": 14,
+        "First usable year": 1990,
+        "Last usable year": 2025,
+        "Usable years": 31
+      },
+      {
+        "Station": "Henderson",
+        "Station ID": 15,
+        "First usable year": 1989,
+        "Last usable year": 2025,
+        "Usable years": 33
+      },
+      {
+        "Station": "Mayo",
+        "Station ID": 17,
+        "First usable year": 1981,
+        "Last usable year": 2025,
+        "Usable years": 45
+      },
+      {
+        "Station": "Nursery",
+        "Station ID": 19,
+        "First usable year": 1988,
+        "Last usable year": 2025,
+        "Usable years": 38
+      },
+      {
+        "Station": "Old Crow",
+        "Station ID": 20,
+        "First usable year": 1985,
+        "Last usable year": 2025,
+        "Usable years": 38
+      },
+      {
+        "Station": "Pelly Farm",
+        "Station ID": 21,
+        "First usable year": 1981,
+        "Last usable year": 2025,
+        "Usable years": 36
+      },
+      {
+        "Station": "Ross River",
+        "Station ID": 22,
+        "First usable year": 1981,
+        "Last usable year": 2025,
+        "Usable years": 41
+      },
+      {
+        "Station": "Teslin",
+        "Station ID": 26,
+        "First usable year": 1981,
+        "Last usable year": 2025,
+        "Usable years": 45
+      },
+      {
+        "Station": "Watson Lake Airport",
+        "Station ID": 29,
+        "First usable year": 1981,
+        "Last usable year": 2025,
+        "Usable years": 45
+      },
+      {
+        "Station": "Whitehorse",
+        "Station ID": 30,
+        "First usable year": 1981,
+        "Last usable year": 2025,
+        "Usable years": 45
+      }
+    ],
+    "station_panel_rules": {
+      "minimum_valid_daily_observations_per_year": 120,
+      "minimum_usable_years_for_fixed_panel": 30,
+      "annual_yukon_aggregation": "median across fixed long-record stations",
+      "trend_magnitude": "Theil-Sen slope",
+      "trend_test": "Kendall tau",
+      "significance_threshold": 0.05
+    },
+    "era5_validation": [
+      {
+        "Dataset": "WFM",
+        "Mean FWI trend per decade": 0.269,
+        "Median daily FWI bias": 0.0,
+        "Median daily correlation": 1.0,
+        "WFM extreme-day hit rate (%)": 100.0,
+        "Same trend direction as WFM (%)": 100.0
+      },
+      {
+        "Dataset": "ERA5-CESM",
+        "Mean FWI trend per decade": -0.134,
+        "Median daily FWI bias": -2.92,
+        "Median daily correlation": 0.767,
+        "WFM extreme-day hit rate (%)": 47.7,
+        "Same trend direction as WFM (%)": 40.0
+      },
+      {
+        "Dataset": "ERA5-ESCER",
+        "Mean FWI trend per decade": 0.001,
+        "Median daily FWI bias": -3.21,
+        "Median daily correlation": 0.737,
+        "WFM extreme-day hit rate (%)": 45.5,
+        "Same trend direction as WFM (%)": 43.3
+      }
+    ]
+  },
+  "future_fire_weather": {
+    "source": "Processed CanLEAD-FWI 30-year ensemble products",
+    "reference_period": "1971-2000",
+    "mean_change": [
+      {
+        "Scenario": "Pseudo-RCP4.5",
+        "Period": "2041-2070",
+        "Indicator": "BUI",
+        "P10": -2.852478,
+        "Median": 0.207793,
+        "P90": 2.901161
+      },
+      {
+        "Scenario": "Pseudo-RCP4.5",
+        "Period": "2041-2070",
+        "Indicator": "FWI",
+        "P10": -0.401227,
+        "Median": 0.067706,
+        "P90": 0.461342
+      },
+      {
+        "Scenario": "Pseudo-RCP4.5",
+        "Period": "2071-2100",
+        "Indicator": "BUI",
+        "P10": -2.64239,
+        "Median": 0.121116,
+        "P90": 2.767002
+      },
+      {
+        "Scenario": "Pseudo-RCP4.5",
+        "Period": "2071-2100",
+        "Indicator": "FWI",
+        "P10": -0.353176,
+        "Median": 0.060577,
+        "P90": 0.466616
+      },
+      {
+        "Scenario": "RCP8.5",
+        "Period": "2041-2070",
+        "Indicator": "BUI",
+        "P10": -2.29648,
+        "Median": 0.250641,
+        "P90": 2.890899
+      },
+      {
+        "Scenario": "RCP8.5",
+        "Period": "2041-2070",
+        "Indicator": "FWI",
+        "P10": -0.301655,
+        "Median": 0.097376,
+        "P90": 0.51969
+      },
+      {
+        "Scenario": "RCP8.5",
+        "Period": "2071-2100",
+        "Indicator": "BUI",
+        "P10": -1.88652,
+        "Median": 0.875625,
+        "P90": 4.031634
+      },
+      {
+        "Scenario": "RCP8.5",
+        "Period": "2071-2100",
+        "Indicator": "FWI",
+        "P10": -0.093478,
+        "Median": 0.349225,
+        "P90": 0.84277
+      }
+    ],
+    "high_extreme_days": [
+      {
+        "Scenario": "Pseudo-RCP4.5",
+        "Period": "2041-2070",
+        "Indicator": "High-FWI days",
+        "P10": -1.308173,
+        "Median": 0.018629,
+        "P90": 1.307112
+      },
+      {
+        "Scenario": "Pseudo-RCP4.5",
+        "Period": "2071-2100",
+        "Indicator": "High-FWI days",
+        "P10": -1.246061,
+        "Median": 0.010271,
+        "P90": 1.360491
+      },
+      {
+        "Scenario": "Pseudo-RCP4.5",
+        "Period": "2041-2070",
+        "Indicator": "Extreme-FWI days",
+        "P10": -0.144692,
+        "Median": 0.072193,
+        "P90": 0.334364
+      },
+      {
+        "Scenario": "Pseudo-RCP4.5",
+        "Period": "2071-2100",
+        "Indicator": "Extreme-FWI days",
+        "P10": -0.128084,
+        "Median": 0.083275,
+        "P90": 0.356841
+      },
+      {
+        "Scenario": "RCP8.5",
+        "Period": "2041-2070",
+        "Indicator": "High-FWI days",
+        "P10": -1.108981,
+        "Median": 0.127742,
+        "P90": 1.524291
+      },
+      {
+        "Scenario": "RCP8.5",
+        "Period": "2071-2100",
+        "Indicator": "High-FWI days",
+        "P10": -0.443897,
+        "Median": 0.947087,
+        "P90": 2.662198
+      },
+      {
+        "Scenario": "RCP8.5",
+        "Period": "2041-2070",
+        "Indicator": "Extreme-FWI days",
+        "P10": -0.118088,
+        "Median": 0.07576,
+        "P90": 0.3606
+      },
+      {
+        "Scenario": "RCP8.5",
+        "Period": "2071-2100",
+        "Indicator": "Extreme-FWI days",
+        "P10": -0.009384,
+        "Median": 0.298242,
+        "P90": 0.766889
+      }
+    ],
+    "fire_season_length": [
+      {
+        "Scenario": "Pseudo-RCP4.5",
+        "Period": "2041-2070",
+        "P10": 9.148263,
+        "Median": 13.222588,
+        "P90": 17.389229
+      },
+      {
+        "Scenario": "Pseudo-RCP4.5",
+        "Period": "2071-2100",
+        "P10": 12.024547,
+        "Median": 15.896282,
+        "P90": 20.122117
+      },
+      {
+        "Scenario": "RCP8.5",
+        "Period": "2041-2070",
+        "P10": 14.024857,
+        "Median": 18.073076,
+        "P90": 22.572649
+      },
+      {
+        "Scenario": "RCP8.5",
+        "Period": "2071-2100",
+        "P10": 25.92668,
+        "Median": 30.260647,
+        "P90": 34.683452
+      }
+    ],
+    "uncertainty_note": "P10-P90 is ensemble spread. Processed files contain cellwise ensemble-percentile fields; Yukon-wide values are area-weighted summaries of those fields."
+  },
+  "known_excluded_data": {
+    "smoke": "No suitable public smoke-exposure dataset has yet been prepared.",
+    "raw_member_recurrence_cache": "Not used. The current compact raw-member cache has invalid scenario labels and contains unmasked fill values."
+  }
+}
