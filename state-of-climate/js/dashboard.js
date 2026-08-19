@@ -6391,15 +6391,6 @@ function buildTable() {
             renderTable
         );
 
-    document
-        .getElementById(
-            "status-filter"
-        )
-        .addEventListener(
-            "change",
-            renderTable
-        );
-
     renderTable();
 }
 
@@ -6411,6 +6402,7 @@ function renderTable() {
             "indicator-table-body"
         );
 
+
     const searchText =
         document
         .getElementById(
@@ -6420,15 +6412,24 @@ function renderTable() {
         .trim()
         .toLowerCase();
 
-    const statusFilter =
-        document
-        .getElementById(
-            "status-filter"
-        )
-        .value;
+
+    // --------------------------------------------------------
+    // Public catalogue policy
+    //
+    // The catalogue is a list of indicators people can
+    // actually explore now. Planned and in-progress tracker
+    // entries remain in the project metadata, but are not
+    // presented as public dashboard indicators.
+    // --------------------------------------------------------
 
     const filtered =
-        indicators.filter(
+        indicators
+        .filter(
+            item =>
+                item.status
+                === "available"
+        )
+        .filter(
             item => {
 
                 const haystack =
@@ -6440,29 +6441,21 @@ function renderTable() {
                     .join(" ")
                     .toLowerCase();
 
-                const matchesSearch =
+
+                return (
                     !searchText
                     ||
                     haystack.includes(
                         searchText
-                    );
-
-                const matchesStatus =
-                    statusFilter
-                    === "all"
-                    ||
-                    item.status
-                    === statusFilter;
-
-                return (
-                    matchesSearch
-                    &&
-                    matchesStatus
+                    )
                 );
             }
         );
 
-    body.innerHTML = "";
+
+    body.innerHTML =
+        "";
+
 
     filtered.forEach(
         item => {
@@ -6471,6 +6464,7 @@ function renderTable() {
                 document.createElement(
                     "tr"
                 );
+
 
             row.innerHTML = `
 
@@ -6485,36 +6479,21 @@ function renderTable() {
                         item.dashboard_theme
                     )}
                 </td>
-
-                <td>
-                    ${
-                        statusLabels[
-                            item.status
-                        ]
-                        || item.status
-                    }
-                </td>
-
-                <td>
-                    ${
-                        item.relevance
-                        ?? ""
-                    }
-                </td>
             `;
+
 
             row.addEventListener(
                 "click",
                 () => {
 
                     selectTheme(
-                        item
-                        .dashboard_theme
+                        item.dashboard_theme
                     );
 
                     selectIndicator(
                         item.id
                     );
+
 
                     document
                         .querySelector(
@@ -6528,6 +6507,7 @@ function renderTable() {
                         });
                 }
             );
+
 
             body.appendChild(
                 row

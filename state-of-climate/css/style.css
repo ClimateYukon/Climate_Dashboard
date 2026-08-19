@@ -576,7 +576,7 @@ section {
 .table-controls {
     display: grid;
 
-    grid-template-columns: minmax(220px, 1fr) 230px;
+    grid-template-columns: minmax(220px, 760px);
 
     gap: 12px;
 
@@ -1901,3 +1901,19 @@ footer {
 .visual-panel svg {
     cursor: zoom-in;
 }
+
+/* BEGIN compact-analysis-toolbar-alignment */
+/*
+   On wide screens the View-as control occupies only the right side
+   of the analysis area. Pull the main visual panel into the unused
+   space on the left so its top aligns with the View-as control.
+
+   The right-side trend/statistics cards remain below the control.
+*/
+@media (min-width: 901px) {
+    #view-content > .visualization-toolbar + #visualization-stage
+    .visual-layout > .visual-panel:first-child {
+        margin-top: -46px;
+    }
+}
+/* END compact-analysis-toolbar-alignment */
