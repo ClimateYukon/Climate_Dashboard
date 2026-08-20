@@ -1917,3 +1917,83 @@ footer {
     }
 }
 /* END compact-analysis-toolbar-alignment */
+
+/* BEGIN editorial about enhancements */
+
+.about-story {
+    max-width: 920px;
+    line-height: 1.58;
+}
+
+.about-source-links {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0 0.65rem;
+    align-items: baseline;
+}
+
+.about-link-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1rem;
+}
+
+.about-source-links a,
+.about-link-list a {
+    color: inherit;
+    font-weight: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+}
+
+.about-source-links a:hover,
+.about-source-links a:focus,
+.about-link-list a:hover,
+.about-link-list a:focus {
+    text-decoration-thickness: 2px;
+}
+
+/* END editorial about enhancements */
+
+
+/* Wildfire indicator view */
+.wildfire-indicator-view {
+    width: 100%;
+}
+
+.wildfire-indicator-figure {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.wildfire-trend-note {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border-color, #d7d7d7);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+
+/* Wildfire normal indicator view */
+.wildfire-indicator-view {
+    width: 100%;
+}
+
+.wildfire-indicator-figure {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.wildfire-trend-note {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid #d9d9d9;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}

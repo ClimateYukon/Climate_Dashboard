@@ -71,7 +71,7 @@
       "communities",
       "heatmap"
     ],
-    "description": "Lowest minimum temperature reached during the year.",
+    "description": "Lowest daily minimum temperature reached during the year.",
     "definition": "Annual minimum of daily minimum 2 m air temperature."
   },
   {
@@ -89,7 +89,7 @@
       "communities",
       "heatmap"
     ],
-    "description": "Highest maximum temperature reached during the year.",
+    "description": "Highest daily maximum temperature reached during the year.",
     "definition": "Annual maximum of daily maximum 2 m air temperature."
   },
   {
@@ -107,7 +107,7 @@
       "communities",
       "heatmap"
     ],
-    "description": "Number of days each year when the maximum temperature rises above 20°C.",
+    "description": "Number of days each year when the daily high is above 20°C.",
     "definition": "Count of days with daily maximum 2 m air temperature > 20°C."
   },
   {
@@ -125,7 +125,7 @@
       "communities",
       "heatmap"
     ],
-    "description": "Number of days each year when the maximum temperature rises above 25°C.",
+    "description": "Number of days each year when the daily high is above 25°C.",
     "definition": "Count of days with daily maximum 2 m air temperature > 25°C."
   },
   {
@@ -143,7 +143,7 @@
       "communities",
       "heatmap"
     ],
-    "description": "Number of days each year when the maximum temperature rises above 30°C.",
+    "description": "Number of days each year when the daily high is above 30°C.",
     "definition": "Count of days with daily maximum 2 m air temperature > 30°C."
   },
   {
@@ -161,7 +161,7 @@
       "communities",
       "heatmap"
     ],
-    "description": "Number of nights each year when the minimum temperature stays above 10°C.",
+    "description": "Number of days each year when the daily low stays above 10°C.",
     "definition": "Count of days with daily minimum 2 m air temperature > 10°C."
   },
   {
@@ -179,7 +179,7 @@
       "communities",
       "heatmap"
     ],
-    "description": "Number of nights each year when the minimum temperature stays above 15°C.",
+    "description": "Number of days each year when the daily low stays above 15°C.",
     "definition": "Count of days with daily minimum 2 m air temperature > 15°C."
   },
   {
@@ -251,7 +251,7 @@
       "communities",
       "heatmap"
     ],
-    "description": "Number of days each year when the minimum temperature falls below freezing.",
+    "description": "Number of days each year with a minimum temperature below freezing.",
     "definition": "Count of days with daily minimum 2 m air temperature < 0°C."
   },
   {
@@ -305,7 +305,7 @@
       "communities",
       "heatmap"
     ],
-    "description": "Length of the period between the last spring frost and the first fall frost.",
+    "description": "Number of days between the last spring frost and the first fall frost.",
     "definition": "Number of days between the last day with daily minimum temperature < 0°C before July 15 and the first day with daily minimum temperature < 0°C on or after July 15."
   },
   {
@@ -359,7 +359,7 @@
       "communities",
       "heatmap"
     ],
-    "description": "Accumulated cold below 18°C, used as an indicator of heating demand.",
+    "description": "Accumulated cold relative to 18°C, an indicator of heating demand.",
     "definition": "Annual sum of max(18°C - daily mean temperature, 0), in °C·days."
   },
   {
@@ -377,7 +377,7 @@
       "communities",
       "heatmap"
     ],
-    "description": "Accumulated warmth above 18°C, used as an indicator of cooling demand.",
+    "description": "Accumulated warmth relative to 18°C, an indicator of cooling demand.",
     "definition": "Annual sum of max(daily mean temperature - 18°C, 0), in °C·days."
   },
   {
@@ -396,7 +396,7 @@
       "communities",
       "heatmap"
     ],
-    "description": "Total rain and snowfall received over the year, expressed as water equivalent.",
+    "description": "Total rain and snowfall water equivalent received over the year.",
     "definition": "Annual sum of daily total precipitation, expressed as liquid-water equivalent in millimetres."
   },
   {
@@ -472,7 +472,7 @@
       "communities",
       "heatmap"
     ],
-    "description": "Largest amount of precipitation received in a single day.",
+    "description": "Largest precipitation total in any single day of the year.",
     "definition": "Maximum daily precipitation total within each year."
   },
   {
@@ -491,7 +491,7 @@
       "communities",
       "heatmap"
     ],
-    "description": "Largest amount of precipitation received over any five consecutive days.",
+    "description": "Largest precipitation total over any consecutive 5-day period.",
     "definition": "Maximum rolling 5-day precipitation total within each year."
   },
   {
@@ -510,7 +510,7 @@
       "communities",
       "heatmap"
     ],
-    "description": "Longest stretch each year with less than 1 mm of precipitation per day.",
+    "description": "Longest run of consecutive days each year with less than 1 mm of precipitation.",
     "definition": "Maximum number of consecutive days with total precipitation < 1 mm."
   },
   {
@@ -528,7 +528,7 @@
       "communities",
       "heatmap"
     ],
-    "description": "Percentage of the year's precipitation that fell as snow.",
+    "description": "Percentage of annual precipitation that fell as snow.",
     "definition": "100 × annual snowfall water equivalent / annual total precipitation, bounded from 0% to 100%."
   },
   {
@@ -675,104 +675,6 @@
     "status": "in-progress",
     "relevance": 5,
     "source": "WGMS annual mass-change estimates (AMCE); gridded glacier-change product used as consistency check",
-    "views": [
-      "yukon",
-      "map",
-      "about"
-    ]
-  },
-  {
-    "id": "dsr",
-    "dashboard_theme": "Wildfire",
-    "theme": "Fire weather",
-    "name": "Daily Severity Rating, June-August mean",
-    "status": "in-progress",
-    "relevance": 5,
-    "source": "Yukon Wildland Fire Management station weather archive; CEMS gridded DSR product",
-    "views": [
-      "yukon",
-      "communities",
-      "about"
-    ]
-  },
-  {
-    "id": "fwi-bui-dc",
-    "dashboard_theme": "Wildfire",
-    "theme": "Fire weather",
-    "name": "FWI, BUI and Drought Code validation",
-    "status": "in-progress",
-    "relevance": 5,
-    "source": "Yukon Wildland Fire Management station archive; ERA5-derived fire-weather products (CESM/ESCER); CanLEAD for projections",
-    "views": [
-      "yukon",
-      "communities",
-      "about"
-    ]
-  },
-  {
-    "id": "high-fwi",
-    "dashboard_theme": "Wildfire",
-    "theme": "Fire weather",
-    "name": "High-FWI frequency and extreme-event agreement",
-    "status": "in-progress",
-    "relevance": 5,
-    "source": "Yukon Wildland Fire Management station archive; ERA5-derived fire-weather products (CESM/ESCER); CanLEAD for projections",
-    "views": [
-      "yukon",
-      "communities",
-      "about"
-    ]
-  },
-  {
-    "id": "extreme-fire-weather-days",
-    "dashboard_theme": "Wildfire",
-    "theme": "Fire weather",
-    "name": "Extreme fire-weather days",
-    "status": "in-progress",
-    "relevance": null,
-    "source": "",
-    "views": [
-      "yukon",
-      "map",
-      "about"
-    ]
-  },
-  {
-    "id": "area-burned",
-    "dashboard_theme": "Wildfire",
-    "theme": "Wildfire history",
-    "name": "Annual area burned",
-    "status": "in-progress",
-    "relevance": 5,
-    "source": "Government of Yukon wildfire/fire-history polygons and attributes, 1960-2025",
-    "views": [
-      "yukon",
-      "map",
-      "about"
-    ]
-  },
-  {
-    "id": "fire-count",
-    "dashboard_theme": "Wildfire",
-    "theme": "Wildfire history",
-    "name": "Annual fire count",
-    "status": "in-progress",
-    "relevance": 5,
-    "source": "Government of Yukon wildfire/fire-history polygons and attributes, 1960-2025",
-    "views": [
-      "yukon",
-      "map",
-      "about"
-    ]
-  },
-  {
-    "id": "fire-projections",
-    "dashboard_theme": "Wildfire",
-    "theme": "Wildfire projections",
-    "name": "BUI/FWI recurrence under CanLEAD",
-    "status": "in-progress",
-    "relevance": 5,
-    "source": "Yukon Wildland Fire Management station archive; ERA5-derived fire-weather products (CESM/ESCER); CanLEAD for projections",
     "views": [
       "yukon",
       "map",
@@ -1048,17 +950,63 @@
     ]
   },
   {
-    "id": "pm25-smoke",
+    "id": "total-area-burned",
     "dashboard_theme": "Wildfire",
-    "theme": "Air quality / smoke",
-    "name": "Whitehorse PM2.5 smoke-season mean and hours above thresholds",
-    "status": "in-progress",
-    "relevance": 5,
-    "source": "NAPS hourly PM2.5 for Whitehorse; satellite smoke/AOD and modelled PM2.5 are candidate Yukon-wide sources",
+    "theme": "Wildfire",
+    "name": "Total area burned",
+    "status": "available",
+    "relevance": null,
+    "source": "Government of Yukon wildfire/fire-history polygons",
     "views": [
       "yukon",
-      "communities",
-      "about"
-    ]
+      "timeseries"
+    ],
+    "description": "Area of Yukon mapped as burned by wildfire each year.",
+    "definition": "Annual total area within Yukon recorded as burned by wildfire."
+  },
+  {
+    "id": "number-of-fires",
+    "dashboard_theme": "Wildfire",
+    "theme": "Wildfire",
+    "name": "Number of fires",
+    "status": "available",
+    "relevance": null,
+    "source": "Government of Yukon wildfire/fire-history polygons",
+    "views": [
+      "yukon",
+      "timeseries"
+    ],
+    "description": "Number of mapped wildfires recorded in Yukon each year.",
+    "definition": "Annual count of wildfire records in the Yukon fire-history dataset."
+  },
+  {
+    "id": "fire-severity",
+    "dashboard_theme": "Wildfire",
+    "theme": "Wildfire",
+    "name": "Fire severity",
+    "status": "available",
+    "relevance": null,
+    "source": "Government of Yukon Wildland Fire Management station archive",
+    "views": [
+      "yukon",
+      "timeseries"
+    ],
+    "description": "Summer Daily Severity Rating across the established eight-community series.",
+    "definition": "June-August Daily Severity Rating, a severity-weighted measure derived from Fire Weather Index."
+  },
+  {
+    "id": "fire-weather-index",
+    "dashboard_theme": "Wildfire",
+    "theme": "Wildfire",
+    "name": "Fire Weather Index",
+    "status": "available",
+    "relevance": null,
+    "source": "Government of Yukon Wildland Fire Management station archive",
+    "views": [
+      "yukon",
+      "timeseries"
+    ],
+    "description": "Severity of sustained fire-weather conditions during the fire season.",
+    "definition": "Annual maximum 90-day running mean Fire Weather Index across the fixed long-record station panel."
   }
 ]

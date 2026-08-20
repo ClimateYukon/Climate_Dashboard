@@ -296,7 +296,7 @@ function integrateTemperatureIndicators(
 
 function buildThemeCards() {
     const container = document.getElementById("theme-cards");
-    const publishedThemes = new Set(["Temperature", "Precipitation"]);
+    const publishedThemes = new Set(["Temperature", "Precipitation", "Wildfire"]);
 
     container.innerHTML = themeOrder.map(theme => {
         const themeIndicators = indicators.filter(item => item.dashboard_theme === theme);
@@ -739,6 +739,10 @@ function getMainViews(indicator) {
         return views;
     }
 
+    if (WildfireIndicators.isIndicator(indicator)) {
+        return WildfireIndicators.getViews(indicator);
+    }
+
     return ["about"];
 }
 
@@ -877,6 +881,10 @@ function getVisualizations(indicator, view) {
         const metadata = precipitationPackage.metadata.indicators[indicator.id];
         if (!metadata || !metadata.views) return [];
         return metadata.views[view] || [];
+    }
+
+    if (WildfireIndicators.isIndicator(indicator)) {
+        return WildfireIndicators.getVisualizations(view);
     }
 
     return [];
@@ -1025,6 +1033,21 @@ function renderAnalysisView(
         return;
     }
 
+
+    if (
+        WildfireIndicators.isIndicator(
+            selectedIndicator
+        )
+    ) {
+        WildfireIndicators.renderView(
+            stage,
+            selectedIndicator,
+            selectedView,
+            selectedVisualization
+        );
+
+        return;
+    }
 
     renderPlaceholder(
         stage
@@ -3222,50 +3245,561 @@ function renderTrendMetrics(
 // 22. About Temperature
 // ============================================================
 
-function renderAbout(container) {
-    if (
-        isTemperatureIndicator(selectedIndicator)
-        || isPrecipitationIndicator(selectedIndicator)
-    ) {
-        const isTemperature = isTemperatureIndicator(selectedIndicator);
-        const metadata = isTemperature
-            ? temperaturePackage.metadata
-            : precipitationPackage.metadata;
-        const indicator = metadata.indicators[selectedIndicator.id];
-        const baselineRelevant = ["anomaly", "anomaly_percent"].includes(
-            indicator.time_series_mode
-        );
-        const communityText = isTemperature
-            ? metadata.community_summary
-            : metadata.community_method;
-        const extraNote = !isTemperature
-            ? metadata.precipitation_note
-            : "";
 
-        container.innerHTML = `
-            <div class="about-panel">
-                <h3>About this indicator</h3>
-                <div class="about-row"><div class="about-label">Definition</div><div>${escapeHtml(indicator.definition || indicator.description || "")}</div></div>
-                ${indicator.review_note ? `<div class="about-row"><div class="about-label">Status</div><div>${escapeHtml(indicator.review_note)}</div></div>` : ""}
-                <div class="about-row"><div class="about-label">Period</div><div>${escapeHtml(metadata.period)}</div></div>
-                ${baselineRelevant ? `<div class="about-row"><div class="about-label">Baseline</div><div>${escapeHtml(metadata.baseline)}</div></div>` : ""}
-                <div class="about-row"><div class="about-label">Data source</div><div>${escapeHtml(metadata.source || "ERA5-Land daily reanalysis")}</div></div>
-                <div class="about-row"><div class="about-label">Yukon value</div><div>${escapeHtml(metadata.yukon_value_note || metadata.yukon_summary || metadata.territorial_method || "")}</div></div>
-                <div class="about-row"><div class="about-label">Boundary</div><div>${escapeHtml(metadata.boundary_summary || "")}</div></div>
-                <div class="about-row"><div class="about-label">Trend and significance</div><div>${escapeHtml(metadata.trend_method || "")}</div></div>
-                <div class="about-row"><div class="about-label">Map significance</div><div>${escapeHtml(metadata.map_note || "")}</div></div>
-                <div class="about-row"><div class="about-label">Community analysis</div><div>${escapeHtml(communityText || "")}</div></div>
-                ${extraNote ? `<div class="heatmap-explanation" style="margin-top: 22px;">${escapeHtml(extraNote)}</div>` : ""}
-            </div>
-        `;
-        return;
+function getSelectedYukonSeries() {
+    if (
+        isTemperatureIndicator(
+            selectedIndicator
+        )
+    ) {
+        return (
+            temperaturePackage
+            ?.yukon
+            ?.indicators
+            ?.[selectedIndicator.id]
+            || null
+        );
     }
 
-    const source = selectedIndicator.source || "Dataset not yet assigned.";
-    container.innerHTML = `<div class="about-panel"><h3>About this indicator</h3><div class="about-row"><div class="about-label">Data source</div><div>${escapeHtml(source)}</div></div></div>`;
+    if (
+        isPrecipitationIndicator(
+            selectedIndicator
+        )
+    ) {
+        return (
+            precipitationPackage
+            ?.yukon
+            ?.indicators
+            ?.[selectedIndicator.id]
+            || null
+        );
+    }
+
+    return null;
 }
 
 
+function formatEditorialTrendSlope(
+    value,
+    unit
+) {
+    const number =
+        Number(
+            value
+        );
+
+    if (
+        !Number.isFinite(
+            number
+        )
+    ) {
+        return "not available";
+    }
+
+    const absolute =
+        Math.abs(
+            number
+        );
+
+    const decimals =
+        absolute >= 100
+            ? 0
+            : (
+                absolute >= 10
+                    ? 1
+                    : 2
+            );
+
+    const prefix =
+        number > 0
+            ? "+"
+            : "";
+
+    return (
+        `${prefix}${number.toFixed(decimals)}`
+        + (
+            unit
+                ? ` ${unit}`
+                : ""
+        )
+    );
+}
+
+
+function buildEditorialTrendStory(
+    indicator,
+    series,
+    period
+) {
+    const trend =
+        series
+        ?.trend;
+
+    const slope =
+        trend
+        && trend.slope_per_decade !== null
+        && trend.slope_per_decade !== undefined
+            ? Number(
+                trend.slope_per_decade
+            )
+            : NaN;
+
+    if (
+        !Number.isFinite(
+            slope
+        )
+    ) {
+        return (
+            "A Yukon-wide long-term trend is not available "
+            + "for this indicator."
+        );
+    }
+
+    const pValue =
+        trend
+        && trend.p_value !== null
+        && trend.p_value !== undefined
+            ? Number(
+                trend.p_value
+            )
+            : NaN;
+
+    const significant =
+        trend
+        && (
+            trend.significant_p05
+            ?? trend.significant
+        ) !== null
+        && (
+            trend.significant_p05
+            ?? trend.significant
+        ) !== undefined
+            ? Boolean(
+                trend.significant_p05
+                ?? trend.significant
+            )
+            : (
+                Number.isFinite(
+                    pValue
+                )
+                    ? pValue < 0.05
+                    : null
+            );
+
+    const direction =
+        slope >= 0
+            ? (
+                indicator.trend_increase
+                || "an increasing value"
+            )
+            : (
+                indicator.trend_decrease
+                || "a decreasing value"
+            );
+
+    const slopeText =
+        formatEditorialTrendSlope(
+            slope,
+            series
+                ?.trend_unit
+                || indicator
+                    ?.trend_unit
+                || ""
+        );
+
+    const pText =
+        Number.isFinite(
+            pValue
+        )
+            ? formatPValue(
+                pValue
+            )
+            : null;
+
+    const periodText =
+        period
+            ? ` from ${period}`
+            : "";
+
+    if (
+        significant === true
+    ) {
+        return (
+            `Across Yukon, the long-term record${periodText} shows `
+            + `${direction}. The estimated change is ${slopeText}`
+            + (
+                pText
+                    ? `. The statistical evidence supports a long-term change (${pText}).`
+                    : "."
+            )
+        );
+    }
+
+    if (
+        significant === false
+    ) {
+        return (
+            `The Yukon-wide trend${periodText} points toward ${direction}, `
+            + `with an estimated change of ${slopeText}. `
+            + (
+                pText
+                    ? `The change is not statistically clear in this record (${pText}), `
+                    : "The change is not statistically clear in this record, "
+            )
+            + "so year-to-year variability remains an important part of the signal."
+        );
+    }
+
+    return (
+        `The estimated Yukon-wide trend${periodText} is ${slopeText}, `
+        + `pointing toward ${direction}.`
+    );
+}
+
+
+function renderEditorialMethodLinks(indicator) {
+    const references =
+        Array.isArray(indicator.trend_links)
+            ? indicator.trend_links
+            : [];
+
+    if (references.length === 0) {
+        return "";
+    }
+
+    return `
+        <div class="about-link-list">
+            ${
+                references
+                    .map(
+                        reference => `
+                            <a
+                                href="${escapeHtml(reference.url)}"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >${escapeHtml(reference.label)}</a>
+                        `
+                    )
+                    .join("")
+            }
+        </div>
+    `;
+}
+
+function renderAbout(container) {
+
+    if (
+        WildfireIndicators.isIndicator(
+            selectedIndicator
+        )
+    ) {
+        WildfireIndicators.renderAbout(
+            container,
+            selectedIndicator
+        );
+
+        return;
+    }
+    if (
+        isTemperatureIndicator(
+            selectedIndicator
+        )
+        || isPrecipitationIndicator(
+            selectedIndicator
+        )
+    ) {
+        const isTemperature =
+            isTemperatureIndicator(
+                selectedIndicator
+            );
+
+        const metadata =
+            isTemperature
+                ? temperaturePackage.metadata
+                : precipitationPackage.metadata;
+
+        const indicator =
+            metadata
+                .indicators[
+                    selectedIndicator.id
+                ];
+
+        const yukonSeries =
+            getSelectedYukonSeries();
+
+        const baselineRelevant =
+            [
+                "anomaly",
+                "anomaly_percent"
+            ].includes(
+                indicator.time_series_mode
+            );
+
+        const communityText =
+            isTemperature
+                ? metadata.community_summary
+                : metadata.community_method;
+
+        const extraNote =
+            !isTemperature
+                ? metadata.precipitation_note
+                : "";
+
+        const whyText =
+            indicator.why_we_track_it
+            || indicator.description
+            || "";
+
+        const trendStory =
+            buildEditorialTrendStory(
+                indicator,
+                yukonSeries,
+                metadata.period
+            );
+
+        const sourceName =
+            metadata.source
+            || "ERA5-Land daily reanalysis";
+
+        const sourceHtml =
+            metadata.source_url
+                ? `
+                    <div class="about-source-links">
+                        <a
+                            href="${escapeHtml(metadata.source_url)}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >${escapeHtml(sourceName)}</a>
+
+                        ${
+                            metadata.source_documentation_url
+                                ? `
+                                    <span aria-hidden="true">·</span>
+                                    <a
+                                        href="${escapeHtml(metadata.source_documentation_url)}"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >Dataset documentation</a>
+                                `
+                                : ""
+                        }
+                    </div>
+                `
+                : escapeHtml(
+                    sourceName
+                );
+
+        const methodLinks =
+            renderEditorialMethodLinks(
+                indicator
+            );
+
+        container.innerHTML = `
+            <div class="about-panel">
+
+                <h3>About this indicator</h3>
+
+                <div class="about-row">
+                    <div class="about-label">
+                        Why we track it
+                    </div>
+                    <div class="about-story">
+                        ${escapeHtml(whyText)}
+                    </div>
+                </div>
+
+                <div class="about-row">
+                    <div class="about-label">
+                        What the Yukon record shows
+                    </div>
+                    <div class="about-story">
+                        ${escapeHtml(trendStory)}
+                    </div>
+                </div>
+
+                <div class="about-row">
+                    <div class="about-label">
+                        Definition
+                    </div>
+                    <div>
+                        ${
+                            escapeHtml(
+                                indicator.definition
+                                || indicator.description
+                                || ""
+                            )
+                        }
+                    </div>
+                </div>
+
+                ${
+                    indicator.review_note
+                        ? `
+                            <div class="about-row">
+                                <div class="about-label">
+                                    Status
+                                </div>
+                                <div>
+                                    ${escapeHtml(indicator.review_note)}
+                                </div>
+                            </div>
+                        `
+                        : ""
+                }
+
+                <div class="about-row">
+                    <div class="about-label">
+                        Period
+                    </div>
+                    <div>
+                        ${escapeHtml(metadata.period)}
+                    </div>
+                </div>
+
+                ${
+                    baselineRelevant
+                        ? `
+                            <div class="about-row">
+                                <div class="about-label">
+                                    Baseline
+                                </div>
+                                <div>
+                                    ${escapeHtml(metadata.baseline)}
+                                </div>
+                            </div>
+                        `
+                        : ""
+                }
+
+                <div class="about-row">
+                    <div class="about-label">
+                        Data source
+                    </div>
+                    <div>
+                        ${sourceHtml}
+                    </div>
+                </div>
+
+                <div class="about-row">
+                    <div class="about-label">
+                        Yukon value
+                    </div>
+                    <div>
+                        ${
+                            escapeHtml(
+                                metadata.yukon_value_note
+                                || metadata.yukon_summary
+                                || metadata.territorial_method
+                                || ""
+                            )
+                        }
+                    </div>
+                </div>
+
+                <div class="about-row">
+                    <div class="about-label">
+                        Boundary
+                    </div>
+                    <div>
+                        ${
+                            escapeHtml(
+                                metadata.boundary_summary
+                                || ""
+                            )
+                        }
+                    </div>
+                </div>
+
+                <div class="about-row">
+                    <div class="about-label">
+                        Trend and significance
+                    </div>
+                    <div>
+                        ${
+                            escapeHtml(
+                                indicator.trend_method
+                                || metadata.trend_method
+                                || ""
+                            )
+                        }
+                    </div>
+                </div>
+
+                <div class="about-row">
+                    <div class="about-label">
+                        Methods and references
+                    </div>
+                    <div>
+                        ${methodLinks}
+                    </div>
+                </div>
+
+                <div class="about-row">
+                    <div class="about-label">
+                        Map significance
+                    </div>
+                    <div>
+                        ${
+                            escapeHtml(
+                                metadata.map_note
+                                || ""
+                            )
+                        }
+                    </div>
+                </div>
+
+                <div class="about-row">
+                    <div class="about-label">
+                        Community analysis
+                    </div>
+                    <div>
+                        ${
+                            escapeHtml(
+                                communityText
+                                || ""
+                            )
+                        }
+                    </div>
+                </div>
+
+                ${
+                    extraNote
+                        ? `
+                            <div
+                                class="heatmap-explanation"
+                                style="margin-top: 22px;"
+                            >
+                                ${escapeHtml(extraNote)}
+                            </div>
+                        `
+                        : ""
+                }
+
+            </div>
+        `;
+
+        return;
+    }
+
+    const source =
+        selectedIndicator.source
+        || "Dataset not yet assigned.";
+
+    container.innerHTML = `
+        <div class="about-panel">
+            <h3>About this indicator</h3>
+
+            <div class="about-row">
+                <div class="about-label">
+                    Data source
+                </div>
+                <div>
+                    ${escapeHtml(source)}
+                </div>
+            </div>
+        </div>
+    `;
+}
 
 // ============================================================
 // Precipitation view router

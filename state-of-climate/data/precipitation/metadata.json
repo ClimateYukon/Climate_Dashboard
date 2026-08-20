@@ -5,7 +5,7 @@
   "source": "ERA5-Land daily reanalysis",
   "community_method": "Nearest ERA5-Land grid cell to each community.",
   "territorial_method": "Area-weighted mean of ERA5-Land grid-cell indicator values using fractional overlap with the Yukon boundary.",
-  "trend_method": "Precipitation indicators use Sen's slope to estimate trend magnitude and the Mann-Kendall test to assess statistical significance. The Hamed-Rao variance correction is applied only when significant lag-1 serial correlation is detected after detrending. Statistical significance is assessed at p < 0.05. For Yukon maps, Benjamini-Hochberg false-discovery-rate correction is applied across grid cells. Community heatmaps use the same multiple-testing control across communities.",
+  "trend_method": "Precipitation indicators use Sen's slope and Mann-Kendall. Serial correlation is accounted for when needed. Maps and community heatmaps use false-discovery-rate correction.",
   "precipitation_note": "ERA5-Land is a reanalysis. Precipitation is more spatially and temporally variable than temperature, and northern precipitation observations carry important uncertainty.",
   "indicators": {
     "total-precipitation": {
@@ -31,8 +31,26 @@
         "annual_map": "figures/precipitation/annual/total-precipitation.png",
         "seasonal_map": "figures/precipitation/seasonal/total-precipitation.png"
       },
-      "description": "Total rain and snowfall received over the year, expressed as water equivalent.",
-      "definition": "Annual sum of daily total precipitation, expressed as liquid-water equivalent in millimetres."
+      "description": "Total rain and snowfall water equivalent received over the year.",
+      "definition": "Annual sum of daily total precipitation, expressed as liquid-water equivalent in millimetres.",
+      "why_we_track_it": "Precipitation controls how much water enters Yukon's rivers, soils, snowpack and ecosystems. Long-term changes affect floods, drought, wildfire conditions, water supply and infrastructure, although precipitation naturally varies much more from year to year than temperature.",
+      "trend_increase": "more annual precipitation",
+      "trend_decrease": "less annual precipitation",
+      "trend_method": "Sen's slope and Mann-Kendall are used because precipitation varies strongly from year to year and can be influenced by unusually wet or dry years. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "wet-days": {
       "label": "Wet days",
@@ -58,7 +76,25 @@
         "seasonal_map": "figures/precipitation/seasonal/wet-days.png"
       },
       "description": "Number of days each year with at least 1 mm of precipitation.",
-      "definition": "Count of days with total precipitation ≥ 1 mm."
+      "definition": "Count of days with total precipitation ≥ 1 mm.",
+      "why_we_track_it": "Wet days show whether precipitation is arriving more often, not just whether annual totals are changing. That distinction matters for soil moisture, streamflow, travel and how frequently wet conditions occur.",
+      "trend_increase": "more wet days",
+      "trend_decrease": "fewer wet days",
+      "trend_method": "Sen's slope and Mann-Kendall are used because this is a threshold-based count with discrete and often repeated values. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "heavy-precipitation-days": {
       "label": "Heavy precipitation days",
@@ -84,7 +120,25 @@
         "seasonal_map": "figures/precipitation/seasonal/heavy-precipitation-days.png"
       },
       "description": "Number of days each year with at least 10 mm of precipitation.",
-      "definition": "Count of days with total precipitation ≥ 10 mm."
+      "definition": "Count of days with total precipitation ≥ 10 mm.",
+      "why_we_track_it": "Heavy precipitation days track events more likely to produce rapid runoff, erosion and drainage problems. They help show whether changes in precipitation are also changing the frequency of intense events.",
+      "trend_increase": "more days with at least 10 mm of precipitation",
+      "trend_decrease": "fewer days with at least 10 mm of precipitation",
+      "trend_method": "Sen's slope and Mann-Kendall are used because this is a threshold-based count with discrete and often repeated values. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "very-heavy-precipitation-days": {
       "label": "Very heavy precipitation days",
@@ -110,7 +164,25 @@
         "seasonal_map": "figures/precipitation/seasonal/very-heavy-precipitation-days.png"
       },
       "description": "Number of days each year with at least 20 mm of precipitation.",
-      "definition": "Count of days with total precipitation ≥ 20 mm."
+      "definition": "Count of days with total precipitation ≥ 20 mm.",
+      "why_we_track_it": "Very heavy precipitation days capture rarer, higher-impact events. Even a small change in frequency can matter for flooding, washouts, slope stability and infrastructure design.",
+      "trend_increase": "more days with at least 20 mm of precipitation",
+      "trend_decrease": "fewer days with at least 20 mm of precipitation",
+      "trend_method": "Sen's slope and Mann-Kendall are used because this is a threshold-based count with discrete and often repeated values. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "maximum-1-day-precipitation": {
       "label": "Maximum 1-day precipitation",
@@ -135,8 +207,26 @@
         "annual_map": "figures/precipitation/annual/maximum-1-day-precipitation.png",
         "seasonal_map": "figures/precipitation/seasonal/maximum-1-day-precipitation.png"
       },
-      "description": "Largest amount of precipitation received in a single day.",
-      "definition": "Maximum daily precipitation total within each year."
+      "description": "Largest precipitation total in any single day of the year.",
+      "definition": "Maximum daily precipitation total within each year.",
+      "why_we_track_it": "The wettest day of the year is a direct measure of short-duration precipitation extremes. It is relevant to rapid runoff, local flooding, erosion and drainage capacity.",
+      "trend_increase": "a wetter annual maximum one-day event",
+      "trend_decrease": "a drier annual maximum one-day event",
+      "trend_method": "Sen's slope and Mann-Kendall are used because precipitation extremes can be strongly influenced by individual unusual years. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "maximum-5-day-precipitation": {
       "label": "Maximum 5-day precipitation",
@@ -161,8 +251,26 @@
         "annual_map": "figures/precipitation/annual/maximum-5-day-precipitation.png",
         "seasonal_map": "figures/precipitation/seasonal/maximum-5-day-precipitation.png"
       },
-      "description": "Largest amount of precipitation received over any five consecutive days.",
-      "definition": "Maximum rolling 5-day precipitation total within each year."
+      "description": "Largest precipitation total over any consecutive 5-day period.",
+      "definition": "Maximum rolling 5-day precipitation total within each year.",
+      "why_we_track_it": "The wettest five-day period captures multi-day events that can saturate soils and keep rivers high. These events can compound flood, landslide and infrastructure risks.",
+      "trend_increase": "a wetter annual maximum five-day period",
+      "trend_decrease": "a drier annual maximum five-day period",
+      "trend_method": "Sen's slope and Mann-Kendall are used because precipitation extremes can be strongly influenced by individual unusual years. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "longest-dry-spell": {
       "label": "Longest dry spell",
@@ -187,8 +295,26 @@
         "annual_map": "figures/precipitation/annual/longest-dry-spell.png",
         "seasonal_map": "figures/precipitation/seasonal/longest-dry-spell.png"
       },
-      "description": "Longest stretch each year with less than 1 mm of precipitation per day.",
-      "definition": "Maximum number of consecutive days with total precipitation < 1 mm."
+      "description": "Longest run of consecutive days each year with less than 1 mm of precipitation.",
+      "definition": "Maximum number of consecutive days with total precipitation < 1 mm.",
+      "why_we_track_it": "The longest dry spell shows how long conditions can persist with little or no meaningful precipitation. Longer dry periods can stress vegetation, reduce soil moisture and contribute to wildfire conditions even in years with normal total precipitation.",
+      "trend_increase": "longer annual dry spells",
+      "trend_decrease": "shorter annual dry spells",
+      "trend_method": "Sen's slope and Mann-Kendall are used because dry-spell length is a duration measure that can be strongly influenced by unusually dry years. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "snow-fraction": {
       "label": "Fraction of precipitation falling as snow",
@@ -210,12 +336,32 @@
         "annual_map": "figures/precipitation/annual/snow-fraction.png",
         "seasonal_map": null
       },
-      "description": "Percentage of the year's precipitation that fell as snow.",
-      "definition": "100 × annual snowfall water equivalent / annual total precipitation, bounded from 0% to 100%."
+      "description": "Percentage of annual precipitation that fell as snow.",
+      "definition": "100 × annual snowfall water equivalent / annual total precipitation, bounded from 0% to 100%.",
+      "why_we_track_it": "Snow fraction tracks the form of precipitation, not just the amount. A shift from snow toward rain changes snowpack storage, runoff timing, winter travel, flood processes and ecosystems.",
+      "trend_increase": "a larger share of precipitation falling as snow",
+      "trend_decrease": "a smaller share of precipitation falling as snow",
+      "trend_method": "Sen's slope and Mann-Kendall are used because snow fraction is a bounded percentage and does not need to follow a normal distribution. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     }
   },
   "boundary_summary": "Yukon admin-1 boundary from Natural Earth 1:10m. A 50 km buffer is used only to extract source data; final statistics and maps use the unbuffered boundary.",
   "yukon_value_note": "Each indicator is calculated at each ERA5-Land grid cell, then area-weighted across Yukon. For counts and extremes, the Yukon value is a spatial average of local indicator values, not a territory-wide event count.",
-  "map_note": "Hatching shows areas where the trend is not statistically significant after accounting for the many grid cells tested across the map.",
-  "heatmap_design": "Rows are Yukon communities. Seasonal results are shown first where available, followed by the annual result. Values show the rate of change per decade. Precipitation uses a brown-white-green scale. Values in parentheses are not statistically significant after accounting for the number of communities tested."
+  "map_note": "Hatching indicates trends that are not statistically significant after correction for multiple testing.",
+  "heatmap_design": "Rows are Yukon communities. Seasonal columns are shown first where available, followed by Annual. Values are physical slopes per decade; Precipitation uses a brown-white-green diverging scale. Parentheses indicate results that are not significant after Benjamini-Hochberg FDR correction across communities.",
+  "source_url": "https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land?tab=overview",
+  "source_documentation_url": "https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land?tab=documentation"
 }

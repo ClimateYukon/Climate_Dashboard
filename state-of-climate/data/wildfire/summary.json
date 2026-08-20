@@ -352,7 +352,7 @@
   "historical_fire_weather": {
     "period": "1981-2025",
     "baseline": "1981-2010",
-    "source": "Yukon Wildland Fire Management station archive",
+    "source": "Government of Yukon Wildland Fire Management (WFM) station archive",
     "fixed_panel_station_count": 18,
     "trends": {
       "FWI95d_pct": {
@@ -852,7 +852,7 @@
         "Same trend direction as WFM (%)": 100.0
       },
       {
-        "Dataset": "ERA5-CESM",
+        "Dataset": "ERA5-CEMS",
         "Mean FWI trend per decade": -0.134,
         "Median daily FWI bias": -2.92,
         "Median daily correlation": 0.767,
@@ -860,7 +860,7 @@
         "Same trend direction as WFM (%)": 40.0
       },
       {
-        "Dataset": "ERA5-ESCER",
+        "Dataset": "ERA5-FWI-SN",
         "Mean FWI trend per decade": 0.001,
         "Median daily FWI bias": -3.21,
         "Median daily correlation": 0.737,

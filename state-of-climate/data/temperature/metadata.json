@@ -12,7 +12,7 @@
   },
   "yukon_summary": "Area-weighted mean of ERA5-Land grid-cell indicator values using the fraction of each cell within the Yukon boundary.",
   "community_summary": "Community products use the existing 18 Yukon ERA5-Land community grid-cell series.",
-  "trend_method": "Mean temperature, mean daily maximum temperature, and mean daily minimum temperature use ordinary least-squares linear trends with lag-1 HAC/Newey-West uncertainty. Other temperature indicators use Sen's slope to estimate trend magnitude and the Mann-Kendall test to assess statistical significance. For Sen/Mann-Kendall analyses, the Hamed-Rao variance correction is applied only when significant lag-1 serial correlation is detected after detrending. Statistical significance is assessed at p < 0.05. For Yukon maps, Benjamini-Hochberg false-discovery-rate correction is applied across grid cells. Community heatmaps use the same multiple-testing control across communities.",
+  "trend_method": "Mean temperature, mean daily maximum temperature and mean daily minimum temperature use OLS with Newey-West/HAC uncertainty. Other temperature indicators use Sen's slope and Mann-Kendall. Serial correlation is accounted for when needed. Maps and community heatmaps use false-discovery-rate correction.",
   "community_multiple_testing": "Community significance is additionally reported using Benjamini-Hochberg FDR correction within each indicator.",
   "heatmap_design": "Rows are Yukon communities. Seasonal results are shown first where available, followed by the annual result. Values show the rate of change per decade. Temperature uses a blue-white-red scale. Values in parentheses are not statistically significant after accounting for the number of communities tested.",
   "indicators": {
@@ -40,7 +40,22 @@
         "seasonal_map": "figures/temperature/seasonal/mean-temperature.png"
       },
       "description": "Average daily temperature over the year.",
-      "definition": "Annual mean of daily mean 2 m air temperature."
+      "definition": "Annual mean of daily mean 2 m air temperature.",
+      "trend_method": "OLS is used because this indicator is a continuous annual temperature mean. Newey-West/HAC accounts for persistence between years. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "OLS",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLS.html"
+        },
+        {
+          "label": "Newey-West / HAC",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.sandwich_covariance.cov_hac.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "mean-daily-maximum-temperature": {
       "label": "Mean daily maximum temperature",
@@ -66,7 +81,22 @@
         "seasonal_map": "figures/temperature/seasonal/mean-daily-maximum-temperature.png"
       },
       "description": "Average of the daily high temperatures over the year.",
-      "definition": "Annual mean of daily maximum 2 m air temperature."
+      "definition": "Annual mean of daily maximum 2 m air temperature.",
+      "trend_method": "OLS is used because this indicator is a continuous annual temperature mean. Newey-West/HAC accounts for persistence between years. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "OLS",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLS.html"
+        },
+        {
+          "label": "Newey-West / HAC",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.sandwich_covariance.cov_hac.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "mean-daily-minimum-temperature": {
       "label": "Mean daily minimum temperature",
@@ -92,7 +122,22 @@
         "seasonal_map": "figures/temperature/seasonal/mean-daily-minimum-temperature.png"
       },
       "description": "Average of the daily low temperatures over the year.",
-      "definition": "Annual mean of daily minimum 2 m air temperature."
+      "definition": "Annual mean of daily minimum 2 m air temperature.",
+      "trend_method": "OLS is used because this indicator is a continuous annual temperature mean. Newey-West/HAC accounts for persistence between years. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "OLS",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLS.html"
+        },
+        {
+          "label": "Newey-West / HAC",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.sandwich_covariance.cov_hac.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "coldest-night": {
       "label": "Coldest night",
@@ -115,7 +160,22 @@
         "seasonal_map": null
       },
       "description": "Lowest minimum temperature reached during the year.",
-      "definition": "Annual minimum of daily minimum 2 m air temperature."
+      "definition": "Annual minimum of daily minimum 2 m air temperature.",
+      "trend_method": "Sen's slope and Mann-Kendall are used because annual extremes can be strongly influenced by individual unusual years. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "hottest-day": {
       "label": "Hottest day",
@@ -138,7 +198,22 @@
         "seasonal_map": null
       },
       "description": "Highest maximum temperature reached during the year.",
-      "definition": "Annual maximum of daily maximum 2 m air temperature."
+      "definition": "Annual maximum of daily maximum 2 m air temperature.",
+      "trend_method": "Sen's slope and Mann-Kendall are used because annual extremes can be strongly influenced by individual unusual years. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "days-above-20c": {
       "label": "Days above 20°C",
@@ -161,7 +236,22 @@
         "seasonal_map": null
       },
       "description": "Number of days each year when the maximum temperature rises above 20°C.",
-      "definition": "Count of days with daily maximum 2 m air temperature > 20°C."
+      "definition": "Count of days with daily maximum 2 m air temperature > 20°C.",
+      "trend_method": "Sen's slope and Mann-Kendall are used because this is a threshold-based count with discrete and often repeated values. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "days-above-25c": {
       "label": "Days above 25°C",
@@ -184,7 +274,22 @@
         "seasonal_map": null
       },
       "description": "Number of days each year when the maximum temperature rises above 25°C.",
-      "definition": "Count of days with daily maximum 2 m air temperature > 25°C."
+      "definition": "Count of days with daily maximum 2 m air temperature > 25°C.",
+      "trend_method": "Sen's slope and Mann-Kendall are used because this is a threshold-based count with discrete and often repeated values. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "days-above-30c": {
       "label": "Days above 30°C",
@@ -207,7 +312,22 @@
         "seasonal_map": null
       },
       "description": "Number of days each year when the maximum temperature rises above 30°C.",
-      "definition": "Count of days with daily maximum 2 m air temperature > 30°C."
+      "definition": "Count of days with daily maximum 2 m air temperature > 30°C.",
+      "trend_method": "Sen's slope and Mann-Kendall are used because this is a threshold-based count with discrete and often repeated values. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "nights-above-10c": {
       "label": "Nights above 10°C",
@@ -230,7 +350,22 @@
         "seasonal_map": null
       },
       "description": "Number of nights each year when the minimum temperature stays above 10°C.",
-      "definition": "Count of days with daily minimum 2 m air temperature > 10°C."
+      "definition": "Count of days with daily minimum 2 m air temperature > 10°C.",
+      "trend_method": "Sen's slope and Mann-Kendall are used because this is a threshold-based count with discrete and often repeated values. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "nights-above-15c": {
       "label": "Nights above 15°C",
@@ -253,7 +388,22 @@
         "seasonal_map": null
       },
       "description": "Number of nights each year when the minimum temperature stays above 15°C.",
-      "definition": "Count of days with daily minimum 2 m air temperature > 15°C."
+      "definition": "Count of days with daily minimum 2 m air temperature > 15°C.",
+      "trend_method": "Sen's slope and Mann-Kendall are used because this is a threshold-based count with discrete and often repeated values. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "nights-below-minus-20c": {
       "label": "Nights below -20°C",
@@ -276,7 +426,22 @@
         "seasonal_map": null
       },
       "description": "Number of nights each year when the minimum temperature falls below -20°C.",
-      "definition": "Count of days with daily minimum 2 m air temperature < -20°C."
+      "definition": "Count of days with daily minimum 2 m air temperature < -20°C.",
+      "trend_method": "Sen's slope and Mann-Kendall are used because this is a threshold-based count with discrete and often repeated values. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "nights-below-minus-30c": {
       "label": "Nights below -30°C",
@@ -299,7 +464,22 @@
         "seasonal_map": null
       },
       "description": "Number of nights each year when the minimum temperature falls below -30°C.",
-      "definition": "Count of days with daily minimum 2 m air temperature < -30°C."
+      "definition": "Count of days with daily minimum 2 m air temperature < -30°C.",
+      "trend_method": "Sen's slope and Mann-Kendall are used because this is a threshold-based count with discrete and often repeated values. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "nights-below-minus-40c": {
       "label": "Nights below -40°C",
@@ -322,7 +502,22 @@
         "seasonal_map": null
       },
       "description": "Number of nights each year when the minimum temperature falls below -40°C.",
-      "definition": "Count of days with daily minimum 2 m air temperature < -40°C."
+      "definition": "Count of days with daily minimum 2 m air temperature < -40°C.",
+      "trend_method": "Sen's slope and Mann-Kendall are used because this is a threshold-based count with discrete and often repeated values. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "frost-days": {
       "label": "Frost days",
@@ -345,7 +540,22 @@
         "seasonal_map": null
       },
       "description": "Number of days each year when the minimum temperature falls below freezing.",
-      "definition": "Count of days with daily minimum 2 m air temperature < 0°C."
+      "definition": "Count of days with daily minimum 2 m air temperature < 0°C.",
+      "trend_method": "Sen's slope and Mann-Kendall are used because this is a threshold-based count with discrete and often repeated values. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "ice-days": {
       "label": "Ice days",
@@ -368,7 +578,22 @@
         "seasonal_map": null
       },
       "description": "Number of days each year when the temperature stays below freezing all day.",
-      "definition": "Count of days with daily maximum 2 m air temperature < 0°C."
+      "definition": "Count of days with daily maximum 2 m air temperature < 0°C.",
+      "trend_method": "Sen's slope and Mann-Kendall are used because this is a threshold-based count with discrete and often repeated values. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "freeze-thaw-days": {
       "label": "Freeze-thaw days",
@@ -391,7 +616,22 @@
         "seasonal_map": null
       },
       "description": "Number of days each year when temperatures fall below freezing and rise above freezing on the same day.",
-      "definition": "Count of days with daily minimum temperature < 0°C and daily maximum temperature > 0°C."
+      "definition": "Count of days with daily minimum temperature < 0°C and daily maximum temperature > 0°C.",
+      "trend_method": "Sen's slope and Mann-Kendall are used because this is a threshold-based count with discrete and often repeated values. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "frost-free-season-length": {
       "label": "Frost-free season length",
@@ -414,7 +654,22 @@
         "seasonal_map": null
       },
       "description": "Length of the period between the last spring frost and the first fall frost.",
-      "definition": "Number of days between the last day with daily minimum temperature < 0°C before July 15 and the first day with daily minimum temperature < 0°C on or after July 15."
+      "definition": "Number of days between the last day with daily minimum temperature < 0°C before July 15 and the first day with daily minimum temperature < 0°C on or after July 15.",
+      "trend_method": "Sen's slope and Mann-Kendall are used because this is a threshold-based duration that can be affected by unusual spring or fall conditions. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "growing-degree-days-above-0c": {
       "label": "Growing degree days above 0°C",
@@ -437,7 +692,22 @@
         "seasonal_map": null
       },
       "description": "Accumulated warmth above 0°C over the year.",
-      "definition": "Annual sum of max(daily mean temperature - 0°C, 0), in °C·days."
+      "definition": "Annual sum of max(daily mean temperature - 0°C, 0), in °C·days.",
+      "trend_method": "Sen's slope and Mann-Kendall are used because this accumulated threshold-based measure can be skewed by unusually warm or cold years. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "growing-degree-days-above-5c": {
       "label": "Growing degree days above 5°C",
@@ -460,7 +730,22 @@
         "seasonal_map": null
       },
       "description": "Accumulated warmth above 5°C over the year.",
-      "definition": "Annual sum of max(daily mean temperature - 5°C, 0), in °C·days."
+      "definition": "Annual sum of max(daily mean temperature - 5°C, 0), in °C·days.",
+      "trend_method": "Sen's slope and Mann-Kendall are used because this accumulated threshold-based measure can be skewed by unusually warm or cold years. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "heating-degree-days-below-18c": {
       "label": "Heating degree days below 18°C",
@@ -483,7 +768,22 @@
         "seasonal_map": null
       },
       "description": "Accumulated cold below 18°C, used as an indicator of heating demand.",
-      "definition": "Annual sum of max(18°C - daily mean temperature, 0), in °C·days."
+      "definition": "Annual sum of max(18°C - daily mean temperature, 0), in °C·days.",
+      "trend_method": "Sen's slope and Mann-Kendall are used because this accumulated threshold-based measure can be skewed by unusually warm or cold years. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     },
     "cooling-degree-days-above-18c": {
       "label": "Cooling degree days above 18°C",
@@ -506,7 +806,22 @@
         "seasonal_map": null
       },
       "description": "Accumulated warmth above 18°C, used as an indicator of cooling demand.",
-      "definition": "Annual sum of max(daily mean temperature - 18°C, 0), in °C·days."
+      "definition": "Annual sum of max(daily mean temperature - 18°C, 0), in °C·days.",
+      "trend_method": "Sen's slope and Mann-Kendall are used because this accumulated threshold-based measure can be skewed by unusually warm or cold years. Serial correlation is accounted for when needed. Significance is assessed at p < 0.05. Maps and community heatmaps account for testing many locations using false-discovery-rate correction. Values in parentheses in community heatmaps are not statistically significant.",
+      "trend_links": [
+        {
+          "label": "Sen's slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Mann-Kendall",
+          "url": "https://search.r-project.org/CRAN/refmans/trend/html/mk.test.html"
+        },
+        {
+          "label": "Benjamini-Hochberg FDR",
+          "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+        }
+      ]
     }
   },
   "data_files": {

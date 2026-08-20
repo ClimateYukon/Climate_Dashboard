@@ -1,4 +1,4 @@
 Dataset,Mean FWI trend per decade,Median daily FWI bias,Median daily correlation,WFM extreme-day hit rate (%),Same trend direction as WFM (%)
 WFM,0.269,0.0,1.0,100.0,100.0
-ERA5-CESM,-0.134,-2.92,0.767,47.7,40.0
-ERA5-ESCER,0.001,-3.21,0.737,45.5,43.3
+ERA5-CEMS,-0.134,-2.92,0.767,47.7,40.0
+ERA5-FWI-SN,0.001,-3.21,0.737,45.5,43.3

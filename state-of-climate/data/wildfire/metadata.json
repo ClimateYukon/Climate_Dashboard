@@ -1,0 +1,83 @@
+{
+  "theme": "Wildfire",
+  "description": "Observed wildfire activity and fire-weather conditions in Yukon.",
+  "indicators": {
+    "total-area-burned": {
+      "label": "Total area burned",
+      "description": "Area of Yukon mapped as burned by wildfire each year.",
+      "definition": "Annual total area within Yukon recorded as burned by wildfire.",
+      "period": "1960-2025",
+      "source": "Government of Yukon wildfire/fire-history polygons",
+      "unit": "thousand hectares",
+      "trend_unit": "thousand hectares per decade",
+      "views": {
+        "yukon": [
+          "timeseries"
+        ],
+        "seasonal": [],
+        "communities": []
+      },
+      "why_we_track_it": "Area burned is one of the clearest measures of the amount of land directly affected by wildfire. It varies greatly from year to year, but long-term changes can reveal shifts in Yukon wildfire activity.",
+      "limitations": "Area burned is influenced by weather, fuels, ignition, suppression, access and individual extreme fire seasons. It should not be interpreted as a direct measure of climate alone.",
+      "figure": "figures/wildfire/indicators/total-area-burned.png"
+    },
+    "number-of-fires": {
+      "label": "Number of fires",
+      "description": "Number of mapped wildfires recorded in Yukon each year.",
+      "definition": "Annual count of wildfire records in the Yukon fire-history dataset.",
+      "period": "1960-2025",
+      "source": "Government of Yukon wildfire/fire-history polygons",
+      "unit": "fires",
+      "trend_unit": "fires per decade",
+      "views": {
+        "yukon": [
+          "timeseries"
+        ],
+        "seasonal": [],
+        "communities": []
+      },
+      "why_we_track_it": "Fire counts show how often wildfires are recorded, complementing area burned because a year with many small fires can look very different from a year dominated by a few very large fires.",
+      "limitations": "Fire counts are influenced by lightning and human ignitions, detection, reporting and suppression practices as well as climate.",
+      "figure": "figures/wildfire/indicators/number-of-fires.png"
+    },
+    "fire-severity": {
+      "label": "Fire severity",
+      "description": "Summer Daily Severity Rating across the eight-community station series used in the previous Yukon indicator.",
+      "definition": "June-August Daily Severity Rating from WFM stations representing Whitehorse, Carmacks, Mayo, Dawson City, Haines Junction, Ross River, Watson Lake and Teslin.",
+      "period": "1960-2025",
+      "source": "Government of Yukon Wildland Fire Management station archive",
+      "unit": "DSR",
+      "trend_unit": "DSR units per decade",
+      "views": {
+        "yukon": [
+          "timeseries"
+        ],
+        "seasonal": [],
+        "communities": []
+      },
+      "why_we_track_it": "Daily Severity Rating gives greater weight to severe fire-weather conditions and provides continuity with the fire-severity indicator used in the previous Yukon climate report.",
+      "limitations": "DSR is calculated directly from Fire Weather Index and is therefore not independent evidence from FWI. This indicator is retained primarily for continuity with the earlier Yukon indicator.",
+      "figure": "figures/wildfire/indicators/fire-severity.png"
+    },
+    "fire-weather-index": {
+      "label": "Fire Weather Index",
+      "description": "Severity of sustained fire-weather conditions during the fire season.",
+      "definition": "Annual maximum 90-day running mean Fire Weather Index, summarized as the annual median across the fixed long-record WFM station panel.",
+      "period": "1981-2025",
+      "baseline": "1981-2010",
+      "source": "Government of Yukon Wildland Fire Management (WFM) station archive",
+      "unit": "FWI",
+      "trend_unit": "FWI units per decade",
+      "views": {
+        "yukon": [
+          "timeseries"
+        ],
+        "seasonal": [],
+        "communities": []
+      },
+      "why_we_track_it": "Fire Weather Index describes how weather affects potential fire behaviour. Sustained high values indicate prolonged periods when fires can become more difficult to control.",
+      "limitations": "FWI describes fire-weather conditions, not actual fire occurrence. Ignitions, fuels, landscape conditions and suppression also influence what ultimately burns.",
+      "figure": "figures/wildfire/indicators/fire-weather-index.png"
+    }
+  }
+}

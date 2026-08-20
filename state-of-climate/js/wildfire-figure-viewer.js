@@ -67,7 +67,13 @@
 
         closeButton.addEventListener(
             "click",
-            closeViewer
+            event => {
+
+                event.preventDefault();
+                event.stopPropagation();
+
+                closeViewer();
+            }
         );
 
 
@@ -75,6 +81,10 @@
             "click",
             event => {
 
+                /*
+                 * A click anywhere outside the enlarged image
+                 * closes the viewer in one action.
+                 */
                 if (
                     event.target
                     === viewer
@@ -83,6 +93,9 @@
                         "wf-figure-viewer-inner"
                     )
                 ) {
+
+                    event.preventDefault();
+                    event.stopPropagation();
 
                     closeViewer();
                 }
@@ -163,7 +176,18 @@
             }
 
 
+            /*
+             * Wildfire Story figures have their own viewer.
+             *
+             * dashboard.js also has a general figure-click
+             * handler. Without stopping propagation, both
+             * viewers can react to the same click, leaving two
+             * overlays stacked on top of one another. That is
+             * why closing appeared to require two clicks.
+             */
             event.preventDefault();
+            event.stopPropagation();
+            event.stopImmediatePropagation();
 
             openViewer(
                 image

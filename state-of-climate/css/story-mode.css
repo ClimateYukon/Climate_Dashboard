@@ -1280,3 +1280,49 @@ img {
 }
 
 /* END compact-wildfire-story-figures */
+
+/* BEGIN wildfire-calm-editorial-typography */
+
+/*
+   Public editorial hierarchy.
+
+   Headings and structural labels carry the hierarchy.
+   Do not selectively bold phrases throughout explanatory
+   prose, captions and technical interpretation.
+*/
+
+body.wf-theme-active
+.wf-story-root
+.lede strong,
+
+body.wf-theme-active
+.wf-story-root
+.intro strong,
+
+body.wf-theme-active
+.wf-story-root
+.data-used-note strong,
+
+body.wf-theme-active
+.wf-story-root
+.caption strong,
+
+body.wf-theme-active
+.wf-story-root
+.finding p strong,
+
+body.wf-theme-active
+.wf-story-root
+.public-limit strong,
+
+body.wf-theme-active
+.wf-story-root
+.technical-details-body p strong,
+
+body.wf-theme-active
+.wf-story-root
+.technical-details-body li strong {
+    font-weight: inherit;
+}
+
+/* END wildfire-calm-editorial-typography */
