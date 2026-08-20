@@ -19,7 +19,18 @@
       },
       "why_we_track_it": "Area burned is one of the clearest measures of the amount of land directly affected by wildfire. It varies greatly from year to year, but long-term changes can reveal shifts in Yukon wildfire activity.",
       "limitations": "Area burned is influenced by weather, fuels, ignition, suppression, access and individual extreme fire seasons. It should not be interpreted as a direct measure of climate alone.",
-      "figure": "figures/wildfire/indicators/total-area-burned.png"
+      "figure": "figures/wildfire/indicators/total-area-burned.png",
+      "trend_method": "Theil-Sen slope is used because annual wildfire and fire-weather indicators can be strongly influenced by individual extreme years. Kendall tau tests whether there is evidence of a consistent long-term trend. Significance is assessed at p < 0.05.",
+      "trend_links": [
+        {
+          "label": "Theil-Sen slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Kendall tau",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kendalltau.html"
+        }
+      ]
     },
     "number-of-fires": {
       "label": "Number of fires",
@@ -38,7 +49,18 @@
       },
       "why_we_track_it": "Fire counts show how often wildfires are recorded, complementing area burned because a year with many small fires can look very different from a year dominated by a few very large fires.",
       "limitations": "Fire counts are influenced by lightning and human ignitions, detection, reporting and suppression practices as well as climate.",
-      "figure": "figures/wildfire/indicators/number-of-fires.png"
+      "figure": "figures/wildfire/indicators/number-of-fires.png",
+      "trend_method": "Theil-Sen slope is used because annual wildfire and fire-weather indicators can be strongly influenced by individual extreme years. Kendall tau tests whether there is evidence of a consistent long-term trend. Significance is assessed at p < 0.05.",
+      "trend_links": [
+        {
+          "label": "Theil-Sen slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Kendall tau",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kendalltau.html"
+        }
+      ]
     },
     "fire-severity": {
       "label": "Fire severity",
@@ -57,7 +79,18 @@
       },
       "why_we_track_it": "Daily Severity Rating gives greater weight to severe fire-weather conditions and provides continuity with the fire-severity indicator used in the previous Yukon climate report.",
       "limitations": "DSR is calculated directly from Fire Weather Index and is therefore not independent evidence from FWI. This indicator is retained primarily for continuity with the earlier Yukon indicator.",
-      "figure": "figures/wildfire/indicators/fire-severity.png"
+      "figure": "figures/wildfire/indicators/fire-severity.png",
+      "trend_method": "Theil-Sen slope is used because annual wildfire and fire-weather indicators can be strongly influenced by individual extreme years. Kendall tau tests whether there is evidence of a consistent long-term trend. Significance is assessed at p < 0.05.",
+      "trend_links": [
+        {
+          "label": "Theil-Sen slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Kendall tau",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kendalltau.html"
+        }
+      ]
     },
     "fire-weather-index": {
       "label": "Fire Weather Index",
@@ -77,7 +110,29 @@
       },
       "why_we_track_it": "Fire Weather Index describes how weather affects potential fire behaviour. Sustained high values indicate prolonged periods when fires can become more difficult to control.",
       "limitations": "FWI describes fire-weather conditions, not actual fire occurrence. Ignitions, fuels, landscape conditions and suppression also influence what ultimately burns.",
-      "figure": "figures/wildfire/indicators/fire-weather-index.png"
+      "figure": "figures/wildfire/indicators/fire-weather-index.png",
+      "trend_method": "Theil-Sen slope is used because annual wildfire and fire-weather indicators can be strongly influenced by individual extreme years. Kendall tau tests whether there is evidence of a consistent long-term trend. Significance is assessed at p < 0.05.",
+      "trend_links": [
+        {
+          "label": "Theil-Sen slope",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+        },
+        {
+          "label": "Kendall tau",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kendalltau.html"
+        }
+      ]
     }
-  }
+  },
+  "trend_method": "Wildfire trends use Theil-Sen slope to estimate the rate of long-term change and Kendall tau to assess whether there is evidence of a consistent monotonic trend. These methods are less sensitive to unusually severe individual years than ordinary least squares. Statistical significance is assessed at p < 0.05.",
+  "trend_links": [
+    {
+      "label": "Theil-Sen slope",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
+    },
+    {
+      "label": "Kendall tau",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kendalltau.html"
+    }
+  ]
 }
