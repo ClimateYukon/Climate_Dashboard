@@ -243,13 +243,13 @@ window.WildfireIndicators = (() => {
                     <div class="about-label">Methods and references</div>
                     <div class="about-link-list">
                         <a
-                            href="https://pubs.usgs.gov/tm/04/a03/tm4a3.pdf"
+                            href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kendalltau.html"
                             target="_blank"
                             rel="noopener noreferrer"
                         >Trend analysis and Kendall methods</a>
 
                         <a
-                            href="https://doi.org/10.1080/01621459.1968.10480934"
+                            href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.theilslopes.html"
                             target="_blank"
                             rel="noopener noreferrer"
                         >Sen slope method</a>
