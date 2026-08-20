@@ -228,10 +228,6 @@ function selectedPeriod(mode, year, month, season) {
   };
 }
 
-function makeSelectedPeriodDates(mode, year, month, season) {
-  const period = selectedPeriod(mode, year, month, season);
-  return makeDateRange(period.plotStart, period.plotEnd);
-}
 
 function rankingWindowForYear(rankYear, selectedStartString, rankingEndString, mode, month, season) {
   const selectedStart = new Date(`${selectedStartString}T00:00:00`);
