@@ -86,6 +86,29 @@
     "sort_order": 30
   },
   {
+    "id": "canterbury_climate_projections",
+    "card_type": "interactive",
+    "title": "Canterbury climate projections",
+    "subtitle": "New Zealand CMIP6 projections",
+    "description": "Explore projected changes in temperature, rainfall, drought, growing conditions, humidity, solar radiation and wind across Canterbury.",
+    "date_label": "Updated 2026-09-30",
+    "updated_date": "2026-09-30",
+    "source": "New Zealand CMIP6 climate projections, Ministry for the Environment / NIWA",
+    "preview_image": "plots/canterbury_climate_projections/preview.svg",
+    "tags": [
+      "Canterbury",
+      "New Zealand",
+      "CMIP6",
+      "climate projections",
+      "SSP2-4.5",
+      "SSP3-7.0",
+      "interactive"
+    ],
+    "plot_count": 1,
+    "href": "canterbury-climate-projections.html",
+    "sort_order": 35
+  },
+  {
     "id": "annual_temperature_anomalies",
     "card_type": "indicator",
     "title": "2025 Yukon annual temperature anomalies",

@@ -1,0 +1,31 @@
+@import url("climate-projections.css");
+
+.category-row td {
+    padding: 0.65rem 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    background: #eef3f7;
+    color: #334155;
+    border-top: 1px solid #d8e0e8;
+    border-bottom: 1px solid #d8e0e8;
+}
+
+.indicator-unit-note {
+    display: block;
+    margin-top: 0.22rem;
+    font-size: 0.76rem;
+    line-height: 1.25;
+    color: #dbe7ee;
+    font-weight: 500;
+}
+
+.plain-language-period {
+    margin-top: 0.45rem;
+}
+
+.plain-language-baseline {
+    margin-bottom: 0.5rem;
+    color: #475569;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive CMIP6 climate projections for Canterbury, New Zealand.">
+    <title>Canterbury climate projections</title>
+    <link rel="stylesheet" href="assets/css/canterbury-climate-projections.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="back-link" href="index.html">← Yukon climate indicators</a>
+            <p class="eyebrow">CLIMATE PROJECTIONS</p>
+            <h1>Canterbury climate projections</h1>
+            <p class="header-description">
+                Explore how temperature, rainfall, drought, growing conditions, humidity,
+                solar radiation and wind are projected to change across Canterbury.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="selector-band" aria-label="Projection selections">
+            <div class="selector-band__inner">
+                <div class="control">
+                    <label for="geography-type">Geography</label>
+                    <select id="geography-type"></select>
+                </div>
+                <div class="control control--location">
+                    <label for="location">Area</label>
+                    <select id="location"></select>
+                </div>
+                <div class="control">
+                    <label for="scenario">Emissions scenario</label>
+                    <select id="scenario"></select>
+                </div>
+                <div class="control expert-mode-control">
+                    <span class="expert-mode-label">Expert mode</span>
+                    <label class="expert-mode-switch">
+                        <input id="expert-mode" type="checkbox" checked>
+                        <span class="expert-mode-slider" aria-hidden="true"></span>
+                        <span id="expert-mode-status" class="expert-mode-status">On</span>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-wrapper">
+            <div id="status-message" class="status-message" role="status">Loading climate projection data...</div>
+
+            <div id="projection-content" hidden>
+                <section class="summary-panel">
+                    <div>
+                        <p class="section-label">SELECTED AREA</p>
+                        <h2 id="location-title"></h2>
+                        <p id="scenario-description"></p>
+                    </div>
+                    <div id="period-summary" class="summary-panel__periods canterbury-periods"></div>
+                </section>
+
+                <section class="table-section">
+                    <div class="table-toolbar">
+                        <div>
+                            <p class="section-label">CLIMATE INDICATORS</p>
+                            <h2>Historical climate and projected change</h2>
+                        </div>
+                        <div class="indicator-search">
+                            <label for="indicator-filter" class="visually-hidden">Search indicators</label>
+                            <input id="indicator-filter" type="search" placeholder="Search indicators">
+                        </div>
+                    </div>
+                    <p class="table-explanation">
+                        Historical values are the median across six downscaled climate models for 1995–2014.
+                        Future columns show projected change. Low, median and high are the 10th, 50th and
+                        90th percentiles across the six individual models for the selected scenario.
+                    </p>
+                    <div class="table-scroll">
+                        <table id="projection-table">
+                            <thead id="projection-table-head"></thead>
+                            <tbody id="projection-table-body"></tbody>
+                        </table>
+                    </div>
+                    <p id="no-results" class="no-results" hidden>No climate indicators match that search.</p>
+                </section>
+
+                <section id="plain-language-section" class="plain-language-section" hidden>
+                    <div class="plain-language-heading">
+                        <div>
+                            <p class="section-label">PLAIN-LANGUAGE VIEW</p>
+                            <h2>Projected climate changes</h2>
+                        </div>
+                        <div class="plain-language-search">
+                            <label for="plain-language-filter" class="visually-hidden">Search climate indicators</label>
+                            <input id="plain-language-filter" type="search" placeholder="Search indicators">
+                        </div>
+                    </div>
+                    <p class="plain-language-introduction">
+                        These statements use the median projection. The model range is the 10th–90th percentile
+                        across six climate models and describes model spread, not the probability of a future outcome.
+                    </p>
+                    <div id="plain-language-list" class="plain-language-list"></div>
+                    <p id="plain-language-no-results" class="no-results" hidden>No climate indicators match that search.</p>
+                </section>
+
+                <section class="method-note">
+                    <h2>About these projections</h2>
+                    <p id="geography-method-text"></p>
+                    <p>
+                        Historical values represent average annual conditions for 1995–2014. Future periods are
+                        2041–2060 and 2081–2100. The app uses SSP2-4.5 and SSP3-7.0.
+                    </p>
+                    <p>
+                        The 10th and 90th percentiles are interpolated across six individual downscaled global climate
+                        models. They show the spread among those models and should not be interpreted as probability
+                        bounds or confidence intervals.
+                    </p>
+                    <p>
+                        Most temperature, rainfall and derived indicators are based on bias-corrected projections.
+                        Relative humidity, solar radiation and wind variables are spatially regridded to the ~5 km
+                        grid and are not bias-corrected in the source dataset.
+                    </p>
+                    <p>
+                        These results are intended for climate information and screening. Conditions can vary within
+                        an area, especially with elevation, distance from the coast and local topography.
+                    </p>
+
+                    <h3>Data and acknowledgements</h3>
+                    <p class="citation-text">
+                        Data are from the New Zealand CMIP6 climate projections produced by NIWA and distributed by
+                        the Ministry for the Environment. Six CMIP6 global models were dynamically downscaled to a
+                        national grid of approximately 5 km.
+                    </p>
+                    <p class="citation-text">
+                        Gibson, P. B., Stuart, S., Sood, A., Stone, D., Rampal, N., Lewis, H., Broadbent, A.,
+                        Thatcher, M., &amp; Morgenstern, O. (2024). Dynamical downscaling CMIP6 models over
+                        New Zealand: added value of climatology and extremes. <em>Climate Dynamics</em>.
+                        <a href="https://doi.org/10.1007/s00382-024-07337-5" target="_blank" rel="noopener noreferrer">Dataset methodology publication</a>
+                    </p>
+                    <p class="citation-text">
+                        <a href="https://climatedata.environment.govt.nz/" target="_blank" rel="noopener noreferrer">New Zealand Climate Projections Dataset</a>
+                        · <a href="https://climatedata.environment.govt.nz/core-public-dataset.html" target="_blank" rel="noopener noreferrer">Core Public Dataset</a>
+                        · <a href="https://climatedata.environment.govt.nz/variable-info.html" target="_blank" rel="noopener noreferrer">Climate variable definitions</a>
+                    </p>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/canterbury-climate-projections.js"></script>
+</body>
+</html>

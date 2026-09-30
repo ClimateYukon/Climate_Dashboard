@@ -1,0 +1,315 @@
+{
+  "schema_version": "2.0",
+  "title": "Canterbury climate projections",
+  "last_updated": "2026-09-30",
+  "historical_period": "1995–2014",
+  "model_count": 6,
+  "scenarios": [
+    {
+      "id": "ssp245",
+      "name": "SSP2-4.5",
+      "description": "A medium-emissions pathway in which global emissions decline later this century."
+    },
+    {
+      "id": "ssp370",
+      "name": "SSP3-7.0",
+      "description": "A high-emissions pathway in which emissions continue to rise through much of this century."
+    }
+  ],
+  "periods": [
+    {
+      "id": "2041",
+      "period": "fp2041-2060",
+      "label": "Mid-century",
+      "years": "2041–2060"
+    },
+    {
+      "id": "2081",
+      "period": "fp2081-2100",
+      "label": "Late century",
+      "years": "2081–2100"
+    }
+  ],
+  "geography_types": [
+    {
+      "id": "region",
+      "name": "Region",
+      "enabled": true,
+      "locations": [
+        {
+          "id": "canterbury_region",
+          "name": "Canterbury Region",
+          "abbreviation": "",
+          "file": "region/canterbury_region.json",
+          "count": 2129
+        }
+      ]
+    },
+    {
+      "id": "district",
+      "name": "District or city",
+      "enabled": true,
+      "locations": [
+        {
+          "id": "ashburton_district",
+          "name": "Ashburton District",
+          "abbreviation": "",
+          "file": "districts/ashburton_district.json",
+          "count": 323
+        },
+        {
+          "id": "christchurch_city",
+          "name": "Christchurch City",
+          "abbreviation": "",
+          "file": "districts/christchurch_city.json",
+          "count": 80
+        },
+        {
+          "id": "hurunui_district",
+          "name": "Hurunui District",
+          "abbreviation": "",
+          "file": "districts/hurunui_district.json",
+          "count": 431
+        },
+        {
+          "id": "kaikoura_district",
+          "name": "Kaikoura District",
+          "abbreviation": "",
+          "file": "districts/kaikoura_district.json",
+          "count": 112
+        },
+        {
+          "id": "mackenzie_district",
+          "name": "Mackenzie District",
+          "abbreviation": "",
+          "file": "districts/mackenzie_district.json",
+          "count": 396
+        },
+        {
+          "id": "selwyn_district",
+          "name": "Selwyn District",
+          "abbreviation": "",
+          "file": "districts/selwyn_district.json",
+          "count": 353
+        },
+        {
+          "id": "timaru_district",
+          "name": "Timaru District",
+          "abbreviation": "",
+          "file": "districts/timaru_district.json",
+          "count": 171
+        },
+        {
+          "id": "waimakariri_district",
+          "name": "Waimakariri District",
+          "abbreviation": "",
+          "file": "districts/waimakariri_district.json",
+          "count": 126
+        },
+        {
+          "id": "waimate_district",
+          "name": "Waimate District",
+          "abbreviation": "",
+          "file": "districts/waimate_district.json",
+          "count": 191
+        }
+      ]
+    },
+    {
+      "id": "sa3",
+      "name": "Local area (SA3)",
+      "enabled": true,
+      "locations": [
+        {
+          "id": "ashburton_centre",
+          "name": "Ashburton Centre",
+          "abbreviation": "",
+          "file": "sa3/ashburton_centre.json",
+          "count": 4
+        },
+        {
+          "id": "ashburton_district_east",
+          "name": "Ashburton District East",
+          "abbreviation": "",
+          "file": "sa3/ashburton_district_east.json",
+          "count": 98
+        },
+        {
+          "id": "ashburton_district_west",
+          "name": "Ashburton District West",
+          "abbreviation": "",
+          "file": "sa3/ashburton_district_west.json",
+          "count": 244
+        },
+        {
+          "id": "ashburton_north",
+          "name": "Ashburton North",
+          "abbreviation": "",
+          "file": "sa3/ashburton_north.json",
+          "count": 5
+        },
+        {
+          "id": "avondale_christchurch_city",
+          "name": "Avondale (Christchurch City)",
+          "abbreviation": "",
+          "file": "sa3/avondale_christchurch_city.json",
+          "count": 3
+        },
+        {
+          "id": "christchurch_centre",
+          "name": "Christchurch Centre",
+          "abbreviation": "",
+          "file": "sa3/christchurch_centre.json",
+          "count": 2
+        },
+        {
+          "id": "harewood_christchurch_airport",
+          "name": "Harewood-Christchurch Airport",
+          "abbreviation": "",
+          "file": "sa3/harewood_christchurch_airport.json",
+          "count": 3
+        },
+        {
+          "id": "hillsborough_christchurch_city",
+          "name": "Hillsborough (Christchurch City)",
+          "abbreviation": "",
+          "file": "sa3/hillsborough_christchurch_city.json",
+          "count": 1
+        },
+        {
+          "id": "hurunui_district_east",
+          "name": "Hurunui District East",
+          "abbreviation": "",
+          "file": "sa3/hurunui_district_east.json",
+          "count": 127
+        },
+        {
+          "id": "hurunui_district_west",
+          "name": "Hurunui District West",
+          "abbreviation": "",
+          "file": "sa3/hurunui_district_west.json",
+          "count": 344
+        },
+        {
+          "id": "kaikoura_district",
+          "name": "Kaikoura District",
+          "abbreviation": "",
+          "file": "sa3/kaikoura_district.json",
+          "count": 112
+        },
+        {
+          "id": "mackenzie_district",
+          "name": "Mackenzie District",
+          "abbreviation": "",
+          "file": "sa3/mackenzie_district.json",
+          "count": 394
+        },
+        {
+          "id": "richmond_christchurch_city",
+          "name": "Richmond (Christchurch City)",
+          "abbreviation": "",
+          "file": "sa3/richmond_christchurch_city.json",
+          "count": 2
+        },
+        {
+          "id": "selwyn_district_east",
+          "name": "Selwyn District East",
+          "abbreviation": "",
+          "file": "sa3/selwyn_district_east.json",
+          "count": 16
+        },
+        {
+          "id": "selwyn_district_north",
+          "name": "Selwyn District North",
+          "abbreviation": "",
+          "file": "sa3/selwyn_district_north.json",
+          "count": 19
+        },
+        {
+          "id": "selwyn_district_south_east",
+          "name": "Selwyn District South East",
+          "abbreviation": "",
+          "file": "sa3/selwyn_district_south_east.json",
+          "count": 29
+        },
+        {
+          "id": "selwyn_district_south_west",
+          "name": "Selwyn District South West",
+          "abbreviation": "",
+          "file": "sa3/selwyn_district_south_west.json",
+          "count": 49
+        },
+        {
+          "id": "selwyn_district_west",
+          "name": "Selwyn District West",
+          "abbreviation": "",
+          "file": "sa3/selwyn_district_west.json",
+          "count": 257
+        },
+        {
+          "id": "selwyn_heights",
+          "name": "Selwyn Heights",
+          "abbreviation": "",
+          "file": "sa3/selwyn_heights.json",
+          "count": 1
+        },
+        {
+          "id": "timaru_centre",
+          "name": "Timaru Centre",
+          "abbreviation": "",
+          "file": "sa3/timaru_centre.json",
+          "count": 2
+        },
+        {
+          "id": "timaru_district_north",
+          "name": "Timaru District North",
+          "abbreviation": "",
+          "file": "sa3/timaru_district_north.json",
+          "count": 120
+        },
+        {
+          "id": "timaru_district_south",
+          "name": "Timaru District South",
+          "abbreviation": "",
+          "file": "sa3/timaru_district_south.json",
+          "count": 44
+        },
+        {
+          "id": "waimakariri_district_coast",
+          "name": "Waimakariri District Coast",
+          "abbreviation": "",
+          "file": "sa3/waimakariri_district_coast.json",
+          "count": 7
+        },
+        {
+          "id": "waimakariri_district_east",
+          "name": "Waimakariri District East",
+          "abbreviation": "",
+          "file": "sa3/waimakariri_district_east.json",
+          "count": 14
+        },
+        {
+          "id": "waimakariri_district_north",
+          "name": "Waimakariri District North",
+          "abbreviation": "",
+          "file": "sa3/waimakariri_district_north.json",
+          "count": 68
+        },
+        {
+          "id": "waimakariri_district_south",
+          "name": "Waimakariri District South",
+          "abbreviation": "",
+          "file": "sa3/waimakariri_district_south.json",
+          "count": 62
+        },
+        {
+          "id": "waimate_district_rural",
+          "name": "Waimate District Rural",
+          "abbreviation": "",
+          "file": "sa3/waimate_district_rural.json",
+          "count": 191
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2379 @@
+{
+  "schema_version": "2.0",
+  "geography": {
+    "id": "mackenzie_district",
+    "code": "61730",
+    "type": "sa3",
+    "area_type": "SA3",
+    "name": "Mackenzie District",
+    "count": 394,
+    "method": "THIESSEN",
+    "method_note": "Values are aggregated for this Statistical Area 3 (SA3) from 394 projection-grid locations using the THIESSEN aggregation supplied by the Ministry for the Environment."
+  },
+  "dataset": {
+    "name": "New Zealand CMIP6 climate projections",
+    "provider": "Ministry for the Environment / NIWA",
+    "historical_period": "1995–2014",
+    "model_count": 6,
+    "models": [
+      "ACCESS-CM2",
+      "AWI-CM-1-1-MR",
+      "CNRM-CM6-1",
+      "EC-Earth3",
+      "GFDL-ESM4",
+      "NorESM2-MM"
+    ]
+  },
+  "indicators": [
+    {
+      "id": "T",
+      "name": "Average annual temperature",
+      "label": "Average annual temperature",
+      "category": "Temperature",
+      "base_units": "°C",
+      "change_units": "°C",
+      "change_type": "absolute",
+      "definition": "Average daily mean 2 m air temperature over the year.",
+      "historical": {
+        "period": "1995–2014",
+        "p10": 7.155,
+        "p50": 7.275,
+        "p90": 7.35
+      },
+      "scenarios": {
+        "ssp245": {
+          "2021": {
+            "change": {
+              "p10": 0.47,
+              "p50": 0.575,
+              "p90": 0.85
+            },
+            "future": {
+              "p10": 7.665,
+              "p50": 7.905,
+              "p90": 8.105
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 0.835,
+              "p50": 1.14,
+              "p90": 1.545
+            },
+            "future": {
+              "p10": 8.025,
+              "p50": 8.45,
+              "p90": 8.83
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 1.635,
+              "p50": 1.93,
+              "p90": 2.68
+            },
+            "future": {
+              "p10": 8.84,
+              "p50": 9.225,
+              "p90": 9.965
+            }
+          }
+        },
+        "ssp370": {
+          "2021": {
+            "change": {
+              "p10": 0.42,
+              "p50": 0.755,
+              "p90": 1.065
+            },
+            "future": {
+              "p10": 7.645,
+              "p50": 8.03,
+              "p90": 8.35
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 1.095,
+              "p50": 1.47,
+              "p90": 1.8
+            },
+            "future": {
+              "p10": 8.3,
+              "p50": 8.76,
+              "p90": 9.08
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 2.55,
+              "p50": 3.075,
+              "p90": 3.835
+            },
+            "future": {
+              "p10": 9.77,
+              "p50": 10.35,
+              "p90": 11.12
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "TX",
+      "name": "Average daily maximum temperature",
+      "label": "Average daily maximum temperature",
+      "category": "Temperature",
+      "base_units": "°C",
+      "change_units": "°C",
+      "change_type": "absolute",
+      "definition": "Average daily maximum 2 m air temperature.",
+      "historical": {
+        "period": "1995–2014",
+        "p10": 12.145,
+        "p50": 12.315,
+        "p90": 12.39
+      },
+      "scenarios": {
+        "ssp245": {
+          "2021": {
+            "change": {
+              "p10": 0.495,
+              "p50": 0.66,
+              "p90": 0.945
+            },
+            "future": {
+              "p10": 12.695,
+              "p50": 13.03,
+              "p90": 13.215
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 0.895,
+              "p50": 1.215,
+              "p90": 1.695
+            },
+            "future": {
+              "p10": 13.1,
+              "p50": 13.57,
+              "p90": 13.985
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 1.725,
+              "p50": 2.06,
+              "p90": 2.92
+            },
+            "future": {
+              "p10": 13.955,
+              "p50": 14.39,
+              "p90": 15.21
+            }
+          }
+        },
+        "ssp370": {
+          "2021": {
+            "change": {
+              "p10": 0.405,
+              "p50": 0.84,
+              "p90": 1.22
+            },
+            "future": {
+              "p10": 12.65,
+              "p50": 13.155,
+              "p90": 13.515
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 1.165,
+              "p50": 1.565,
+              "p90": 2.025
+            },
+            "future": {
+              "p10": 13.4,
+              "p50": 13.895,
+              "p90": 14.32
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 2.73,
+              "p50": 3.29,
+              "p90": 4.115
+            },
+            "future": {
+              "p10": 14.98,
+              "p50": 15.605,
+              "p90": 16.415
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "TN",
+      "name": "Average daily minimum temperature",
+      "label": "Average daily minimum temperature",
+      "category": "Temperature",
+      "base_units": "°C",
+      "change_units": "°C",
+      "change_type": "absolute",
+      "definition": "Average daily minimum 2 m air temperature.",
+      "historical": {
+        "period": "1995–2014",
+        "p10": 2.165,
+        "p50": 2.24,
+        "p90": 2.305
+      },
+      "scenarios": {
+        "ssp245": {
+          "2021": {
+            "change": {
+              "p10": 0.45,
+              "p50": 0.49,
+              "p90": 0.755
+            },
+            "future": {
+              "p10": 2.625,
+              "p50": 2.78,
+              "p90": 2.995
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 0.765,
+              "p50": 1.05,
+              "p90": 1.42
+            },
+            "future": {
+              "p10": 2.945,
+              "p50": 3.325,
+              "p90": 3.67
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 1.545,
+              "p50": 1.805,
+              "p90": 2.44
+            },
+            "future": {
+              "p10": 3.725,
+              "p50": 4.06,
+              "p90": 4.71
+            }
+          }
+        },
+        "ssp370": {
+          "2021": {
+            "change": {
+              "p10": 0.44,
+              "p50": 0.67,
+              "p90": 0.91
+            },
+            "future": {
+              "p10": 2.635,
+              "p50": 2.91,
+              "p90": 3.18
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 1.02,
+              "p50": 1.335,
+              "p90": 1.605
+            },
+            "future": {
+              "p10": 3.195,
+              "p50": 3.62,
+              "p90": 3.85
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 2.365,
+              "p50": 2.865,
+              "p90": 3.555
+            },
+            "future": {
+              "p10": 4.55,
+              "p50": 5.11,
+              "p90": 5.825
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "DTR",
+      "name": "Average daily temperature range",
+      "label": "Average daily temperature range",
+      "category": "Temperature",
+      "base_units": "°C",
+      "change_units": "°C",
+      "change_type": "absolute",
+      "definition": "Average difference between daily maximum and minimum air temperature.",
+      "historical": {
+        "period": "1995–2014",
+        "p10": 9.985,
+        "p50": 10.065,
+        "p90": 10.1
+      },
+      "scenarios": {
+        "ssp245": {
+          "2021": {
+            "change": {
+              "p10": 0.04,
+              "p50": 0.115,
+              "p90": 0.235
+            },
+            "future": {
+              "p10": 10.07,
+              "p50": 10.2,
+              "p90": 10.27
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 0.015,
+              "p50": 0.25,
+              "p90": 0.305
+            },
+            "future": {
+              "p10": 10.07,
+              "p50": 10.305,
+              "p90": 10.34
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 0.115,
+              "p50": 0.3,
+              "p90": 0.5
+            },
+            "future": {
+              "p10": 10.17,
+              "p50": 10.39,
+              "p90": 10.505
+            }
+          }
+        },
+        "ssp370": {
+          "2021": {
+            "change": {
+              "p10": -0.035,
+              "p50": 0.17,
+              "p90": 0.31
+            },
+            "future": {
+              "p10": 10.015,
+              "p50": 10.195,
+              "p90": 10.38
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 0.105,
+              "p50": 0.25,
+              "p90": 0.445
+            },
+            "future": {
+              "p10": 10.16,
+              "p50": 10.32,
+              "p90": 10.47
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 0.365,
+              "p50": 0.425,
+              "p90": 0.57
+            },
+            "future": {
+              "p10": 10.42,
+              "p50": 10.495,
+              "p90": 10.585
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "TX25",
+      "name": "Hot days above 25°C",
+      "label": "Hot days above 25°C",
+      "category": "Temperature extremes",
+      "base_units": "days",
+      "change_units": "days",
+      "change_type": "absolute",
+      "definition": "Number of days in a year when maximum temperature exceeds 25°C.",
+      "historical": {
+        "period": "1995–2014",
+        "p10": 7.39,
+        "p50": 9.315,
+        "p90": 10.87
+      },
+      "scenarios": {
+        "ssp245": {
+          "2021": {
+            "change": {
+              "p10": 1.705,
+              "p50": 3.43,
+              "p90": 6.085
+            },
+            "future": {
+              "p10": 10.225,
+              "p50": 13.355,
+              "p90": 15.21
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 4.74,
+              "p50": 8.205,
+              "p90": 11.145
+            },
+            "future": {
+              "p10": 13.875,
+              "p50": 17.515,
+              "p90": 20.27
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 9.775,
+              "p50": 12.68,
+              "p90": 22.125
+            },
+            "future": {
+              "p10": 18.875,
+              "p50": 22.165,
+              "p90": 31.11
+            }
+          }
+        },
+        "ssp370": {
+          "2021": {
+            "change": {
+              "p10": 1.67,
+              "p50": 6.305,
+              "p90": 8.83
+            },
+            "future": {
+              "p10": 10.8,
+              "p50": 14.65,
+              "p90": 18.925
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 6.68,
+              "p50": 11.225,
+              "p90": 15.42
+            },
+            "future": {
+              "p10": 15.72,
+              "p50": 20.775,
+              "p90": 24.41
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 18.59,
+              "p50": 25.23,
+              "p90": 33.325
+            },
+            "future": {
+              "p10": 27.725,
+              "p50": 34.685,
+              "p90": 42.31
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "TX30",
+      "name": "Very hot days above 30°C",
+      "label": "Very hot days above 30°C",
+      "category": "Temperature extremes",
+      "base_units": "days",
+      "change_units": "days",
+      "change_type": "absolute",
+      "definition": "Number of days in a year when maximum temperature exceeds 30°C.",
+      "historical": {
+        "period": "1995–2014",
+        "p10": 0.31,
+        "p50": 0.485,
+        "p90": 0.795
+      },
+      "scenarios": {
+        "ssp245": {
+          "2021": {
+            "change": {
+              "p10": 0.155,
+              "p50": 0.42,
+              "p90": 0.745
+            },
+            "future": {
+              "p10": 0.57,
+              "p50": 1.02,
+              "p90": 1.32
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 0.55,
+              "p50": 1.1,
+              "p90": 1.395
+            },
+            "future": {
+              "p10": 0.985,
+              "p50": 1.65,
+              "p90": 2.005
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 1.07,
+              "p50": 1.8,
+              "p90": 3.375
+            },
+            "future": {
+              "p10": 1.575,
+              "p50": 2.365,
+              "p90": 3.9
+            }
+          }
+        },
+        "ssp370": {
+          "2021": {
+            "change": {
+              "p10": 0.25,
+              "p50": 0.68,
+              "p90": 1.035
+            },
+            "future": {
+              "p10": 0.65,
+              "p50": 1.155,
+              "p90": 1.76
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 0.725,
+              "p50": 1.59,
+              "p90": 1.86
+            },
+            "future": {
+              "p10": 1.16,
+              "p50": 2.22,
+              "p90": 2.385
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 2.145,
+              "p50": 4.43,
+              "p90": 6.185
+            },
+            "future": {
+              "p10": 2.585,
+              "p50": 5.065,
+              "p90": 6.705
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "FD",
+      "name": "Frost days below 0°C",
+      "label": "Frost days below 0°C",
+      "category": "Temperature extremes",
+      "base_units": "days",
+      "change_units": "days",
+      "change_type": "absolute",
+      "definition": "Number of days in a year when minimum temperature is below 0°C.",
+      "historical": {
+        "period": "1995–2014",
+        "p10": 127.185,
+        "p50": 128.26,
+        "p90": 130.345
+      },
+      "scenarios": {
+        "ssp245": {
+          "2021": {
+            "change": {
+              "p10": -13.895,
+              "p50": -10.035,
+              "p90": -7.29
+            },
+            "future": {
+              "p10": 115.02,
+              "p50": 117.27,
+              "p90": 122.285
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": -28.83,
+              "p50": -20.64,
+              "p90": -11.11
+            },
+            "future": {
+              "p10": 100.085,
+              "p50": 106.545,
+              "p90": 118.58
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": -46.815,
+              "p50": -36.145,
+              "p90": -28.32
+            },
+            "future": {
+              "p10": 81.27,
+              "p50": 91.88,
+              "p90": 101.365
+            }
+          }
+        },
+        "ssp370": {
+          "2021": {
+            "change": {
+              "p10": -16.265,
+              "p50": -12.705,
+              "p90": -6.24
+            },
+            "future": {
+              "p10": 112.405,
+              "p50": 114.735,
+              "p90": 123.445
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": -29.705,
+              "p50": -25.07,
+              "p90": -17.925
+            },
+            "future": {
+              "p10": 99.215,
+              "p50": 102.12,
+              "p90": 111.765
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": -66.33,
+              "p50": -53.865,
+              "p90": -43.445
+            },
+            "future": {
+              "p10": 61.755,
+              "p50": 74.155,
+              "p90": 86.245
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "TXx",
+      "name": "Hottest day of the year",
+      "label": "Hottest day of the year",
+      "category": "Temperature extremes",
+      "base_units": "°C",
+      "change_units": "°C",
+      "change_type": "absolute",
+      "definition": "Temperature on the hottest day of the year.",
+      "historical": {
+        "period": "1995–2014",
+        "p10": 25.09,
+        "p50": 25.48,
+        "p90": 26.5
+      },
+      "scenarios": {
+        "ssp245": {
+          "2021": {
+            "change": {
+              "p10": 0.365,
+              "p50": 1.14,
+              "p90": 1.595
+            },
+            "future": {
+              "p10": 25.76,
+              "p50": 27.015,
+              "p90": 27.38
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 1.36,
+              "p50": 1.65,
+              "p90": 2.42
+            },
+            "future": {
+              "p10": 26.875,
+              "p50": 27.59,
+              "p90": 28.04
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 1.95,
+              "p50": 2.76,
+              "p90": 3.75
+            },
+            "future": {
+              "p10": 27.54,
+              "p50": 28.515,
+              "p90": 29.47
+            }
+          }
+        },
+        "ssp370": {
+          "2021": {
+            "change": {
+              "p10": 0.625,
+              "p50": 1.445,
+              "p90": 1.85
+            },
+            "future": {
+              "p10": 26.025,
+              "p50": 27.01,
+              "p90": 27.955
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 1.48,
+              "p50": 2.09,
+              "p90": 3.09
+            },
+            "future": {
+              "p10": 26.91,
+              "p50": 28.25,
+              "p90": 28.56
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 2.97,
+              "p50": 3.865,
+              "p90": 4.635
+            },
+            "future": {
+              "p10": 28.37,
+              "p50": 29.73,
+              "p90": 30.435
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "TNn",
+      "name": "Coldest day of the year",
+      "label": "Coldest day of the year",
+      "category": "Temperature extremes",
+      "base_units": "°C",
+      "change_units": "°C",
+      "change_type": "absolute",
+      "definition": "Temperature on the coldest day of the year.",
+      "historical": {
+        "period": "1995–2014",
+        "p10": -9.585,
+        "p50": -9.445,
+        "p90": -9.12
+      },
+      "scenarios": {
+        "ssp245": {
+          "2021": {
+            "change": {
+              "p10": 0.34,
+              "p50": 0.745,
+              "p90": 1.145
+            },
+            "future": {
+              "p10": -8.97,
+              "p50": -8.635,
+              "p90": -8.305
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 0.855,
+              "p50": 0.98,
+              "p90": 1.995
+            },
+            "future": {
+              "p10": -8.675,
+              "p50": -8.185,
+              "p90": -7.455
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 2.1,
+              "p50": 2.26,
+              "p90": 3.26
+            },
+            "future": {
+              "p10": -7.405,
+              "p50": -6.93,
+              "p90": -6.19
+            }
+          }
+        },
+        "ssp370": {
+          "2021": {
+            "change": {
+              "p10": 0.295,
+              "p50": 1.01,
+              "p90": 1.295
+            },
+            "future": {
+              "p10": -9.02,
+              "p50": -8.465,
+              "p90": -8.055
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 1.395,
+              "p50": 1.89,
+              "p90": 2.275
+            },
+            "future": {
+              "p10": -7.89,
+              "p50": -7.615,
+              "p90": -7.09
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 2.795,
+              "p50": 3.565,
+              "p90": 4.145
+            },
+            "future": {
+              "p10": -6.315,
+              "p50": -6.015,
+              "p90": -5.31
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "GDD5",
+      "name": "Growing degree days above 5°C",
+      "label": "Growing degree days above 5°C",
+      "category": "Growing and energy conditions",
+      "base_units": "degree-days",
+      "change_units": "degree-days",
+      "change_type": "absolute",
+      "definition": "Accumulated warmth above a 5°C base temperature over the year.",
+      "historical": {
+        "period": "1995–2014",
+        "p10": 1297.46,
+        "p50": 1328.565,
+        "p90": 1345.23
+      },
+      "scenarios": {
+        "ssp245": {
+          "2021": {
+            "change": {
+              "p10": 111.25,
+              "p50": 146.78,
+              "p90": 216.555
+            },
+            "future": {
+              "p10": 1423.395,
+              "p50": 1486.2,
+              "p90": 1536.25
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 220.605,
+              "p50": 294.055,
+              "p90": 391.25
+            },
+            "future": {
+              "p10": 1527.285,
+              "p50": 1632.315,
+              "p90": 1717.565
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 411.92,
+              "p50": 502.195,
+              "p90": 712.785
+            },
+            "future": {
+              "p10": 1727.945,
+              "p50": 1831.105,
+              "p90": 2039.105
+            }
+          }
+        },
+        "ssp370": {
+          "2021": {
+            "change": {
+              "p10": 100.19,
+              "p50": 201.385,
+              "p90": 283.32
+            },
+            "future": {
+              "p10": 1416.565,
+              "p50": 1529.95,
+              "p90": 1609.64
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 277.965,
+              "p50": 381.92,
+              "p90": 474.595
+            },
+            "future": {
+              "p10": 1593.99,
+              "p50": 1710.835,
+              "p90": 1800.915
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 665.365,
+              "p50": 836.385,
+              "p90": 1054.29
+            },
+            "future": {
+              "p10": 1981.735,
+              "p50": 2164.955,
+              "p90": 2380.61
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "GDD10",
+      "name": "Growing degree days above 10°C",
+      "label": "Growing degree days above 10°C",
+      "category": "Growing and energy conditions",
+      "base_units": "degree-days",
+      "change_units": "degree-days",
+      "change_type": "absolute",
+      "definition": "Accumulated warmth above a 10°C base temperature over the year.",
+      "historical": {
+        "period": "1995–2014",
+        "p10": 415.355,
+        "p50": 437.075,
+        "p90": 453.495
+      },
+      "scenarios": {
+        "ssp245": {
+          "2021": {
+            "change": {
+              "p10": 67.3,
+              "p50": 84.59,
+              "p90": 125.15
+            },
+            "future": {
+              "p10": 488.445,
+              "p50": 536.14,
+              "p90": 558.385
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 136.62,
+              "p50": 174.495,
+              "p90": 230.675
+            },
+            "future": {
+              "p10": 559.305,
+              "p50": 621.465,
+              "p90": 666.945
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 247.74,
+              "p50": 293.355,
+              "p90": 440.71
+            },
+            "future": {
+              "p10": 672.33,
+              "p50": 737.91,
+              "p90": 877.48
+            }
+          }
+        },
+        "ssp370": {
+          "2021": {
+            "change": {
+              "p10": 56.825,
+              "p50": 125.44,
+              "p90": 177.495
+            },
+            "future": {
+              "p10": 488.895,
+              "p50": 562.51,
+              "p90": 614.27
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 174.355,
+              "p50": 225.73,
+              "p90": 293.745
+            },
+            "future": {
+              "p10": 596.905,
+              "p50": 672.33,
+              "p90": 730.525
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 407.045,
+              "p50": 523.735,
+              "p90": 665.85
+            },
+            "future": {
+              "p10": 839.115,
+              "p50": 960.805,
+              "p90": 1102.625
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "HD18",
+      "name": "Heating degree days",
+      "label": "Heating degree days",
+      "category": "Growing and energy conditions",
+      "base_units": "degree-days",
+      "change_units": "degree-days",
+      "change_type": "absolute",
+      "definition": "Heating degree days calculated using a base temperature of 18°C.",
+      "historical": {
+        "period": "1995–2014",
+        "p10": 3969.035,
+        "p50": 3990.59,
+        "p90": 4025.24
+      },
+      "scenarios": {
+        "ssp245": {
+          "2021": {
+            "change": {
+              "p10": -282.375,
+              "p50": -188.49,
+              "p90": -157.285
+            },
+            "future": {
+              "p10": 3713.175,
+              "p50": 3786.835,
+              "p90": 3856.715
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": -509.245,
+              "p50": -377.905,
+              "p90": -268.895
+            },
+            "future": {
+              "p10": 3476.535,
+              "p50": 3607.185,
+              "p90": 3745.105
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": -864.06,
+              "p50": -637.385,
+              "p90": -541.49
+            },
+            "future": {
+              "p10": 3121.725,
+              "p50": 3346.92,
+              "p90": 3473.295
+            }
+          }
+        },
+        "ssp370": {
+          "2021": {
+            "change": {
+              "p10": -344.655,
+              "p50": -244.495,
+              "p90": -142.29
+            },
+            "future": {
+              "p10": 3641.125,
+              "p50": 3746.1,
+              "p90": 3866.205
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": -581.74,
+              "p50": -482.465,
+              "p90": -355.595
+            },
+            "future": {
+              "p10": 3404.04,
+              "p50": 3501.84,
+              "p90": 3659.19
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": -1221.735,
+              "p50": -990.345,
+              "p90": -830.0
+            },
+            "future": {
+              "p10": 2764.045,
+              "p50": 2993.96,
+              "p90": 3184.785
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "CD18",
+      "name": "Cooling degree days",
+      "label": "Cooling degree days",
+      "category": "Growing and energy conditions",
+      "base_units": "degree-days",
+      "change_units": "degree-days",
+      "change_type": "absolute",
+      "definition": "Cooling degree days calculated using a base temperature of 18°C.",
+      "historical": {
+        "period": "1995–2014",
+        "p10": 67.135,
+        "p50": 75.74,
+        "p90": 81.27
+      },
+      "scenarios": {
+        "ssp245": {
+          "2021": {
+            "change": {
+              "p10": 13.385,
+              "p50": 18.165,
+              "p90": 31.2
+            },
+            "future": {
+              "p10": 83.705,
+              "p50": 98.11,
+              "p90": 105.08
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 28.49,
+              "p50": 42.215,
+              "p90": 57.04
+            },
+            "future": {
+              "p10": 102.785,
+              "p50": 118.185,
+              "p90": 130.92
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 56.09,
+              "p50": 67.655,
+              "p90": 113.76
+            },
+            "future": {
+              "p10": 128.035,
+              "p50": 145.75,
+              "p90": 187.87
+            }
+          }
+        },
+        "ssp370": {
+          "2021": {
+            "change": {
+              "p10": 11.15,
+              "p50": 30.96,
+              "p90": 44.67
+            },
+            "future": {
+              "p10": 85.445,
+              "p50": 104.935,
+              "p90": 120.545
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 39.615,
+              "p50": 56.21,
+              "p90": 75.565
+            },
+            "future": {
+              "p10": 111.765,
+              "p50": 134.095,
+              "p90": 149.68
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 99.61,
+              "p50": 134.23,
+              "p90": 178.265
+            },
+            "future": {
+              "p10": 173.91,
+              "p50": 209.97,
+              "p90": 252.375
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "PR",
+      "name": "Total rainfall",
+      "label": "Total rainfall",
+      "category": "Rainfall and moisture",
+      "base_units": "mm",
+      "change_units": "%",
+      "change_type": "percent",
+      "definition": "Total rainfall over the year. Projected change is expressed as a percentage of the historical baseline.",
+      "historical": {
+        "period": "1995–2014",
+        "p10": 1442.38,
+        "p50": 1462.53,
+        "p90": 1469.28
+      },
+      "scenarios": {
+        "ssp245": {
+          "2021": {
+            "change": {
+              "p10": -6.685,
+              "p50": -2.68,
+              "p90": 1.48
+            },
+            "future": {
+              "p10": 1364.96,
+              "p50": 1405.815,
+              "p90": 1499.145
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": -5.14,
+              "p50": -3.155,
+              "p90": 7.215
+            },
+            "future": {
+              "p10": 1376.62,
+              "p50": 1457.855,
+              "p90": 1537.305
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": -5.77,
+              "p50": -0.79,
+              "p90": 3.52
+            },
+            "future": {
+              "p10": 1413.3,
+              "p50": 1484.23,
+              "p90": 1509.005
+            }
+          }
+        },
+        "ssp370": {
+          "2021": {
+            "change": {
+              "p10": -10.805,
+              "p50": 2.47,
+              "p90": 4.115
+            },
+            "future": {
+              "p10": 1320.12,
+              "p50": 1473.905,
+              "p90": 1493.52
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": -7.05,
+              "p50": 1.035,
+              "p90": 3.175
+            },
+            "future": {
+              "p10": 1388.41,
+              "p50": 1474.485,
+              "p90": 1493.045
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": -4.71,
+              "p50": -1.87,
+              "p90": 8.695
+            },
+            "future": {
+              "p10": 1413.95,
+              "p50": 1459.525,
+              "p90": 1593.16
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "DD1mm",
+      "name": "Dry days below 1 mm",
+      "label": "Dry days below 1 mm",
+      "category": "Rainfall and moisture",
+      "base_units": "days",
+      "change_units": "days",
+      "change_type": "absolute",
+      "definition": "Number of days in a year with less than 1 mm of rainfall.",
+      "historical": {
+        "period": "1995–2014",
+        "p10": 258.99,
+        "p50": 260.11,
+        "p90": 260.745
+      },
+      "scenarios": {
+        "ssp245": {
+          "2021": {
+            "change": {
+              "p10": -1.925,
+              "p50": -0.095,
+              "p90": 3.525
+            },
+            "future": {
+              "p10": 258.325,
+              "p50": 259.115,
+              "p90": 263.905
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": -0.8,
+              "p50": -0.275,
+              "p90": 1.805
+            },
+            "future": {
+              "p10": 259.305,
+              "p50": 259.88,
+              "p90": 261.375
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": -0.84,
+              "p50": 2.14,
+              "p90": 3.605
+            },
+            "future": {
+              "p10": 259.54,
+              "p50": 261.49,
+              "p90": 263.715
+            }
+          }
+        },
+        "ssp370": {
+          "2021": {
+            "change": {
+              "p10": -4.24,
+              "p50": 0.25,
+              "p90": 2.175
+            },
+            "future": {
+              "p10": 255.865,
+              "p50": 259.28,
+              "p90": 262.88
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": -1.55,
+              "p50": -0.08,
+              "p90": 3.17
+            },
+            "future": {
+              "p10": 258.56,
+              "p50": 259.995,
+              "p90": 262.835
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 3.12,
+              "p50": 4.105,
+              "p90": 5.42
+            },
+            "future": {
+              "p10": 262.7,
+              "p50": 264.08,
+              "p90": 265.705
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "RR1mm",
+      "name": "Rainy days of at least 1 mm",
+      "label": "Rainy days of at least 1 mm",
+      "category": "Rainfall and moisture",
+      "base_units": "days",
+      "change_units": "days",
+      "change_type": "absolute",
+      "definition": "Number of days in a year with at least 1 mm of rainfall.",
+      "historical": {
+        "period": "1995–2014",
+        "p10": 104.255,
+        "p50": 104.89,
+        "p90": 106.01
+      },
+      "scenarios": {
+        "ssp245": {
+          "2021": {
+            "change": {
+              "p10": -3.525,
+              "p50": 0.095,
+              "p90": 1.925
+            },
+            "future": {
+              "p10": 101.095,
+              "p50": 105.885,
+              "p90": 106.675
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": -1.805,
+              "p50": 0.275,
+              "p90": 0.8
+            },
+            "future": {
+              "p10": 103.625,
+              "p50": 105.12,
+              "p90": 105.695
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": -3.605,
+              "p50": -2.14,
+              "p90": 0.84
+            },
+            "future": {
+              "p10": 101.285,
+              "p50": 103.51,
+              "p90": 105.46
+            }
+          }
+        },
+        "ssp370": {
+          "2021": {
+            "change": {
+              "p10": -2.175,
+              "p50": -0.25,
+              "p90": 4.24
+            },
+            "future": {
+              "p10": 102.12,
+              "p50": 105.72,
+              "p90": 109.135
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": -3.17,
+              "p50": 0.08,
+              "p90": 1.55
+            },
+            "future": {
+              "p10": 102.165,
+              "p50": 105.005,
+              "p90": 106.44
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": -5.42,
+              "p50": -4.105,
+              "p90": -3.12
+            },
+            "future": {
+              "p10": 99.295,
+              "p50": 100.92,
+              "p90": 102.3
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "RR25mm",
+      "name": "Very rainy days above 25 mm",
+      "label": "Very rainy days above 25 mm",
+      "category": "Rainfall and moisture",
+      "base_units": "days",
+      "change_units": "days",
+      "change_type": "absolute",
+      "definition": "Number of days in a year with more than 25 mm of rainfall.",
+      "historical": {
+        "period": "1995–2014",
+        "p10": 13.425,
+        "p50": 13.695,
+        "p90": 13.865
+      },
+      "scenarios": {
+        "ssp245": {
+          "2021": {
+            "change": {
+              "p10": -0.635,
+              "p50": -0.28,
+              "p90": 0.715
+            },
+            "future": {
+              "p10": 12.935,
+              "p50": 13.41,
+              "p90": 14.44
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": -0.575,
+              "p50": 0.015,
+              "p90": 1.5
+            },
+            "future": {
+              "p10": 12.995,
+              "p50": 13.865,
+              "p90": 15.065
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": -0.075,
+              "p50": 0.515,
+              "p90": 0.85
+            },
+            "future": {
+              "p10": 13.485,
+              "p50": 14.245,
+              "p90": 14.555
+            }
+          }
+        },
+        "ssp370": {
+          "2021": {
+            "change": {
+              "p10": -1.565,
+              "p50": 0.42,
+              "p90": 0.685
+            },
+            "future": {
+              "p10": 12.26,
+              "p50": 13.85,
+              "p90": 14.415
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": -0.69,
+              "p50": 0.5,
+              "p90": 0.72
+            },
+            "future": {
+              "p10": 13.095,
+              "p50": 14.12,
+              "p90": 14.31
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": -0.105,
+              "p50": 0.51,
+              "p90": 2.125
+            },
+            "future": {
+              "p10": 13.605,
+              "p50": 14.065,
+              "p90": 15.85
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "R99pVAL",
+      "name": "Heavy rainfall, 99th percentile",
+      "label": "Heavy rainfall, 99th percentile",
+      "category": "Rainfall and moisture",
+      "base_units": "mm",
+      "change_units": "%",
+      "change_type": "percent",
+      "definition": "99th percentile of daily rainfall over the period. Projected change is expressed as a percentage.",
+      "historical": {
+        "period": "1995–2014",
+        "p10": 42.755,
+        "p50": 43.735,
+        "p90": 44.515
+      },
+      "scenarios": {
+        "ssp245": {
+          "2021": {
+            "change": {
+              "p10": -1.335,
+              "p50": 1.155,
+              "p90": 6.415
+            },
+            "future": {
+              "p10": 42.72,
+              "p50": 43.725,
+              "p90": 45.915
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": -2.77,
+              "p50": 2.965,
+              "p90": 13.545
+            },
+            "future": {
+              "p10": 42.69,
+              "p50": 45.435,
+              "p90": 47.765
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 0.45,
+              "p50": 6.355,
+              "p90": 9.77
+            },
+            "future": {
+              "p10": 44.19,
+              "p50": 45.98,
+              "p90": 47.805
+            }
+          }
+        },
+        "ssp370": {
+          "2021": {
+            "change": {
+              "p10": -7.26,
+              "p50": 3.085,
+              "p90": 7.395
+            },
+            "future": {
+              "p10": 41.135,
+              "p50": 44.54,
+              "p90": 46.245
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": -0.61,
+              "p50": 4.585,
+              "p90": 7.0
+            },
+            "future": {
+              "p10": 43.815,
+              "p50": 45.125,
+              "p90": 46.37
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 2.15,
+              "p50": 8.32,
+              "p90": 22.695
+            },
+            "future": {
+              "p10": 44.87,
+              "p50": 46.555,
+              "p90": 52.475
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "R99pVALWet",
+      "name": "Heavy rainfall on wet days, 99th percentile",
+      "label": "Heavy rainfall on wet days, 99th percentile",
+      "category": "Rainfall and moisture",
+      "base_units": "mm",
+      "change_units": "%",
+      "change_type": "percent",
+      "definition": "99th percentile of daily rainfall calculated only on wet days with at least 1 mm of rainfall. Projected change is expressed as a percentage.",
+      "historical": {
+        "period": "1995–2014",
+        "p10": 58.31,
+        "p50": 59.47,
+        "p90": 60.525
+      },
+      "scenarios": {
+        "ssp245": {
+          "2021": {
+            "change": {
+              "p10": 1.775,
+              "p50": 6.02,
+              "p90": 11.085
+            },
+            "future": {
+              "p10": 59.84,
+              "p50": 61.81,
+              "p90": 65.01
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 1.135,
+              "p50": 7.39,
+              "p90": 17.08
+            },
+            "future": {
+              "p10": 60.09,
+              "p50": 63.545,
+              "p90": 67.385
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 5.04,
+              "p50": 11.79,
+              "p90": 13.62
+            },
+            "future": {
+              "p10": 62.84,
+              "p50": 64.425,
+              "p90": 67.335
+            }
+          }
+        },
+        "ssp370": {
+          "2021": {
+            "change": {
+              "p10": -2.435,
+              "p50": 5.985,
+              "p90": 13.145
+            },
+            "future": {
+              "p10": 58.255,
+              "p50": 61.84,
+              "p90": 66.515
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 3.44,
+              "p50": 5.425,
+              "p90": 14.915
+            },
+            "future": {
+              "p10": 60.93,
+              "p50": 62.735,
+              "p90": 66.62
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 9.265,
+              "p50": 15.91,
+              "p90": 29.435
+            },
+            "future": {
+              "p10": 65.075,
+              "p50": 66.37,
+              "p90": 75.86
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "PEDsrad",
+      "name": "Potential evapotranspiration deficit",
+      "label": "Potential evapotranspiration deficit",
+      "category": "Rainfall and moisture",
+      "base_units": "mm",
+      "change_units": "mm",
+      "change_type": "absolute",
+      "definition": "Potential evapotranspiration deficit calculated from a water-balance model using precipitation and potential evapotranspiration.",
+      "historical": {
+        "period": "1995–2014",
+        "p10": 247.845,
+        "p50": 257.96,
+        "p90": 273.205
+      },
+      "scenarios": {
+        "ssp245": {
+          "2021": {
+            "change": {
+              "p10": 4.22,
+              "p50": 23.985,
+              "p90": 54.16
+            },
+            "future": {
+              "p10": 265.22,
+              "p50": 283.125,
+              "p90": 313.035
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 0.805,
+              "p50": 39.555,
+              "p90": 78.025
+            },
+            "future": {
+              "p10": 263.44,
+              "p50": 302.55,
+              "p90": 331.405
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 36.34,
+              "p50": 72.65,
+              "p90": 105.56
+            },
+            "future": {
+              "p10": 306.49,
+              "p50": 323.095,
+              "p90": 363.975
+            }
+          }
+        },
+        "ssp370": {
+          "2021": {
+            "change": {
+              "p10": -16.015,
+              "p50": 27.6,
+              "p90": 76.37
+            },
+            "future": {
+              "p10": 254.14,
+              "p50": 275.445,
+              "p90": 337.385
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": 20.045,
+              "p50": 55.455,
+              "p90": 97.675
+            },
+            "future": {
+              "p10": 290.195,
+              "p50": 303.295,
+              "p90": 358.69
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 65.65,
+              "p50": 83.74,
+              "p90": 110.57
+            },
+            "future": {
+              "p10": 313.495,
+              "p50": 353.89,
+              "p90": 371.585
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "hurs",
+      "name": "Average relative humidity",
+      "label": "Average relative humidity",
+      "category": "Humidity, solar and wind",
+      "base_units": "%",
+      "change_units": "%",
+      "change_type": "absolute",
+      "definition": "Average 2 m relative humidity.",
+      "historical": {
+        "period": "1995–2014",
+        "p10": 82.575,
+        "p50": 84.56,
+        "p90": 87.045
+      },
+      "scenarios": {
+        "ssp245": {
+          "2021": {
+            "change": {
+              "p10": -1.28,
+              "p50": -0.565,
+              "p90": 0.12
+            },
+            "future": {
+              "p10": 81.65,
+              "p50": 83.81,
+              "p90": 86.995
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": -1.32,
+              "p50": -0.815,
+              "p90": 0.095
+            },
+            "future": {
+              "p10": 81.775,
+              "p50": 83.88,
+              "p90": 86.475
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": -1.825,
+              "p50": -1.245,
+              "p90": -0.24
+            },
+            "future": {
+              "p10": 81.415,
+              "p50": 83.345,
+              "p90": 86.105
+            }
+          }
+        },
+        "ssp370": {
+          "2021": {
+            "change": {
+              "p10": -1.615,
+              "p50": -0.495,
+              "p90": 0.16
+            },
+            "future": {
+              "p10": 81.415,
+              "p50": 83.89,
+              "p90": 86.925
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": -1.845,
+              "p50": -0.9,
+              "p90": -0.435
+            },
+            "future": {
+              "p10": 81.165,
+              "p50": 83.505,
+              "p90": 86.325
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": -2.015,
+              "p50": -1.475,
+              "p90": -1.08
+            },
+            "future": {
+              "p10": 80.825,
+              "p50": 83.08,
+              "p90": 85.7
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "rsds",
+      "name": "Average incoming solar radiation",
+      "label": "Average incoming solar radiation",
+      "category": "Humidity, solar and wind",
+      "base_units": "W/m²",
+      "change_units": "W/m²",
+      "change_type": "absolute",
+      "definition": "Average incoming surface solar radiation.",
+      "historical": {
+        "period": "1995–2014",
+        "p10": 179.36,
+        "p50": 183.91,
+        "p90": 187.93
+      },
+      "scenarios": {
+        "ssp245": {
+          "2021": {
+            "change": {
+              "p10": -2.07,
+              "p50": -0.65,
+              "p90": 0.87
+            },
+            "future": {
+              "p10": 177.745,
+              "p50": 183.64,
+              "p90": 187.975
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": -2.965,
+              "p50": -0.765,
+              "p90": 0.88
+            },
+            "future": {
+              "p10": 178.435,
+              "p50": 183.435,
+              "p90": 186.485
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": -3.555,
+              "p50": -1.995,
+              "p90": 0.65
+            },
+            "future": {
+              "p10": 177.8,
+              "p50": 183.19,
+              "p90": 185.31
+            }
+          }
+        },
+        "ssp370": {
+          "2021": {
+            "change": {
+              "p10": -2.66,
+              "p50": -0.31,
+              "p90": 0.94
+            },
+            "future": {
+              "p10": 177.71,
+              "p50": 183.945,
+              "p90": 187.52
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": -1.97,
+              "p50": -0.725,
+              "p90": 0.17
+            },
+            "future": {
+              "p10": 178.635,
+              "p50": 183.225,
+              "p90": 186.82
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": -3.88,
+              "p50": -2.585,
+              "p90": -0.76
+            },
+            "future": {
+              "p10": 177.995,
+              "p50": 181.77,
+              "p90": 184.21
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "sfcWind",
+      "name": "Average wind speed",
+      "label": "Average wind speed",
+      "category": "Humidity, solar and wind",
+      "base_units": "m/s",
+      "change_units": "%",
+      "change_type": "percent",
+      "definition": "Average daily 10 m wind speed. Projected change is expressed as a percentage.",
+      "historical": {
+        "period": "1995–2014",
+        "p10": 5.625,
+        "p50": 6.645,
+        "p90": 7.175
+      },
+      "scenarios": {
+        "ssp245": {
+          "2021": {
+            "change": {
+              "p10": -1.295,
+              "p50": 0.52,
+              "p90": 1.69
+            },
+            "future": {
+              "p10": 5.605,
+              "p50": 6.62,
+              "p90": 7.28
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": -0.185,
+              "p50": 1.27,
+              "p90": 2.95
+            },
+            "future": {
+              "p10": 5.705,
+              "p50": 6.715,
+              "p90": 7.26
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 0.945,
+              "p50": 2.165,
+              "p90": 3.75
+            },
+            "future": {
+              "p10": 5.75,
+              "p50": 6.71,
+              "p90": 7.41
+            }
+          }
+        },
+        "ssp370": {
+          "2021": {
+            "change": {
+              "p10": -1.625,
+              "p50": 0.18,
+              "p90": 1.925
+            },
+            "future": {
+              "p10": 5.675,
+              "p50": 6.57,
+              "p90": 7.215
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": -0.125,
+              "p50": 1.865,
+              "p90": 2.57
+            },
+            "future": {
+              "p10": 5.735,
+              "p50": 6.655,
+              "p90": 7.305
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 0.655,
+              "p50": 3.245,
+              "p90": 4.02
+            },
+            "future": {
+              "p10": 5.81,
+              "p50": 6.715,
+              "p90": 7.395
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Wd10",
+      "name": "Windy days above 10 m/s",
+      "label": "Windy days above 10 m/s",
+      "category": "Humidity, solar and wind",
+      "base_units": "days",
+      "change_units": "days",
+      "change_type": "absolute",
+      "definition": "Number of days with average wind speed above 10 m/s.",
+      "historical": {
+        "period": "1995–2014",
+        "p10": 152.74,
+        "p50": 198.985,
+        "p90": 221.43
+      },
+      "scenarios": {
+        "ssp245": {
+          "2021": {
+            "change": {
+              "p10": -3.59,
+              "p50": 3.785,
+              "p90": 5.325
+            },
+            "future": {
+              "p10": 151.365,
+              "p50": 201.005,
+              "p90": 226.31
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": -1.675,
+              "p50": 4.695,
+              "p90": 8.605
+            },
+            "future": {
+              "p10": 155.17,
+              "p50": 204.615,
+              "p90": 225.0
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": 1.9,
+              "p50": 5.25,
+              "p90": 11.39
+            },
+            "future": {
+              "p10": 158.39,
+              "p50": 202.715,
+              "p90": 230.595
+            }
+          }
+        },
+        "ssp370": {
+          "2021": {
+            "change": {
+              "p10": -6.85,
+              "p50": -0.13,
+              "p90": 7.18
+            },
+            "future": {
+              "p10": 154.565,
+              "p50": 196.305,
+              "p90": 222.495
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": -2.325,
+              "p50": 4.11,
+              "p90": 7.89
+            },
+            "future": {
+              "p10": 156.855,
+              "p50": 200.825,
+              "p90": 225.16
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": -3.38,
+              "p50": 6.1,
+              "p90": 12.295
+            },
+            "future": {
+              "p10": 158.84,
+              "p50": 199.775,
+              "p90": 229.565
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Wd99pVAL",
+      "name": "Strong wind, 99th percentile",
+      "label": "Strong wind, 99th percentile",
+      "category": "Humidity, solar and wind",
+      "base_units": "m/s",
+      "change_units": "%",
+      "change_type": "percent",
+      "definition": "99th percentile of daily wind speed. Projected change is expressed as a percentage.",
+      "historical": {
+        "period": "1995–2014",
+        "p10": 21.875,
+        "p50": 23.495,
+        "p90": 24.475
+      },
+      "scenarios": {
+        "ssp245": {
+          "2021": {
+            "change": {
+              "p10": -3.01,
+              "p50": -0.575,
+              "p90": 0.765
+            },
+            "future": {
+              "p10": 21.61,
+              "p50": 23.285,
+              "p90": 24.135
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": -3.245,
+              "p50": -1.235,
+              "p90": 0.875
+            },
+            "future": {
+              "p10": 21.65,
+              "p50": 23.085,
+              "p90": 23.99
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": -2.72,
+              "p50": -1.085,
+              "p90": 1.735
+            },
+            "future": {
+              "p10": 21.8,
+              "p50": 23.175,
+              "p90": 23.96
+            }
+          }
+        },
+        "ssp370": {
+          "2021": {
+            "change": {
+              "p10": -1.315,
+              "p50": -0.11,
+              "p90": 0.37
+            },
+            "future": {
+              "p10": 21.935,
+              "p50": 23.235,
+              "p90": 24.265
+            }
+          },
+          "2041": {
+            "change": {
+              "p10": -1.62,
+              "p50": -0.37,
+              "p90": 0.185
+            },
+            "future": {
+              "p10": 21.805,
+              "p50": 23.08,
+              "p90": 24.265
+            }
+          },
+          "2081": {
+            "change": {
+              "p10": -1.715,
+              "p50": -1.185,
+              "p90": 2.22
+            },
+            "future": {
+              "p10": 22.035,
+              "p50": 23.255,
+              "p90": 23.82
+            }
+          }
+        }
+      }
+    }
+  ]
+}
