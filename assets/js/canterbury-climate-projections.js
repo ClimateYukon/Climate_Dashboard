@@ -113,9 +113,9 @@ function createIndicatorCell(indicator) {
 
     const units = document.createElement("span");
     units.className = "indicator-unit-note";
-    units.textContent = indicator.base_units === indicator.change_units
-        ? `Historical and change: ${indicator.base_units}`
-        : `Historical: ${indicator.base_units} · projected change: ${indicator.change_units}`;
+    const changedUnits = DEGREE_PERCENT_IDS.has(indicator.id) ? "%"
+        : indicator.id === "hurs" ? "percentage points" : indicator.change_units;
+    units.textContent = `Historical: ${indicator.base_units} · projected change: ${changedUnits}`;
     labelWrap.appendChild(units);
 
     const button = document.createElement("button");
@@ -211,6 +211,7 @@ async function loadLocationData() {
     const response = await fetch(`${DATA_ROOT}/${location.file}`);
     if (!response.ok) throw new Error(`Could not load ${location.name}.`);
     state.locationData = await response.json();
+    expandedSeasonIndicators.clear();
     renderPage();
     statusMessage.hidden = true;
     projectionContent.hidden = false;
@@ -278,10 +279,137 @@ function filteredIndicators(filterText) {
     });
 }
 
+const expandedSeasonIndicators = new Set();
+
+
+// Canterbury relative-percentage display and model-matched absolute tooltips.
+const DEGREE_PERCENT_IDS = new Set(["GDD5", "GDD10", "HD18", "CD18"]);
+
+function projectedChangeDisplay(indicator, values, rank) {
+    if (DEGREE_PERCENT_IDS.has(indicator.id) &&
+            Number.isFinite(values.percentage_change?.[rank])) {
+        return formatChange(values.percentage_change[rank], "%");
+    }
+    if (indicator.id === "hurs") {
+        return formatChange(values.change[rank], "pp");
+    }
+    return formatChange(values.change[rank], indicator.change_units);
+}
+
+const pctDetailsTooltip = document.createElement("div");
+pctDetailsTooltip.className = "canterbury-percent-tooltip";
+pctDetailsTooltip.setAttribute("role", "tooltip");
+pctDetailsTooltip.id = "canterbury-percent-detail-tooltip";
+pctDetailsTooltip.hidden = true;
+document.body.appendChild(pctDetailsTooltip);
+let pinnedPctButton = null;
+let activePctButton = null;
+
+function hidePctDetails(force = false) {
+    if (pinnedPctButton && !force) return;
+    pctDetailsTooltip.hidden = true;
+    activePctButton = null;
+    if (force) pinnedPctButton = null;
+}
+
+function showPctDetails(button) {
+    closeIndicatorTooltips();
+    activePctButton = button;
+    pctDetailsTooltip.textContent = button.dataset.detail;
+    pctDetailsTooltip.hidden = false;
+    pctDetailsTooltip.style.left = "12px";
+    pctDetailsTooltip.style.top = "12px";
+
+    const rect = button.getBoundingClientRect();
+    const width = pctDetailsTooltip.offsetWidth;
+    const height = pctDetailsTooltip.offsetHeight;
+    const left = Math.max(12, Math.min(
+        rect.left + rect.width / 2 - width / 2,
+        window.innerWidth - width - 12
+    ));
+    let top = rect.top - height - 10;
+    if (top < 12) top = rect.bottom + 10;
+    top = Math.max(12, Math.min(top, window.innerHeight - height - 12));
+    pctDetailsTooltip.style.left = `${left}px`;
+    pctDetailsTooltip.style.top = `${top}px`;
+}
+
+document.addEventListener("click", event => {
+    if (!event.target.closest?.(".canterbury-percent-button")) {
+        hidePctDetails(true);
+    }
+});
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape") hidePctDetails(true);
+});
+window.addEventListener("scroll", () => hidePctDetails(true), {passive: true});
+
+function createPercentageCell(indicator, values, rank, className, years) {
+    const displayed = projectedChangeDisplay(indicator, values, rank);
+    const cell = createCell(displayed, className);
+    const details = values.percent_details?.[rank];
+    if (!details) return cell;
+
+    const percentileLabel = {p10: "Low (10th percentile)",
+        p50: "Median (50th percentile)", p90: "High (90th percentile)"}[rank];
+    const explanation = DEGREE_PERCENT_IDS.has(indicator.id) &&
+        !Number.isFinite(values.percentage_change?.[rank])
+        ? "Relative % unavailable because at least one model has zero baseline degree-days."
+        : "Historical, future and absolute values follow the model ranking of this change percentile.";
+    const text = [
+        `${indicator.name} | ${years}`,
+        percentileLabel,
+        `Displayed change: ${displayed}`,
+        `Historical (1995–2014): ${number(details.historical, indicator.base_units)}`,
+        `Projected value: ${number(details.future, indicator.base_units)}`,
+        `Absolute change: ${formatChange(details.absolute_change, indicator.id === "hurs" ? "pp" : indicator.base_units)}`,
+        explanation
+    ].join("\n");
+
+    const button = document.createElement("button");
+    button.className = "canterbury-percent-button";
+    button.type = "button";
+    button.textContent = displayed;
+    button.dataset.detail = text;
+    button.setAttribute("aria-describedby", pctDetailsTooltip.id);
+    button.setAttribute("aria-label", text.replaceAll("\n", ". "));
+    button.addEventListener("mouseenter", () => {
+        if (!pinnedPctButton) showPctDetails(button);
+    });
+    button.addEventListener("mouseleave", () => {
+        if (!pinnedPctButton) hidePctDetails();
+    });
+    button.addEventListener("focus", () => {
+        if (!pinnedPctButton) showPctDetails(button);
+    });
+    button.addEventListener("blur", () => {
+        if (!pinnedPctButton) hidePctDetails();
+    });
+    button.addEventListener("click", event => {
+        event.stopPropagation();
+        if (pinnedPctButton === button) {
+            hidePctDetails(true);
+        } else {
+            pinnedPctButton = button;
+            showPctDetails(button);
+        }
+    });
+    cell.textContent = "";
+    cell.appendChild(button);
+    return cell;
+}
+
 function renderTable() {
+    hidePctDetails(true);
     tableBody.innerHTML = "";
     const indicators = filteredIndicators(state.filterText);
     const periods = state.manifest.periods;
+    const seasonLabels = [
+        ["DJF", "Summer (Dec–Feb)"],
+        ["MAM", "Autumn (Mar–May)"],
+        ["JJA", "Winter (Jun–Aug)"],
+        ["SON", "Spring (Sep–Nov)"]
+    ];
     let lastCategory = null;
 
     indicators.forEach(indicator => {
@@ -296,20 +424,111 @@ function renderTable() {
             lastCategory = indicator.category;
         }
 
+        const seasonalEntries = seasonLabels.filter(([key]) =>
+            indicator.seasons?.[key]?.scenarios?.[state.scenario]
+        );
+        const hasSeasons = seasonalEntries.length > 0;
+        const isOpen = expandedSeasonIndicators.has(indicator.id);
+        const seasonalRows = [];
+
         const row = document.createElement("tr");
-        row.appendChild(createIndicatorCell(indicator));
-        row.appendChild(createCell(number(indicator.historical.p50, indicator.base_units), "historical-cell median-value"));
+        const indicatorCell = createIndicatorCell(indicator);
+        let toggle = null;
 
-        periods.forEach((period, index) => {
-            const change = indicator.scenarios[state.scenario][period.id].change;
-            row.appendChild(createCell(formatChange(change.p10, indicator.change_units), period.id === "2041" ? "near-cell" : "late-cell"));
-            row.appendChild(createCell(formatChange(change.p50, indicator.change_units), period.id === "2041" ? "near-cell median-value" : "late-cell median-value"));
-            row.appendChild(createCell(formatChange(change.p90, indicator.change_units), period.id === "2041" ? "near-cell" : "late-cell"));
+        if (hasSeasons) {
+            toggle = document.createElement("button");
+            toggle.type = "button";
+            toggle.className = "seasonal-toggle";
+            toggle.textContent = "▸";
+            toggle.setAttribute("aria-expanded", String(isOpen));
+            toggle.setAttribute("aria-label",
+                `${isOpen ? "Hide" : "Show"} seasons for ${indicator.name}`);
+            toggle.setAttribute("title", "Show or hide seasons");
+            toggle.setAttribute("aria-controls", seasonalEntries.map(([key]) =>
+                `season-${indicator.id}-${key}`).join(" "));
+
+            const labelContainer = indicatorCell.querySelector(
+                ".indicator-name-wrapper > div");
+            if (!labelContainer) throw new Error("Indicator label element not found");
+            labelContainer.insertBefore(toggle, labelContainer.firstChild);
+        }
+
+        row.appendChild(indicatorCell);
+        row.appendChild(createCell(
+            number(indicator.historical.p50, indicator.base_units),
+            "historical-cell median-value"
+        ));
+        periods.forEach(period => {
+            const periodClass = period.id === "2041" ? "near" : "late";
+            const values = indicator.scenarios[state.scenario][period.id];
+            row.appendChild(createPercentageCell(
+
+                indicator, values, "p10", `${periodClass}-cell`, period.years
+
+            ));
+            row.appendChild(createPercentageCell(
+
+                indicator, values, "p50", `${periodClass}-cell median-value`, period.years
+
+            ));
+            row.appendChild(createPercentageCell(
+
+                indicator, values, "p90", `${periodClass}-cell`, period.years
+
+            ));
         });
-
         tableBody.appendChild(row);
-    });
 
+        for (const [seasonCode, seasonLabel] of seasonalEntries) {
+            const seasonData = indicator.seasons[seasonCode];
+            const seasonRow = document.createElement("tr");
+            seasonRow.className = "seasonal-row";
+            seasonRow.id = `season-${indicator.id}-${seasonCode}`;
+            seasonRow.hidden = !isOpen;
+            seasonRow.appendChild(createCell(
+                seasonLabel, "indicator-cell seasonal-label-cell"
+            ));
+            seasonRow.appendChild(createCell(
+                number(seasonData.historical.p50, indicator.base_units),
+                "historical-cell median-value"
+            ));
+            periods.forEach(period => {
+                const periodClass = period.id === "2041" ? "near" : "late";
+                const values = seasonData.scenarios[state.scenario][period.id];
+                seasonRow.appendChild(createPercentageCell(
+
+                    indicator, values, "p10", `${periodClass}-cell`, period.years
+
+                ));
+                seasonRow.appendChild(createPercentageCell(
+
+                    indicator, values, "p50", `${periodClass}-cell median-value`, period.years
+
+                ));
+                seasonRow.appendChild(createPercentageCell(
+
+                    indicator, values, "p90", `${periodClass}-cell`, period.years
+
+                ));
+            });
+            tableBody.appendChild(seasonRow);
+            seasonalRows.push(seasonRow);
+        }
+
+        if (toggle) {
+            toggle.addEventListener("click", () => {
+                const shouldOpen = !expandedSeasonIndicators.has(indicator.id);
+                if (shouldOpen) expandedSeasonIndicators.add(indicator.id);
+                else expandedSeasonIndicators.delete(indicator.id);
+                toggle.setAttribute("aria-expanded", String(shouldOpen));
+                toggle.setAttribute("aria-label",
+                    `${shouldOpen ? "Hide" : "Show"} seasons for ${indicator.name}`);
+                seasonalRows.forEach(seasonRow => {
+                    seasonRow.hidden = !shouldOpen;
+                });
+            });
+        }
+    });
     noResults.hidden = indicators.length !== 0;
 }
 
@@ -335,9 +554,13 @@ function renderPlainLanguage() {
             const values = indicator.scenarios[state.scenario][period.id];
             const paragraph = document.createElement("p");
             paragraph.className = "plain-language-period";
+            const absoluteContext = DEGREE_PERCENT_IDS.has(indicator.id) &&
+                Number.isFinite(values.percentage_change?.p50)
+                ? ` (${formatChange(values.change.p50, indicator.base_units)} in absolute terms)`
+                : "";
             paragraph.innerHTML = `<strong>${period.years}:</strong> median projected value ${number(values.future.p50, indicator.base_units)}, ` +
-                `with a median change of ${formatChange(values.change.p50, indicator.change_units)}. ` +
-                `The six-model P10–P90 change range is ${formatChange(values.change.p10, indicator.change_units)} to ${formatChange(values.change.p90, indicator.change_units)}.`;
+                `with a median change of ${projectedChangeDisplay(indicator, values, "p50")}${absoluteContext}. ` +
+                `The six-model P10–P90 change range is ${projectedChangeDisplay(indicator, values, "p10")} to ${projectedChangeDisplay(indicator, values, "p90")}.`;
             item.appendChild(paragraph);
         });
 

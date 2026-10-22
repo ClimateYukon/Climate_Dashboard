@@ -29,3 +29,78 @@
     margin-bottom: 0.5rem;
     color: #475569;
 }
+
+/* Canterbury seasonal drill-down. Annual rows remain unchanged. */
+.seasonal-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    width: 1.35rem;
+    height: 1.35rem;
+    margin-right: 0.28rem;
+    padding: 0;
+    border: 0;
+    border-radius: 0.25rem;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    font-size: 1.05rem;
+    line-height: 1;
+    transition: transform 120ms ease;
+}
+.seasonal-toggle:hover { background: rgba(148, 163, 184, 0.24); }
+.seasonal-toggle:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; }
+.seasonal-toggle[aria-expanded="true"] { transform: rotate(90deg); }
+#projection-table tbody tr.seasonal-row[hidden] { display: none !important; }
+#projection-table tbody tr.seasonal-row td {
+    border-top: 1px solid rgba(148, 163, 184, 0.2);
+    font-size: 0.91em;
+}
+#projection-table tbody tr.seasonal-row .seasonal-label-cell {
+    padding-left: 2.2rem;
+    color: #e8f1f6;
+    font-weight: 500;
+}
+
+/* Canterbury percentage changes with absolute-value tooltips. */
+.canterbury-percent-button {
+    display: inline-block;
+    max-width: 100%;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px dotted currentColor;
+    padding: 0 0 1px;
+    margin: 0;
+    color: inherit;
+    font: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    text-align: center;
+    cursor: help;
+}
+.canterbury-percent-button:hover { border-bottom-style: solid; }
+.canterbury-percent-button:focus-visible {
+    outline: 2px solid #183f66;
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+.canterbury-percent-tooltip {
+    position: fixed;
+    z-index: 10002;
+    width: min(340px, calc(100vw - 24px));
+    padding: 0.8rem 0.95rem;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 8px;
+    background: #1f3342;
+    color: #f6f9fc;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.26);
+    font-size: 0.8rem;
+    line-height: 1.55;
+    font-weight: 400;
+    text-align: left;
+    white-space: pre-line;
+    pointer-events: none;
+}
+.canterbury-percent-tooltip[hidden] { display: none !important; }
