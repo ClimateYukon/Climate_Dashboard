@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#24483c">
+<title>Canterbury projections v3.2 | Maps, communities & indicator guide</title>
+<link rel="preconnect" href="https://unpkg.com">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="assets/style.css?v=3.2">
+<script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script defer src="assets/app.js?v=3.2"></script>
+</head>
+<body data-site-version="3.2">
+<header class="banner"><div class="banner-inner"><div><div class="eyebrow">CANTERBURY CLIMATE PROJECTIONS <span class="version-mark">V3.2</span></div>
+<h1>Canterbury's future climate</h1><p>Explore regional climate change, model agreement and local projections</p></div>
+<div class="banner-meta"><span>Reference climate</span><b>1995–2014</b></div></div></header>
+<main class="layout">
+<aside class="sidebar panel"><div class="aside-title"><h2>Climate indicators</h2><span id="variableCount"></span></div>
+<label class="visually-hidden" for="search">Find an indicator</label>
+<input id="search" type="search" placeholder="Find an indicator…" autocomplete="off">
+<div id="variables" class="variable-list"></div></aside>
+<section class="workspace">
+<div class="intro"><div class="overline">NIWA / MfE • SIX-MODEL CMIP6 ENSEMBLE</div>
+<h2 id="title">Climate projections</h2>
+<div class="intro-meta"><p id="subtitle">Change relative to 1995-2014</p>
+<button id="defineCurrent" type="button" class="definition-jump">What does this indicator mean?</button></div></div>
+<div class="nav" role="tablist" aria-label="Projection display">
+<button id="tab-map" role="tab" aria-selected="true" class="active" data-tab="map">Map</button>
+<button id="tab-communities" role="tab" aria-selected="false" data-tab="communities">Communities</button>
+<button id="tab-about" role="tab" aria-selected="false" data-tab="about">About the data</button></div>
+<div class="filter-line" id="filters">
+<label>Future period<select id="period"></select></label>
+<label>Emissions scenario<select id="scenario"></select></label>
+<label id="season-wrap">Season<select id="season"></select></label>
+</div>
+<div id="panel-map" role="tabpanel" class="tab-panel">
+<div class="panel map-panel">
+<div class="map-topline"><div><h3>Projected change across Canterbury</h3><p>Original approximately 5 km climate grid, with selectable model results</p></div>
+<div class="map-options">
+<label class="checkbox"><input id="townToggle" type="checkbox" checked> Show communities <span id="townCount"></span></label>
+<label class="checkbox"><input id="basemapToggle" type="checkbox" checked> OpenStreetMap background</label>
+</div></div>
+<div class="modes" aria-label="Map statistic">
+<button data-mode="median" class="active">Six-model median</button>
+<button data-mode="agreement">Model agreement</button>
+<button data-mode="low">Lowest model</button>
+<button data-mode="high">Highest model</button>
+</div>
+<div class="map-wrap"><div id="map" aria-label="Map of modelled climate change in Canterbury"></div>
+<div class="map-badge">CANTERBURY • NEW ZEALAND</div><div class="map-north" title="North is up"><span>▲</span>N</div>
+</div>
+<div class="map-display-settings"><label for="opacityRange">Climate overlay opacity <strong id="opacityValue">92%</strong></label>
+<input id="opacityRange" type="range" min="60" max="100" value="92" step="2" aria-label="Climate overlay opacity"></div>
+<div class="legend" id="legend"></div>
+<p class="footnote" id="notes"></p>
+</div></div>
+<div id="panel-communities" role="tabpanel" class="tab-panel" hidden>
+<div class="panel community-panel"><h3>Projected changes near Canterbury communities</h3>
+<p class="description">Numbers are the <strong>median change</strong> across six individual climate models, measured at the nearest valid approximately 5 km grid centre. Cell colour shows how many models agree on the direction of change. Hover over a cell to see the lowest and highest individual models.</p>
+<div id="communitySummary" class="community-summary"></div>
+<div class="table-scroll"><table class="heat-table" id="communityTable"><thead></thead><tbody></tbody></table></div>
+<div id="agreementLegend" class="agreement-legend"></div>
+<p class="footnote">These are gridded model values near town centres, not weather station observations or SA2 averages. Click a community name to locate it on the map.</p></div>
+</div>
+<div id="panel-about" role="tabpanel" class="tab-panel about" hidden>
+<div class="panel article">
+<h3>Climate indicator definitions</h3>
+<p>Choose an indicator to read its full definition, how it is calculated, the units used for projected change and what those changes mean. The currently selected indicator appears first and opens automatically.</p>
+<div class="definition-controls">
+  <label for="definitionSearch">Find an indicator</label>
+  <input id="definitionSearch" type="search" placeholder="Search names, definitions or codes" autocomplete="off">
+  <div class="definition-actions"><span id="definitionCount"></span>
+    <button type="button" id="expandDefinitions">Expand all</button>
+    <button type="button" id="collapseDefinitions">Collapse all</button>
+  </div>
+</div>
+<div id="definitionList" class="definition-list" aria-live="polite"></div>
+<p class="glossary-sources">Definitions and units are based on the
+  <a href="https://environment.govt.nz/facts-and-science/climate-change/climate-change-projections/understanding-climate-variables-and-scenarios-used-in-the-projections/" target="_blank" rel="noopener">Ministry for the Environment variable definitions</a>,
+  <a href="https://climatedata.environment.govt.nz/documents/CMIP6_guidance_doc_June2024.pdf" target="_blank" rel="noopener">NIWA's 2024 technical guidance (Table 3)</a>, and the
+  <a href="https://climatedata.environment.govt.nz/variable-info.html" target="_blank" rel="noopener">Core Public Dataset metadata</a>.</p>
+<div class="article-divider"></div>
+<h3>About these projections</h3>
+<p>The map shows changes calculated from the six individual climate-model fields in the <a href="https://climatedata.environment.govt.nz/core-public-dataset.html" target="_blank" rel="noopener">NIWA / Ministry for the Environment Core Public Dataset</a>. Every value is a projected change from the modelled <strong>1995–2014</strong> reference period. Different variables have different units and different seasonal availability.</p>
+<h3>How the maps are calculated</h3>
+<p><strong>Median:</strong> the median of six model changes at each original approximately 5 km grid centre. <strong>Agreement:</strong> the greater of the number of models showing an increase and the number showing a decrease. Zero changes count in neither direction. It describes agreement on the direction of change, not probability or statistical significance.</p>
+<p><strong>Lowest and highest models:</strong> the full spatial fields from the single models with the smallest and largest area-weighted mean change over Canterbury. Their identities can change with indicator, period, scenario and season. These are different from the minimum and maximum model values at a particular community.</p>
+<h3>Why the map is smooth</h3>
+<p>The source measurements are unchanged. Smooth interpolation is applied only to the coloured display image when the original grid is reprojected. The agreement layer uses nearest-neighbour resampling to keep model counts discrete. The map does not contain predictions at a finer resolution than the original grid. Map raster opacity can be adjusted to inspect location context underneath.</p>
+<h3>Colour scale and comparisons</h3>
+<p>Each map's colour legend covers the actual smallest and largest values across its valid Canterbury grid cells. Single-direction changes use a stronger single-colour palette; maps containing both increases and decreases use blue to red with a zero midpoint. <strong>Read the legend when comparing two selections</strong>, because colour intensity is scaled independently for each displayed map.</p>
+<h3>Communities</h3>
+<p>Mapped town-centre coordinates are used to find the nearest land grid centre in New Zealand Transverse Mercator (EPSG:2193). For every season, the community table shows the median across all six models; the hover details identify the lowest and highest <em>at that town's sampled grid centre</em>. The distance to the sampled grid cell is displayed. Where possible, populated-place coordinates are taken from the <a href="https://gis.ecan.govt.nz/arcgis/rest/services/Story_Maps/Whakaraupo_Story_Map/MapServer/layers" target="_blank" rel="noopener">LINZ gazetteer served by Environment Canterbury</a>; otherwise points are approximate town-centre references.</p>
+<h3>Projection and basemap</h3>
+<p>The original NetCDF rasters are tagged EPSG:4272. Geographic boundaries and community coordinates are transformed to the appropriate source and rendering reference systems. Coloured map images are reprojected to Web Mercator (EPSG:3857), the projection used by the Leaflet display. Canterbury and surrounding regional boundaries originate from <a href="https://gis.ecan.govt.nz/arcgis/rest/services/Region_Base/MapServer/0" target="_blank" rel="noopener">Environment Canterbury GIS</a>, which cites Statistics New Zealand. The default map uses OpenStreetMap Standard tiles without an API key, with the local Environment Canterbury boundary overlay. Turn off OpenStreetMap background to use the bundled local regional geography. A north arrow and labelled places help verify map orientation.</p>
+<h3>Scope and limitations</h3>
+<p>The visualised region is the Canterbury regional council area. It is not the full extent of Waitaki District outside Canterbury. The data are 20-year climate averages. Model agreement does not capture every source of uncertainty, and even unanimous directional agreement may correspond to a small change. These are climate-change projections rather than site-specific engineering hazard estimates.</p>
+</div></div>
+<div id="error" class="panel error" hidden role="alert"></div>
+</section></main>
+<footer>Version 3.2 | Original climate data: NIWA / Ministry for the Environment (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>), processed and visualised independently · Regional geography: Environment Canterbury / Stats NZ · Place names: LINZ where available</footer>
+</body></html>

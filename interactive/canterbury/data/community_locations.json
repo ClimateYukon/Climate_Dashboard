@@ -1,0 +1,149 @@
+[
+  {
+    "id": "akaroa",
+    "name": "Akaroa",
+    "lat": -43.803,
+    "lon": 172.967,
+    "source": "Approximate town-centre reference"
+  },
+  {
+    "id": "amberley",
+    "name": "Amberley",
+    "lat": -43.157,
+    "lon": 172.73,
+    "source": "Approximate town-centre reference"
+  },
+  {
+    "id": "ashburton",
+    "name": "Ashburton",
+    "lat": -43.904,
+    "lon": 171.749,
+    "source": "Approximate town-centre reference"
+  },
+  {
+    "id": "christchurch",
+    "name": "Christchurch",
+    "lat": -43.531,
+    "lon": 172.636,
+    "source": "Approximate town-centre reference"
+  },
+  {
+    "id": "culverden",
+    "name": "Culverden",
+    "lat": -42.77,
+    "lon": 172.851,
+    "source": "Approximate town-centre reference"
+  },
+  {
+    "id": "darfield",
+    "name": "Darfield",
+    "lat": -43.49,
+    "lon": 172.112,
+    "source": "Approximate town-centre reference"
+  },
+  {
+    "id": "fairlie",
+    "name": "Fairlie",
+    "lat": -44.099,
+    "lon": 170.828,
+    "source": "Approximate town-centre reference"
+  },
+  {
+    "id": "geraldine",
+    "name": "Geraldine",
+    "lat": -44.09,
+    "lon": 171.243,
+    "source": "Approximate town-centre reference"
+  },
+  {
+    "id": "hanmer-springs",
+    "name": "Hanmer Springs",
+    "lat": -42.525,
+    "lon": 172.828,
+    "source": "Approximate town-centre reference"
+  },
+  {
+    "id": "kaiapoi",
+    "name": "Kaiapoi",
+    "lat": -43.378,
+    "lon": 172.657,
+    "source": "Approximate town-centre reference"
+  },
+  {
+    "id": "kaik-ura",
+    "name": "Kaikōura",
+    "lat": -42.401,
+    "lon": 173.679,
+    "source": "Approximate town-centre reference"
+  },
+  {
+    "id": "lake-tekapo",
+    "name": "Lake Tekapo",
+    "lat": -44.004,
+    "lon": 170.478,
+    "source": "Approximate town-centre reference"
+  },
+  {
+    "id": "lincoln",
+    "name": "Lincoln",
+    "lat": -43.64,
+    "lon": 172.484,
+    "source": "Approximate town-centre reference"
+  },
+  {
+    "id": "lyttelton",
+    "name": "Lyttelton",
+    "lat": -43.603,
+    "lon": 172.72,
+    "source": "Approximate town-centre reference"
+  },
+  {
+    "id": "methven",
+    "name": "Methven",
+    "lat": -43.63,
+    "lon": 171.65,
+    "source": "Approximate town-centre reference"
+  },
+  {
+    "id": "rangiora",
+    "name": "Rangiora",
+    "lat": -43.304,
+    "lon": 172.595,
+    "source": "Approximate town-centre reference"
+  },
+  {
+    "id": "rolleston",
+    "name": "Rolleston",
+    "lat": -43.596,
+    "lon": 172.383,
+    "source": "Approximate town-centre reference"
+  },
+  {
+    "id": "temuka",
+    "name": "Temuka",
+    "lat": -44.246,
+    "lon": 171.276,
+    "source": "Approximate town-centre reference"
+  },
+  {
+    "id": "timaru",
+    "name": "Timaru",
+    "lat": -44.395,
+    "lon": 171.253,
+    "source": "Approximate town-centre reference"
+  },
+  {
+    "id": "twizel",
+    "name": "Twizel",
+    "lat": -44.257,
+    "lon": 170.096,
+    "source": "Approximate town-centre reference"
+  },
+  {
+    "id": "waimate",
+    "name": "Waimate",
+    "lat": -44.734,
+    "lon": 171.046,
+    "source": "Approximate town-centre reference"
+  }
+]

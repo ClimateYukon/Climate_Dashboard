@@ -1,0 +1,195 @@
+{
+  "version": "3.2",
+  "basis": "Original NIWA/MfE Core Public Dataset, changes relative to 1995-2014",
+  "sources": [
+    {
+      "name": "MfE: understanding climate variables and scenarios",
+      "url": "https://environment.govt.nz/facts-and-science/climate-change/climate-change-projections/understanding-climate-variables-and-scenarios-used-in-the-projections/"
+    },
+    {
+      "name": "NIWA: 2024 CMIP6 downscaled-data guidance, Table 3",
+      "url": "https://climatedata.environment.govt.nz/documents/CMIP6_guidance_doc_June2024.pdf"
+    },
+    {
+      "name": "MfE: downloadable climate-variable metadata",
+      "url": "https://climatedata.environment.govt.nz/variable-info.html"
+    }
+  ],
+  "indicators": {
+    "CD18": {
+      "definition": "An index of the accumulated warmth above a daily mean air temperature of 18 degrees C. It is commonly used to indicate the potential need for cooling buildings during warmer weather.",
+      "method": "For each day, the number of degrees that the daily mean temperature exceeds 18 degrees C contributes to the annual total. Days at or below 18 degrees C contribute zero. Only an annual index is provided.",
+      "interpretation": "A positive projected change means more cooling degree-days each year relative to 1995-2014. These are accumulated temperature differences, not a count of days needing cooling or a forecast of electricity use.",
+      "change_unit": "CDD (degree-days)",
+      "note": "Actual cooling demand also depends on the building, its occupants and local adaptation."
+    },
+    "DD1mm": {
+      "definition": "The number of days receiving less than 1 millimetre of daily precipitation during a year or season. It measures the frequency of relatively dry days, not how long dry spells last.",
+      "method": "Each day with less than 1 mm counts as one dry day. Counts are summarised as representative annual or seasonal averages across the 20-year period.",
+      "interpretation": "A change of +5 days means about five additional dry days in the selected annual or seasonal period relative to 1995-2014. A negative value means fewer dry days.",
+      "change_unit": "days",
+      "note": "This index does not describe consecutive dry-day sequences, rainfall intensity on wet days or soil moisture directly."
+    },
+    "DTR": {
+      "definition": "The daily temperature range is the difference between the maximum and minimum air temperature on a day. It describes typical day-to-night temperature variation, averaged over the year or season.",
+      "method": "For each modelled day, daily minimum temperature is subtracted from daily maximum temperature. Those daily ranges are averaged over the selected time period.",
+      "interpretation": "A positive change in degrees C means the difference between daytime highs and nighttime lows becomes larger. A negative change means that the daily range becomes smaller.",
+      "change_unit": "degrees C",
+      "note": "A change in daily range does not by itself indicate whether nights or days warm: compare mean maximum and mean minimum temperature as well."
+    },
+    "FD": {
+      "definition": "The number of frost days in a year or season, defined by the daily minimum air temperature falling below 0 degrees C.",
+      "method": "A day is counted when its daily minimum air temperature is less than 0 degrees C. The annual or seasonal count is averaged over the selected 20-year climate period.",
+      "interpretation": "A change of -10 days means around ten fewer frost days per year or season than during 1995-2014; positive values mean more.",
+      "change_unit": "days",
+      "note": "Air frost at 2 metres is not the same as ground frost. Frost duration and the severity of very cold nights are not captured by this count."
+    },
+    "GDD10": {
+      "definition": "Growing degree days accumulated above a base daily mean temperature of 10 degrees C. The index measures the amount of warmth available during a year for temperature-dependent plant development.",
+      "method": "For each day, add the daily mean temperature above 10 degrees C, or zero if the mean is at or below 10 degrees C. Sum those contributions over the year. Available annually.",
+      "interpretation": "An increase of +100 GDD means 100 more accumulated degree-days of warmth above the 10 degrees C base compared with 1995-2014. It does not mean 100 extra growing days.",
+      "change_unit": "GDD (degree-days)",
+      "note": "Different crops and ecosystems respond to different temperature thresholds. Growth also depends on water, light, soil and other constraints."
+    },
+    "GDD5": {
+      "definition": "Growing degree days accumulated above a base daily mean temperature of 5 degrees C. It measures the annual supply of warmth above a lower threshold than the 10 degrees C growing degree-day indicator.",
+      "method": "For each day, add the daily mean temperature above 5 degrees C, or zero if the mean is at or below 5 degrees C. Sum over the year. Available annually.",
+      "interpretation": "A positive projected change represents additional accumulated warmth above 5 degrees C relative to 1995-2014. Degree-days combine temperature and duration and should not be read as the number of warm days.",
+      "change_unit": "GDD (degree-days)",
+      "note": "Which threshold is most useful depends on the crop, ecological process or research question."
+    },
+    "HD18": {
+      "definition": "Heating degree days measure accumulated daily temperatures below a base of 18 degrees C. This index is commonly used as an indicator of the climatic need to heat buildings.",
+      "method": "For each day, add the difference between 18 degrees C and the daily mean temperature if that mean is below 18 degrees C. Otherwise add zero. Sum over the year. Available annually.",
+      "interpretation": "A negative change means fewer heating degree-days than in 1995-2014, suggesting lower climate-driven heating demand. A positive change means more heating degree-days.",
+      "change_unit": "HDD (degree-days)",
+      "note": "It is not a direct estimate of energy savings or fuel consumption. Those depend on building efficiency, behaviour and other conditions."
+    },
+    "PEDsrad": {
+      "definition": "Potential evapotranspiration deficit (PED) is a water-balance-based index of drought exposure. It reflects the shortfall between potential atmospheric demand for water through evapotranspiration and the water available from precipitation and the modelled soil-water balance.",
+      "method": "The source dataset derives PED from precipitation and potential evapotranspiration using a water-balance calculation. The available indicator represents annual accumulated deficit and is expressed in millimetres.",
+      "interpretation": "An increase in PED means greater modelled moisture deficit or drought potential relative to 1995-2014. A decrease suggests less deficit.",
+      "change_unit": "mm",
+      "note": "PED is not observed soil moisture, streamflow, an irrigation requirement or a direct forecast of agricultural drought impacts."
+    },
+    "PR": {
+      "definition": "The total amount of precipitation accumulated over a year or season. This index represents how much rain or other precipitation falls over that period, rather than the intensity of an individual storm.",
+      "method": "Daily precipitation amounts are summed within each year or season; the period statistic is then averaged across the 20-year climate window. The baseline total is in millimetres.",
+      "interpretation": "Future change is shown as a percentage of the baseline amount. For example, +10% means the modelled annual or seasonal total is 10% greater than in 1995-2014, not 10 additional millimetres.",
+      "change_unit": "% (relative change)",
+      "note": "Seasonal totals can change differently from annual totals, and annual precipitation does not indicate flood return periods."
+    },
+    "R99pVAL": {
+      "definition": "A measure of the upper tail of daily precipitation, defined by the 99th percentile of all daily precipitation values over the selected 20-year period. Approximately 1% of days are above this threshold.",
+      "method": "All daily precipitation values in the applicable period are used, including days receiving less than 1 mm. The percentile is a precipitation amount, with historical values expressed in millimetres.",
+      "interpretation": "A projected +20% means that the 99th-percentile daily precipitation amount is 20% higher than during 1995-2014. This is an intensity measure, not the number of heavy-rain days.",
+      "change_unit": "% (relative change)",
+      "note": "This percentile does not equal a return-period estimate, probable maximum rainfall or a design-storm value. A related wet-day-only percentile is also available."
+    },
+    "R99pVALWet": {
+      "definition": "The 99th percentile of daily precipitation after restricting the sample to wet days, defined as days with precipitation of at least 1 mm. It describes the heavier end of rainfall amounts on wet days.",
+      "method": "Days with rainfall below 1 mm are excluded before the 99th percentile is calculated over the selected 20-year period. The baseline percentile is a daily precipitation amount in millimetres.",
+      "interpretation": "Future change is expressed as a percentage relative to the 1995-2014 wet-day 99th percentile. A +15% change indicates a 15% higher precipitation threshold.",
+      "change_unit": "% (relative change)",
+      "note": "This differs from R99pVAL, which uses all days. MfE notes that the wet-day-only version is in the downloadable archive but is not shown in its standard national map/dashboard."
+    },
+    "RR1mm": {
+      "definition": "The number of wet or rainy days, defined by a daily precipitation total of at least 1 millimetre, in a year or season.",
+      "method": "Count each day on which daily precipitation reaches or exceeds 1 mm. Summaries represent typical annual or seasonal counts over the selected 20-year period.",
+      "interpretation": "A positive change means more wet days. For example, +6 days represents an increase of about six rainy days per selected year or season compared with 1995-2014.",
+      "change_unit": "days",
+      "note": "More wet days do not necessarily mean more rainfall overall, because average intensity can change separately."
+    },
+    "RR25mm": {
+      "definition": "The number of days in a year or season with more than 25 millimetres of daily precipitation. This is a fixed-threshold indicator of relatively heavy daily precipitation.",
+      "method": "Count each day when the daily precipitation total exceeds 25 mm and average the annual or seasonal counts over the future or baseline 20-year period.",
+      "interpretation": "A change of +2 days means about two additional days above 25 mm in the selected year or season compared with 1995-2014.",
+      "change_unit": "days",
+      "note": "A 25 mm daily threshold is not a universal flood threshold. Impacts depend on local drainage, catchments, antecedent conditions and rainfall duration."
+    },
+    "T": {
+      "definition": "Mean daily near-surface air temperature, averaged over the year or season. It describes the overall thermal climate, rather than daily extremes.",
+      "method": "Daily mean air temperatures at approximately 2 metres above ground are averaged over each year or season and then summarised across the 20-year period.",
+      "interpretation": "A projected +2 degrees C means the future average temperature is 2 degrees C warmer than the modelled 1995-2014 average. The mapped figure is a change, not the future absolute temperature.",
+      "change_unit": "degrees C",
+      "note": "Average warming does not describe how often particular thresholds or extremes are reached; use the hot-day and temperature-extreme indicators for that."
+    },
+    "TN": {
+      "definition": "The mean daily minimum near-surface air temperature for a year or season, commonly reflecting overnight temperatures.",
+      "method": "Daily minimum air temperatures are averaged within each year or season and then over the 20-year period. This is the average of daily minima, not the single coldest reading.",
+      "interpretation": "A +2 degrees C anomaly means the average daily minimum temperature is 2 degrees C higher than in 1995-2014.",
+      "change_unit": "degrees C",
+      "note": "For the coldest annual event, use TNn. For the frequency of days below freezing, use frost days."
+    },
+    "TNn": {
+      "definition": "The temperature of the coldest day of the year, represented by the lowest daily minimum near-surface air temperature within each year.",
+      "method": "Find the minimum daily minimum temperature for each year, then summarise the annual cold extremes across the 20-year period. The indicator is annual, not seasonal.",
+      "interpretation": "A positive change indicates that the coldest annual temperature is projected to become warmer relative to 1995-2014; a negative change indicates colder annual lows.",
+      "change_unit": "degrees C",
+      "note": "It is an indicator of the annual cold extreme rather than the average winter temperature or a precise forecast of the coldest date."
+    },
+    "TX": {
+      "definition": "The mean daily maximum near-surface air temperature in a year or season. It describes typical daytime highs.",
+      "method": "Daily maximum temperatures are averaged within each year or season, then summarised over the relevant 20-year climate period.",
+      "interpretation": "A projected +2 degrees C indicates average daily maximum temperatures 2 degrees C higher than the modelled 1995-2014 reference climate.",
+      "change_unit": "degrees C",
+      "note": "It is different from TXx, which describes the hottest day of each year, and from the count of days exceeding 25 or 30 degrees C."
+    },
+    "TX25": {
+      "definition": "The annual or seasonal number of hot days when the daily maximum near-surface air temperature is greater than 25 degrees C.",
+      "method": "Each day with a modelled daily maximum above 25 degrees C counts once. Counts are averaged across the selected 20-year period.",
+      "interpretation": "A projected +12 days means about twelve additional days above 25 degrees C per year or season compared with 1995-2014.",
+      "change_unit": "days",
+      "note": "The threshold is fixed rather than defined by a local historical percentile. This measure does not capture heatwave duration or warm nights."
+    },
+    "TX30": {
+      "definition": "The number of days with a daily maximum near-surface air temperature exceeding 30 degrees C in a year or season. It captures a hotter fixed-temperature threshold than TX25.",
+      "method": "Count days for which the modelled daily maximum is above 30 degrees C, then average the annual or seasonal totals over 20 years.",
+      "interpretation": "A positive projected change means additional days exceeding 30 degrees C relative to 1995-2014.",
+      "change_unit": "days",
+      "note": "This is not a heatwave metric, and an increase in 30 degrees C days can occur even when the annual mean warming is relatively modest."
+    },
+    "TXx": {
+      "definition": "The air temperature on the hottest day of the year, represented by the highest daily maximum temperature in that year.",
+      "method": "Identify each year's maximum of daily maximum temperatures and summarise those annual extreme values across the 20-year window. This indicator is available annually.",
+      "interpretation": "A projected +3 degrees C indicates an increase in the typical annual highest daily maximum relative to 1995-2014.",
+      "change_unit": "degrees C",
+      "note": "The value is not the highest temperature expected over the entire 20-year future period or a forecast for any particular date."
+    },
+    "Wd10": {
+      "definition": "The number of windy days that exceed a wind-speed threshold of 10 metres per second (approximately 36 km/h).",
+      "method": "NIWA's 2024 technical guidance (Table 3) describes counting days with average wind speed above 10 m/s. MfE's general web definitions instead describe maximum wind speed above 10 m/s. The two descriptions differ, so the exact threshold statistic should be confirmed from the source NetCDF metadata before technical use.",
+      "interpretation": "A positive anomaly means more days crossing the specified wind threshold compared with 1995-2014; a negative anomaly means fewer.",
+      "change_unit": "days",
+      "note": "This is a wind-day count, not a measure of peak gusts or wind damage. The source-document discrepancy is retained here deliberately."
+    },
+    "Wd99pVAL": {
+      "definition": "A measure of strong winds represented by the 99th percentile of the daily wind-speed distribution across a 20-year climate period.",
+      "method": "The MfE public definitions describe the 99th percentile of maximum daily wind speeds. The source values for the reference period are given in metres per second.",
+      "interpretation": "Projected change is a percentage change in the high-end wind-speed statistic relative to 1995-2014. For example, +5% represents a 5% higher 99th-percentile wind-speed value.",
+      "change_unit": "% (relative change)",
+      "note": "This is not a gust return-level estimate or an engineering design-wind value."
+    },
+    "hurs": {
+      "definition": "Average near-surface relative humidity: the amount of water vapour in the air expressed as a percentage of the saturation amount at the same temperature.",
+      "method": "Daily near-surface relative humidity is averaged over each year or season and across the selected 20-year period. The MfE source lists both base and change units as percent.",
+      "interpretation": "A positive change corresponds to higher relative humidity values, and a negative change to lower relative humidity values, relative to 1995-2014.",
+      "change_unit": "% (dataset units)",
+      "note": "The source metadata should be consulted before treating percent changes as relative percentage changes versus percentage-point changes. Relative humidity is not the same as absolute moisture content."
+    },
+    "rsds": {
+      "definition": "Average incoming shortwave solar radiation at the surface, representing solar energy received per unit of horizontal area.",
+      "method": "Daily mean incoming solar radiation is averaged over the relevant year or season and the 20-year climate period. The original variable is expressed in watts per square metre.",
+      "interpretation": "Projected change is an absolute difference in W/m2 relative to the 1995-2014 period. A +5 W/m2 anomaly indicates higher modelled incoming solar energy flux.",
+      "change_unit": "W/m2",
+      "note": "Incoming radiation is different from sunshine duration, UV exposure or total usable photovoltaic electricity."
+    },
+    "sfcWind": {
+      "definition": "Average daily wind speed at approximately 10 metres above ground, summarised over the year or season.",
+      "method": "Daily mean 10 m wind speeds are averaged over the 20-year period. Historical speeds are expressed in metres per second, while this dataset expresses future changes as percentages.",
+      "interpretation": "A +10% anomaly means average 10 m wind speed is projected to be 10% higher than in 1995-2014. It does not mean an increase of 10 m/s.",
+      "change_unit": "% (relative change)",
+      "note": "Mean wind speed does not describe peak gusts, storm frequency or local wind exposure at building scale."
+    }
+  }
+}
