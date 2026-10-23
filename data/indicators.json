@@ -89,7 +89,7 @@
     "id": "canterbury_climate_projections",
     "card_type": "interactive",
     "title": "Canterbury climate projections",
-    "subtitle": "Interactive 5 km CMIP6 projections",
+    "subtitle": "Original climate projections explorer",
     "description": "Explore Canterbury's projected climate changes using 5 km climate model data, with interactive maps, emissions scenarios, model agreement and community comparisons.",
     "date_label": "Updated 2026-10-23",
     "updated_date": "2026-10-23",
@@ -105,7 +105,7 @@
       "interactive"
     ],
     "plot_count": 1,
-    "href": "interactive/canterbury/",
+    "href": "canterbury-climate-projections.html",
     "sort_order": 35
   },
   {
@@ -210,5 +210,28 @@
     "sort_order": 999,
     "status": "archived",
     "status_label": "ARCHIVED"
+  },
+  {
+    "id": "canterbury_5km_projections",
+    "card_type": "interactive",
+    "title": "Canterbury 5 km climate projections",
+    "subtitle": "Interactive maps and model agreement",
+    "description": "Explore 5 km CMIP6 projections across Canterbury, including scenarios, future periods, model agreement and community comparisons.",
+    "date_label": "Updated 2026-10-23",
+    "updated_date": "2026-10-23",
+    "source": "New Zealand CMIP6 climate projections, Ministry for the Environment / NIWA",
+    "preview_image": "plots/canterbury_climate_projections/preview.svg",
+    "tags": [
+      "Canterbury",
+      "New Zealand",
+      "CMIP6",
+      "climate projections",
+      "SSP2-4.5",
+      "SSP3-7.0",
+      "interactive"
+    ],
+    "plot_count": 1,
+    "href": "interactive/canterbury/",
+    "sort_order": 36
   }
 ]
