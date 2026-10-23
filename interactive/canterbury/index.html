@@ -9,9 +9,32 @@
 <link rel="stylesheet" href="assets/style.css?v=3.2">
 <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script defer src="assets/app.js?v=3.2"></script>
+<style>
+/* Navigation to the existing Climate Dashboard. No dependency on the map scripts. */
+.dashboard-back {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 7px 12px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, .55);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, .09);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-decoration: none;
+}
+.dashboard-back:hover, .dashboard-back:focus-visible {
+  background: #fff;
+  color: #24483c;
+}
+.dashboard-back:focus-visible { outline: 3px solid #c5e8d2; outline-offset: 3px; }
+</style>
 </head>
 <body data-site-version="3.2">
-<header class="banner"><div class="banner-inner"><div><div class="eyebrow">CANTERBURY CLIMATE PROJECTIONS <span class="version-mark">V3.2</span></div>
+<header class="banner"><div class="banner-inner"><div><a class="dashboard-back" href="https://climateyukon.github.io/Climate_Dashboard/" aria-label="Back to Climate Dashboard">&larr; Back to dashboard</a><div class="eyebrow">CANTERBURY CLIMATE PROJECTIONS <span class="version-mark">V3.2</span></div>
 <h1>Canterbury's future climate</h1><p>Explore regional climate change, model agreement and local projections</p></div>
 <div class="banner-meta"><span>Reference climate</span><b>1995–2014</b></div></div></header>
 <main class="layout">
