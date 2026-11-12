@@ -354,18 +354,78 @@
       }
     }
   </style>
+
+<style>
+  #forecast-controls { padding: 18px 22px; }
+  .forecast-heading { display:flex; align-items:center; justify-content:space-between; gap:15px; flex-wrap:wrap; }
+  .forecast-heading h2, #forecast-agreement-card h2 { font-size:1.04rem; margin:0 0 8px; }
+  .forecast-model-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(175px,1fr)); gap:9px; margin:12px 0 15px; }
+  .forecast-model-choice { display:flex; align-items:center; gap:8px; color:#1f2933; font-size:.90rem;
+    font-weight:600; border:1px solid #d8dee6; border-radius:9px; padding:9px 10px; cursor:pointer; }
+  .forecast-model-choice:has(input:checked) { border-color:#9eafc1; background:#f2f6fb; }
+  .forecast-model-choice:has(input:disabled) { opacity:.42; cursor:not-allowed; }
+  .forecast-color { width:17px; height:5px; border-radius:5px; flex:0 0 auto; }
+  .forecast-actions { display:flex; flex-wrap:wrap; gap:10px 20px; align-items:center; }
+  .forecast-actions button { border:1px solid #b6c3d1; border-radius:8px; background:white;
+    color:#244265; padding:7px 11px; font-weight:600; cursor:pointer; }
+  .forecast-actions label { color:#344054; display:flex; gap:6px; align-items:center; font-weight:500; }
+  #forecast-model-note { margin:11px 0 0; font-size:.85rem; color:#5f6c7b; line-height:1.45; }
+  #custom-legend.forecast-legend { display:flex; flex-wrap:wrap; gap:9px 22px; align-items:center; justify-content:center; }
+  #custom-legend.forecast-legend .legend-item { font-size:.82rem; }
+  #forecast-agreement-card .agreement-strip { display:grid; grid-template-columns:repeat(21,minmax(0,1fr)); gap:3px; margin:12px 0 6px; }
+  .agreement-day { min-width:0; height:34px; border-radius:5px; display:flex; align-items:center;
+    justify-content:center; font-size:10px; font-weight:700; cursor:help; }
+  #forecast-agreement-dates { display:flex; justify-content:space-between; color:#667085; font-size:.76rem; margin:0 0 8px; }
+  #forecast-agreement-note { font-size:.87rem; color:#526173; line-height:1.55; }
+  #forecast-agreement-note p { margin:5px 0; }
+  @media(max-width:760px) { #forecast-controls { padding:12px; }
+    .forecast-model-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .agreement-strip { gap:2px !important; } .agreement-day { font-size:0; }
+  }
+</style>
+
+<style id="agreement-redesign-v2">
+  #forecast-agreement-card .agreement-intro {margin:2px 0 12px; color:#526173; font-size:.89rem; line-height:1.5;}
+  #forecast-agreement-card .agreement-key {display:flex; flex-wrap:wrap; align-items:center; gap:8px 18px; margin:0 0 12px; font-size:.82rem; font-weight:600; color:#344054;}
+  #forecast-agreement-card .agreement-key-item {display:inline-flex; align-items:center; gap:6px;}
+  #forecast-agreement-card .agreement-swatch {display:inline-block; width:13px; height:13px; border-radius:4px; border:1px solid transparent;}
+  #forecast-agreement-card .agreement-swatch.above {background:#f6dcd5; border-color:#d68c7c;}
+  #forecast-agreement-card .agreement-swatch.below {background:#dceafa; border-color:#80a6d2;}
+  #forecast-agreement-card .agreement-swatch.mixed {background:#ebedf0; border-color:#c5cad2;}
+  #forecast-agreement-card .agreement-swatch.few {background:#fafbfc; border:1px dashed #a7b0bd;}
+  #forecast-agreement-card .agreement-strip {display:block; margin:0 0 8px;}
+  #forecast-agreement-card .agreement-week {margin:0 0 14px;}
+  #forecast-agreement-card .agreement-week-label {font-size:.81rem; font-weight:700; color:#516176; margin-bottom:7px;}
+  #forecast-agreement-card .agreement-week-grid {display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:7px;}
+  #forecast-agreement-card .agreement-week-grid .agreement-day {box-sizing:border-box; display:flex; flex-direction:column; justify-content:center; gap:4px; min-width:0; height:auto; min-height:67px; padding:9px 3px; border-radius:7px; border:1px solid #d5dce5; text-align:center; font-size:initial; line-height:1.15; cursor:help;}
+  #forecast-agreement-card .agreement-day-date {font-size:.76rem; font-weight:600; white-space:nowrap;}
+  #forecast-agreement-card .agreement-day-value {font-size:1.05rem; font-weight:800; font-variant-numeric:tabular-nums; letter-spacing:-.02em; white-space:nowrap;}
+  #forecast-agreement-card .agreement-day-status {font-size:.74rem; font-weight:600; white-space:nowrap;}
+  #forecast-agreement-card .agreement-day.strong-above {background:#f6dcd5; border-color:#d68c7c; color:#852a1a;}
+  #forecast-agreement-card .agreement-day.lean-above {background:#fff2ed; border-color:#edc4b7; color:#944936;}
+  #forecast-agreement-card .agreement-day.strong-below {background:#dceafa; border-color:#80a6d2; color:#174a82;}
+  #forecast-agreement-card .agreement-day.lean-below {background:#edf4fd; border-color:#c0d6ed; color:#315c87;}
+  #forecast-agreement-card .agreement-day.mixed {background:#ebedf0; border-color:#c5cad2; color:#475467;}
+  #forecast-agreement-card .agreement-day.insufficient {background:#fafbfc; border:1px dashed #a7b0bd; color:#687586;}
+  #forecast-agreement-dates {display:none !important;}
+  #forecast-agreement-card #forecast-agreement-note {font-size:.86rem; margin-top:5px; color:#526173;}
+  @media (max-width:700px) {
+    #forecast-agreement-card .agreement-strip {overflow-x:auto; padding-bottom:5px;}
+    #forecast-agreement-card .agreement-week {min-width:630px;}
+  }
+</style>
 </head>
 
 <body>
   <main>
     <div class="top-bar">
       <div>
-        <h1>Daily temperature observations</h1>
+        <h1>Daily temperature observations and forecasts</h1>
         <p class="subtitle">
-          Compare recent daily temperatures with normal values, extreme ranges, and daily records.
+          Compare daily observations with historical conditions and seven global ensemble forecasts.
         </p>
       </div>
-      <a class="back-link" href="../index.html">Back to dashboard</a>
+      <a class="back-link" href="https://climateyukon.github.io/Climate_Dashboard/">Back to dashboard</a>
     </div>
 
     <div id="error-box" class="error"></div>
@@ -413,12 +473,42 @@
       </div>
     </section>
 
+
+    <section class="card" id="forecast-controls" style="display:none">
+      <div class="forecast-heading">
+        <h2>Ensemble models</h2>
+        <div class="forecast-actions">
+          <button type="button" id="forecast-select-all">Show all models</button>
+          <button type="button" id="forecast-select-core">Core models</button>
+        </div>
+      </div>
+      <div id="forecast-model-options" class="forecast-model-grid"></div>
+      <div class="forecast-actions">
+        <label><input type="checkbox" id="forecast-bands"> Show P10-P90 uncertainty bands</label>
+        <label><input type="checkbox" id="forecast-multimodel" checked> Show equal-weight multi-model mean</label>
+      </div>
+      <p id="forecast-model-note">Select individual models. Each model contributes one mean regardless of member count.</p>
+    </section>
     <section class="card">
       <div id="graph-title"></div>
       <div id="custom-legend"></div>
       <div id="temperature-plot"></div>
     </section>
 
+
+    <section class="card" id="forecast-agreement-card" style="display:none">
+      <h2>Model agreement by day</h2>
+      <p class="agreement-intro">Each tile shows how many selected model means are above or below the daily historical normal. This is not a probability forecast.</p>
+      <div class="agreement-key" aria-label="Agreement colours">
+        <span class="agreement-key-item"><i class="agreement-swatch above"></i> Above normal</span>
+        <span class="agreement-key-item"><i class="agreement-swatch below"></i> Below normal</span>
+        <span class="agreement-key-item"><i class="agreement-swatch mixed"></i> Mixed</span>
+        <span class="agreement-key-item"><i class="agreement-swatch few"></i> Fewer than 2 models</span>
+      </div>
+      <div id="forecast-agreement-strip" class="agreement-strip"></div>
+      <div id="forecast-agreement-dates"></div>
+      <div id="forecast-agreement-note"></div>
+    </section>
     <section class="card summary-card" id="summary-card">
       <h2>Temperature summary</h2>
       <div id="temperature-summary">Select a station and period to view the summary.</div>
@@ -444,9 +534,16 @@
     <section class="card status" id="data-status">
       Loading data...
     </section>
+    <section id="forecast-attribution" class="card status" style="display:none">
+      Ensemble forecasts via <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>
+      (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>).
+      Daily means and P10-P90 member ranges calculated from the available ensemble members.
+      Forecasts may differ from station observations, especially during Yukon winter inversions.
+    </section>
   </main>
 
   <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
   <script src="ahccd-temperature.js"></script>
+  <script src="ahccd-temperature-forecast.js"></script>
 </body>
 </html>

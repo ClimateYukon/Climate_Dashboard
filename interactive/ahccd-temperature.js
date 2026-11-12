@@ -759,7 +759,8 @@ function setupControls() {
     [
       { label: "Month", value: "month" },
       { label: "Season", value: "season" },
-      { label: "Last 365 days", value: "annual" }
+      { label: "Last 365 days", value: "annual" },
+      { label: "Forecast", value: "forecast" }
     ],
     "month"
   );
@@ -1047,6 +1048,23 @@ function updatePlot() {
 
   document.getElementById("month-control").style.display = mode === "month" ? "flex" : "none";
   document.getElementById("season-control").style.display = mode === "season" ? "flex" : "none";
+  const forecastMode = mode === "forecast";
+  document.getElementById("forecast-controls").style.display = forecastMode ? "block" : "none";
+  document.getElementById("forecast-attribution").style.display = forecastMode ? "block" : "none";
+  document.getElementById("forecast-agreement-card").style.display = forecastMode ? "block" : "none";
+  document.getElementById("year-select").closest(".control").style.display = forecastMode ? "none" : "flex";
+  document.querySelector(".comparison-options").closest(".control").style.display = forecastMode ? "none" : "flex";
+  document.querySelector(".table-card").style.display = forecastMode ? "none" : "block";
+  document.getElementById("custom-legend").classList.toggle("forecast-legend", forecastMode);
+  if (forecastMode) {
+    updateForecastPlot().catch((error) => {
+      showError(error.message);
+      setStatus("Ensemble forecast could not be loaded.");
+    });
+    return;
+  }
+  document.querySelector("#summary-card h2").textContent = "Temperature summary";
+  document.getElementById("error-box").style.display = "none";
 
   const period = selectedPeriod(mode, year, month, season);
   const periodDates = makeDateRange(period.plotStart, period.plotEnd);
