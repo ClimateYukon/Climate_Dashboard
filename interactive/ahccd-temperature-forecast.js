@@ -321,4 +321,5 @@ async function updateForecastPlot() {
   }
   setStatus(`Observed through ${latestObserved}. Ensemble download ${forecast.updated_utc} UTC. Forecast daily timezone ${forecast.daily_timezone}. ` +
     `Forecasts are retrieved daily by Junix.`);
+  await updateDay1Verification(stationId, selectedKeys);
 }

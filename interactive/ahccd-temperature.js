@@ -1050,6 +1050,7 @@ function updatePlot() {
   document.getElementById("season-control").style.display = mode === "season" ? "flex" : "none";
   const forecastMode = mode === "forecast";
   document.getElementById("forecast-controls").style.display = forecastMode ? "block" : "none";
+  document.getElementById("forecast-day1-card").style.display = forecastMode ? "block" : "none";
   document.getElementById("forecast-attribution").style.display = forecastMode ? "block" : "none";
   document.getElementById("forecast-agreement-card").style.display = forecastMode ? "block" : "none";
   document.getElementById("year-select").closest(".control").style.display = forecastMode ? "none" : "flex";

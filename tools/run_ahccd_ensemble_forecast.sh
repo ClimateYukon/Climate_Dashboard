@@ -8,9 +8,10 @@ echo "Ensemble forecast update started: $(date -Is)"
 cd "$DASHBOARD_DIR"
 git pull --ff-only
 "$PYTHON" tools/update_ahccd_ensemble_forecast.py
+"$PYTHON" tools/build_ahccd_forecast_skill.py
 
 # 2. Only commit the forecast data, never pending AHCCD or manual changes.
-git add data/interactive/ahccd_ensemble_forecasts/
+git add data/interactive/ahccd_ensemble_forecasts/ data/interactive/ahccd_forecast_skill/
 if git diff --cached --quiet; then
     echo "No forecast JSON changes to publish."
 else

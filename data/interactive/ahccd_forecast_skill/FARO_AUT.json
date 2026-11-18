@@ -1,0 +1,105 @@
+{
+  "station_id": "FARO_AUT",
+  "generated_utc": "2026-11-18T23:41:08+00:00",
+  "meaning": "Forecast snapshot downloaded on the preceding local calendar day",
+  "days": [
+    {
+      "date": "2026-11-13",
+      "issue_date_local": "2026-11-12",
+      "downloaded_utc": "2026-11-12T20:54:22+00:00",
+      "models": {
+        "ecmwf": -4.92,
+        "gefs": -5.59,
+        "geps": -7.89,
+        "aifs": -5.88,
+        "icon": -6.0,
+        "ukmo": -6.7,
+        "google": -5.27
+      }
+    },
+    {
+      "date": "2026-11-14",
+      "issue_date_local": "2026-11-13",
+      "downloaded_utc": "2026-11-13T10:00:03+00:00",
+      "models": {
+        "ecmwf": -1.84,
+        "gefs": -3.77,
+        "geps": -5.34,
+        "aifs": -1.52,
+        "icon": -2.95,
+        "ukmo": -1.34,
+        "google": -2.38
+      }
+    },
+    {
+      "date": "2026-11-15",
+      "issue_date_local": "2026-11-14",
+      "downloaded_utc": "2026-11-14T10:00:03+00:00",
+      "models": {
+        "ecmwf": -2.52,
+        "gefs": -3.66,
+        "geps": -5.11,
+        "aifs": -1.6,
+        "icon": -2.86,
+        "ukmo": -2.33,
+        "google": -1.64
+      }
+    },
+    {
+      "date": "2026-11-16",
+      "issue_date_local": "2026-11-15",
+      "downloaded_utc": "2026-11-15T10:00:03+00:00",
+      "models": {
+        "ecmwf": -2.58,
+        "gefs": -2.23,
+        "geps": -3.42,
+        "aifs": -1.33,
+        "icon": -3.05,
+        "ukmo": -2.16,
+        "google": -2.16
+      }
+    },
+    {
+      "date": "2026-11-17",
+      "issue_date_local": "2026-11-16",
+      "downloaded_utc": "2026-11-16T10:00:03+00:00",
+      "models": {
+        "ecmwf": -4.66,
+        "gefs": -4.24,
+        "geps": -4.52,
+        "aifs": -3.93,
+        "icon": -5.41,
+        "ukmo": -6.04,
+        "google": -4.6
+      }
+    },
+    {
+      "date": "2026-11-18",
+      "issue_date_local": "2026-11-17",
+      "downloaded_utc": "2026-11-17T10:00:03+00:00",
+      "models": {
+        "ecmwf": -3.38,
+        "gefs": -2.38,
+        "geps": -2.4,
+        "aifs": -3.0,
+        "icon": -2.82,
+        "ukmo": -4.39,
+        "google": -4.76
+      }
+    },
+    {
+      "date": "2026-11-19",
+      "issue_date_local": "2026-11-18",
+      "downloaded_utc": "2026-11-18T10:00:03+00:00",
+      "models": {
+        "ecmwf": -6.26,
+        "gefs": -5.97,
+        "geps": -7.31,
+        "aifs": -7.74,
+        "icon": -6.27,
+        "ukmo": -11.95,
+        "google": -6.83
+      }
+    }
+  ]
+}

@@ -414,6 +414,14 @@
     #forecast-agreement-card .agreement-week {min-width:630px;}
   }
 </style>
+<style id="forecast-day1-style">
+  #forecast-day1-card h2 {font-size:1.04rem;margin:0 0 6px}
+  #forecast-day1-summary {font-size:.84rem;color:#475467;line-height:1.5}
+  .forecast-day1-metrics {display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:8px;margin-top:10px}
+  .forecast-day1-metric {display:flex;flex-direction:column;gap:3px;padding:10px 12px;border:1px solid #dbe2ea;border-radius:8px}
+  .forecast-day1-metric strong {font-size:1.08rem;color:#1f2933}
+  .forecast-day1-caveat {font-size:.8rem;color:#667085;line-height:1.5;margin-top:12px}
+</style>
 </head>
 
 <body>
@@ -509,6 +517,18 @@
       <div id="forecast-agreement-dates"></div>
       <div id="forecast-agreement-note"></div>
     </section>
+    <section class="card" id="forecast-day1-card" style="display:none">
+      <h2>How accurate were yesterday's forecasts?</h2>
+      <p style="color:#526173;font-size:.89rem;line-height:1.5;margin:6px 0 10px">
+        For the last seven observed dates, the lines show what each model predicted the preceding calendar day.
+        These are saved forecasts, not hindcasts. Actual observations are from AHCCD.
+      </p>
+      <div id="forecast-day1-graph"></div>
+      <div id="forecast-day1-summary"></div>
+      <p class="forecast-day1-caveat">The model forecast represents a grid cell; AHCCD is a station observation.
+        Forecasts may have local systematic errors, particularly during winter inversions.
+        One week is too short to determine which model has the best long-term forecast skill.</p>
+    </section>
     <section class="card summary-card" id="summary-card">
       <h2>Temperature summary</h2>
       <div id="temperature-summary">Select a station and period to view the summary.</div>
@@ -545,5 +565,6 @@
   <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
   <script src="ahccd-temperature.js"></script>
   <script src="ahccd-temperature-forecast.js"></script>
+  <script src="ahccd-temperature-verification.js"></script>
 </body>
 </html>
