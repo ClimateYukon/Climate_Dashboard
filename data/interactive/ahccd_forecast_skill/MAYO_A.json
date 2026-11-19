@@ -1,6 +1,6 @@
 {
   "station_id": "MAYO_A",
-  "generated_utc": "2026-11-18T23:41:08+00:00",
+  "generated_utc": "2026-11-19T10:00:08+00:00",
   "meaning": "Forecast snapshot downloaded on the preceding local calendar day",
   "days": [
     {
@@ -99,6 +99,20 @@
         "icon": -4.55,
         "ukmo": -5.29,
         "google": -7.02
+      }
+    },
+    {
+      "date": "2026-11-20",
+      "issue_date_local": "2026-11-19",
+      "downloaded_utc": "2026-11-19T10:00:03+00:00",
+      "models": {
+        "ecmwf": -5.58,
+        "gefs": -6.27,
+        "geps": -10.71,
+        "aifs": -5.97,
+        "icon": -2.56,
+        "ukmo": -2.7,
+        "google": -5.31
       }
     }
   ]

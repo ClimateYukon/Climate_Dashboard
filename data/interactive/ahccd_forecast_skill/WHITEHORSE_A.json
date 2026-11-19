@@ -1,6 +1,6 @@
 {
   "station_id": "WHITEHORSE_A",
-  "generated_utc": "2026-11-18T23:41:08+00:00",
+  "generated_utc": "2026-11-19T10:00:08+00:00",
   "meaning": "Forecast snapshot downloaded on the preceding local calendar day",
   "days": [
     {
@@ -99,6 +99,20 @@
         "icon": -1.58,
         "ukmo": -0.28,
         "google": -3.42
+      }
+    },
+    {
+      "date": "2026-11-20",
+      "issue_date_local": "2026-11-19",
+      "downloaded_utc": "2026-11-19T10:00:03+00:00",
+      "models": {
+        "ecmwf": -1.04,
+        "gefs": -2.44,
+        "geps": -4.17,
+        "aifs": -0.26,
+        "icon": -0.12,
+        "ukmo": 1.47,
+        "google": 0.12
       }
     }
   ]
