@@ -1,6 +1,6 @@
 {
   "station_id": "OLD_CROW_RCS",
-  "generated_utc": "2026-11-19T10:00:08+00:00",
+  "generated_utc": "2026-11-20T10:00:08+00:00",
   "meaning": "Forecast snapshot downloaded on the preceding local calendar day",
   "days": [
     {
@@ -113,6 +113,20 @@
         "icon": -10.1,
         "ukmo": -14.84,
         "google": -9.68
+      }
+    },
+    {
+      "date": "2026-11-21",
+      "issue_date_local": "2026-11-20",
+      "downloaded_utc": "2026-11-20T10:00:03+00:00",
+      "models": {
+        "ecmwf": -10.61,
+        "gefs": -9.46,
+        "geps": -15.84,
+        "aifs": -8.37,
+        "icon": -9.91,
+        "ukmo": -15.95,
+        "google": -8.43
       }
     }
   ]
