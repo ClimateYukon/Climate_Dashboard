@@ -1,6 +1,6 @@
 {
   "station_id": "FARO_AUT",
-  "generated_utc": "2026-11-20T10:00:08+00:00",
+  "generated_utc": "2026-11-21T10:00:08+00:00",
   "meaning": "Forecast snapshot downloaded on the preceding local calendar day",
   "days": [
     {
@@ -127,6 +127,20 @@
         "icon": -5.58,
         "ukmo": -6.24,
         "google": -4.28
+      }
+    },
+    {
+      "date": "2026-11-22",
+      "issue_date_local": "2026-11-21",
+      "downloaded_utc": "2026-11-21T10:00:03+00:00",
+      "models": {
+        "ecmwf": -6.11,
+        "gefs": -8.14,
+        "geps": -9.09,
+        "aifs": -9.71,
+        "icon": -7.37,
+        "ukmo": -10.91,
+        "google": -7.03
       }
     }
   ]
