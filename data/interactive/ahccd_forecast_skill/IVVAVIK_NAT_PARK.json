@@ -1,6 +1,6 @@
 {
   "station_id": "IVVAVIK_NAT_PARK",
-  "generated_utc": "2026-11-22T10:00:09+00:00",
+  "generated_utc": "2026-11-23T10:00:07+00:00",
   "meaning": "Forecast snapshot downloaded on the preceding local calendar day",
   "days": [
     {
@@ -155,6 +155,20 @@
         "icon": -7.26,
         "ukmo": -17.86,
         "google": -13.66
+      }
+    },
+    {
+      "date": "2026-11-24",
+      "issue_date_local": "2026-11-23",
+      "downloaded_utc": "2026-11-23T10:00:03+00:00",
+      "models": {
+        "ecmwf": -16.92,
+        "gefs": -13.02,
+        "geps": -13.88,
+        "aifs": -13.89,
+        "icon": -13.18,
+        "ukmo": -25.05,
+        "google": -15.13
       }
     }
   ]
