@@ -1,6 +1,6 @@
 {
   "station_id": "WATSON_LAKE_AUT",
-  "generated_utc": "2026-11-23T10:00:07+00:00",
+  "generated_utc": "2026-11-24T10:00:09+00:00",
   "meaning": "Forecast snapshot downloaded on the preceding local calendar day",
   "days": [
     {
@@ -169,6 +169,20 @@
         "icon": -10.49,
         "ukmo": -9.75,
         "google": -11.14
+      }
+    },
+    {
+      "date": "2026-11-25",
+      "issue_date_local": "2026-11-24",
+      "downloaded_utc": "2026-11-24T10:00:03+00:00",
+      "models": {
+        "ecmwf": -11.73,
+        "gefs": -11.8,
+        "geps": -13.68,
+        "aifs": -11.17,
+        "icon": -10.96,
+        "ukmo": -8.5,
+        "google": -11.2
       }
     }
   ]
