@@ -1,6 +1,6 @@
 {
   "station_id": "CARMACKS_CS",
-  "generated_utc": "2026-11-24T10:00:08+00:00",
+  "generated_utc": "2026-11-25T10:00:08+00:00",
   "meaning": "Forecast snapshot downloaded on the preceding local calendar day",
   "days": [
     {
@@ -183,6 +183,20 @@
         "icon": -8.98,
         "ukmo": -6.79,
         "google": -11.31
+      }
+    },
+    {
+      "date": "2026-11-26",
+      "issue_date_local": "2026-11-25",
+      "downloaded_utc": "2026-11-25T10:00:04+00:00",
+      "models": {
+        "ecmwf": -11.15,
+        "gefs": -9.37,
+        "geps": -13.05,
+        "aifs": -8.29,
+        "icon": -6.41,
+        "ukmo": -6.55,
+        "google": -8.48
       }
     }
   ]

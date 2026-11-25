@@ -1,6 +1,6 @@
 {
   "station_id": "PELLY_RANCH_FORT_SELKIRK",
-  "generated_utc": "2026-11-24T10:00:08+00:00",
+  "generated_utc": "2026-11-25T10:00:08+00:00",
   "meaning": "Forecast snapshot downloaded on the preceding local calendar day",
   "days": [
     {
@@ -183,6 +183,20 @@
         "icon": -11.15,
         "ukmo": -9.91,
         "google": -12.39
+      }
+    },
+    {
+      "date": "2026-11-26",
+      "issue_date_local": "2026-11-25",
+      "downloaded_utc": "2026-11-25T10:00:04+00:00",
+      "models": {
+        "ecmwf": -12.35,
+        "gefs": -11.26,
+        "geps": -13.77,
+        "aifs": -9.52,
+        "icon": -8.7,
+        "ukmo": -8.38,
+        "google": -10.36
       }
     }
   ]

@@ -1,6 +1,6 @@
 {
   "station_id": "TESLIN_AUT",
-  "generated_utc": "2026-11-24T10:00:09+00:00",
+  "generated_utc": "2026-11-25T10:00:08+00:00",
   "meaning": "Forecast snapshot downloaded on the preceding local calendar day",
   "days": [
     {
@@ -183,6 +183,20 @@
         "icon": -5.07,
         "ukmo": -3.61,
         "google": -7.08
+      }
+    },
+    {
+      "date": "2026-11-26",
+      "issue_date_local": "2026-11-25",
+      "downloaded_utc": "2026-11-25T10:00:04+00:00",
+      "models": {
+        "ecmwf": -8.09,
+        "gefs": -5.8,
+        "geps": -11.99,
+        "aifs": -6.93,
+        "icon": -4.97,
+        "ukmo": -4.0,
+        "google": -5.95
       }
     }
   ]
