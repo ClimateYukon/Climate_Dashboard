@@ -1,6 +1,6 @@
 {
   "station_id": "HAINES_JUNCTION",
-  "generated_utc": "2026-11-25T10:00:08+00:00",
+  "generated_utc": "2026-11-26T10:00:07+00:00",
   "meaning": "Forecast snapshot downloaded on the preceding local calendar day",
   "days": [
     {
@@ -197,6 +197,20 @@
         "icon": -5.24,
         "ukmo": -9.55,
         "google": -5.24
+      }
+    },
+    {
+      "date": "2026-11-27",
+      "issue_date_local": "2026-11-26",
+      "downloaded_utc": "2026-11-26T10:00:03+00:00",
+      "models": {
+        "ecmwf": -5.84,
+        "gefs": -7.46,
+        "geps": -12.48,
+        "aifs": -5.76,
+        "icon": -6.04,
+        "ukmo": -8.06,
+        "google": -5.66
       }
     }
   ]

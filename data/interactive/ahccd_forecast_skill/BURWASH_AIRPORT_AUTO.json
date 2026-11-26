@@ -1,6 +1,6 @@
 {
   "station_id": "BURWASH_AIRPORT_AUTO",
-  "generated_utc": "2026-11-25T10:00:08+00:00",
+  "generated_utc": "2026-11-26T10:00:07+00:00",
   "meaning": "Forecast snapshot downloaded on the preceding local calendar day",
   "days": [
     {
@@ -197,6 +197,20 @@
         "icon": -10.35,
         "ukmo": -9.02,
         "google": -6.98
+      }
+    },
+    {
+      "date": "2026-11-27",
+      "issue_date_local": "2026-11-26",
+      "downloaded_utc": "2026-11-26T10:00:03+00:00",
+      "models": {
+        "ecmwf": -8.59,
+        "gefs": -6.8,
+        "geps": -13.85,
+        "aifs": -8.09,
+        "icon": -7.63,
+        "ukmo": -11.62,
+        "google": -6.74
       }
     }
   ]
