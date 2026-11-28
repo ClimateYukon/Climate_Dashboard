@@ -1,6 +1,6 @@
 {
   "station_id": "DAWSON",
-  "generated_utc": "2026-11-27T10:00:08+00:00",
+  "generated_utc": "2026-11-28T10:00:08+00:00",
   "meaning": "Forecast snapshot downloaded on the preceding local calendar day",
   "days": [
     {
@@ -225,6 +225,20 @@
         "icon": -10.57,
         "ukmo": -8.64,
         "google": -9.9
+      }
+    },
+    {
+      "date": "2026-11-29",
+      "issue_date_local": "2026-11-28",
+      "downloaded_utc": "2026-11-28T10:00:03+00:00",
+      "models": {
+        "ecmwf": -12.81,
+        "gefs": -15.91,
+        "geps": -13.39,
+        "aifs": -12.13,
+        "icon": -12.46,
+        "ukmo": -11.29,
+        "google": -12.37
       }
     }
   ]
